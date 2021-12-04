@@ -37,6 +37,17 @@
 		<li>EyeCover</li>
       </layers>
     </apparel>
+	<modExtensions>
+		<li Class="VFECore.ApparelDrawPosExtension">
+			<headgearDrawSettings>
+				<drawPosNorthOffset>(0, 0, 0)</drawPosNorthOffset>
+				<drawPosSouthOffset>(0, 0, 0)</drawPosSouthOffset>
+				<drawPosWestOffset>(0, 0, 0)</drawPosWestOffset>
+				<drawPosEastOffset>(0, 0, 0)</drawPosEastOffset>
+			</headgearDrawSettings>
+			<isUnifiedApparel>true</isUnifiedApparel>
+		</li>
+	</modExtensions>
   </ThingDef>
   
   <ThingDef ParentName="VFEP_WarcasketPartBase">

@@ -82,6 +82,22 @@
         <li>Shell</li>
       </layers>
     </apparel>
+	<modExtensions>
+		<li Class="VFECore.ApparelDrawPosExtension">
+			<shellPosDrawSettings>
+				<drawPosNorthOffset>(0, 0, 0)</drawPosNorthOffset>
+				<drawPosSouthOffset>(0, 0, 0)</drawPosSouthOffset>
+				<drawPosWestOffset>(0, 0, 0)</drawPosWestOffset>
+				<drawPosEastOffset>(0, 0, 0)</drawPosEastOffset>
+
+				<drawNorthSize>(15, 15)</drawNorthSize>
+				<drawSouthSize>(15, 15)</drawSouthSize>
+				<drawWestSize>(15, 15)</drawWestSize>
+				<drawEastSize>(15, 15)</drawEastSize>
+			</shellPosDrawSettings>
+			<isUnifiedApparel>true</isUnifiedApparel>
+		</li>
+	</modExtensions>
   </ThingDef>
   
   <ThingDef ParentName="VFEP_WarcasketPartBase">
@@ -122,6 +138,22 @@
         <li>Shell</li>
       </layers>
     </apparel>
+	<modExtensions>
+		<li Class="VFECore.ApparelDrawPosExtension">
+			<apparelDrawSettings>
+				<drawPosNorthOffset>(1, 0, 0)</drawPosNorthOffset>
+				<drawPosSouthOffset>(1, 0, 0)</drawPosSouthOffset>
+				<drawPosWestOffset>(1, 0, 0)</drawPosWestOffset>
+				<drawPosEastOffset>(1, 0, 0)</drawPosEastOffset>
+
+				<drawNorthSize>(3, 3)</drawNorthSize>
+				<drawSouthSize>(3, 3)</drawSouthSize>
+				<drawWestSize>(3, 3)</drawWestSize>
+				<drawEastSize>(3, 3)</drawEastSize>
+			</apparelDrawSettings>
+			<isUnifiedApparel>true</isUnifiedApparel>
+		</li>
+	</modExtensions>
   </ThingDef>
   
   <!-- Marine warcasket -->

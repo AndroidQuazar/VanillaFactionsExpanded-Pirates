@@ -2,6 +2,9 @@
 <Defs>
 
   <ThingDef Name="VFEP_WarcasketPartBase" Abstract="True">
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
     <thingClass>Apparel</thingClass>
     <category>Item</category>
     <drawerType>MapMeshOnly</drawerType>
@@ -15,11 +18,21 @@
       <DeteriorationRate>0</DeteriorationRate>
       <Beauty>-3</Beauty>
     </statBases>
+    <apparel>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+	<generateCommonality>0</generateCommonality>
     <altitudeLayer>Item</altitudeLayer>
     <alwaysHaulable>True</alwaysHaulable>
     <tickerType>Never</tickerType>
     <burnableByRecipe>false</burnableByRecipe>
     <smeltable>false</smeltable>
+    <thingSetMakerTags>
+      <li>Warcasket</li> <!-- Won't be actually used anywhere -->
+    </thingSetMakerTags>
+    <tradeTags>
+      <li>Warcasket</li> <!-- Won't be actually used anywhere -->
+    </tradeTags>
     <comps>
       <li Class="CompProperties_Forbiddable"/>
       <li>
@@ -34,9 +47,7 @@
     <description>Basic warcasket shell with baseline protection and weight.</description>
     <graphicData>
       <texPath>Things/Pawn/Warcasketlike/Warcasket/Warcasket</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <generateCommonality>0</generateCommonality>
     <statBases>
       <Mass>50</Mass>
       <Flammability>0</Flammability>
@@ -51,9 +62,6 @@
       <MoveSpeed>-0.5</MoveSpeed>
       <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
     </equippedStatOffsets>
-    <tradeTags>
-      <li>Warcasket</li> <!-- Won't be actually used anywhere -->
-    </tradeTags>
     <costList>
       <ComponentIndustrial>2</ComponentIndustrial>
       <Steel>80</Steel>
@@ -62,7 +70,6 @@
     <apparel>
       <bodyPartGroups>
         <li>Torso</li>
-        <li>Neck</li>
         <li>Legs</li>
 		<li>Feet</li>
       </bodyPartGroups>
@@ -72,32 +79,7 @@
         <li>Middle</li>
         <li>Shell</li>
       </layers>
-      <useDeflectMetalEffect>true</useDeflectMetalEffect>
     </apparel>
-    <colorGenerator Class="ColorGenerator_Options">
-      <options>
-        <li>
-          <weight>10</weight>
-          <only>(0.9,0.9,0.9)</only>
-        </li>
-        <li>
-          <weight>10</weight>
-          <only>(0.33,0.33,0.33)</only>
-        </li>
-        <li>
-          <weight>10</weight>
-          <only>(0.65,0.65,0.65)</only>
-        </li>
-        <li>
-          <weight>6</weight>
-          <min>(0.3,0.3,0.3)</min>
-          <max>(0.5,0.5,0.5)</max>
-        </li>
-      </options>
-    </colorGenerator>
-    <thingSetMakerTags>
-      <li>Warcasket</li> <!-- Won't be actually used anywhere -->
-    </thingSetMakerTags>
   </ThingDef>
   
   <ThingDef ParentName="VFEP_WarcasketPartBase">
@@ -106,9 +88,7 @@
     <description>Basic warcasket pauldrons with baseline protection and weight.</description>
     <graphicData>
       <texPath>Things/Pawn/Warcasketlike/Warcasket/WarcasketShoulders</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <generateCommonality>0</generateCommonality>
     <statBases>
       <Mass>20</Mass>
       <Flammability>0</Flammability>
@@ -123,9 +103,6 @@
       <MoveSpeed>-0.2</MoveSpeed>
       <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
     </equippedStatOffsets>
-    <tradeTags>
-      <li>Warcasket</li> <!-- Won't be actually used anywhere -->
-    </tradeTags>
     <costList>
       <Steel>40</Steel>
     </costList>
@@ -134,6 +111,7 @@
         <li>Shoulders</li>
         <li>Arms</li>
         <li>Hands</li>
+		<li>Neck</li>
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Warcasketlike/Warcasket/WarcasketShoulders</wornGraphicPath>
       <layers>
@@ -141,32 +119,7 @@
         <li>Middle</li>
         <li>Shell</li>
       </layers>
-      <useDeflectMetalEffect>true</useDeflectMetalEffect>
     </apparel>
-    <colorGenerator Class="ColorGenerator_Options">
-      <options>
-        <li>
-          <weight>10</weight>
-          <only>(0.9,0.9,0.9)</only>
-        </li>
-        <li>
-          <weight>10</weight>
-          <only>(0.33,0.33,0.33)</only>
-        </li>
-        <li>
-          <weight>10</weight>
-          <only>(0.65,0.65,0.65)</only>
-        </li>
-        <li>
-          <weight>6</weight>
-          <min>(0.3,0.3,0.3)</min>
-          <max>(0.5,0.5,0.5)</max>
-        </li>
-      </options>
-    </colorGenerator>
-    <thingSetMakerTags>
-      <li>Warcasket</li> <!-- Won't be actually used anywhere -->
-    </thingSetMakerTags>
   </ThingDef>
 
 </Defs>

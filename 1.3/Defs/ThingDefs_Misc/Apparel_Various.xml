@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="VFEP_WarcasketPartBase" Abstract="True">
+    <thingClass>Apparel</thingClass>
+    <category>Item</category>
+    <drawerType>MapMeshOnly</drawerType>
+    <selectable>True</selectable>
+    <pathCost>14</pathCost>
+    <useHitPoints>False</useHitPoints>
+    <techLevel>Industrial</techLevel>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <statBases>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Beauty>-3</Beauty>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="VFEP_WarcasketPartBase">
+    <defName>VFEP_Warcasket_Warcasket</defName>
+    <label>warcasket</label>
+    <description>Basic warcasket shell with baseline protection and weight.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Warcasketlike/Warcasket/Warcasket</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <generateCommonality>0</generateCommonality>
+    <statBases>
+      <Mass>50</Mass>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>1.06</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.55</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.64</ArmorRating_Heat>
+      <Insulation_Cold>20</Insulation_Cold>
+      <Insulation_Heat>7</Insulation_Heat>
+      <EquipDelay>14</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.5</MoveSpeed>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <tradeTags>
+      <li>Warcasket</li> <!-- Won't be actually used anywhere -->
+    </tradeTags>
+    <costList>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <Steel>80</Steel>
+      <Uranium>20</Uranium>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Legs</li>
+		<li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/Warcasket/Warcasket</wornGraphicPath>
+      <layers>
+	    <li>OnSkin</li>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>(0.9,0.9,0.9)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.33,0.33,0.33)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.65,0.65,0.65)</only>
+        </li>
+        <li>
+          <weight>6</weight>
+          <min>(0.3,0.3,0.3)</min>
+          <max>(0.5,0.5,0.5)</max>
+        </li>
+      </options>
+    </colorGenerator>
+    <thingSetMakerTags>
+      <li>Warcasket</li> <!-- Won't be actually used anywhere -->
+    </thingSetMakerTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="VFEP_WarcasketPartBase">
+    <defName>VFEP_WarcasketShoulders_Warcasket</defName>
+    <label>warcasket shoulders</label>
+    <description>Basic warcasket pauldrons with baseline protection and weight.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Warcasketlike/Warcasket/WarcasketShoulders</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <generateCommonality>0</generateCommonality>
+    <statBases>
+      <Mass>20</Mass>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>1.06</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.55</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.64</ArmorRating_Heat>
+      <Insulation_Cold>6</Insulation_Cold>
+      <Insulation_Heat>2</Insulation_Heat>
+      <EquipDelay>14</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <tradeTags>
+      <li>Warcasket</li> <!-- Won't be actually used anywhere -->
+    </tradeTags>
+    <costList>
+      <Steel>40</Steel>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Hands</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/Warcasket/WarcasketShoulders</wornGraphicPath>
+      <layers>
+	    <li>OnSkin</li>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>(0.9,0.9,0.9)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.33,0.33,0.33)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.65,0.65,0.65)</only>
+        </li>
+        <li>
+          <weight>6</weight>
+          <min>(0.3,0.3,0.3)</min>
+          <max>(0.5,0.5,0.5)</max>
+        </li>
+      </options>
+    </colorGenerator>
+    <thingSetMakerTags>
+      <li>Warcasket</li> <!-- Won't be actually used anywhere -->
+    </thingSetMakerTags>
+  </ThingDef>
+
+</Defs>

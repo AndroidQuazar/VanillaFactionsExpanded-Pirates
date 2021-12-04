@@ -40,6 +40,8 @@
       </li>
     </comps>
   </ThingDef>
+  
+  <!-- Basic warcasket -->
 
   <ThingDef ParentName="VFEP_WarcasketPartBase">
     <defName>VFEP_Warcasket_Warcasket</defName>
@@ -114,6 +116,88 @@
 		<li>Neck</li>
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Warcasketlike/Warcasket/WarcasketShoulders</wornGraphicPath>
+      <layers>
+	    <li>OnSkin</li>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+    </apparel>
+  </ThingDef>
+  
+  <!-- Marine warcasket -->
+  <ThingDef ParentName="VFEP_WarcasketPartBase">
+    <defName>VFEP_Warcasket_Marine</defName>
+    <label>marine warcasket</label>
+    <description>Advanced warcasket shell with improved protection for similar weight.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketMarine/WarcasketMarine</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>50</Mass>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.74</ArmorRating_Heat>
+      <Insulation_Cold>24</Insulation_Cold>
+      <Insulation_Heat>8</Insulation_Heat>
+      <EquipDelay>14</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.5</MoveSpeed>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <costList>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <Steel>130</Steel>
+      <Uranium>40</Uranium>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Legs</li>
+		<li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketMarine/WarcasketMarine</wornGraphicPath>
+      <layers>
+	    <li>OnSkin</li>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+    </apparel>
+  </ThingDef>
+  
+  <ThingDef ParentName="VFEP_WarcasketPartBase">
+    <defName>VFEP_WarcasketShoulders_Marine</defName>
+    <label>marine warcasket shoulders</label>
+    <description>Advanced warcasket pauldrons with improved protection for similar weight.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketMarine/WarcasketMarineShoulders</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>20</Mass>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.74</ArmorRating_Heat>
+      <Insulation_Cold>7</Insulation_Cold>
+      <Insulation_Heat>2</Insulation_Heat>
+      <EquipDelay>14</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <costList>
+      <Steel>55</Steel>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Hands</li>
+		<li>Neck</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketMarine/WarcasketMarineShoulders</wornGraphicPath>
       <layers>
 	    <li>OnSkin</li>
         <li>Middle</li>

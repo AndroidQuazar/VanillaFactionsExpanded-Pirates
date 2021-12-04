@@ -51,9 +51,6 @@
       <MoveSpeed>-0.5</MoveSpeed>
       <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
     </equippedStatOffsets>
-    <thingCategories>
-      <li>ApparelArmor</li>
-    </thingCategories>
     <tradeTags>
       <li>Warcasket</li> <!-- Won't be actually used anywhere -->
     </tradeTags>
@@ -126,9 +123,6 @@
       <MoveSpeed>-0.2</MoveSpeed>
       <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
     </equippedStatOffsets>
-    <thingCategories>
-      <li>ApparelArmor</li>
-    </thingCategories>
     <tradeTags>
       <li>Warcasket</li> <!-- Won't be actually used anywhere -->
     </tradeTags>

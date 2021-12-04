@@ -43,9 +43,6 @@
       </layers>
       <useDeflectMetalEffect>true</useDeflectMetalEffect>
     </apparel>
-    <thingCategories>
-      <li>Headgear</li>
-    </thingCategories>
     <colorGenerator Class="ColorGenerator_Options">
       <options>
         <li>

@@ -41,7 +41,7 @@
     </comps>
   </ThingDef>
   
-  <ThingDef ParentName="VFEP_WarcasketPartBase">
+  <!-- <ThingDef ParentName="VFEP_WarcasketPartBase"> Will remove later
     <defName>VFEP_Warcasket_Bodysuit</defName>
     <label>warcasket bodysuit</label>
     <description>Basic bodysuit that serves as a base for warcasket shells.</description>
@@ -86,7 +86,7 @@
 			<isUnifiedApparel>true</isUnifiedApparel>
 		</li>
 	</modExtensions>
-  </ThingDef>
+  </ThingDef> -->
   
   <!-- Basic warcasket -->
 

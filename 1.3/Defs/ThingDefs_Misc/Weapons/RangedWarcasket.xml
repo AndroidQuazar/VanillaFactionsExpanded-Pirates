@@ -4,6 +4,7 @@
   <ThingDef Name="VFEP_BaseWarcasketGun" ParentName="BaseGunWithQuality" Abstract="True">
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.7</drawSize>
     </graphicData>
     <weaponClasses>
       <li>RangedHeavy</li>
@@ -37,7 +38,6 @@
     <description>A portable version of the Autocannon designed for use by a warcasket. Due to a shortened barrel it has a lower range, less penetration and damage compared to the turreted version. However, it is very capable in close quarters combat which makes up for the slight accuracy loss at greater ranges.</description>
     <graphicData>
       <texPath>Things/Item/Weapons/WarcasketAutorifle</texPath>
-	  <drawSize>2.0</drawSize>
     </graphicData>
     <soundInteract>Interact_Rifle</soundInteract>
     <recipeMaker>
@@ -117,7 +117,6 @@
     <description>A portable version of the uranium slug cannon designed for use by a warcasket. Due to a shortened barrel it has less penetration, worse recoil and damage compared to the turreted version. However, it lacks the minimum range requirement thanks to a human operator and has better mid-range performance.</description>
     <graphicData>
       <texPath>Things/Item/Weapons/WarcasketUraniumSlugRifle</texPath>
-	  <drawSize>2.0</drawSize>
     </graphicData>
     <soundInteract>Interact_Rifle</soundInteract>
     <recipeMaker>
@@ -198,7 +197,6 @@
     <description>An upscaled version of the pump shotgun designed for use by a Warcasket. Each cartridge fired contains 4 pellets larger than slugs from a regular-sized shotgun, giving it better range, armor penetration and much better damage. The recoil is insane though, even for a warcasket’s recoil damping system.</description>
     <graphicData>
       <texPath>Things/Item/Weapons/WarcasketUraniumSlugRifle</texPath>
-	  <drawSize>2.0</drawSize>
     </graphicData>
     <soundInteract>Interact_Shotgun</soundInteract>
     <recipeMaker>
@@ -278,7 +276,6 @@
     <description>An upscaled version of the minigun designed for use by a warcasket. It uses larger caliber rounds which are poorly made en masse due to how many rounds need to be manufactured. Thus, it has a slower rate of fire and armor penetration, but who cares because no one wants to be on the receiving end of this amount of dakka.</description>
     <graphicData>
       <texPath>Things/Item/Weapons/WarcasketMinigun</texPath>
-	  <drawSize>2.0</drawSize>
     </graphicData>
     <soundInteract>Interact_Rifle</soundInteract>
     <recipeMaker>
@@ -358,7 +355,6 @@
     <description>A portable version of the Autocannon designed for use by a warcasket. Due to a shortened barrel it has a lower range, less penetration and damage compared to the turreted version. However, it is very capable in close quarters combat which makes up for the slight accuracy loss at greater ranges.</description>
     <graphicData>
       <texPath>Things/Item/Weapons/WarcasketGrenadeLauncher</texPath>
-	  <drawSize>2.0</drawSize>
     </graphicData>
     <soundInteract>Interact_Rifle</soundInteract>
     <recipeMaker>
@@ -428,7 +424,6 @@
     <description>An upscaled version of the heavy flamer designed for use by a warcasket. Thanks to the twin barrels and larger heat sink, it can spit out two jets of flames while also needing less time to prevent overheating.</description>
     <graphicData>
       <texPath>Things/Item/Weapons/WarcasketHeavyFlamer</texPath>
-	  <drawSize>2.0</drawSize>
     </graphicData>
     <soundInteract>Interact_Rifle</soundInteract>
     <recipeMaker>

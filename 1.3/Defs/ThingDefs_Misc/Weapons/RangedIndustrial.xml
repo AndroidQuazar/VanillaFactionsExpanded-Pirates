@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="VFEP_BaseWarcasketGun" ParentName="BaseGunWithQuality" Abstract="True">
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <weaponTags>
+      <li>Warcasket</li>
+    </weaponTags>
+	<thingSetMakerTags><li>Warcasket</li></thingSetMakerTags>
+	<relicChance>0</relicChance>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+      <researchPrerequisite>VFEP_WarcasketWeaponry</researchPrerequisite>
+    </recipeMaker>
+	<comps>
+		<li>
+			<compClass>CompOversizedWeapon.CompOversizedWeapon</compClass>
+		</li>
+	</comps>
+  </ThingDef>
+
+  <ThingDef ParentName="VFEP_BaseWarcasketGun">
+    <defName>VFEP_WarcasketGun_Autorifle</defName>
+    <label>warcasket autorifle</label>
+    <description>A portable version of the Autocannon designed for use by a warcasket. Due to a shortened barrel it has a lower range, less penetration and damage compared to the turreted version. However, it is very capable in close quarters combat which makes up for the slight accuracy loss at greater ranges.</description>
+    <graphicData>
+      <texPath>Things/Item/Weapons/WarcasketAutorifle</texPath>
+	  <drawSize>2.0</drawSize>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>45000</WorkToMake>
+      <Mass>30</Mass>
+      <AccuracyTouch>0.55</AccuracyTouch>
+      <AccuracyShort>0.64</AccuracyShort>
+      <AccuracyMedium>0.55</AccuracyMedium>
+      <AccuracyLong>0.45</AccuracyLong>
+      <RangedWeapon_Cooldown>2.2</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>175</Steel>
+	  <Plasteel>20</Plasteel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>VFEP_Bullet_WarcasketAutorifle</defaultProjectile>
+        <warmupTime>1</warmupTime>
+        <range>28.9</range>
+        <ticksBetweenBurstShots>17</ticksBetweenBurstShots>
+        <burstShotCount>3</burstShotCount>
+        <soundCast>Shot_Minigun</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>11</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>VFEP_Bullet_WarcasketAutorifle</defName>
+    <label>warcasket autorifle bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>22</damageAmountBase>
+      <stoppingPower>0.5</stoppingPower>
+	  <armorPenetrationBase>0.375</armorPenetrationBase>
+      <speed>46</speed>
+    </projectile>
+  </ThingDef>
+  
+  <ThingDef ParentName="VFEP_BaseWarcasketGun">
+    <defName>VFEP_WarcasketGun_UraniumSlugRifle</defName>
+    <label>warcasket uranium slug rifle</label>
+    <description>A portable version of the uranium slug cannon designed for use by a warcasket. Due to a shortened barrel it has less penetration, worse recoil and damage compared to the turreted version. However, it lacks the minimum range requirement thanks to a human operator and has better mid-range performance.</description>
+    <graphicData>
+      <texPath>Things/Item/Weapons/WarcasketUraniumSlugRifle</texPath>
+	  <drawSize>2.0</drawSize>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>48000</WorkToMake>
+      <Mass>30</Mass>
+      <AccuracyTouch>0.20</AccuracyTouch>
+      <AccuracyShort>0.35</AccuracyShort>
+      <AccuracyMedium>0.55</AccuracyMedium>
+      <AccuracyLong>0.95</AccuracyLong>
+      <RangedWeapon_Cooldown>2.2</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>175</Steel>
+	  <Plasteel>20</Plasteel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>VFEP_Bullet_WarcasketUraniumSlugRifle</defaultProjectile>
+        <warmupTime>2.3</warmupTime>
+        <range>45.9</range>
+        <ticksBetweenBurstShots>17</ticksBetweenBurstShots>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Shot_TurretSniper</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>11</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>VFEP_Bullet_WarcasketUraniumSlugRifle</defName>
+    <label>uranium slug</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>50</damageAmountBase>
+      <stoppingPower>2</stoppingPower>
+	  <armorPenetrationBase>0.75</armorPenetrationBase>
+      <speed>120</speed>
+    </projectile>
+  </ThingDef>
+  
+</Defs>

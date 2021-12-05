@@ -7,5 +7,6 @@ namespace VFEPirates
     public static class VFEP_DefOf
     {
         public static JobDef VFEP_EntompIn;
+        public static ThingDef VFEP_Warcasket_Bodysuit;
     }
 }

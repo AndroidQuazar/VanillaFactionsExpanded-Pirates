@@ -1,11 +1,42 @@
-﻿using RimWorld;
+﻿using HarmonyLib;
+using RimWorld;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography;
+using UnityEngine;
+using UnityEngine.SocialPlatforms;
+using UnityEngine.UIElements.Experimental;
 using Verse;
 using Verse.AI;
 
 namespace VFEPirates
 {
+    public class WarcasketDef : ThingDef
+    {
+
+    }
+
+    [StaticConstructorOnStartup]
+    public static class StaticStartup
+    {
+        static StaticStartup()
+        {
+            Log.Message("1: " + Traverse.Create(typeof(PawnApparelGenerator)).Field<List<ThingStuffPair>>("allApparelPairs").Value.Count);
+            var apparels = DefDatabase<ThingDef>.AllDefs.Where(x => x.apparel != null).ToList();
+            var allApparelPairs = Traverse.Create(typeof(PawnApparelGenerator)).Field<List<ThingStuffPair>>("allApparelPairs").Value;
+            allApparelPairs.RemoveAll(pair => pair.thing is WarcasketDef);
+            Log.Message("2: " + Traverse.Create(typeof(PawnApparelGenerator)).Field<List<ThingStuffPair>>("allApparelPairs").Value.Count);
+        }
+    }
+    public class ApparelExtension : DefModExtension
+    {
+        public bool nonSpawnable;
+        public bool hiddenFromDatabases;
+        public bool isWarCasketApparel;
+    }
     public class Building_WarcasketFoundry : Building
     {
         public Pawn occupant;

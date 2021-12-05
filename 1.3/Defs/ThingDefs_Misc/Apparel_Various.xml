@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ThingDef Name="VFEP_WarcasketPartBase" Abstract="True">
+  <VFEPirates.WarcasketDef Name="VFEP_WarcasketPartBase" Abstract="True">
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
@@ -13,6 +13,7 @@
     <useHitPoints>False</useHitPoints>
     <techLevel>Industrial</techLevel>
     <drawGUIOverlay>true</drawGUIOverlay>
+	<destroyOnDrop>true</destroyOnDrop>
     <statBases>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>0</DeteriorationRate>
@@ -39,58 +40,54 @@
         <compClass>CompColorable</compClass>
       </li>
     </comps>
-  </ThingDef>
+	<modExtensions>
+		<li Class="VFEPirates.ApparelExtension">
+			<nonSpawnable>true</nonSpawnable>
+			<hiddenFromDatabases>true</hiddenFromDatabases>
+			<isWarCasketApparel>true</isWarCasketApparel>
+		</li>
+	</modExtensions>
+  </VFEPirates.WarcasketDef>
   
-  <!-- <ThingDef ParentName="VFEP_WarcasketPartBase"> Will remove later
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketPartBase" Name="VFEP_WarcasketArmorBase" Abstract="True">
+	<thingClass>VFEPirates.Apparel_WarcasketArmor</thingClass>
+	<modExtensions>
+		<li Class="VFECore.ApparelDrawPosExtension">
+			<shellPosDrawSettings>
+				<drawPosNorthOffset>(0, 0.1, 0)</drawPosNorthOffset>
+				<drawPosSouthOffset>(0, 0, 0)</drawPosSouthOffset>
+				<drawPosWestOffset>(-0.03, 0, 0)</drawPosWestOffset>
+				<drawPosEastOffset>(0.03, 0, 0)</drawPosEastOffset>
+				<!--
+				<drawNorthSize>(2, 2)</drawNorthSize>
+				<drawSouthSize>(2, 2)</drawSouthSize>
+				<drawWestSize>(2, 2)</drawWestSize>
+				<drawEastSize>(2, 2)</drawEastSize>-->
+			</shellPosDrawSettings>
+			<isUnifiedApparel>true</isUnifiedApparel>
+		</li>
+	</modExtensions>
+  </VFEPirates.WarcasketDef>
+  
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketPartBase">
     <defName>VFEP_Warcasket_Bodysuit</defName>
     <label>warcasket bodysuit</label>
     <description>Basic bodysuit that serves as a base for warcasket shells.</description>
     <graphicData>
       <texPath>Things/Pawn/Warcasketlike/WarcasketBodysuit/WarcasketBodysuit</texPath>
     </graphicData>
-    <statBases>
-      <Mass>1</Mass>
-      <Flammability>0</Flammability>
-      <ArmorRating_Sharp>0</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0</ArmorRating_Blunt>
-      <ArmorRating_Heat>0</ArmorRating_Heat>
-      <Insulation_Cold>0</Insulation_Cold>
-      <Insulation_Heat>0</Insulation_Heat>
-      <EquipDelay>1</EquipDelay>
-    </statBases>
-    <costList>
-      <Synthread>30</Synthread>
-    </costList>
     <apparel>
-      <bodyPartGroups>
-        <li>Torso</li>
-      </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketBodysuit/WarcasketBodysuit</wornGraphicPath>
       <layers>
-	    <li>OnSkin</li>
+        <li>Middle</li>
+        <li>Shell</li>
       </layers>
     </apparel>
-	<modExtensions>
-		<li Class="VFECore.ApparelDrawPosExtension">
-			<shellPosDrawSettings>
-				<drawPosNorthOffset>(0, 0.1, 0)</drawPosNorthOffset>
-				<drawPosSouthOffset>(0, 0, 0)</drawPosSouthOffset>
-				<drawPosWestOffset>(0, 0, 0)</drawPosWestOffset>
-				<drawPosEastOffset>(0, 0, 0)</drawPosEastOffset>
-
-				<drawNorthSize>(2, 2)</drawNorthSize>
-				<drawSouthSize>(2, 2)</drawSouthSize>
-				<drawWestSize>(2, 2)</drawWestSize>
-				<drawEastSize>(2, 2)</drawEastSize>
-			</shellPosDrawSettings>
-			<isUnifiedApparel>true</isUnifiedApparel>
-		</li>
-	</modExtensions>
-  </ThingDef> -->
+  </VFEPirates.WarcasketDef>
   
   <!-- Basic warcasket -->
 
-  <ThingDef ParentName="VFEP_WarcasketPartBase">
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
     <defName>VFEP_Warcasket_Warcasket</defName>
     <label>warcasket</label>
     <description>Basic warcasket shell with baseline protection and weight.</description>
@@ -128,25 +125,28 @@
         <li>Shell</li>
       </layers>
     </apparel>
+  </VFEPirates.WarcasketDef>
+  
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketPartBase" Name="VFEP_WarcasketShoulderPadBase" Abstract="True">
 	<modExtensions>
 		<li Class="VFECore.ApparelDrawPosExtension">
 			<shellPosDrawSettings>
-				<drawPosNorthOffset>(0, 0.1, 0)</drawPosNorthOffset>
-				<drawPosSouthOffset>(0, 0, 0)</drawPosSouthOffset>
-				<drawPosWestOffset>(0, 0, 0)</drawPosWestOffset>
-				<drawPosEastOffset>(0, 0, 0)</drawPosEastOffset>
+				<drawPosNorthOffset>(0, 0.2, 0)</drawPosNorthOffset>
+				<drawPosSouthOffset>(0, 0.1, 0)</drawPosSouthOffset>
+				<drawPosWestOffset>(0, 0.1, 0)</drawPosWestOffset>
+				<drawPosEastOffset>(0, 0.1, 0)</drawPosEastOffset>
 				<!--
 				<drawNorthSize>(2, 2)</drawNorthSize>
 				<drawSouthSize>(2, 2)</drawSouthSize>
 				<drawWestSize>(2, 2)</drawWestSize>
-				<drawEastSize>(2, 2)</drawEastSize>-->
+				<drawEastSize>(2, 2)</drawEastSize> -->
 			</shellPosDrawSettings>
 			<isUnifiedApparel>true</isUnifiedApparel>
 		</li>
 	</modExtensions>
-  </ThingDef>
+  </VFEPirates.WarcasketDef>
   
-  <ThingDef ParentName="VFEP_WarcasketPartBase">
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
     <defName>VFEP_WarcasketShoulders_Warcasket</defName>
     <label>warcasket shoulders</label>
     <description>Basic warcasket pauldrons with baseline protection and weight.</description>
@@ -184,26 +184,10 @@
         <li>Shell</li>
       </layers>
     </apparel>
-	<modExtensions>
-		<li Class="VFECore.ApparelDrawPosExtension">
-			<shellPosDrawSettings>
-				<drawPosNorthOffset>(0, 0.2, 0)</drawPosNorthOffset>
-				<drawPosSouthOffset>(0, 0.1, 0)</drawPosSouthOffset>
-				<drawPosWestOffset>(0, 0.1, 0)</drawPosWestOffset>
-				<drawPosEastOffset>(0, 0.1, 0)</drawPosEastOffset>
-				<!--
-				<drawNorthSize>(2, 2)</drawNorthSize>
-				<drawSouthSize>(2, 2)</drawSouthSize>
-				<drawWestSize>(2, 2)</drawWestSize>
-				<drawEastSize>(2, 2)</drawEastSize> -->
-			</shellPosDrawSettings>
-			<isUnifiedApparel>true</isUnifiedApparel>
-		</li>
-	</modExtensions>
-  </ThingDef>
+  </VFEPirates.WarcasketDef>
   
   <!-- Marine warcasket -->
-  <ThingDef ParentName="VFEP_WarcasketPartBase">
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
     <defName>VFEP_Warcasket_Marine</defName>
     <label>marine warcasket</label>
     <description>Advanced warcasket shell with improved protection for similar weight.</description>
@@ -242,9 +226,9 @@
         <li>Shell</li>
       </layers>
     </apparel>
-  </ThingDef>
+  </VFEPirates.WarcasketDef>
   
-  <ThingDef ParentName="VFEP_WarcasketPartBase">
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
     <defName>VFEP_WarcasketShoulders_Marine</defName>
     <label>marine warcasket shoulders</label>
     <description>Advanced warcasket pauldrons with improved protection for similar weight.</description>
@@ -282,6 +266,6 @@
         <li>Shell</li>
       </layers>
     </apparel>
-  </ThingDef>
+  </VFEPirates.WarcasketDef>
 
 </Defs>

@@ -1,7 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ThingDef ParentName="VFEP_WarcasketPartBase">
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketPartBase" Name="VFEP_WarcasketHelmetBase" Abstract="True">
+	<modExtensions>
+		<li Class="VFECore.ApparelDrawPosExtension">
+			<headgearDrawSettings>
+				<drawPosNorthOffset>(0, 0, 0.07)</drawPosNorthOffset>
+				<drawPosSouthOffset>(0, 0.2, 0.07)</drawPosSouthOffset>
+				<drawPosWestOffset>(-0.07, 0, 0.07)</drawPosWestOffset>
+				<drawPosEastOffset>(0.07, 0, 0.07)</drawPosEastOffset>
+				<!--
+				<drawNorthSize>(2, 2)</drawNorthSize>
+				<drawSouthSize>(2, 2)</drawSouthSize>
+				<drawWestSize>(2, 2)</drawWestSize>
+				<drawEastSize>(2, 2)</drawEastSize> -->
+			</headgearDrawSettings>
+			<isUnifiedApparel>true</isUnifiedApparel>
+			<hideHead>true</hideHead>
+		</li>
+	</modExtensions>
+  </VFEPirates.WarcasketDef>
+
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketHelmetBase">
     <defName>VFEP_WarcasketHelmet_Warcasket</defName>
     <label>warcasket helmet</label>
     <description>Basic warcasket helmet with baseline protection and weight.</description>
@@ -37,25 +57,9 @@
 		<li>EyeCover</li>
       </layers>
     </apparel>
-	<modExtensions>
-		<li Class="VFECore.ApparelDrawPosExtension">
-			<headgearDrawSettings>
-				<drawPosNorthOffset>(0, 0, 0)</drawPosNorthOffset>
-				<drawPosSouthOffset>(0, 0.2, 0)</drawPosSouthOffset>
-				<drawPosWestOffset>(0, 0, 0)</drawPosWestOffset>
-				<drawPosEastOffset>(0, 0, 0)</drawPosEastOffset>
-				<!--
-				<drawNorthSize>(2, 2)</drawNorthSize>
-				<drawSouthSize>(2, 2)</drawSouthSize>
-				<drawWestSize>(2, 2)</drawWestSize>
-				<drawEastSize>(2, 2)</drawEastSize> -->
-			</headgearDrawSettings>
-			<isUnifiedApparel>true</isUnifiedApparel>
-		</li>
-	</modExtensions>
-  </ThingDef>
-  
-  <ThingDef ParentName="VFEP_WarcasketPartBase">
+  </VFEPirates.WarcasketDef>
+
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketHelmetBase">
     <defName>VFEP_WarcasketHelmet_Marine</defName>
     <label>marine warcasket helmet</label>
     <description>Advanced warcasket helmet with improved protection for similar weight.</description>
@@ -91,6 +95,6 @@
 		<li>EyeCover</li>
       </layers>
     </apparel>
-  </ThingDef>
+  </VFEPirates.WarcasketDef>
 
 </Defs>

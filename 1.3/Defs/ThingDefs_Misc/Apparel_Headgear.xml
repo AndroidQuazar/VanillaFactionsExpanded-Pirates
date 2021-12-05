@@ -40,10 +40,15 @@
 	<modExtensions>
 		<li Class="VFECore.ApparelDrawPosExtension">
 			<headgearDrawSettings>
-				<drawPosNorthOffset>(0, 0, 0)</drawPosNorthOffset>
-				<drawPosSouthOffset>(0, 0, 0)</drawPosSouthOffset>
-				<drawPosWestOffset>(0, 0, 0)</drawPosWestOffset>
-				<drawPosEastOffset>(0, 0, 0)</drawPosEastOffset>
+				<drawPosNorthOffset>(0, 0, 1)</drawPosNorthOffset>
+				<drawPosSouthOffset>(0, 0.2, 1)</drawPosSouthOffset>
+				<drawPosWestOffset>(0, 0, 1)</drawPosWestOffset>
+				<drawPosEastOffset>(0, 0, 1)</drawPosEastOffset>
+				
+				<drawNorthSize>(2, 2)</drawNorthSize>
+				<drawSouthSize>(2, 2)</drawSouthSize>
+				<drawWestSize>(2, 2)</drawWestSize>
+				<drawEastSize>(2, 2)</drawEastSize>
 			</headgearDrawSettings>
 			<isUnifiedApparel>true</isUnifiedApparel>
 		</li>

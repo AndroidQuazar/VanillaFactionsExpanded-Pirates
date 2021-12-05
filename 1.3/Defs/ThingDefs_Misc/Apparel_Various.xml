@@ -85,15 +85,15 @@
 	<modExtensions>
 		<li Class="VFECore.ApparelDrawPosExtension">
 			<shellPosDrawSettings>
-				<drawPosNorthOffset>(0, 0, 0)</drawPosNorthOffset>
+				<drawPosNorthOffset>(0, 0.1, 0)</drawPosNorthOffset>
 				<drawPosSouthOffset>(0, 0, 0)</drawPosSouthOffset>
 				<drawPosWestOffset>(0, 0, 0)</drawPosWestOffset>
 				<drawPosEastOffset>(0, 0, 0)</drawPosEastOffset>
 
-				<drawNorthSize>(15, 15)</drawNorthSize>
-				<drawSouthSize>(15, 15)</drawSouthSize>
-				<drawWestSize>(15, 15)</drawWestSize>
-				<drawEastSize>(15, 15)</drawEastSize>
+				<drawNorthSize>(2, 2)</drawNorthSize>
+				<drawSouthSize>(2, 2)</drawSouthSize>
+				<drawWestSize>(2, 2)</drawWestSize>
+				<drawEastSize>(2, 2)</drawEastSize>
 			</shellPosDrawSettings>
 			<isUnifiedApparel>true</isUnifiedApparel>
 		</li>
@@ -140,17 +140,17 @@
     </apparel>
 	<modExtensions>
 		<li Class="VFECore.ApparelDrawPosExtension">
-			<apparelDrawSettings>
-				<drawPosNorthOffset>(1, 0, 0)</drawPosNorthOffset>
-				<drawPosSouthOffset>(1, 0, 0)</drawPosSouthOffset>
-				<drawPosWestOffset>(1, 0, 0)</drawPosWestOffset>
-				<drawPosEastOffset>(1, 0, 0)</drawPosEastOffset>
+			<shellPosDrawSettings>
+				<drawPosNorthOffset>(0, 0.2, 0)</drawPosNorthOffset>
+				<drawPosSouthOffset>(0, 0.1, 0)</drawPosSouthOffset>
+				<drawPosWestOffset>(0, 0.1, 0)</drawPosWestOffset>
+				<drawPosEastOffset>(0, 0.1, 0)</drawPosEastOffset>
 
-				<drawNorthSize>(3, 3)</drawNorthSize>
-				<drawSouthSize>(3, 3)</drawSouthSize>
-				<drawWestSize>(3, 3)</drawWestSize>
-				<drawEastSize>(3, 3)</drawEastSize>
-			</apparelDrawSettings>
+				<drawNorthSize>(2, 2)</drawNorthSize>
+				<drawSouthSize>(2, 2)</drawSouthSize>
+				<drawWestSize>(2, 2)</drawWestSize>
+				<drawEastSize>(2, 2)</drawEastSize>
+			</shellPosDrawSettings>
 			<isUnifiedApparel>true</isUnifiedApparel>
 		</li>
 	</modExtensions>

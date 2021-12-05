@@ -136,8 +136,9 @@
       <RangedWeapon_Cooldown>2.2</RangedWeapon_Cooldown>
     </statBases>
     <costList>
-      <Steel>175</Steel>
-	  <Plasteel>20</Plasteel>
+      <Steel>150</Steel>
+	  <Plasteel>15</Plasteel>
+	  <Uranium>30</Uranium>
       <ComponentIndustrial>3</ComponentIndustrial>
     </costList>
     <verbs>
@@ -194,7 +195,7 @@
   <ThingDef ParentName="VFEP_BaseWarcasketGun">
     <defName>VFEP_WarcasketGun_Slugthrower</defName>
     <label>warcasket slugthrower</label>
-    <description>An upscaled version of the Pump Shotgun designed for use by a Warcasket. Each cartridge fired contains 4 pellets larger than slugs from a regular-sized shotgun, giving it better range, armor penetration and much better damage. The recoil is insane though, even for a Warcasket’s recoil damping system.</description>
+    <description>An upscaled version of the pump shotgun designed for use by a Warcasket. Each cartridge fired contains 4 pellets larger than slugs from a regular-sized shotgun, giving it better range, armor penetration and much better damage. The recoil is insane though, even for a warcasket’s recoil damping system.</description>
     <graphicData>
       <texPath>Things/Item/Weapons/WarcasketUraniumSlugRifle</texPath>
 	  <drawSize>2.0</drawSize>
@@ -268,6 +269,86 @@
       <stoppingPower>3</stoppingPower>
       <armorPenetrationBase>0.225</armorPenetrationBase>
       <speed>55</speed>
+    </projectile>
+  </ThingDef>
+  
+  <ThingDef ParentName="VFEP_BaseWarcasketGun">
+    <defName>VFEP_WarcasketGun_Minigun</defName>
+    <label>warcasket minigun</label>
+    <description>An upscaled version of the minigun designed for use by a warcasket. It uses larger caliber rounds which are poorly made en masse due to how many rounds need to be manufactured. Thus, it has a slower rate of fire and armor penetration, but who cares because no one wants to be on the receiving end of this amount of dakka.</description>
+    <graphicData>
+      <texPath>Things/Item/Weapons/WarcasketMinigun</texPath>
+	  <drawSize>2.0</drawSize>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+	  <MarketValue>2240</MarketValue>
+      <WorkToMake>55000</WorkToMake>
+      <Mass>45</Mass>
+      <AccuracyTouch>0.15</AccuracyTouch>
+      <AccuracyShort>0.25</AccuracyShort>
+      <AccuracyMedium>0.25</AccuracyMedium>
+      <AccuracyLong>0.18</AccuracyLong>
+      <RangedWeapon_Cooldown>2.6</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>240</Steel>
+	  <Plasteel>10</Plasteel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>VFEP_Bullet_WarcasketMinigun</defaultProjectile>
+        <warmupTime>3.1</warmupTime>
+        <range>30.9</range>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <burstShotCount>25</burstShotCount>
+        <soundCast>Shot_Minigun</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>4</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>4</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>VFEP_Bullet_WarcasketMinigun</defName>
+    <label>warcasket minigun bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>12</damageAmountBase>
+      <stoppingPower>0.5</stoppingPower>
+	  <armorPenetrationBase>0.12</armorPenetrationBase>
+      <speed>46</speed>
     </projectile>
   </ThingDef>
   

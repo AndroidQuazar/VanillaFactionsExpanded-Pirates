@@ -89,11 +89,11 @@
 				<drawPosSouthOffset>(0, 0, 0)</drawPosSouthOffset>
 				<drawPosWestOffset>(0, 0, 0)</drawPosWestOffset>
 				<drawPosEastOffset>(0, 0, 0)</drawPosEastOffset>
-
+				<!--
 				<drawNorthSize>(2, 2)</drawNorthSize>
 				<drawSouthSize>(2, 2)</drawSouthSize>
 				<drawWestSize>(2, 2)</drawWestSize>
-				<drawEastSize>(2, 2)</drawEastSize>
+				<drawEastSize>(2, 2)</drawEastSize>-->
 			</shellPosDrawSettings>
 			<isUnifiedApparel>true</isUnifiedApparel>
 		</li>
@@ -145,11 +145,11 @@
 				<drawPosSouthOffset>(0, 0.1, 0)</drawPosSouthOffset>
 				<drawPosWestOffset>(0, 0.1, 0)</drawPosWestOffset>
 				<drawPosEastOffset>(0, 0.1, 0)</drawPosEastOffset>
-
+				<!--
 				<drawNorthSize>(2, 2)</drawNorthSize>
 				<drawSouthSize>(2, 2)</drawSouthSize>
 				<drawWestSize>(2, 2)</drawWestSize>
-				<drawEastSize>(2, 2)</drawEastSize>
+				<drawEastSize>(2, 2)</drawEastSize> -->
 			</shellPosDrawSettings>
 			<isUnifiedApparel>true</isUnifiedApparel>
 		</li>

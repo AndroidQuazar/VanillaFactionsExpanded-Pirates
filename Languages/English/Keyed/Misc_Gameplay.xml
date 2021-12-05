@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	
+	<VFEPirates.CannotEntomb>Cannot entomp in warcasket: {0}</VFEPirates.CannotEntomb>
+	<VFEPirates.EntombInWarcasket>Entomb in warcasket</VFEPirates.EntombInWarcasket>
+	<VFEPirates.EntombingWarning>Entombing a colonist in warcasket is permanent operation that cannot be reversed without painful consequences.</VFEPirates.EntombingWarning>
+</LanguageData>

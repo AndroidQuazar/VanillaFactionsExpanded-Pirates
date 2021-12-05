@@ -41,14 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Building_WarcasketFoundry.cs" />
+    <Compile Include="VFEPiratesMod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VFEP_DefOf.cs" />
+    <Compile Include="WarcasketProject.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">
       <Version>1.3.3200</Version>
     </PackageReference>
-    <PackageReference Include="Lib.Harmony" ExcludeAssets="runtime" >
+    <PackageReference Include="Lib.Harmony" ExcludeAssets="runtime">
       <Version>2.1.1</Version>
     </PackageReference>
   </ItemGroup>

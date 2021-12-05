@@ -44,7 +44,7 @@
   <ThingDef ParentName="VFEP_WarcasketPartBase">
     <defName>VFEP_Warcasket_Bodysuit</defName>
     <label>warcasket bodysuit</label>
-    <description>Basic body suit that serves as a base for warcasket shells.</description>
+    <description>Basic bodysuit that serves as a base for warcasket shells.</description>
     <graphicData>
       <texPath>Things/Pawn/Warcasketlike/WarcasketBodysuit/WarcasketBodysuit</texPath>
     </graphicData>

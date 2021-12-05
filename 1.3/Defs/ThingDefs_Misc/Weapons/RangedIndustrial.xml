@@ -46,6 +46,7 @@
       </skillRequirements>
     </recipeMaker>
     <statBases>
+	  <MarketValue>1250</MarketValue>
       <WorkToMake>45000</WorkToMake>
       <Mass>30</Mass>
       <AccuracyTouch>0.55</AccuracyTouch>
@@ -125,6 +126,7 @@
       </skillRequirements>
     </recipeMaker>
     <statBases>
+	  <MarketValue>1650</MarketValue>
       <WorkToMake>48000</WorkToMake>
       <Mass>40</Mass>
       <AccuracyTouch>0.20</AccuracyTouch>

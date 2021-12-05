@@ -2,6 +2,8 @@
 <Defs>
 
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketPartBase" Name="VFEP_WarcasketHelmetBase" Abstract="True">
+	<shortDescription>short desc</shortDescription>
+	<isHelmet>true</isHelmet>
 	<modExtensions>
 		<li Class="VFECore.ApparelDrawPosExtension">
 			<headgearDrawSettings>

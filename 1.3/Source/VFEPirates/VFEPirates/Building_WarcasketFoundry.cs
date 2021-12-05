@@ -1,10 +1,9 @@
-﻿using HarmonyLib;
-using RimWorld;
+﻿using RimWorld;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Runtime.Remoting.Messaging;
 using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
@@ -14,34 +13,16 @@ using Verse.AI;
 
 namespace VFEPirates
 {
-    public class WarcasketDef : ThingDef
-    {
-
-    }
-
     [StaticConstructorOnStartup]
-    public static class StaticStartup
-    {
-        static StaticStartup()
-        {
-            Log.Message("1: " + Traverse.Create(typeof(PawnApparelGenerator)).Field<List<ThingStuffPair>>("allApparelPairs").Value.Count);
-            var apparels = DefDatabase<ThingDef>.AllDefs.Where(x => x.apparel != null).ToList();
-            var allApparelPairs = Traverse.Create(typeof(PawnApparelGenerator)).Field<List<ThingStuffPair>>("allApparelPairs").Value;
-            allApparelPairs.RemoveAll(pair => pair.thing is WarcasketDef);
-            Log.Message("2: " + Traverse.Create(typeof(PawnApparelGenerator)).Field<List<ThingStuffPair>>("allApparelPairs").Value.Count);
-        }
-    }
-    public class ApparelExtension : DefModExtension
-    {
-        public bool nonSpawnable;
-        public bool hiddenFromDatabases;
-        public bool isWarCasketApparel;
-    }
     public class Building_WarcasketFoundry : Building
     {
         public Pawn occupant;
 
         public CompPowerTrader compPower;
+
+        public float weldingProgress;
+
+        public WarcasketProject curWarcasketProject;
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
@@ -61,7 +42,7 @@ namespace VFEPirates
                     }
                     else
                     {
-                        JobDef jobDef = VFEP_DefOf.VFEP_EntompIn;
+                        JobDef jobDef = VFEP_DefOf.VFEP_EntombIn;
                         string label = "VFEPirates.EntombInWarcasket".Translate();
                         Action action = delegate
                         {
@@ -84,15 +65,63 @@ namespace VFEPirates
             return null;
         }
 
+        public void OpenCustomizationWindow(Pawn entombedPawn)
+        {
+            // Legodude, here you need to create and call customization window where you initialize chosenWarCasketProject with all its variables, such as crafter, total cost, workamount etc
+            // All armor, helmet and shoulder pad defs can be found in VFEPiratesMod class
+
+            // below is just a test code which you can use for now
+            var armor = VFEPiratesMod.allArmorDefs.RandomElement();
+            var shoulderPads = VFEPiratesMod.allShoulderPadsDefs.RandomElement();
+            var helmet = VFEPiratesMod.allHelmetDefs.RandomElement();
+            curWarcasketProject = new WarcasketProject
+            {
+                armorDef = armor,
+                shoulderPadsDef = shoulderPads,
+                helmetDef = helmet,
+                colorArmor = new Color(Rand.RangeInclusive(0, 255), Rand.RangeInclusive(0, 255), Rand.RangeInclusive(0, 255)),
+                colorHelmet = new Color(Rand.RangeInclusive(0, 255), Rand.RangeInclusive(0, 255), Rand.RangeInclusive(0, 255)),
+                colorShoulderPads = new Color(Rand.RangeInclusive(0, 255), Rand.RangeInclusive(0, 255), Rand.RangeInclusive(0, 255)),
+                totalWorkAmount = armor.GetStatValueAbstract(StatDefOf.WorkToMake) + shoulderPads.GetStatValueAbstract(StatDefOf.WorkToMake) + helmet.GetStatValueAbstract(StatDefOf.WorkToMake)
+            };
+        }
         public void RegisterOccupant(Pawn pawn)
         {
             occupant = pawn;
+        }
+
+        public void DeregisterOccupant()
+        {
+            occupant = null;
+        }
+
+        public static readonly Material Frame = MaterialPool.MatFrom("Things/Building/WarcasketFoundry/WarcasketFrame");
+
+        [TweakValue("00", 0, 10)] public static float yOffset = 4.5f;
+        [TweakValue("00", 0, 10)] public static float zOffset = 0.7f;
+
+        [TweakValue("00", 0, 10)] public static float ySize = 2f;
+        [TweakValue("00", 0, 10)] public static float zSize = 2f;
+        public override void Draw()
+        {
+            base.Draw();
+            if (occupant != null)
+            {
+                var pos = this.TrueCenter();
+                pos.y += yOffset;
+                pos.z += zOffset;
+                var quat = Quaternion.identity;
+                var matrix = default(Matrix4x4);
+                matrix.SetTRS(pos, quat, new Vector3(ySize, 1, zSize));
+                Graphics.DrawMesh(MeshPool.plane10, matrix, Frame, 0);
+            }
         }
 
         public override void ExposeData()
         {
             base.ExposeData();
             Scribe_References.Look(ref occupant, "occupant");
+            Scribe_Deep.Look(ref curWarcasketProject, "curWarcasketProject");
         }
     }
 }

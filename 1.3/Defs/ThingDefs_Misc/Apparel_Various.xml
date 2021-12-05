@@ -2,6 +2,7 @@
 <Defs>
 
   <VFEPirates.WarcasketDef Name="VFEP_WarcasketPartBase" Abstract="True">
+    <tradeability>None</tradeability>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
@@ -18,6 +19,7 @@
       <Flammability>1.0</Flammability>
       <DeteriorationRate>0</DeteriorationRate>
       <Beauty>-3</Beauty>
+	  <WorkToMake>1000</WorkToMake>
     </statBases>
     <apparel>
       <useDeflectMetalEffect>true</useDeflectMetalEffect>
@@ -51,6 +53,8 @@
   
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketPartBase" Name="VFEP_WarcasketArmorBase" Abstract="True">
 	<thingClass>VFEPirates.Apparel_WarcasketArmor</thingClass>
+	<isArmor>true</isArmor>
+	<shortDescription>short desc</shortDescription>
 	<modExtensions>
 		<li Class="VFECore.ApparelDrawPosExtension">
 			<shellPosDrawSettings>
@@ -128,6 +132,8 @@
   </VFEPirates.WarcasketDef>
   
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketPartBase" Name="VFEP_WarcasketShoulderPadBase" Abstract="True">
+	<isShoulderPads>true</isShoulderPads>
+	<shortDescription>short desc</shortDescription>
 	<modExtensions>
 		<li Class="VFECore.ApparelDrawPosExtension">
 			<shellPosDrawSettings>

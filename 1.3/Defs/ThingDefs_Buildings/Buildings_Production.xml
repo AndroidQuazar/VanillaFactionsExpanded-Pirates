@@ -61,6 +61,7 @@
     <hasInteractionCell>False</hasInteractionCell>
     <surfaceType>Item</surfaceType>
     <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <drawerType>MapMeshAndRealTime</drawerType>
     <!-- <inspectorTabs> Doubt it should have bills, leaving it just in case, will remove later
       <li>ITab_Bills</li>
     </inspectorTabs>

@@ -1,5 +1,5 @@
 ﻿using HarmonyLib;
-using System;
+using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +12,9 @@ namespace VFEPirates
     {
         public static Harmony harmony;
 
-        public static List<ThingDef> allWarcasketApparels = new List<ThingDef>();
+        public static List<WarcasketDef> allArmorDefs = new List<WarcasketDef>();
+        public static List<WarcasketDef> allShoulderPadsDefs = new List<WarcasketDef>();
+        public static List<WarcasketDef> allHelmetDefs = new List<WarcasketDef>();
         public VFEPiratesMod(ModContentPack modContentPack) : base(modContentPack)
         {
             harmony = new Harmony("VFEPirates.Mod");

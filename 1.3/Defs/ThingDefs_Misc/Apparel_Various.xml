@@ -49,13 +49,13 @@
       <texPath>Things/Pawn/Warcasketlike/WarcasketBodysuit/WarcasketBodysuit</texPath>
     </graphicData>
     <statBases>
-      <Mass>2</Mass>
+      <Mass>1</Mass>
       <Flammability>0</Flammability>
       <ArmorRating_Sharp>0</ArmorRating_Sharp>
       <ArmorRating_Blunt>0</ArmorRating_Blunt>
       <ArmorRating_Heat>0</ArmorRating_Heat>
-      <Insulation_Cold>2</Insulation_Cold>
-      <Insulation_Heat>2</Insulation_Heat>
+      <Insulation_Cold>0</Insulation_Cold>
+      <Insulation_Heat>0</Insulation_Heat>
       <EquipDelay>1</EquipDelay>
     </statBases>
     <costList>

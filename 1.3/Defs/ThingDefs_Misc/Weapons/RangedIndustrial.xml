@@ -352,4 +352,74 @@
     </projectile>
   </ThingDef>
   
+  <ThingDef ParentName="VFEP_BaseWarcasketGun">
+    <defName>VFEP_WarcasketGun_GrenadeLauncher</defName>
+    <label>warcasket grenade launcher</label>
+    <description>A portable version of the Autocannon designed for use by a warcasket. Due to a shortened barrel it has a lower range, less penetration and damage compared to the turreted version. However, it is very capable in close quarters combat which makes up for the slight accuracy loss at greater ranges.</description>
+    <graphicData>
+      <texPath>Things/Item/Weapons/WarcasketGrenadeLauncher</texPath>
+	  <drawSize>2.0</drawSize>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+	  <MarketValue>1890</MarketValue>
+      <WorkToMake>55000</WorkToMake>
+      <Mass>30</Mass>
+      <AccuracyTouch>0.55</AccuracyTouch>
+      <AccuracyShort>0.64</AccuracyShort>
+      <AccuracyMedium>0.55</AccuracyMedium>
+      <AccuracyLong>0.45</AccuracyLong>
+      <RangedWeapon_Cooldown>3.0</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>120</Steel>
+	  <Chemfuel>80</Chemfuel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Proj_GrenadeFrag</defaultProjectile>
+        <warmupTime>1.8</warmupTime>
+        <range>30.9</range>
+		<forcedMissRadius>2.9</forcedMissRadius>
+        <noiseRadius>4</noiseRadius>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <burstShotCount>3</burstShotCount>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>11</power>
+        <cooldownTime>3</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>3</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
 </Defs>

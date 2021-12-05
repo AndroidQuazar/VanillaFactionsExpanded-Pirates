@@ -12,6 +12,9 @@
     <weaponTags>
       <li>Warcasket</li>
     </weaponTags>
+    <tradeTags>
+      <li>VFEP_WarcasketWeapon</li>
+    </tradeTags>
 	<thingSetMakerTags><li>Warcasket</li></thingSetMakerTags>
 	<relicChance>0</relicChance>
     <recipeMaker>

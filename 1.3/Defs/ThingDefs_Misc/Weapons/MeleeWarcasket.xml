@@ -37,15 +37,15 @@
   <ThingDef ParentName="VFEP_BaseMeleeWeapon_Warcasket">
     <defName>VFEP_WarcasketMeleeWeapon_CombatKnife</defName>
     <label>warcasket combat knife</label>
-    <description>An upscaled version of the Combat Knife designed for use by a Warcasket. It is only still called a knife due to size comparison to a Warcasket, but it is capable of cleaving a man in half and is just as large. The preferred weapon for the faster moving Warcaskets that prioritize lightly armored, isolated targets.</description>
+    <description>An upscaled version of the combat knife designed for use by a warcasket. It is only still called a knife due to size comparison to a warcasket, but it is capable of cleaving a man in half and is just as large. The preferred weapon for the faster moving warcaskets that prioritize lightly armored, isolated targets.</description>
     <graphicData>
       <texPath>Things/Item/Weapons/WarcasketCombatKnife</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
 	  <drawSize>1.5</drawSize>
     </graphicData>
     <statBases>
+	  <MarketValue>870</MarketValue>
       <WorkToMake>25000</WorkToMake>
-      <Mass>8</Mass>
+      <Mass>10</Mass>
     </statBases>
     <equippedAngleOffset>-65</equippedAngleOffset>
     <costList>
@@ -59,6 +59,7 @@
         </capacities>
         <power>24</power>
         <cooldownTime>2</cooldownTime>
+		<armorPenetration>0.34</armorPenetration>
       </li>
       <li>
         <label>blade</label>
@@ -67,6 +68,52 @@
         </capacities>
         <power>24</power>
         <cooldownTime>2.4</cooldownTime>
+		<armorPenetration>0.34</armorPenetration>
+      </li>
+    </tools>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  
+  <ThingDef ParentName="VFEP_BaseMeleeWeapon_Warcasket">
+    <defName>VFEP_WarcasketMeleeWeapon_Broadsword</defName>
+    <label>warcasket broadsword</label>
+    <description>A very unique melee weapon exclusively made for warcaskets. It combines massive weight and a cutting force that gives it no equal in melee combat. While it was intended for use against other warcaskets, it works just as well against smaller targets that would normally be considered armored.</description>
+    <graphicData>
+      <texPath>Things/Item/Weapons/WarcasketBroadsword</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.7</drawSize>
+    </graphicData>
+    <statBases>
+	  <MarketValue>1460</MarketValue>
+      <WorkToMake>35000</WorkToMake>
+      <Mass>30</Mass>
+    </statBases>
+	<equippedAngleOffset>-35</equippedAngleOffset>
+    <costList>
+      <Steel>270</Steel>
+    </costList>
+    <tools>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>26</power>
+        <cooldownTime>2.6</cooldownTime>
+		<armorPenetration>0.45</armorPenetration>
+      </li>
+      <li>
+        <label>blade</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>36</power>
+        <cooldownTime>2.8</cooldownTime>
+		<armorPenetration>0.5</armorPenetration>
       </li>
     </tools>
     <recipeMaker>

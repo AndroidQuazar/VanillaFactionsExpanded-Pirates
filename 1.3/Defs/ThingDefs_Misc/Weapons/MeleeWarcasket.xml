@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <ThingDef Name="VFEP_BaseMeleeWeapon_Warcasket" ParentName="BaseMeleeWeapon" Abstract="True">
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <weaponClasses>
+      <li>MeleePiercer</li>
+    </weaponClasses>
+	<techLevel>Industrial</techLevel>
+    <weaponTags>
+      <li>Warcasket</li>
+    </weaponTags>
+	<thingSetMakerTags><li>Warcasket</li></thingSetMakerTags>
+	<relicChance>0</relicChance>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>FueledSmithy</li>
+		<li>ElectricSmithy</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+      <researchPrerequisite>VFEP_WarcasketWeaponry</researchPrerequisite>
+    </recipeMaker>
+	<comps>
+		<li>
+			<compClass>CompOversizedWeapon.CompOversizedWeapon</compClass>
+		</li>
+	</comps>
+  </ThingDef>
+
+  <ThingDef ParentName="VFEP_BaseMeleeWeapon_Warcasket">
+    <defName>VFEP_WarcasketMeleeWeapon_CombatKnife</defName>
+    <label>warcasket combat knife</label>
+    <description>An upscaled version of the Combat Knife designed for use by a Warcasket. It is only still called a knife due to size comparison to a Warcasket, but it is capable of cleaving a man in half and is just as large. The preferred weapon for the faster moving Warcaskets that prioritize lightly armored, isolated targets.</description>
+    <graphicData>
+      <texPath>Things/Item/Weapons/WarcasketCombatKnife</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.5</drawSize>
+    </graphicData>
+    <statBases>
+      <WorkToMake>25000</WorkToMake>
+      <Mass>8</Mass>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <costList>
+      <Steel>140</Steel>
+    </costList>
+    <tools>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>24</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>blade</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>24</power>
+        <cooldownTime>2.4</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+
+</Defs>

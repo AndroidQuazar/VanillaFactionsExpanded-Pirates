@@ -41,6 +41,53 @@
     </comps>
   </ThingDef>
   
+  <!-- <ThingDef ParentName="VFEP_WarcasketPartBase"> Will remove later
+    <defName>VFEP_Warcasket_Bodysuit</defName>
+    <label>warcasket bodysuit</label>
+    <description>Basic bodysuit that serves as a base for warcasket shells.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketBodysuit/WarcasketBodysuit</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>1</Mass>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>0</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0</ArmorRating_Blunt>
+      <ArmorRating_Heat>0</ArmorRating_Heat>
+      <Insulation_Cold>0</Insulation_Cold>
+      <Insulation_Heat>0</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <costList>
+      <Synthread>30</Synthread>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketBodysuit/WarcasketBodysuit</wornGraphicPath>
+      <layers>
+	    <li>OnSkin</li>
+      </layers>
+    </apparel>
+	<modExtensions>
+		<li Class="VFECore.ApparelDrawPosExtension">
+			<shellPosDrawSettings>
+				<drawPosNorthOffset>(0, 0.1, 0)</drawPosNorthOffset>
+				<drawPosSouthOffset>(0, 0, 0)</drawPosSouthOffset>
+				<drawPosWestOffset>(0, 0, 0)</drawPosWestOffset>
+				<drawPosEastOffset>(0, 0, 0)</drawPosEastOffset>
+
+				<drawNorthSize>(2, 2)</drawNorthSize>
+				<drawSouthSize>(2, 2)</drawSouthSize>
+				<drawWestSize>(2, 2)</drawWestSize>
+				<drawEastSize>(2, 2)</drawEastSize>
+			</shellPosDrawSettings>
+			<isUnifiedApparel>true</isUnifiedApparel>
+		</li>
+	</modExtensions>
+  </ThingDef> -->
+  
   <!-- Basic warcasket -->
 
   <ThingDef ParentName="VFEP_WarcasketPartBase">
@@ -77,7 +124,6 @@
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Warcasketlike/Warcasket/Warcasket</wornGraphicPath>
       <layers>
-	    <li>OnSkin</li>
         <li>Middle</li>
         <li>Shell</li>
       </layers>

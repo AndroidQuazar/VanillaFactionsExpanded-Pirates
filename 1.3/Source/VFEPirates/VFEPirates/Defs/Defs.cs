@@ -9,10 +9,4 @@ namespace VFEPirates
         public bool isShoulderPads;
         public bool isHelmet;
     }
-    public class ApparelExtension : DefModExtension
-    {
-        public bool nonSpawnable;
-        public bool hiddenFromDatabases;
-        public bool isWarCasketApparel;
-    }
 }

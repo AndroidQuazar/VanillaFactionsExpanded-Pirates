@@ -11,6 +11,7 @@ using UnityEngine.SocialPlatforms;
 using UnityEngine.UIElements.Experimental;
 using Verse;
 using Verse.AI;
+using static RimWorld.RitualRoleAssignments;
 
 namespace VFEPirates
 {
@@ -68,11 +69,37 @@ namespace VFEPirates
 
         public IEnumerable<IngredientCount> RequiredIngredients()
         {
-            return curWarcasketProject.armorDef.costList.Select(x => x.ToIngredientCount())
-             .Concat(curWarcasketProject.helmetDef.costList.Select(x => x.ToIngredientCount()))
-             .Concat(curWarcasketProject.shoulderPadsDef.costList.Select(x => x.ToIngredientCount()));
+            Dictionary<ThingDef, int> thingCounts = new Dictionary<ThingDef, int>();
+            foreach (var thingCount in curWarcasketProject.armorDef.costList
+                .Concat(curWarcasketProject.helmetDef.costList)
+                .Concat(curWarcasketProject.shoulderPadsDef.costList))
+            {
+                if (thingCounts.ContainsKey(thingCount.thingDef))
+                {
+                    thingCounts[thingCount.thingDef] += thingCount.count;
+                }
+                else
+                {
+                    thingCounts[thingCount.thingDef] = thingCount.count;
+                }
+            };
+
+            var ingredientCountList = new List<IngredientCount>();
+            foreach (var data in thingCounts)
+            {
+                ingredientCountList.Add(new ThingDefCountClass(data.Key, data.Value).ToIngredientCount());
+            }
+            return ingredientCountList;
         }
-        public bool ReadyForWelding => compPower.PowerOn && occupant != null && curWarcasketProject != null;
+        public bool ReadyForWelding(Pawn crafter, out string failReason)
+        {
+            failReason = null;
+            if (!compPower.PowerOn)
+            {
+                failReason = "NoPower".Translate();
+            }
+            return failReason is null;
+        }
         public void OpenCustomizationWindow(Pawn entombedPawn)
         {
             // Legodude, here you need to create and call customization window where you initialize chosenWarCasketProject with all its variables, such as crafter, total cost, workamount etc

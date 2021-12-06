@@ -42,13 +42,6 @@
         <compClass>CompColorable</compClass>
       </li>
     </comps>
-	<modExtensions>
-		<li Class="VFEPirates.ApparelExtension">
-			<nonSpawnable>true</nonSpawnable>
-			<hiddenFromDatabases>true</hiddenFromDatabases>
-			<isWarCasketApparel>true</isWarCasketApparel>
-		</li>
-	</modExtensions>
   </VFEPirates.WarcasketDef>
   
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketPartBase" Name="VFEP_WarcasketArmorBase" Abstract="True">

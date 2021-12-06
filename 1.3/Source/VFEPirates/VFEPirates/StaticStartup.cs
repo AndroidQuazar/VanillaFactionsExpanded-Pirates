@@ -15,10 +15,6 @@ namespace VFEPirates
             VFEPiratesMod.allArmorDefs.AddRange(apparels.Where(x => x.isArmor));
             VFEPiratesMod.allShoulderPadsDefs.AddRange(apparels.Where(x => x.isShoulderPads));
             VFEPiratesMod.allHelmetDefs.AddRange(apparels.Where(x => x.isHelmet));
-
-            var allApparelPairs = Traverse.Create(typeof(PawnApparelGenerator)).Field<List<ThingStuffPair>>("allApparelPairs").Value;
-            allApparelPairs.RemoveAll(pair => pair.thing is WarcasketDef);
-
         }
     }
 }

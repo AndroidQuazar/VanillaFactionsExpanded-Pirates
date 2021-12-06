@@ -18,5 +18,6 @@ namespace VFEPirates
         public static HistoryEventDef VFEP_CrewmanDied;
 
         public static ThingDef VFEP_WarcasketFoundry;
+        public static JobDef VFEP_DoWelding;
     }
 }

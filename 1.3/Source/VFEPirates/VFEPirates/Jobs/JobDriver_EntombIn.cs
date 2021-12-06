@@ -11,7 +11,7 @@ namespace VFEPirates
         public Building_WarcasketFoundry Foundry => TargetA.Thing as Building_WarcasketFoundry;
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
-            return pawn.Reserve(TargetA, job);
+            return pawn.Reserve(TargetA, job, 2);
         }
 
         protected override IEnumerable<Toil> MakeNewToils()

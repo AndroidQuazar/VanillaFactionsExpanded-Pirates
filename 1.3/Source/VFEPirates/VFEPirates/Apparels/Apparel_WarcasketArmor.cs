@@ -28,7 +28,6 @@ namespace VFEPirates
             pos.y += yOffset;
             var baseMat = BodySuit.Graphic.MatAt(Wearer.Rotation);
             baseMat = Wearer.Drawer.renderer.graphics.flasher.GetDamagedMat(baseMat);
-            Log.Message("Drawing: " + baseMat);
             var quat = Quaternion.AngleAxis(Wearer.Drawer.renderer.BodyAngle(), Vector3.up);
             Graphics.DrawMesh(bodyMesh, pos, quat, baseMat, 0);
         }

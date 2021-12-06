@@ -18,20 +18,20 @@ namespace VFEPirates
         public float totalWorkAmount; // we could just retrieve it from all apparels, but might be too much perf impact if done every frame and tick
         public void ApplyOn(Pawn pawn)
         {
-            var armor = ThingMaker.MakeThing(armorDef) as Apparel;
-            armor.SetColor(colorArmor);
+            var armor = ThingMaker.MakeThing(armorDef) as Apparel_Warcasket;
+            armor.color = colorArmor;
             pawn.apparel.Wear(armor, false, true);
 
-            var helmet = ThingMaker.MakeThing(helmetDef) as Apparel;
-            helmet.SetColor(colorHelmet);
+            var helmet = ThingMaker.MakeThing(helmetDef) as Apparel_Warcasket;
+            helmet.color = colorHelmet;
             pawn.apparel.Wear(helmet, false, true);
 
-            var shoulderPads = ThingMaker.MakeThing(shoulderPadsDef) as Apparel;
-            shoulderPads.SetColor(colorShoulderPads);
-
+            var shoulderPads = ThingMaker.MakeThing(shoulderPadsDef) as Apparel_Warcasket;
+            shoulderPads.color = colorShoulderPads;
             pawn.apparel.Wear(shoulderPads, false, true);
 
             Log.Message(colorArmor + " - " + colorHelmet + " - " + colorShoulderPads);
+            Log.Message(armor.DrawColor + " - " + helmet.DrawColor + " - " + shoulderPads.DrawColor);
         }
         public void ExposeData()
         {

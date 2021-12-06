@@ -87,9 +87,9 @@ namespace VFEPirates
                 armorDef = armor,
                 shoulderPadsDef = shoulderPads,
                 helmetDef = helmet,
-                colorArmor = new Color(Rand.RangeInclusive(0, 255), Rand.RangeInclusive(0, 255), Rand.RangeInclusive(0, 255)),
-                colorHelmet = new Color(Rand.RangeInclusive(0, 255), Rand.RangeInclusive(0, 255), Rand.RangeInclusive(0, 255)),
-                colorShoulderPads = new Color(Rand.RangeInclusive(0, 255), Rand.RangeInclusive(0, 255), Rand.RangeInclusive(0, 255)),
+                colorArmor = Color.red,
+                colorHelmet = Color.green,
+                colorShoulderPads = Color.blue,
                 totalWorkAmount = armor.GetStatValueAbstract(StatDefOf.WorkToMake) + shoulderPads.GetStatValueAbstract(StatDefOf.WorkToMake) + helmet.GetStatValueAbstract(StatDefOf.WorkToMake)
             };
         }

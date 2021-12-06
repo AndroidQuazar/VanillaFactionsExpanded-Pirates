@@ -3,10 +3,10 @@
 
   <VFEPirates.WarcasketDef Name="VFEP_WarcasketPartBase" Abstract="True">
     <tradeability>None</tradeability>
+	<thingClass>VFEPirates.Apparel_Warcasket</thingClass>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <thingClass>Apparel</thingClass>
     <category>Item</category>
     <drawerType>MapMeshOnly</drawerType>
     <selectable>True</selectable>
@@ -77,6 +77,7 @@
     <defName>VFEP_Warcasket_Bodysuit</defName>
     <label>warcasket bodysuit</label>
     <description>Basic bodysuit that serves as a base for warcasket shells.</description>
+	<thingClass>Apparel</thingClass>
     <graphicData>
       <texPath>Things/Pawn/Warcasketlike/WarcasketBodysuit/WarcasketBodysuit</texPath>
     </graphicData>

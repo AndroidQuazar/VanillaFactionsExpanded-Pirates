@@ -4,7 +4,7 @@ using Verse;
 
 namespace VFEPirates
 {
-    public class Apparel_WarcasketArmor : Apparel
+    public class Apparel_WarcasketArmor : Apparel_Warcasket
     {
         public Apparel bodySuit;
         public Apparel BodySuit
@@ -18,10 +18,6 @@ namespace VFEPirates
                 return bodySuit;
             }
         }
-        public override void PostMake()
-        {
-            base.PostMake();
-        }
 
         public static float yOffset = 0.0125f;
         public override void DrawWornExtras()
@@ -32,6 +28,7 @@ namespace VFEPirates
             pos.y += yOffset;
             var baseMat = BodySuit.Graphic.MatAt(Wearer.Rotation);
             baseMat = Wearer.Drawer.renderer.graphics.flasher.GetDamagedMat(baseMat);
+            Log.Message("Drawing: " + baseMat);
             var quat = Quaternion.AngleAxis(Wearer.Drawer.renderer.BodyAngle(), Vector3.up);
             Graphics.DrawMesh(bodyMesh, pos, quat, baseMat, 0);
         }

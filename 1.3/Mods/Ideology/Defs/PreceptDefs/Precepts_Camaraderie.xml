@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- Issues -->
+	<IssueDef>
+		<defName>VME_Alcohol</defName>
+		<label>alcohol</label>
+		<iconPath>UI/Issues/VME_Alcohol</iconPath>
+	</IssueDef>
+	<!-- Precepts -->
+	<PreceptDef>
+		<defName>VME_Alcohol_Demanded</defName>
+		<issue>VME_Alcohol</issue>
+		<label>demanded</label>
+		<description>Spirits, booze, sauce, whatever you call it, we desire it. At least an occasional drink should be encouraged and we shouldn’t even think of sobriety.</description>
+		<impact>Medium</impact>
+		<displayOrderInIssue>0</displayOrderInIssue>
+		<selectionWeight>1</selectionWeight>
+		<associatedMemes>
+			<li>VME_PartyLife</li>
+		</associatedMemes>
+		<comps>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>VME_Alcohol_Demanded</thought>
+				<thoughtStageDescriptions>
+					<li>Missing alcohol (3 days)</li>
+					<li>No alcohol (5 days)</li>
+					<li>Needs alcohol (10 days)</li>
+					<li>Craves alcohol (15 days)</li>
+					<li>Demands alcohol (30 days)</li>
+				</thoughtStageDescriptions>
+			</li>
+		</comps>
+	</PreceptDef>
+	<ThoughtDef>
+		<defName>VME_Alcohol_Demanded</defName>
+		<validWhileDespawned>true</validWhileDespawned>
+		<minExpectation>Moderate</minExpectation>
+		<nullifyingTraitDegrees>
+			
+				<DrugDesire>-1</DrugDesire>
+			
+		</nullifyingTraitDegrees>
+		<workerClass>VanillaMemesExpanded.ThoughtWorker_Precept_Alcohol</workerClass>
+		<stages>
+			<li>
+				<label>missing alcohol</label>
+				<description>I could use a drink. Something stronger please.</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+			<li>
+				<label>no alcohol</label>
+				<description>I wish I could have a drink of something stronger.</description>
+				<baseMoodEffect>-6</baseMoodEffect>
+			</li>
+			<li>
+				<label>needs alcohol</label>
+				<description>I need a drink of something stronger.</description>
+				<baseMoodEffect>-12</baseMoodEffect>
+			</li>
+			<li>
+				<label>craves alcohol</label>
+				<description>I’d kill for a drop of something stronger.</description>
+				<baseMoodEffect>-24</baseMoodEffect>
+			</li>
+			<li>
+				<label>demands alcohol</label>
+				<description>Booze or I riot.</description>
+				<baseMoodEffect>-48</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<PreceptDef>
+		<defName>VME_Alcohol_Desired</defName>
+		<issue>VME_Alcohol</issue>
+		<label>desired</label>
+		<description>Drinking is just plain fun, though not in excess.</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>10</displayOrderInIssue>
+		<selectionWeight>0</selectionWeight>
+		<comps>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>VME_Alcohol_Desired</thought>
+				<thoughtStageDescriptions>
+					<li>Missing alcohol (3 days)</li>
+					<li>Desiring a drink (5 days)</li>
+					<li>Wanting a drink (10 days or more)</li>					
+				</thoughtStageDescriptions>
+			</li>
+		</comps>
+	</PreceptDef>
+	<ThoughtDef>
+		<defName>VME_Alcohol_Desired</defName>
+		<validWhileDespawned>true</validWhileDespawned>
+		<minExpectation>Moderate</minExpectation>
+		
+		<nullifyingTraitDegrees>
+			
+				<DrugDesire>-1</DrugDesire>
+			
+		</nullifyingTraitDegrees>
+		<workerClass>VanillaMemesExpanded.ThoughtWorker_Precept_Alcohol</workerClass>
+		<stages>
+			<li>
+				<label>missing alcohol</label>
+				<description>It's been a while since I've had a drink.</description>
+				<baseMoodEffect>-1</baseMoodEffect>
+			</li>
+			<li>
+				<label>desiring a drink</label>
+				<description>What this colony needs is a bar so we can take a few drinks with our friends after a day of hard work.</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+			<li>
+				<label>wanting a drink</label>
+				<description>Hard work is fine, but I'd really appreciate relaxing with some strong spirits or a beer.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+			<li>
+				<label>wanting a drink</label>
+				<description>Hard work is fine, but I'd really appreciate relaxing with some strong spirits or a beer.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+			<li>
+				<label>wanting a drink</label>
+				<description>Hard work is fine, but I'd really appreciate relaxing with some strong spirits or a beer.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	<PreceptDef>
+		<defName>VME_Alcohol_MildAbstinence</defName>
+		<issue>VME_Alcohol</issue>
+		<label>mild abstinence</label>
+		<description>Alcohol is okay when consumed in small dosages, but it is better to stay away from it as long as possible.</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>20</displayOrderInIssue>
+		<comps>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>VME_Alcohol_MildAbstinence</thought>
+				<thoughtStageDescriptions>
+					<li>Consumed alcohol</li>
+					<li>Abstained from alcohol</li>
+
+				</thoughtStageDescriptions>
+			</li>
+		</comps>
+	</PreceptDef>
+	<ThoughtDef>
+		<defName>VME_Alcohol_MildAbstinence</defName>
+		<validWhileDespawned>true</validWhileDespawned>
+		<nullifyingTraitDegrees>
+			
+				<DrugDesire>-1</DrugDesire>
+			
+		</nullifyingTraitDegrees>
+		<workerClass>VanillaMemesExpanded.ThoughtWorker_Precept_Alcohol_MildAbstinence</workerClass>
+		<stages>
+			<li>
+				<label>consumed alcohol</label>
+				<description>I drank a bit of alcohol. Not a big deal, but I feel a bit woozy.</description>
+				<baseMoodEffect>-2</baseMoodEffect>
+			</li>
+			<li>
+				<label>abstained from alcohol</label>
+				<description>I haven't consumed alcohol lately.</description>
+				<baseMoodEffect>2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>

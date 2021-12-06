@@ -14,22 +14,18 @@ namespace VFEPirates
 				return false;
 			}
 
-			else return ThoughtState.ActiveAtStage(0);
+			else if (StaticCollectionsClass.crewMembersLost >= 20)
+			{
+				return ThoughtState.ActiveAtStage(19); 
+			}
+
+			return ThoughtState.ActiveAtStage(StaticCollectionsClass.crewMembersLost-1);
 			
 
 
 		}
 
-		public override float MoodMultiplier(Pawn p)
-		{
-			if (StaticCollectionsClass.crewMembersLost < 20)
-			{
-				return StaticCollectionsClass.crewMembersLost;
-
-			}
-			else return 20;
-		}
-
+		
 
 	}
 }

@@ -19,12 +19,15 @@ namespace VFEPirates
         public void ApplyOn(Pawn pawn)
         {
             var armor = ThingMaker.MakeThing(armorDef) as Apparel;
+            armor.SetColor(colorArmor);
             pawn.apparel.Wear(armor, false, true);
 
             var helmet = ThingMaker.MakeThing(helmetDef) as Apparel;
+            helmet.SetColor(colorHelmet);
             pawn.apparel.Wear(helmet, false, true);
 
             var shoulderPads = ThingMaker.MakeThing(shoulderPadsDef) as Apparel;
+            shoulderPads.SetColor(colorShoulderPads);
             pawn.apparel.Wear(shoulderPads, false, true);
         }
         public void ExposeData()

@@ -85,6 +85,26 @@ namespace VFEPirates
                 totalWorkAmount = armor.GetStatValueAbstract(StatDefOf.WorkToMake) + shoulderPads.GetStatValueAbstract(StatDefOf.WorkToMake) + helmet.GetStatValueAbstract(StatDefOf.WorkToMake)
             };
         }
+
+        public override IEnumerable<Gizmo> GetGizmos()
+        {
+            foreach (var g in base.GetGizmos()) yield return g;
+            if (Prefs.DevMode)
+            {
+                if (occupant != null && curWarcasketProject != null)
+                {
+                    yield return new Command_Action
+                    {
+                        defaultLabel = "DEV: Finish welding",
+                        action = delegate
+                        {
+                            curWarcasketProject.ApplyOn(occupant);
+                            DeregisterOccupant();
+                        }
+                    };
+                }
+            }
+        }
         public void RegisterOccupant(Pawn pawn)
         {
             occupant = pawn;
@@ -92,6 +112,7 @@ namespace VFEPirates
 
         public void DeregisterOccupant()
         {
+            occupant.jobs.StopAll();
             occupant = null;
         }
 

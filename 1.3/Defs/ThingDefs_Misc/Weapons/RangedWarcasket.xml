@@ -17,17 +17,6 @@
     </tradeTags>
 	<thingSetMakerTags><li>Warcasket</li></thingSetMakerTags>
 	<relicChance>0</relicChance>
-    <recipeMaker>
-      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-      <workSkill>Crafting</workSkill>
-      <effectWorking>Smith</effectWorking>
-      <soundWorking>Recipe_Smith</soundWorking>
-      <recipeUsers>
-        <li>TableMachining</li>
-      </recipeUsers>
-      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
-      <researchPrerequisite>VFEP_WarcasketWeaponry</researchPrerequisite>
-    </recipeMaker>
 	<comps>
 		<li>
 			<compClass>CompOversizedWeapon.CompOversizedWeapon</compClass>
@@ -43,11 +32,6 @@
       <texPath>Things/Item/Weapons/WarcasketAutorifle</texPath>
     </graphicData>
     <soundInteract>Interact_Rifle</soundInteract>
-    <recipeMaker>
-      <skillRequirements>
-        <Crafting>6</Crafting>
-      </skillRequirements>
-    </recipeMaker>
     <statBases>
 	  <MarketValue>1250</MarketValue>
       <WorkToMake>45000</WorkToMake>
@@ -63,6 +47,9 @@
 	  <Plasteel>20</Plasteel>
       <ComponentIndustrial>3</ComponentIndustrial>
     </costList>
+    <weaponTags>
+      <li>WarcasketBasic</li>
+    </weaponTags>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>

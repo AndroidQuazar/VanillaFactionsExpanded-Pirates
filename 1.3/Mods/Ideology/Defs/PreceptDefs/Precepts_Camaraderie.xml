@@ -2,170 +2,107 @@
 <Defs>
 	<!-- Issues -->
 	<IssueDef>
-		<defName>VME_Alcohol</defName>
-		<label>alcohol</label>
-		<iconPath>UI/Issues/VME_Alcohol</iconPath>
+		<defName>VFEP_Camaraderie</defName>
+		<label>camaraderie</label>
+		<iconPath>UI/Ideology/Camaraderie</iconPath>
 	</IssueDef>
+
+	<HistoryEventDef>
+		<defName>VFEP_CrewmanDied</defName>
+		<label>crewmember died</label>
+	</HistoryEventDef>
+	
 	<!-- Precepts -->
 	<PreceptDef>
-		<defName>VME_Alcohol_Demanded</defName>
-		<issue>VME_Alcohol</issue>
-		<label>demanded</label>
-		<description>Spirits, booze, sauce, whatever you call it, we desire it. At least an occasional drink should be encouraged and we shouldn’t even think of sobriety.</description>
+		<defName>VFEP_Camaraderie_Respected</defName>
+		<issue>VFEP_Camaraderie</issue>
+		<label>respected</label>
+		<description>Different interests, yet aiming for one: hardships, suffering and sacrifices must be faced together, as a crew.</description>
 		<impact>Medium</impact>
 		<displayOrderInIssue>0</displayOrderInIssue>
-		<selectionWeight>1</selectionWeight>
+
 		<associatedMemes>
-			<li>VME_PartyLife</li>
+			<li>VFEP_PirateMeme</li>
 		</associatedMemes>
 		<comps>
-			<li Class="PreceptComp_SituationalThought">
-				<thought>VME_Alcohol_Demanded</thought>
-				<thoughtStageDescriptions>
-					<li>Missing alcohol (3 days)</li>
-					<li>No alcohol (5 days)</li>
-					<li>Needs alcohol (10 days)</li>
-					<li>Craves alcohol (15 days)</li>
-					<li>Demands alcohol (30 days)</li>
-				</thoughtStageDescriptions>
+			<li Class="PreceptComp_SelfTookMemoryThought">
+				<eventDef>VFEP_CrewmanDied</eventDef>
+				<thought>VFEP_Camaraderie_Respected_CrewDead</thought>
 			</li>
+			
 		</comps>
 	</PreceptDef>
+
 	<ThoughtDef>
-		<defName>VME_Alcohol_Demanded</defName>
-		<validWhileDespawned>true</validWhileDespawned>
-		<minExpectation>Moderate</minExpectation>
-		<nullifyingTraitDegrees>
-			
-				<DrugDesire>-1</DrugDesire>
-			
-		</nullifyingTraitDegrees>
-		<workerClass>VanillaMemesExpanded.ThoughtWorker_Precept_Alcohol</workerClass>
+		<defName>VFEP_Camaraderie_Respected_CrewDead</defName>
+		<durationDays>1</durationDays>
+		<stackLimit>1</stackLimit>
 		<stages>
 			<li>
-				<label>missing alcohol</label>
-				<description>I could use a drink. Something stronger please.</description>
+				<label>lost a comrade</label>
+				<description>We’ve lost one of ours. What a sad day it is.</description>
 				<baseMoodEffect>-3</baseMoodEffect>
 			</li>
+		</stages>
+	</ThoughtDef>
+	<ThoughtDef>
+		<defName>VFEP_Camaraderie_Respected_Memory</defName>
+		<durationDays>0.25</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
 			<li>
-				<label>no alcohol</label>
-				<description>I wish I could have a drink of something stronger.</description>
-				<baseMoodEffect>-6</baseMoodEffect>
-			</li>
-			<li>
-				<label>needs alcohol</label>
-				<description>I need a drink of something stronger.</description>
-				<baseMoodEffect>-12</baseMoodEffect>
-			</li>
-			<li>
-				<label>craves alcohol</label>
-				<description>I’d kill for a drop of something stronger.</description>
-				<baseMoodEffect>-24</baseMoodEffect>
-			</li>
-			<li>
-				<label>demands alcohol</label>
-				<description>Booze or I riot.</description>
-				<baseMoodEffect>-48</baseMoodEffect>
+				<label>socialized with a comrade</label>
+				<description>I’ve socialised with a comrade, which strengthens our bond.</description>
+				<baseMoodEffect>3</baseMoodEffect>
 			</li>
 		</stages>
 	</ThoughtDef>
 
+
 	<PreceptDef>
-		<defName>VME_Alcohol_Desired</defName>
-		<issue>VME_Alcohol</issue>
-		<label>desired</label>
-		<description>Drinking is just plain fun, though not in excess.</description>
-		<impact>Low</impact>
+		<defName>VFEP_Camaraderie_Exalted</defName>
+		<issue>VFEP_Camaraderie</issue>
+		<label>exalted</label>
+		<description>In the table of brotherhood we'll dine, the banner of camaraderie will be unroll, all for one, one for all. Together, we will have the world.</description>
+		<impact>High</impact>
 		<displayOrderInIssue>10</displayOrderInIssue>
-		<selectionWeight>0</selectionWeight>
-		<comps>
-			<li Class="PreceptComp_SituationalThought">
-				<thought>VME_Alcohol_Desired</thought>
-				<thoughtStageDescriptions>
-					<li>Missing alcohol (3 days)</li>
-					<li>Desiring a drink (5 days)</li>
-					<li>Wanting a drink (10 days or more)</li>					
-				</thoughtStageDescriptions>
-			</li>
-		</comps>
-	</PreceptDef>
-	<ThoughtDef>
-		<defName>VME_Alcohol_Desired</defName>
-		<validWhileDespawned>true</validWhileDespawned>
-		<minExpectation>Moderate</minExpectation>
-		
-		<nullifyingTraitDegrees>
-			
-				<DrugDesire>-1</DrugDesire>
-			
-		</nullifyingTraitDegrees>
-		<workerClass>VanillaMemesExpanded.ThoughtWorker_Precept_Alcohol</workerClass>
-		<stages>
-			<li>
-				<label>missing alcohol</label>
-				<description>It's been a while since I've had a drink.</description>
-				<baseMoodEffect>-1</baseMoodEffect>
-			</li>
-			<li>
-				<label>desiring a drink</label>
-				<description>What this colony needs is a bar so we can take a few drinks with our friends after a day of hard work.</description>
-				<baseMoodEffect>-3</baseMoodEffect>
-			</li>
-			<li>
-				<label>wanting a drink</label>
-				<description>Hard work is fine, but I'd really appreciate relaxing with some strong spirits or a beer.</description>
-				<baseMoodEffect>-5</baseMoodEffect>
-			</li>
-			<li>
-				<label>wanting a drink</label>
-				<description>Hard work is fine, but I'd really appreciate relaxing with some strong spirits or a beer.</description>
-				<baseMoodEffect>-5</baseMoodEffect>
-			</li>
-			<li>
-				<label>wanting a drink</label>
-				<description>Hard work is fine, but I'd really appreciate relaxing with some strong spirits or a beer.</description>
-				<baseMoodEffect>-5</baseMoodEffect>
-			</li>
-		</stages>
-	</ThoughtDef>
-	<PreceptDef>
-		<defName>VME_Alcohol_MildAbstinence</defName>
-		<issue>VME_Alcohol</issue>
-		<label>mild abstinence</label>
-		<description>Alcohol is okay when consumed in small dosages, but it is better to stay away from it as long as possible.</description>
-		<impact>Low</impact>
-		<displayOrderInIssue>20</displayOrderInIssue>
-		<comps>
-			<li Class="PreceptComp_SituationalThought">
-				<thought>VME_Alcohol_MildAbstinence</thought>
-				<thoughtStageDescriptions>
-					<li>Consumed alcohol</li>
-					<li>Abstained from alcohol</li>
 
-				</thoughtStageDescriptions>
+		<associatedMemes>
+			<li>VFEP_PirateMeme</li>
+		</associatedMemes>
+		<comps>
+			<li Class="PreceptComp_SelfTookMemoryThought">
+				<eventDef>VFEP_CrewmanDied</eventDef>
+				<thought>VFEP_Camaraderie_Exalted_CrewDead</thought>
 			</li>
 		</comps>
 	</PreceptDef>
+
 	<ThoughtDef>
-		<defName>VME_Alcohol_MildAbstinence</defName>
-		<validWhileDespawned>true</validWhileDespawned>
-		<nullifyingTraitDegrees>
-			
-				<DrugDesire>-1</DrugDesire>
-			
-		</nullifyingTraitDegrees>
-		<workerClass>VanillaMemesExpanded.ThoughtWorker_Precept_Alcohol_MildAbstinence</workerClass>
+		<defName>VFEP_Camaraderie_Exalted_CrewDead</defName>
+		<durationDays>1</durationDays>
+		<stackLimit>1</stackLimit>
 		<stages>
 			<li>
-				<label>consumed alcohol</label>
-				<description>I drank a bit of alcohol. Not a big deal, but I feel a bit woozy.</description>
-				<baseMoodEffect>-2</baseMoodEffect>
-			</li>
-			<li>
-				<label>abstained from alcohol</label>
-				<description>I haven't consumed alcohol lately.</description>
-				<baseMoodEffect>2</baseMoodEffect>
+				<label>lost a comrade</label>
+				<description>We’ve lost one of ours. I need to look to others for strength.</description>
+				<baseMoodEffect>-10</baseMoodEffect>
 			</li>
 		</stages>
 	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>VFEP_Camaraderie_Exalted_Memory</defName>
+		<durationDays>0.25</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>socialized with a comrade</label>
+				<description>I’ve socialised with a comrade. We are unstoppable!</description>
+				<baseMoodEffect>6</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+
 </Defs>

@@ -87,7 +87,10 @@
 				<li>Execution_RespectedIfGuilty</li>
 				<li>Execution_Required</li>
 			</li>
-
+			<li>
+				<li>VFEP_Camaraderie_Respected</li>
+				<li>VFEP_Camaraderie_Exalted</li>
+			</li>
 		</requireOne>
 		<symbolPacks>
 			<li>

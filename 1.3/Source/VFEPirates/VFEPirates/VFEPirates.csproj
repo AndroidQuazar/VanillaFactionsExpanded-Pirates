@@ -41,26 +41,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Defs.cs" />
+    <Compile Include="Defs\Defs.cs" />
     <Compile Include="Apparel_WarcasketArmor.cs" />
-    <Compile Include="Building_WarcasketFoundry.cs" />
+    <Compile Include="Buildings\Building_WarcasketFoundry.cs" />
     <Compile Include="HarmonyPatches\GenSpawn_Spawn_Patch.cs" />
+    <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_TryInteractWith_Patch.cs" />
+    <Compile Include="HarmonyPatches\TaleUtility_Notify_PawnDied_Patch.cs" />
     <Compile Include="Jobs\JobDriver_EntombIn.cs" />
     <Compile Include="StaticStartup.cs" />
     <Compile Include="VFEPiratesMod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VFEP_DefOf.cs" />
+    <Compile Include="DefOfs\VFEP_DefOf.cs" />
     <Compile Include="WarcasketProject.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">
       <Version>1.3.3200</Version>
-	  <ExcludeAssets>runtime</ExcludeAssets>
+      <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>
     <PackageReference Include="Lib.Harmony">
       <Version>2.1.1</Version>
-	  <ExcludeAssets>runtime</ExcludeAssets>
+      <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

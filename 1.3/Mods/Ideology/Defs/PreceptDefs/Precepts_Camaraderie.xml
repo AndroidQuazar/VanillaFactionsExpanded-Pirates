@@ -17,7 +17,7 @@
 		<defName>VFEP_Camaraderie_Respected</defName>
 		<issue>VFEP_Camaraderie</issue>
 		<label>respected</label>
-		<description>Different interests, yet aiming for one: hardships, suffering and sacrifices must be faced together, as a crew.</description>
+		<description>Different interests, yet aiming for one: hardships, suffering and sacrifices must be faced together, as a crew.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt;\n - Colonists will receive a +3 mood bonus after socializing with another colonist.</description>
 		<impact>Medium</impact>
 		<displayOrderInIssue>0</displayOrderInIssue>
 
@@ -25,7 +25,7 @@
 			<li>VFEP_PirateMeme</li>
 		</associatedMemes>
 		<comps>
-			<li Class="PreceptComp_SelfTookMemoryThought">
+			<li Class="PreceptComp_KnowsMemoryThought">
 				<eventDef>VFEP_CrewmanDied</eventDef>
 				<thought>VFEP_Camaraderie_Respected_CrewDead</thought>
 			</li>
@@ -63,7 +63,7 @@
 		<defName>VFEP_Camaraderie_Exalted</defName>
 		<issue>VFEP_Camaraderie</issue>
 		<label>exalted</label>
-		<description>In the table of brotherhood we'll dine, the banner of camaraderie will be unroll, all for one, one for all. Together, we will have the world.</description>
+		<description>In the table of brotherhood we'll dine, the banner of camaraderie will be unroll, all for one, one for all. Together, we will have the world.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt;\n - Colonists will receive a +6 mood bonus after socializing with another colonist.</description>
 		<impact>High</impact>
 		<displayOrderInIssue>10</displayOrderInIssue>
 
@@ -71,13 +71,15 @@
 			<li>VFEP_PirateMeme</li>
 		</associatedMemes>
 		<comps>
-			<li Class="PreceptComp_SelfTookMemoryThought">
+			<li Class="PreceptComp_KnowsMemoryThought">
 				<eventDef>VFEP_CrewmanDied</eventDef>
 				<thought>VFEP_Camaraderie_Exalted_CrewDead</thought>
 			</li>
 			<li Class="PreceptComp_SituationalThought">
 				<thought>VFEP_Camaraderie_Exalted_DeadCumulative</thought>
-				
+				<thoughtStageDescriptions>
+					<li>Been through some tough times together! (cumulative +5 per slain colonist)</li>				
+				</thoughtStageDescriptions>
 			</li>
 		</comps>
 	</PreceptDef>
@@ -116,6 +118,82 @@
 			<li>
 				<label>been through some tough times together!</label>
 				<baseOpinionOffset>5</baseOpinionOffset>
+			</li>
+			<li>
+				<label>been through some tough times together!</label>
+				<baseOpinionOffset>10</baseOpinionOffset>
+			</li>
+			<li>
+				<label>been through some tough times together!</label>
+				<baseOpinionOffset>15</baseOpinionOffset>
+			</li>
+			<li>
+				<label>been through some tough times together!</label>
+				<baseOpinionOffset>20</baseOpinionOffset>
+			</li>
+			<li>
+				<label>been through some tough times together!</label>
+				<baseOpinionOffset>25</baseOpinionOffset>
+			</li>
+			<li>
+				<label>been through some tough times together!</label>
+				<baseOpinionOffset>30</baseOpinionOffset>
+			</li>
+			<li>
+				<label>been through some tough times together!</label>
+				<baseOpinionOffset>35</baseOpinionOffset>
+			</li>
+			<li>
+				<label>been through some tough times together!</label>
+				<baseOpinionOffset>40</baseOpinionOffset>
+			</li>
+			<li>
+				<label>been through some tough times together!</label>
+				<baseOpinionOffset>45</baseOpinionOffset>
+			</li>
+			<li>
+				<label>been through some tough times together!</label>
+				<baseOpinionOffset>50</baseOpinionOffset>
+			</li>
+			<li>
+				<label>been through some tough times together!</label>
+				<baseOpinionOffset>55</baseOpinionOffset>
+			</li>
+			<li>
+				<label>been through some tough times together!</label>
+				<baseOpinionOffset>60</baseOpinionOffset>
+			</li>
+			<li>
+				<label>been through some tough times together!</label>
+				<baseOpinionOffset>65</baseOpinionOffset>
+			</li>
+			<li>
+				<label>been through some tough times together!</label>
+				<baseOpinionOffset>70</baseOpinionOffset>
+			</li>
+			<li>
+				<label>been through some tough times together!</label>
+				<baseOpinionOffset>75</baseOpinionOffset>
+			</li>
+			<li>
+				<label>been through some tough times together!</label>
+				<baseOpinionOffset>80</baseOpinionOffset>
+			</li>
+			<li>
+				<label>been through some tough times together!</label>
+				<baseOpinionOffset>85</baseOpinionOffset>
+			</li>
+			<li>
+				<label>been through some tough times together!</label>
+				<baseOpinionOffset>90</baseOpinionOffset>
+			</li>
+			<li>
+				<label>been through some tough times together!</label>
+				<baseOpinionOffset>95</baseOpinionOffset>
+			</li>
+			<li>
+				<label>been through some tough times together!</label>
+				<baseOpinionOffset>100</baseOpinionOffset>
 			</li>
 			
 		</stages>

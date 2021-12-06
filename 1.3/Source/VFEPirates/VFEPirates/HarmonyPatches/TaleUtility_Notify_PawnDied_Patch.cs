@@ -12,10 +12,11 @@ namespace VFEPirates
         [HarmonyPostfix]
         static void NotifyCrewmanDied(Pawn victim)
         {
+           
 
-            if (victim?.RaceProps?.Humanlike == true && victim.Faction == Faction.OfPlayer)
-            {
-                Find.HistoryEventsManager.RecordEvent(new HistoryEvent(VFEP_DefOf.VFEP_CrewmanDied, new SignalArgs(victim.Named(HistoryEventArgsNames.Victim))), true);
+            if (victim?.RaceProps?.Humanlike == true && victim.IsColonist)
+            { 
+                Find.HistoryEventsManager.RecordEvent(new HistoryEvent(VFEP_DefOf.VFEP_CrewmanDied));
                 StaticCollectionsClass.crewMembersLost++;
             }
         }

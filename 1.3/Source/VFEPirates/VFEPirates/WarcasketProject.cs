@@ -14,7 +14,7 @@ namespace VFEPirates
         public Color colorArmor;
         public Color colorShoulderPads;
         public Color colorHelmet;
-
+         
         public float totalWorkAmount; // we could just retrieve it from all apparels, but might be too much perf impact if done every frame and tick
         public void ApplyOn(Pawn pawn)
         {

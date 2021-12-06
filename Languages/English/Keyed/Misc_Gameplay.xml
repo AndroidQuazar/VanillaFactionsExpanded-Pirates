@@ -5,4 +5,5 @@
 	<VFEPirates.EntombInWarcasket>Entomb in warcasket</VFEPirates.EntombInWarcasket>
 	<VFEPirates.EntombingWarning>Entombing a colonist in warcasket is permanent operation that cannot be reversed without painful consequences.</VFEPirates.EntombingWarning>
 	<VFEM.MissingMaterials>Missing materials: {0}</VFEM.MissingMaterials>
+	<VFEP.Occupied>Occupied</VFEP.Occupied>
 </LanguageData>

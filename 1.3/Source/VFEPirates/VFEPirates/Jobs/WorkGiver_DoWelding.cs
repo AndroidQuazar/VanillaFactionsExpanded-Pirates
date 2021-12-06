@@ -16,7 +16,7 @@ namespace VFEPirates
 		public override Danger MaxPathDanger(Pawn pawn) => Danger.Some;
         public override Job JobOnThing(Pawn pawn, Thing thing, bool forced = false)
 		{
-			if (thing is Building_WarcasketFoundry foundry)
+			if (thing is Building_WarcasketFoundry foundry && foundry.OccupantAliveAndPresent)
 			{
 				if (!foundry.ReadyForWelding(pawn, out string failReason))
 				{
@@ -30,11 +30,14 @@ namespace VFEPirates
                     {
 						JobFailReason.Is("VFEM.MissingMaterials".Translate(string.Join(", ", requiredIngredients.Select(x => x.ToString()))));
 					}
+					else if (chosen.Any(x => !pawn.CanReserveAndReach(x.Thing, PathEndMode.ClosestTouch, MaxPathDanger(pawn))))
+                    {
+						JobFailReason.Is("VFEM.MissingMaterials".Translate(string.Join(", ", requiredIngredients.Select(x => x.ToString()))));
+					}
 					else
 					{
 						Job job = JobMaker.MakeJob(VFEP_DefOf.VFEP_DoWelding);
 						job.targetA = foundry;
-						job.targetB = foundry.occupant;
 						job.targetQueueB = new List<LocalTargetInfo>(chosen.Count);
 						job.countQueue = new List<int>(chosen.Count);
 						for (int i = 0; i < chosen.Count; i++)

@@ -11,12 +11,13 @@ namespace VFEPirates
         public Building_WarcasketFoundry Foundry => TargetA.Thing as Building_WarcasketFoundry;
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
-            return pawn.Reserve(TargetA, job, 2);
+            return pawn.Reserve(TargetA, job, 1);
         }
 
         protected override IEnumerable<Toil> MakeNewToils()
         {
             yield return Toils_Goto.GotoThing(TargetIndex.A, Foundry.Position);
+            yield return Toils_Reserve.Release(TargetIndex.A);
 			Toil toil = new Toil();
             toil.initAction = delegate
             {

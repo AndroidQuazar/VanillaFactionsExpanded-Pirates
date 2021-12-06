@@ -1,6 +1,7 @@
 ﻿using RimWorld;
 using System;
 using System.Collections.Generic;
+using Unity.Jobs;
 using UnityEngine;
 using Verse;
 using Verse.AI;
@@ -9,52 +10,19 @@ namespace VFEPirates
 {
     public class JobDriver_DoWelding : JobDriver
 	{
-		public float workLeft;
-
-		public int billStartTick;
-
-		public int ticksSpentDoingRecipeWork;
-
-		public const PathEndMode GotoIngredientPathEndMode = PathEndMode.ClosestTouch;
-
-		public const TargetIndex BillGiverInd = TargetIndex.A;
-
-		public const TargetIndex IngredientInd = TargetIndex.B;
-
-		public const TargetIndex IngredientPlaceCellInd = TargetIndex.C;
-
-		public IBillGiver BillGiver => (job.GetTarget(TargetIndex.A).Thing as IBillGiver) ?? throw new InvalidOperationException("DoBill on non-Billgiver.");
-
-		public override string GetReport()
-		{
-			if (job.RecipeDef != null)
-			{
-				return ReportStringProcessed(job.RecipeDef.jobString);
-			}
-			return base.GetReport();
-		}
-
-		public override void ExposeData()
-		{
-			base.ExposeData();
-			Scribe_Values.Look(ref workLeft, "workLeft", 0f);
-			Scribe_Values.Look(ref billStartTick, "billStartTick", 0);
-			Scribe_Values.Look(ref ticksSpentDoingRecipeWork, "ticksSpentDoingRecipeWork", 0);
-		}
-
+		public Building_WarcasketFoundry Foundry => TargetA.Thing as Building_WarcasketFoundry;
 		public override bool TryMakePreToilReservations(bool errorOnFailed)
 		{
 			this.pawn.jobs.debugLog = true;
-			Thing thing = job.GetTarget(TargetIndex.A).Thing;
-			if (!pawn.Reserve(job.GetTarget(TargetIndex.A), job, 2, -1, null, errorOnFailed))
-			{
-				return false;
-			}
-			if (thing != null && thing.def.hasInteractionCell && !pawn.ReserveSittableOrSpot(thing.InteractionCell, job, errorOnFailed))
+			if (!pawn.Reserve(job.GetTarget(TargetIndex.A), job, 1, -1, null, errorOnFailed))
 			{
 				return false;
 			}
 			pawn.ReserveAsManyAsPossible(job.GetTargetQueue(TargetIndex.B), job);
+			foreach (var target in job.GetTargetQueue(TargetIndex.B))
+            {
+				Log.Message(pawn + " reserving " + target.Thing);
+            }
 			return true;
 		}
 
@@ -63,105 +31,137 @@ namespace VFEPirates
 			AddEndCondition(delegate
 			{
 				Thing thing = GetActor().jobs.curJob.GetTarget(TargetIndex.A).Thing;
-				return (!(thing is Building) || thing.Spawned) ? JobCondition.Ongoing : JobCondition.Incompletable;
+				return thing.Spawned && thing is Building_WarcasketFoundry foundry && foundry.ReadyForWelding(pawn, out _) ? JobCondition.Ongoing : JobCondition.Incompletable;
 			});
 			this.FailOnBurningImmobile(TargetIndex.A);
-			Toil gotoBillGiver = Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.InteractionCell);
-			Toil toil = new Toil();
-			toil.initAction = delegate
-			{
-				if (job.targetQueueB != null && job.targetQueueB.Count == 1)
-				{
-					UnfinishedThing unfinishedThing = job.targetQueueB[0].Thing as UnfinishedThing;
-					if (unfinishedThing != null)
-					{
-						unfinishedThing.BoundBill = (Bill_ProductionWithUft)job.bill;
-					}
-				}
-			};
-			yield return toil;
-			yield return Toils_Jump.JumpIf(gotoBillGiver, () => job.GetTargetQueue(TargetIndex.B).NullOrEmpty());
+			Toil gotoFoundry = Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.ClosestTouch);
+			yield return Toils_Jump.JumpIf(gotoFoundry, () => job.GetTargetQueue(TargetIndex.B).NullOrEmpty());
 			foreach (Toil item in CollectIngredientsToils(TargetIndex.B, TargetIndex.A, TargetIndex.C))
 			{
 				yield return item;
 			}
-			yield return gotoBillGiver;
-			yield return Toils_Recipe.MakeUnfinishedThingIfNeeded();
-			yield return Toils_Recipe.DoRecipeWork().FailOnDespawnedNullOrForbiddenPlacedThings().FailOnCannotTouch(TargetIndex.A, PathEndMode.InteractionCell);
-			yield return Toils_Recipe.FinishRecipeAndStartStoringProduct();
-			if (job.RecipeDef.products.NullOrEmpty() && job.RecipeDef.specialProducts.NullOrEmpty())
+			yield return gotoFoundry;
+			yield return new Toil
 			{
-				yield break;
-			}
-			yield return Toils_Reserve.Reserve(TargetIndex.B);
-			Toil carryToCell = Toils_Haul.CarryHauledThingToCell(TargetIndex.B);
-			yield return carryToCell;
-			yield return Toils_Haul.PlaceHauledThingInCell(TargetIndex.B, carryToCell, storageMode: true, tryStoreInSameStorageIfSpotCantHoldWholeStack: true);
-			Toil recount = new Toil();
-			recount.initAction = delegate
-			{
-				Bill_Production bill_Production = recount.actor.jobs.curJob.bill as Bill_Production;
-				if (bill_Production != null && bill_Production.repeatMode == BillRepeatModeDefOf.TargetCount)
+				initAction = delegate
 				{
-					base.Map.resourceCounter.UpdateResourceCounts();
-				}
+					for (var i = job.placedThings.Count - 1; i >= 0; i--)
+					{
+						job.placedThings[i].thing?.Destroy();
+					}
+					job.placedThings = null;
+				},
+				tickAction = delegate
+                {
+					Foundry.compPower.powerOutputInt = -350;
+					Foundry.curWarcasketProject.DoWork(pawn.GetStatValue(StatDefOf.WorkSpeedGlobal), out bool workDone);
+					if (workDone)
+                    {
+						Foundry.FinishWarCasketProject();
+						this.EndJobWith(JobCondition.Succeeded);
+					}
+				},
+			    defaultCompleteMode = ToilCompleteMode.Never
 			};
-			yield return recount;
 		}
 
-		public static IEnumerable<Toil> CollectIngredientsToils(TargetIndex ingredientInd, TargetIndex billGiverInd, TargetIndex ingredientPlaceCellInd, bool subtractNumTakenFromJobCount = false, bool failIfStackCountLessThanJobCount = true)
+		public IEnumerable<Toil> CollectIngredientsToils(TargetIndex ingredientInd, TargetIndex billGiverInd, TargetIndex ingredientPlaceCellInd, bool subtractNumTakenFromJobCount = false, bool failIfStackCountLessThanJobCount = true)
 		{
 			Toil extract = Toils_JobTransforms.ExtractNextTargetFromQueue(ingredientInd);
 			yield return extract;
 			Toil getToHaulTarget = Toils_Goto.GotoThing(ingredientInd, PathEndMode.ClosestTouch).FailOnDespawnedNullOrForbidden(ingredientInd).FailOnSomeonePhysicallyInteracting(ingredientInd);
 			yield return getToHaulTarget;
+			yield return new Toil
+			{
+				initAction = () => Log.Message("Start carry 1: " + ingredientInd + " - " + job.GetTarget(ingredientInd) + " - " 
+				+ pawn.Map.reservationManager.FirstRespectedReserver(job.GetTarget(ingredientInd), pawn))
+			};
 			yield return Toils_Haul.StartCarryThing(ingredientInd, putRemainderInQueue: true, subtractNumTakenFromJobCount, failIfStackCountLessThanJobCount);
-			yield return JumpToCollectNextIntoHandsForBill(getToHaulTarget, TargetIndex.B);
-			yield return Toils_Goto.GotoThing(billGiverInd, PathEndMode.InteractionCell).FailOnDestroyedOrNull(ingredientInd);
+			yield return new Toil
+			{
+				initAction = () => Log.Message("Start carry 2: " + ingredientInd + " - " + job.GetTarget(ingredientInd) + " - "
+				+ pawn.Map.reservationManager.FirstRespectedReserver(job.GetTarget(ingredientInd), pawn))
+			};
+			yield return JobDriver_DoBill.JumpToCollectNextIntoHandsForBill(getToHaulTarget, TargetIndex.B);
+			yield return Toils_Goto.GotoThing(billGiverInd, PathEndMode.OnCell).FailOnDestroyedOrNull(ingredientInd);
 			Toil findPlaceTarget = Toils_JobTransforms.SetTargetToIngredientPlaceCell(billGiverInd, ingredientInd, ingredientPlaceCellInd);
 			yield return findPlaceTarget;
-			yield return Toils_Haul.PlaceHauledThingInCell(ingredientPlaceCellInd, findPlaceTarget, storageMode: false);
+			yield return PlaceHauledThingInCell(ingredientPlaceCellInd, findPlaceTarget, storageMode: false);
 			yield return Toils_Jump.JumpIfHaveTargetInQueue(ingredientInd, extract);
 		}
 
-		public static Toil JumpToCollectNextIntoHandsForBill(Toil gotoGetTargetToil, TargetIndex ind)
+		public static Toil PlaceHauledThingInCell(TargetIndex cellInd, Toil nextToilOnPlaceFailOrIncomplete, bool storageMode, bool tryStoreInSameStorageIfSpotCantHoldWholeStack = false)
 		{
 			Toil toil = new Toil();
 			toil.initAction = delegate
 			{
 				Pawn actor = toil.actor;
+				Job curJob = actor.jobs.curJob;
+				IntVec3 cell = curJob.GetTarget(cellInd).Cell;
 				if (actor.carryTracker.CarriedThing == null)
 				{
-					Log.Error(string.Concat("JumpToAlsoCollectTargetInQueue run on ", actor, " who is not carrying something."));
+					Log.Error(string.Concat(actor, " tried to place hauled thing in cell but is not hauling anything."));
 				}
-				else if (!actor.carryTracker.Full)
+				else
 				{
-					Job curJob = actor.jobs.curJob;
-					List<LocalTargetInfo> targetQueue = curJob.GetTargetQueue(ind);
-					if (!targetQueue.NullOrEmpty())
+					SlotGroup slotGroup = actor.Map.haulDestinationManager.SlotGroupAt(cell);
+					if (slotGroup != null && slotGroup.Settings.AllowedToAccept(actor.carryTracker.CarriedThing))
 					{
-						for (int i = 0; i < targetQueue.Count; i++)
+						actor.Map.designationManager.TryRemoveDesignationOn(actor.carryTracker.CarriedThing, DesignationDefOf.Haul);
+					}
+					Action<Thing, int> placedAction = delegate (Thing th, int added)
+					{
+						if (curJob.placedThings == null)
 						{
-							if (GenAI.CanUseItemForWork(actor, targetQueue[i].Thing) && targetQueue[i].Thing.CanStackWith(actor.carryTracker.CarriedThing) && !((float)(actor.Position - targetQueue[i].Thing.Position).LengthHorizontalSquared > 64f))
+							curJob.placedThings = new List<ThingCountClass>();
+						}
+						ThingCountClass thingCountClass = curJob.placedThings.Find((ThingCountClass x) => x.thing == th);
+						if (thingCountClass != null)
+						{
+							thingCountClass.Count += added;
+						}
+						else
+						{
+							curJob.placedThings.Add(new ThingCountClass(th, added));
+						}
+					};
+
+					if (!actor.carryTracker.TryDropCarriedThing(cell, ThingPlaceMode.Direct, out var _, placedAction))
+					{
+						if (storageMode)
+						{
+							if (nextToilOnPlaceFailOrIncomplete != null && ((tryStoreInSameStorageIfSpotCantHoldWholeStack && StoreUtility.TryFindBestBetterStoreCellForIn(actor.carryTracker.CarriedThing, actor, actor.Map, StoragePriority.Unstored, actor.Faction, cell.GetSlotGroup(actor.Map), out var foundCell)) || StoreUtility.TryFindBestBetterStoreCellFor(actor.carryTracker.CarriedThing, actor, actor.Map, StoragePriority.Unstored, actor.Faction, out foundCell)))
 							{
-								int num = ((actor.carryTracker.CarriedThing != null) ? actor.carryTracker.CarriedThing.stackCount : 0);
-								int a = curJob.countQueue[i];
-								a = Mathf.Min(a, targetQueue[i].Thing.def.stackLimit - num);
-								a = Mathf.Min(a, actor.carryTracker.AvailableStackSpace(targetQueue[i].Thing.def));
-								if (a > 0)
+								if (actor.CanReserve(foundCell))
 								{
-									curJob.count = a;
-									curJob.SetTarget(ind, targetQueue[i].Thing);
-									curJob.countQueue[i] -= a;
-									if (curJob.countQueue[i] <= 0)
-									{
-										curJob.countQueue.RemoveAt(i);
-										targetQueue.RemoveAt(i);
-									}
-									actor.jobs.curDriver.JumpToToil(gotoGetTargetToil);
-									break;
+									actor.Reserve(foundCell, actor.CurJob);
+								}
+								actor.CurJob.SetTarget(cellInd, foundCell);
+								actor.jobs.curDriver.JumpToToil(nextToilOnPlaceFailOrIncomplete);
+							}
+							else
+							{
+								Job job = HaulAIUtility.HaulAsideJobFor(actor, actor.carryTracker.CarriedThing);
+								if (job != null)
+								{
+									curJob.targetA = job.targetA;
+									curJob.targetB = job.targetB;
+									curJob.targetC = job.targetC;
+									curJob.count = job.count;
+									curJob.haulOpportunisticDuplicates = job.haulOpportunisticDuplicates;
+									curJob.haulMode = job.haulMode;
+									actor.jobs.curDriver.JumpToToil(nextToilOnPlaceFailOrIncomplete);
+								}
+								else
+								{
+									Log.Error(string.Concat("Incomplete haul for ", actor, ": Could not find anywhere to put ", actor.carryTracker.CarriedThing, " near ", actor.Position, ". Destroying. This should never happen!"));
+									actor.carryTracker.CarriedThing.Destroy();
 								}
 							}
+						}
+						else if (nextToilOnPlaceFailOrIncomplete != null)
+						{
+							actor.jobs.curDriver.JumpToToil(nextToilOnPlaceFailOrIncomplete);
 						}
 					}
 				}

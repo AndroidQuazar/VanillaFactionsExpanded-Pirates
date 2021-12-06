@@ -16,6 +16,7 @@ namespace VFEPirates
         public Color colorHelmet;
          
         public float totalWorkAmount; // we could just retrieve it from all apparels, but might be too much perf impact if done every frame and tick
+        public float currentWorkAmountDone;
         public void ApplyOn(Pawn pawn)
         {
             var armor = ThingMaker.MakeThing(armorDef) as Apparel_Warcasket;
@@ -32,6 +33,19 @@ namespace VFEPirates
 
             Log.Message(colorArmor + " - " + colorHelmet + " - " + colorShoulderPads);
             Log.Message(armor.DrawColor + " - " + helmet.DrawColor + " - " + shoulderPads.DrawColor);
+        }
+
+        public void DoWork(float workAmount, out bool workDone)
+        {
+            currentWorkAmountDone += workAmount;
+            if (currentWorkAmountDone >= totalWorkAmount)
+            {
+                workDone = true;
+            }
+            else
+            {
+                workDone = false;
+            }
         }
         public void ExposeData()
         {

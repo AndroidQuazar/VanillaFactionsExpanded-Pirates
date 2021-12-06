@@ -98,7 +98,21 @@ namespace VFEPirates
             {
                 failReason = "NoPower".Translate();
             }
+            if (!OccupantAliveAndPresent)
+            {
+                return false;
+            }
             return failReason is null;
+        }
+
+        public bool OccupantAliveAndPresent => occupant != null && occupant.Position == this.Position && !occupant.Downed && !occupant.Dead;
+        public override void Tick()
+        {
+            base.Tick();
+            if (!OccupantAliveAndPresent)
+            {
+                DeregisterOccupant();
+            }
         }
         public void OpenCustomizationWindow(Pawn entombedPawn)
         {
@@ -133,12 +147,19 @@ namespace VFEPirates
                         defaultLabel = "DEV: Finish welding",
                         action = delegate
                         {
-                            curWarcasketProject.ApplyOn(occupant);
-                            DeregisterOccupant();
+                            FinishWarCasketProject();
                         }
                     };
                 }
             }
+        }
+
+        public void FinishWarCasketProject()
+        {
+            curWarcasketProject.ApplyOn(occupant);
+            curWarcasketProject = null;
+            DeregisterOccupant();
+            this.compPower.powerOutputInt = -50;
         }
         public void RegisterOccupant(Pawn pawn)
         {
@@ -158,6 +179,18 @@ namespace VFEPirates
 
         [TweakValue("00", 0, 10)] public static float ySize = 2f;
         [TweakValue("00", 0, 10)] public static float zSize = 2f;
+
+        [TweakValue("00", 0, 1)] public static float BarSizeX = 0.815f;
+        [TweakValue("00", 0, 1)] public static float BarSizeY = 0.175f;
+
+
+        [TweakValue("00", 0, 1)] public static float BatOffsetX = 0;
+        [TweakValue("00", 0, 1)] public static float BatOffsetZ = 0.25f;
+        [TweakValue("00", 0, 6)] public static float BatOffsetY = 5f;
+
+        private static readonly Material BatteryBarFilledMat = SolidColorMaterials.SimpleSolidColorMaterial(new Color(0.9f, 0.85f, 0.2f));
+        private static readonly Material BatteryBarUnfilledMat = SolidColorMaterials.SimpleSolidColorMaterial(new Color(0.3f, 0.3f, 0.3f));
+
         public override void Draw()
         {
             base.Draw();
@@ -170,6 +203,18 @@ namespace VFEPirates
                 var matrix = default(Matrix4x4);
                 matrix.SetTRS(pos, quat, new Vector3(ySize, 1, zSize));
                 Graphics.DrawMesh(MeshPool.plane10, matrix, Frame, 0);
+
+                GenDraw.FillableBarRequest r = default(GenDraw.FillableBarRequest);
+                r.center = DrawPos + new Vector3(BatOffsetX, BatOffsetY, BatOffsetZ);
+                r.size = new Vector2(BarSizeX, BarSizeY);
+                r.fillPercent = curWarcasketProject.currentWorkAmountDone / curWarcasketProject.totalWorkAmount;
+                r.filledMat = BatteryBarFilledMat;
+                r.unfilledMat = BatteryBarUnfilledMat;
+                r.margin = 0.15f;
+                Rot4 rotation = base.Rotation;
+                rotation.Rotate(RotationDirection.Clockwise);
+                r.rotation = rotation;
+                GenDraw.DrawFillableBar(r);
             }
         }
 

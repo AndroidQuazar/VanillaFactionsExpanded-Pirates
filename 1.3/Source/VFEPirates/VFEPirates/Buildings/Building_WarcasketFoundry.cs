@@ -1,6 +1,7 @@
 ﻿using RimWorld;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Runtime.Remoting.Messaging;
@@ -65,6 +66,13 @@ namespace VFEPirates
             return null;
         }
 
+        public IEnumerable<IngredientCount> RequiredIngredients()
+        {
+            return curWarcasketProject.armorDef.costList.Select(x => x.ToIngredientCount())
+             .Concat(curWarcasketProject.helmetDef.costList.Select(x => x.ToIngredientCount()))
+             .Concat(curWarcasketProject.shoulderPadsDef.costList.Select(x => x.ToIngredientCount()));
+        }
+        public bool ReadyForWelding => compPower.PowerOn && occupant != null && curWarcasketProject != null;
         public void OpenCustomizationWindow(Pawn entombedPawn)
         {
             // Legodude, here you need to create and call customization window where you initialize chosenWarCasketProject with all its variables, such as crafter, total cost, workamount etc

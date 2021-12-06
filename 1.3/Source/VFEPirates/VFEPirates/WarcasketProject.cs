@@ -28,7 +28,10 @@ namespace VFEPirates
 
             var shoulderPads = ThingMaker.MakeThing(shoulderPadsDef) as Apparel;
             shoulderPads.SetColor(colorShoulderPads);
+
             pawn.apparel.Wear(shoulderPads, false, true);
+
+            Log.Message(colorArmor + " - " + colorHelmet + " - " + colorShoulderPads);
         }
         public void ExposeData()
         {

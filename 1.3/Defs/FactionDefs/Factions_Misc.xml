@@ -35,9 +35,6 @@ Junkers utilise warcasket technology and seal themselves in metal tombs in which
     <allowedMemes>
       <li MayRequire="Ludeon.RimWorld.Ideology">PainIsVirtue</li>
     </allowedMemes>
-    <disallowedMemes>
-      <li MayRequire="Ludeon.RimWorld.Ideology">FleshPurity</li>
-    </disallowedMemes>
     <structureMemeWeights>
       <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
     </structureMemeWeights>

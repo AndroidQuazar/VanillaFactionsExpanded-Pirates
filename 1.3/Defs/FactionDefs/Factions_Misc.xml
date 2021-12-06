@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef ParentName="FactionBase">
+    <defName>VFEP_Junkers</defName>
+    <label>junkers</label>
+    <description>A loose confederation of pirate gangs who've agreed to mostly fight outsiders instead of fighting each other.
+Pirates don't sow, they don't build, and they rarely trade. Driven by a blood-and-honor culture that values personal strength and ruthlessness, they enrich themselves by raiding and robbing their more productive neighbors.
+Junkers utilise warcasket technology and seal themselves in metal tombs in which they raid, steal, plunder and inevitably die. They rarely use melee weapons and prefer to keep at distance to the enemy to fully utilise the powerful warcasket weaponry.</description>
+    <pawnSingular>junker</pawnSingular>
+    <pawnsPlural>junkers</pawnsPlural>
+    <listOrderPriority>11</listOrderPriority>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <maxCountAtGameStart>1</maxCountAtGameStart>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>khan</leaderTitle>
+    <factionIconPath>UI/FactionIcons/JunkersOutpost</factionIconPath>
+    <factionNameMaker>NamerFactionPirate</factionNameMaker>
+    <settlementNameMaker>NamerSettlementPirate</settlementNameMaker>
+    <pawnNameMaker>VFEM_NamerPersonJunker</pawnNameMaker>
+    <pawnNameMakerFemale>VFEM_NamerPersonJunkerFemale</pawnNameMakerFemale>
+    <colorSpectrum>
+      <li>(0.74, 0.33, 0.33)</li>
+      <li>(0.95, 0.46, 0.46)</li>
+    </colorSpectrum>
+    <permanentEnemy>true</permanentEnemy>
+    <techLevel>Industrial</techLevel>
+    <allowedCultures><li>VFEP_Khanate</li></allowedCultures>
+    <requiredMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
+    </requiredMemes>
+    <allowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">PainIsVirtue</li>
+    </allowedMemes>
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">FleshPurity</li>
+    </disallowedMemes>
+    <structureMemeWeights>
+      <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
+    </structureMemeWeights>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Pirate</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <geneticVariance>0.8</geneticVariance>
+    <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+    <raidLootMaker>PirateRaidLootMaker</raidLootMaker>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(700, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <!-- Normal fights, ranged with melee mix-ins -->
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <Drifter>10</Drifter>
+          <Thrasher>3</Thrasher>
+          <Scavenger>10</Scavenger>
+          <Pirate>10</Pirate>
+          <Grenadier_EMP>0.25</Grenadier_EMP>
+          <Grenadier_Smoke>0.25</Grenadier_Smoke>
+          <Grenadier_Destructive>2</Grenadier_Destructive>
+          <Mercenary_Gunner>10</Mercenary_Gunner>
+          <Mercenary_Heavy>6</Mercenary_Heavy>
+          <Mercenary_Slasher>3</Mercenary_Slasher>
+          <Mercenary_Sniper>7</Mercenary_Sniper>
+          <Mercenary_Elite>10</Mercenary_Elite>
+          <PirateBoss>5</PirateBoss>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, melee-only -->
+        <kindDef>Combat</kindDef>
+        <commonality>30</commonality>
+        <disallowedStrategies>
+          <li>Siege</li>
+        </disallowedStrategies>
+        <options>
+          <Thrasher>10</Thrasher>
+          <Mercenary_Slasher>10</Mercenary_Slasher>
+          <PirateBoss>5</PirateBoss>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, ranged only -->
+        <kindDef>Combat</kindDef>
+        <commonality>20</commonality>
+        <options>
+          <Scavenger>10</Scavenger>
+          <Pirate>10</Pirate>
+          <Grenadier_EMP>0.25</Grenadier_EMP>
+          <Grenadier_Smoke>0.25</Grenadier_Smoke>
+          <Grenadier_Destructive>2</Grenadier_Destructive>
+          <Mercenary_Gunner>10</Mercenary_Gunner>
+          <Mercenary_Heavy>6</Mercenary_Heavy>
+          <Mercenary_Sniper>7</Mercenary_Sniper>
+          <Mercenary_Elite>10</Mercenary_Elite>
+          <PirateBoss>5</PirateBoss>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, explosives with ranged mix-ins -->
+        <kindDef>Combat</kindDef>
+        <commonality>15</commonality>
+        <disallowedStrategies>
+          <li>Siege</li>
+        </disallowedStrategies>
+        <options>
+          <Grenadier_EMP>0.5</Grenadier_EMP>
+          <Grenadier_Smoke>0.5</Grenadier_Smoke>
+          <Grenadier_Destructive>10</Grenadier_Destructive>
+          <Mercenary_Gunner>1</Mercenary_Gunner>
+          <Mercenary_Heavy>10</Mercenary_Heavy>
+          <Mercenary_Elite>1</Mercenary_Elite>
+          <PirateBoss>1</PirateBoss>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, snipers only -->
+        <kindDef>Combat</kindDef>
+        <commonality>10</commonality>
+        <options>
+          <Mercenary_Sniper>10</Mercenary_Sniper>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, drifters only (very rare) -->
+        <kindDef>Combat</kindDef>
+        <commonality>2.5</commonality>
+        <maxTotalPoints>1000</maxTotalPoints>
+        <options>
+          <Drifter>10</Drifter>
+        </options>
+      </li>
+      <li>
+        <!-- Base defense, mainly ranged with melee mix-ins -->
+        <kindDef>Settlement</kindDef>
+        <options>
+          <Thrasher>3</Thrasher>
+          <Pirate>10</Pirate>
+          <Grenadier_Destructive>2</Grenadier_Destructive>
+          <Mercenary_Slasher>3</Mercenary_Slasher>
+          <Mercenary_Sniper>10</Mercenary_Sniper>
+          <Mercenary_Gunner>10</Mercenary_Gunner>
+          <Mercenary_Elite>10</Mercenary_Elite>
+          <PirateBoss>10</PirateBoss>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>30</configurationListOrderPriority>
+  </FactionDef>
+
+  <ThingSetMakerDef>
+    <defName>PirateRaidLootMaker</defName>
+    <root Class="ThingSetMaker_MarketValue">
+      <fixedParams>
+        <filter>
+          <thingDefs>
+            <li>Silver</li>
+            <li>MedicineIndustrial</li>
+            <li>MealSurvivalPack</li>
+            <li>Flake</li>
+            <li>Yayo</li>
+            <li>GoJuice</li>
+            <li>WakeUp</li>
+            <li>SmokeleafJoint</li>
+            <li>Luciferium</li>
+          </thingDefs>
+        </filter>
+      </fixedParams>
+    </root>
+  </ThingSetMakerDef>
+
+</Defs>

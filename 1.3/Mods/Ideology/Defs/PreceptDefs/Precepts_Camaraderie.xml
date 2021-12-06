@@ -75,6 +75,10 @@
 				<eventDef>VFEP_CrewmanDied</eventDef>
 				<thought>VFEP_Camaraderie_Exalted_CrewDead</thought>
 			</li>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>VFEP_Camaraderie_Exalted_DeadCumulative</thought>
+				
+			</li>
 		</comps>
 	</PreceptDef>
 
@@ -101,6 +105,19 @@
 				<description>I’ve socialised with a comrade. We are unstoppable!</description>
 				<baseMoodEffect>6</baseMoodEffect>
 			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<ThoughtDef>
+		<defName>VFEP_Camaraderie_Exalted_DeadCumulative</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>VFEPirates.Thought_Precept_Camaraderie_Exalted</workerClass>
+		<stages>
+			<li>
+				<label>been through some tough times together!</label>
+				<baseOpinionOffset>5</baseOpinionOffset>
+			</li>
+			
 		</stages>
 	</ThoughtDef>
 

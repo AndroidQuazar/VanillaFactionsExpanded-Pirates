@@ -16,6 +16,7 @@ namespace VFEPirates
             if (victim?.RaceProps?.Humanlike == true && victim.Faction == Faction.OfPlayer)
             {
                 Find.HistoryEventsManager.RecordEvent(new HistoryEvent(VFEP_DefOf.VFEP_CrewmanDied, new SignalArgs(victim.Named(HistoryEventArgsNames.Victim))), true);
+                StaticCollectionsClass.crewMembersLost++;
             }
         }
     }

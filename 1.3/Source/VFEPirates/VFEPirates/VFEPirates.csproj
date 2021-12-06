@@ -48,7 +48,10 @@
     <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_TryInteractWith_Patch.cs" />
     <Compile Include="HarmonyPatches\TaleUtility_Notify_PawnDied_Patch.cs" />
     <Compile Include="Jobs\JobDriver_EntombIn.cs" />
+    <Compile Include="MapComponents and GameComponents\GameComponent_LostCrewmenChecker.cs" />
+    <Compile Include="StaticCollectionsClass\StaticCollectionsClass.cs" />
     <Compile Include="StaticStartup.cs" />
+    <Compile Include="Thoughts\Thought_Precept_Camaraderie_Exalted.cs" />
     <Compile Include="VFEPiratesMod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DefOfs\VFEP_DefOf.cs" />

@@ -5,6 +5,8 @@
     <defName>VFEP_Khanate</defName>
     <label>khanate</label>
     <description>A broad category describing the styles and practices of many pirate groups.</description>
+    <pawnNameMaker>VFEM_NamerPersonJunker</pawnNameMaker>
+    <pawnNameMakerFemale>VFEM_NamerPersonJunkerFemale</pawnNameMakerFemale>
     <ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoKriminul</ideoNameMaker>
     <deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerDeityKriminul</deityNameMaker>
     <deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">DeityTypeMakerKriminul</deityTypeMaker>

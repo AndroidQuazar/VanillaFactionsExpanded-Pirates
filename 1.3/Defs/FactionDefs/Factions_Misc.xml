@@ -20,8 +20,6 @@ Junkers utilise warcasket technology and seal themselves in metal tombs in which
     <factionIconPath>UI/FactionIcons/JunkersOutpost</factionIconPath>
     <factionNameMaker>NamerFactionPirate</factionNameMaker>
     <settlementNameMaker>NamerSettlementPirate</settlementNameMaker>
-    <pawnNameMaker>VFEM_NamerPersonJunker</pawnNameMaker>
-    <pawnNameMakerFemale>VFEM_NamerPersonJunkerFemale</pawnNameMakerFemale>
     <colorSpectrum>
       <li>(0.74, 0.33, 0.33)</li>
       <li>(0.95, 0.46, 0.46)</li>

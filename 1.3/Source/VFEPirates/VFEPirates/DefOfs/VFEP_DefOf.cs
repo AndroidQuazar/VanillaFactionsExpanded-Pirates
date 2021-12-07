@@ -47,5 +47,7 @@ namespace VFEPirates
 
         public static ThingDef VFEP_WarcasketFoundry;
         public static JobDef VFEP_DoWelding;
+
+        public static CurseDef VFEP_CurseOfPestilence;
     }
 }

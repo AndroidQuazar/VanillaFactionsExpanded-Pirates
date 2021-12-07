@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <VFEPirates.CurseDef>
+	<defName>VFEP_CurseOfMind</defName>
+	<label>Curse of Mind</label>
+	<description>All mood effects are doubled.</description>
+	<iconPath>UI/Curses/CurseMind</iconPath>
+	<workerClass>VFEPirates.CurseOfMind</workerClass>
+  </VFEPirates.CurseDef>
+
+  <VFEPirates.CurseDef>
+	<defName>VFEP_CurseOfDarkness</defName>
+	<label>Curse of Darkness</label>
+	<description>Darkness intensified. Any tile with 0% light is pitch black.</description>
+	<iconPath>UI/Curses/CurseDarkness</iconPath>
+	<workerClass>VFEPirates.CurseOfDarkness</workerClass>
+  </VFEPirates.CurseDef>
+
+  <VFEPirates.CurseDef> <!-- is being handled in StatPart_CurseOfPestilence to ImmunityGainSpeed parts-->
+	<defName>VFEP_CurseOfPestilence</defName>
+	<label>Curse of Pestilence</label>
+	<description>Immunity gain speed is halved.</description>
+	<iconPath>UI/Curses/CurseSickly</iconPath>
+  </VFEPirates.CurseDef>
+
+</Defs>

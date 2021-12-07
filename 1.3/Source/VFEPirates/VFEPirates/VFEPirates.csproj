@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+	<LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>false</DebugSymbols>
@@ -43,6 +44,10 @@
   <ItemGroup>
     <Compile Include="Apparels\Apparel_Warcasket.cs" />
     <Compile Include="Apparels\Apparel_WarcasketArmor.cs" />
+    <Compile Include="Curses\CurseDef.cs" />
+    <Compile Include="Curses\CurseOfMind.cs" />
+    <Compile Include="Curses\CurseWorker.cs" />
+    <Compile Include="Curses\GameComponent_CurseManager.cs" />
     <Compile Include="Defs\Defs.cs" />
     <Compile Include="Buildings\Building_WarcasketFoundry.cs" />
     <Compile Include="HarmonyPatches\GenSpawn_Spawn_Patch.cs" />
@@ -53,6 +58,7 @@
     <Compile Include="Jobs\JobDriver_DoWelding.cs" />
     <Compile Include="Jobs\JobDriver_EntombIn.cs" />
     <Compile Include="Jobs\RecipeWorker_WarcasketRemoval.cs" />
+    <Compile Include="Utilities\HarmonyUtility.cs" />
     <Compile Include="Utilities\WeldingUtility.cs" />
     <Compile Include="Jobs\WorkGiver_DoWelding.cs" />
     <Compile Include="MapComponents and GameComponents\GameComponent_LostCrewmenChecker.cs" />

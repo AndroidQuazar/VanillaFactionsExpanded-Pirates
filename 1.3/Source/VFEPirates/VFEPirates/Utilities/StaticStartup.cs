@@ -11,6 +11,19 @@ namespace VFEPirates
     {
         static StaticStartup()
         {
+            FillWarcasketDefLists();
+            InitializeCurses();
+        }
+
+        private static void InitializeCurses()
+        {
+            foreach (var def in DefDatabase<CurseDef>.AllDefs)
+            {
+                def.Worker.DoPatches(VFEPiratesMod.harmony);
+            }
+        }
+        private static void FillWarcasketDefLists()
+        {
             var apparels = DefDatabase<ThingDef>.AllDefs.OfType<WarcasketDef>().ToList();
             VFEPiratesMod.allArmorDefs.AddRange(apparels.Where(x => x.isArmor));
             VFEPiratesMod.allShoulderPadsDefs.AddRange(apparels.Where(x => x.isShoulderPads));

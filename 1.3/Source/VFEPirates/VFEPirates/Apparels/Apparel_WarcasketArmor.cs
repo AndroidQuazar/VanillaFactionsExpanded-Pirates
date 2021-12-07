@@ -19,13 +19,16 @@ namespace VFEPirates
             }
         }
 
-        public static float yOffset = 0.0125f;
+        public static float yOffset = 1.22f;
         public override void DrawWornExtras()
         {
             base.DrawWornExtras();
             var bodyMesh = MeshPool.humanlikeBodySet.MeshAt(Wearer.Rotation);
             var pos = CachedData.getBodyPos(Wearer.Drawer.renderer, Wearer.DrawPos, out _);
-            pos.y += yOffset;
+            if (Wearer.CurrentBed() is null)
+            {
+                pos.y += yOffset;
+            }
             var baseMat = BodySuit.Graphic.MatAt(Wearer.Rotation);
             baseMat = Wearer.Drawer.renderer.graphics.flasher.GetDamagedMat(baseMat);
             var quat = Quaternion.AngleAxis(Wearer.Drawer.renderer.BodyAngle(), Vector3.up);

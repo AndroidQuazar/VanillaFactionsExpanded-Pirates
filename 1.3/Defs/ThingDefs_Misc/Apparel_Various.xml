@@ -62,6 +62,7 @@
 				<drawEastSize>(2, 2)</drawEastSize>-->
 			</shellPosDrawSettings>
 			<isUnifiedApparel>true</isUnifiedApparel>
+			<showBodyInBedAlways>true</showBodyInBedAlways>
 		</li>
 	</modExtensions>
   </VFEPirates.WarcasketDef>

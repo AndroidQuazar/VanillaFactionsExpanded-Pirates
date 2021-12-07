@@ -2,14 +2,10 @@
 using RimWorld;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using Unity.Jobs;
 using UnityEngine;
 using Verse;
 using Verse.AI;
-using static Verse.AI.ReservationManager;
-using Verse.Noise;
-using static UnityEngine.GridBrushBase;
 
 namespace VFEPirates
 {

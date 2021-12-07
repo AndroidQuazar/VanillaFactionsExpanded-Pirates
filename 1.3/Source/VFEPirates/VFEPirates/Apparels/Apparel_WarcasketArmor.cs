@@ -24,7 +24,7 @@ namespace VFEPirates
         {
             base.DrawWornExtras();
             var bodyMesh = MeshPool.humanlikeBodySet.MeshAt(Wearer.Rotation);
-            var pos = Wearer.DrawPos;
+            var pos = CachedData.getBodyPos(Wearer.Drawer.renderer, Wearer.DrawPos, out _);
             pos.y += yOffset;
             var baseMat = BodySuit.Graphic.MatAt(Wearer.Rotation);
             baseMat = Wearer.Drawer.renderer.graphics.flasher.GetDamagedMat(baseMat);

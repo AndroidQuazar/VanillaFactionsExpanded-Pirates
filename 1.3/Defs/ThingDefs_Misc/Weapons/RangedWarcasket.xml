@@ -49,6 +49,7 @@
     </costList>
     <weaponTags>
       <li>WarcasketBasic</li>
+	  <li>WarcasketVeteran</li>
     </weaponTags>
     <verbs>
       <li>
@@ -130,6 +131,9 @@
 	  <Uranium>30</Uranium>
       <ComponentIndustrial>3</ComponentIndustrial>
     </costList>
+    <weaponTags>
+	  <li>WarcasketVeteran</li>
+    </weaponTags>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
@@ -208,6 +212,9 @@
       <Steel>190</Steel>
       <ComponentIndustrial>3</ComponentIndustrial>
     </costList>
+    <weaponTags>
+	  <li>WarcasketVeteran</li>
+    </weaponTags>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
@@ -288,6 +295,9 @@
 	  <Plasteel>10</Plasteel>
       <ComponentIndustrial>8</ComponentIndustrial>
     </costList>
+    <weaponTags>
+	  <li>WarcasketHeavy</li>
+    </weaponTags>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
@@ -367,6 +377,9 @@
 	  <Chemfuel>80</Chemfuel>
       <ComponentIndustrial>4</ComponentIndustrial>
     </costList>
+    <weaponTags>
+	  <li>WarcasketHeavy</li>
+    </weaponTags>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
@@ -436,6 +449,9 @@
 	  <Chemfuel>160</Chemfuel>
       <ComponentIndustrial>6</ComponentIndustrial>
     </costList>
+    <weaponTags>
+	  <li>WarcasketFlamer</li>
+    </weaponTags>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>

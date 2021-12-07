@@ -33,13 +33,12 @@
     <uiIconScale>1.25</uiIconScale>
     <statBases>
       <Mass>5</Mass>
-      <Flammability>0</Flammability>
       <ArmorRating_Sharp>1.06</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.55</ArmorRating_Blunt>
       <ArmorRating_Heat>0.64</ArmorRating_Heat>
       <Insulation_Cold>4</Insulation_Cold>
       <Insulation_Heat>2</Insulation_Heat>
-      <EquipDelay>4</EquipDelay>
+      <EquipDelay>1</EquipDelay>
     </statBases>
     <equippedStatOffsets>
 	  <MoveSpeed>-0.1</MoveSpeed>
@@ -58,6 +57,10 @@
         <li>Overhead</li>
 		<li>EyeCover</li>
       </layers>
+      <tags>
+        <li>Warcasket</li>
+		<li>WarcasketVeteran</li>
+      </tags>
     </apparel>
   </VFEPirates.WarcasketDef>
 
@@ -70,14 +73,14 @@
     </graphicData>
     <uiIconScale>1.25</uiIconScale>
     <statBases>
-      <Mass>5</Mass>
+      <Mass>8</Mass>
       <Flammability>0</Flammability>
       <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.65</ArmorRating_Blunt>
       <ArmorRating_Heat>0.74</ArmorRating_Heat>
       <Insulation_Cold>5</Insulation_Cold>
       <Insulation_Heat>2</Insulation_Heat>
-      <EquipDelay>4</EquipDelay>
+      <EquipDelay>1</EquipDelay>
     </statBases>
     <equippedStatOffsets>
 	  <MoveSpeed>-0.1</MoveSpeed>
@@ -96,6 +99,88 @@
         <li>Overhead</li>
 		<li>EyeCover</li>
       </layers>
+      <tags>
+		<li>WarcasketVeteran</li>
+      </tags>
+    </apparel>
+  </VFEPirates.WarcasketDef>
+  
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketHelmetBase">
+    <defName>VFEP_WarcasketHelmet_Recon</defName>
+    <label>recon warcasket helmet</label>
+    <description>Advanced warcasket helmet with improved environment protection and reduced weight.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketRecon/WarcasketReconHelmet</texPath>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <statBases>
+      <Mass>4</Mass>
+      <ArmorRating_Sharp>1.02</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.60</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.66</ArmorRating_Heat>
+      <Insulation_Cold>12</Insulation_Cold>
+      <Insulation_Heat>4</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.1</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <costList>
+      <ComponentIndustrial>1</ComponentIndustrial>
+      <Steel>40</Steel>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketRecon/WarcasketReconHelmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+		<li>EyeCover</li>
+      </layers>
+      <tags>
+		<li>WarcasketVeteran</li>
+      </tags>
+    </apparel>
+  </VFEPirates.WarcasketDef>
+  
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketHelmetBase">
+    <defName>VFEP_WarcasketHelmet_Cataphract</defName>
+    <label>cataphract warcasket helmet</label>
+    <description>Advanced warcasket helmet with superior protection and worse weight.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketCataphract/WarcasketCataphractHelmet</texPath>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <statBases>
+      <Mass>8</Mass>
+      <ArmorRating_Sharp>1.56</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.78</ArmorRating_Heat>
+      <Insulation_Cold>4</Insulation_Cold>
+      <Insulation_Heat>2</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	  <MoveSpeed>-0.15</MoveSpeed>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.1</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <costList>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <Steel>75</Steel>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketCataphract/WarcasketCataphractHelmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+		<li>EyeCover</li>
+      </layers>
+      <tags>
+		<li>WarcasketHeavy</li>
+      </tags>
     </apparel>
   </VFEPirates.WarcasketDef>
 

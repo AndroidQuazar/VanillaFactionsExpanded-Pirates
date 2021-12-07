@@ -90,5 +90,40 @@
     <initialWillRange>2~3</initialWillRange>
     <initialResistanceRange>7~12</initialResistanceRange>
   </PawnKindDef>
+  
+  <PawnKindDef ParentName="VFEP_JunkersBase">
+    <defName>VFEP_Veteran</defName>
+    <label>veteran</label>
+    <combatPower>200</combatPower>
+    <maxGenerationAge>55</maxGenerationAge>
+    <apparelMoney>3000~5000</apparelMoney>
+    <apparelTags>
+      <li>WarcasketVeteran</li>
+    </apparelTags>
+    <apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
+    <weaponMoney>2600~3200</weaponMoney>
+    <weaponTags>
+      <li>WarcasketVeteran</li>
+    </weaponTags>
+    <techHediffsChance>0.18</techHediffsChance>
+    <techHediffsMoney>800~2200</techHediffsMoney>
+    <techHediffsTags>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+	  <li>Advanced</li>
+    </techHediffsTags>
+    <inventoryOptions>
+      <skipChance>0.6</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>5</countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+    <biocodeWeaponChance>0.25</biocodeWeaponChance>
+    <initialWillRange>2~3</initialWillRange>
+    <initialResistanceRange>9~14</initialResistanceRange>
+  </PawnKindDef>
 
 </Defs>

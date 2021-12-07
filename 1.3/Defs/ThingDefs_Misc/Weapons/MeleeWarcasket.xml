@@ -11,7 +11,7 @@
     </weaponClasses>
 	<techLevel>Industrial</techLevel>
     <weaponTags>
-      <li>Warcasket</li>
+      <li>WarcasketMelee</li>
     </weaponTags>
 	<thingSetMakerTags><li>Warcasket</li></thingSetMakerTags>
     <tradeTags>
@@ -54,6 +54,10 @@
     <costList>
       <Steel>140</Steel>
     </costList>
+    <weaponTags>
+	  <li>WarcasketMelee</li>
+	  <li>WarcasketVeteran</li>
+    </weaponTags>
     <tools>
       <li>
         <label>point</label>

@@ -94,13 +94,12 @@
     </graphicData>
     <statBases>
       <Mass>50</Mass>
-      <Flammability>0</Flammability>
       <ArmorRating_Sharp>1.06</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.55</ArmorRating_Blunt>
       <ArmorRating_Heat>0.64</ArmorRating_Heat>
       <Insulation_Cold>20</Insulation_Cold>
       <Insulation_Heat>7</Insulation_Heat>
-      <EquipDelay>14</EquipDelay>
+      <EquipDelay>1</EquipDelay>
     </statBases>
     <equippedStatOffsets>
       <MoveSpeed>-0.5</MoveSpeed>
@@ -158,13 +157,12 @@
     </graphicData>
     <statBases>
       <Mass>20</Mass>
-      <Flammability>0</Flammability>
       <ArmorRating_Sharp>1.06</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.55</ArmorRating_Blunt>
       <ArmorRating_Heat>0.64</ArmorRating_Heat>
       <Insulation_Cold>6</Insulation_Cold>
       <Insulation_Heat>2</Insulation_Heat>
-      <EquipDelay>14</EquipDelay>
+      <EquipDelay>1</EquipDelay>
     </statBases>
     <equippedStatOffsets>
       <MoveSpeed>-0.2</MoveSpeed>
@@ -199,13 +197,12 @@
     </graphicData>
     <statBases>
       <Mass>50</Mass>
-      <Flammability>0</Flammability>
       <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.65</ArmorRating_Blunt>
       <ArmorRating_Heat>0.74</ArmorRating_Heat>
       <Insulation_Cold>24</Insulation_Cold>
       <Insulation_Heat>8</Insulation_Heat>
-      <EquipDelay>14</EquipDelay>
+      <EquipDelay>1</EquipDelay>
     </statBases>
     <equippedStatOffsets>
       <MoveSpeed>-0.5</MoveSpeed>
@@ -240,13 +237,12 @@
     </graphicData>
     <statBases>
       <Mass>20</Mass>
-      <Flammability>0</Flammability>
       <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.65</ArmorRating_Blunt>
       <ArmorRating_Heat>0.74</ArmorRating_Heat>
       <Insulation_Cold>7</Insulation_Cold>
       <Insulation_Heat>2</Insulation_Heat>
-      <EquipDelay>14</EquipDelay>
+      <EquipDelay>1</EquipDelay>
     </statBases>
     <equippedStatOffsets>
       <MoveSpeed>-0.2</MoveSpeed>
@@ -254,6 +250,167 @@
     </equippedStatOffsets>
     <costList>
       <Steel>55</Steel>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Hands</li>
+		<li>Neck</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketMarine/WarcasketMarineShoulders</wornGraphicPath>
+      <layers>
+	    <li>OnSkin</li>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+    </apparel>
+  </VFEPirates.WarcasketDef>
+  
+  <!-- Recon warcasket -->
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
+    <defName>VFEP_Warcasket_Recon</defName>
+    <label>recon warcasket</label>
+    <description>Advanced warcasket pauldrons with improved environment protection and reduced weight.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketRecon/WarcasketRecon</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>40</Mass>
+      <ArmorRating_Sharp>1.02</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.6</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.66</ArmorRating_Heat>
+      <Insulation_Cold>20</Insulation_Cold>
+      <Insulation_Heat>6</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <costList>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <Steel>80</Steel>
+      <Uranium>20</Uranium>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Legs</li>
+		<li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketRecon/WarcasketRecon</wornGraphicPath>
+      <layers>
+	    <li>OnSkin</li>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+    </apparel>
+  </VFEPirates.WarcasketDef>
+  
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
+    <defName>VFEP_WarcasketShoulders_Recon</defName>
+    <label>recon warcasket shoulders</label>
+    <description>Advanced warcasket pauldrons with improved protection for similar weight.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketRecon/WarcasketReconShoulders</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>15</Mass>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>1.02</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.6</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.66</ArmorRating_Heat>
+      <Insulation_Cold>7</Insulation_Cold>
+      <Insulation_Heat>2</Insulation_Heat>
+      <EquipDelay>14</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.1</MoveSpeed>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <costList>
+      <Steel>40</Steel>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Hands</li>
+		<li>Neck</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketRecon/WarcasketReconShoulders</wornGraphicPath>
+      <layers>
+	    <li>OnSkin</li>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+    </apparel>
+  </VFEPirates.WarcasketDef>
+  
+  <!-- Cataphract warcasket -->
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
+    <defName>VFEP_Warcasket_Cataphract</defName>
+    <label>cataphract warcasket</label>
+    <description>Advanced warcasket shell with superior protection and worse weight.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketMarine/WarcasketMarine</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>75</Mass>
+      <ArmorRating_Sharp>1.56</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.78</ArmorRating_Heat>
+      <Insulation_Cold>43</Insulation_Cold>
+      <Insulation_Heat>14</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.85</MoveSpeed>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <costList>
+      <ComponentIndustrial>5</ComponentIndustrial>
+      <Steel>175</Steel>
+      <Uranium>50</Uranium>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Legs</li>
+		<li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketMarine/WarcasketMarine</wornGraphicPath>
+      <layers>
+	    <li>OnSkin</li>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+    </apparel>
+  </VFEPirates.WarcasketDef>
+  
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
+    <defName>VFEP_WarcasketShoulders_Cataphract</defName>
+    <label>cataphract warcasket shoulders</label>
+    <description>Advanced warcasket pauldrons with superior protection and worse weight.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketMarine/WarcasketMarineShoulders</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>35</Mass>
+      <ArmorRating_Sharp>1.56</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.78</ArmorRating_Heat>
+      <Insulation_Cold>18</Insulation_Cold>
+      <Insulation_Heat>6</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.35</MoveSpeed>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <costList>
+      <Steel>75</Steel>
     </costList>
     <apparel>
       <bodyPartGroups>

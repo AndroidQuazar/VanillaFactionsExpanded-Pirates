@@ -1,10 +1,15 @@
-﻿using RimWorld;
+﻿using HarmonyLib;
+using RimWorld;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.Jobs;
 using UnityEngine;
 using Verse;
 using Verse.AI;
+using static Verse.AI.ReservationManager;
+using Verse.Noise;
+using static UnityEngine.GridBrushBase;
 
 namespace VFEPirates
 {
@@ -13,7 +18,6 @@ namespace VFEPirates
 		public Building_WarcasketFoundry Foundry => TargetA.Thing as Building_WarcasketFoundry;
 		public override bool TryMakePreToilReservations(bool errorOnFailed)
 		{
-			this.pawn.jobs.debugLog = true;
 			if (!pawn.Reserve(job.GetTarget(TargetIndex.A), job, 1, -1, null, errorOnFailed))
 			{
 				return false;
@@ -21,7 +25,7 @@ namespace VFEPirates
 			pawn.ReserveAsManyAsPossible(job.GetTargetQueue(TargetIndex.B), job);
 			foreach (var target in job.GetTargetQueue(TargetIndex.B))
             {
-				Log.Message(pawn + " reserving " + target.Thing);
+				pawn.Map.physicalInteractionReservationManager.Reserve(pawn, job, target.Thing);
             }
 			return true;
 		}
@@ -49,6 +53,7 @@ namespace VFEPirates
 					{
 						job.placedThings[i].thing?.Destroy();
 					}
+					pawn.Map.physicalInteractionReservationManager.ReleaseClaimedBy(pawn, job);
 					job.placedThings = null;
 				},
 				tickAction = delegate
@@ -61,8 +66,8 @@ namespace VFEPirates
 						this.EndJobWith(JobCondition.Succeeded);
 					}
 				},
-			    defaultCompleteMode = ToilCompleteMode.Never
-			};
+				defaultCompleteMode = ToilCompleteMode.Never
+			}.WithEffect(() => EffecterDefOf.ConstructMetal, TargetIndex.A);
 		}
 
 		public IEnumerable<Toil> CollectIngredientsToils(TargetIndex ingredientInd, TargetIndex billGiverInd, TargetIndex ingredientPlaceCellInd, bool subtractNumTakenFromJobCount = false, bool failIfStackCountLessThanJobCount = true)

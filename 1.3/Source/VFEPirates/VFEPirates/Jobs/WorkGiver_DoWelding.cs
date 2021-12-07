@@ -16,7 +16,7 @@ namespace VFEPirates
 		public override Danger MaxPathDanger(Pawn pawn) => Danger.Some;
         public override Job JobOnThing(Pawn pawn, Thing thing, bool forced = false)
 		{
-			if (thing is Building_WarcasketFoundry foundry && foundry.OccupantAliveAndPresent)
+			if (thing is Building_WarcasketFoundry foundry && foundry.OccupantAliveAndPresent && pawn.CanReserveAndReach(thing, PathEndMode.Touch, MaxPathDanger(pawn)))
 			{
 				if (!foundry.ReadyForWelding(pawn, out string failReason))
 				{

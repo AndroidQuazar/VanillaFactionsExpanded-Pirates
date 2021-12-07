@@ -46,6 +46,7 @@
     <Compile Include="Defs\Defs.cs" />
     <Compile Include="Buildings\Building_WarcasketFoundry.cs" />
     <Compile Include="HarmonyPatches\GenSpawn_Spawn_Patch.cs" />
+    <Compile Include="HarmonyPatches\ITab_Pawn_Gear_DrawThingRow.cs" />
     <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_TryInteractWith_Patch.cs" />
     <Compile Include="HarmonyPatches\TaleUtility_Notify_PawnDied_Patch.cs" />
     <Compile Include="Jobs\JobDriver_DoWelding.cs" />

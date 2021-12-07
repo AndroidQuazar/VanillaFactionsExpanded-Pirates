@@ -123,6 +123,7 @@
       </layers>
       <tags>
         <li>Warcasket</li>
+		<li>WarcasketVeteran</li>
       </tags>
     </apparel>
   </VFEPirates.WarcasketDef>
@@ -184,6 +185,10 @@
         <li>Middle</li>
         <li>Shell</li>
       </layers>
+      <tags>
+        <li>Warcasket</li>
+		<li>WarcasketVeteran</li>
+      </tags>
     </apparel>
   </VFEPirates.WarcasketDef>
   
@@ -225,6 +230,9 @@
         <li>Middle</li>
         <li>Shell</li>
       </layers>
+      <tags>
+		<li>WarcasketVeteran</li>
+      </tags>
     </apparel>
   </VFEPirates.WarcasketDef>
   
@@ -265,6 +273,9 @@
         <li>Shell</li>
       </layers>
     </apparel>
+      <tags>
+		<li>WarcasketVeteran</li>
+      </tags>
   </VFEPirates.WarcasketDef>
   
   <!-- Recon warcasket -->
@@ -305,6 +316,9 @@
         <li>Middle</li>
         <li>Shell</li>
       </layers>
+      <tags>
+		<li>WarcasketVeteran</li>
+      </tags>
     </apparel>
   </VFEPirates.WarcasketDef>
   
@@ -345,6 +359,9 @@
         <li>Middle</li>
         <li>Shell</li>
       </layers>
+      <tags>
+		<li>WarcasketVeteran</li>
+      </tags>
     </apparel>
   </VFEPirates.WarcasketDef>
   
@@ -354,7 +371,7 @@
     <label>cataphract warcasket</label>
     <description>Advanced warcasket shell with superior protection and worse weight.</description>
     <graphicData>
-      <texPath>Things/Pawn/Warcasketlike/WarcasketMarine/WarcasketMarine</texPath>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketCataphract/WarcasketCataphract</texPath>
     </graphicData>
     <statBases>
       <Mass>75</Mass>
@@ -380,7 +397,7 @@
         <li>Legs</li>
 		<li>Feet</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketMarine/WarcasketMarine</wornGraphicPath>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketCataphract/WarcasketCataphract</wornGraphicPath>
       <layers>
 	    <li>OnSkin</li>
         <li>Middle</li>
@@ -394,7 +411,7 @@
     <label>cataphract warcasket shoulders</label>
     <description>Advanced warcasket pauldrons with superior protection and worse weight.</description>
     <graphicData>
-      <texPath>Things/Pawn/Warcasketlike/WarcasketMarine/WarcasketMarineShoulders</texPath>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketCataphract/WarcasketCataphractShoulders</texPath>
     </graphicData>
     <statBases>
       <Mass>35</Mass>
@@ -419,12 +436,15 @@
         <li>Hands</li>
 		<li>Neck</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketMarine/WarcasketMarineShoulders</wornGraphicPath>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketCataphract/WarcasketCataphractShoulders</wornGraphicPath>
       <layers>
 	    <li>OnSkin</li>
         <li>Middle</li>
         <li>Shell</li>
       </layers>
+      <tags>
+		<li>WarcasketHeavy</li>
+      </tags>
     </apparel>
   </VFEPirates.WarcasketDef>
 

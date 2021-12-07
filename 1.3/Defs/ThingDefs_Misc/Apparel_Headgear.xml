@@ -57,6 +57,10 @@
         <li>Overhead</li>
 		<li>EyeCover</li>
       </layers>
+      <tags>
+        <li>Warcasket</li>
+		<li>WarcasketVeteran</li>
+      </tags>
     </apparel>
   </VFEPirates.WarcasketDef>
 
@@ -95,6 +99,9 @@
         <li>Overhead</li>
 		<li>EyeCover</li>
       </layers>
+      <tags>
+		<li>WarcasketVeteran</li>
+      </tags>
     </apparel>
   </VFEPirates.WarcasketDef>
   
@@ -103,7 +110,7 @@
     <label>recon warcasket helmet</label>
     <description>Advanced warcasket helmet with improved environment protection and reduced weight.</description>
     <graphicData>
-      <texPath>Things/Pawn/Warcasketlike/Warcasket/WarcasketHelmet</texPath>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketRecon/WarcasketReconHelmet</texPath>
     </graphicData>
     <uiIconScale>1.25</uiIconScale>
     <statBases>
@@ -126,11 +133,14 @@
       <bodyPartGroups>
         <li>FullHead</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Warcasketlike/Warcasket/WarcasketHelmet</wornGraphicPath>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketRecon/WarcasketReconHelmet</wornGraphicPath>
       <layers>
         <li>Overhead</li>
 		<li>EyeCover</li>
       </layers>
+      <tags>
+		<li>WarcasketVeteran</li>
+      </tags>
     </apparel>
   </VFEPirates.WarcasketDef>
   
@@ -139,7 +149,7 @@
     <label>cataphract warcasket helmet</label>
     <description>Advanced warcasket helmet with superior protection and worse weight.</description>
     <graphicData>
-      <texPath>Things/Pawn/Warcasketlike/Warcasket/WarcasketHelmet</texPath>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketCataphract/WarcasketCataphractHelmet</texPath>
     </graphicData>
     <uiIconScale>1.25</uiIconScale>
     <statBases>
@@ -163,11 +173,14 @@
       <bodyPartGroups>
         <li>FullHead</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Warcasketlike/Warcasket/WarcasketHelmet</wornGraphicPath>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketCataphract/WarcasketCataphractHelmet</wornGraphicPath>
       <layers>
         <li>Overhead</li>
 		<li>EyeCover</li>
       </layers>
+      <tags>
+		<li>WarcasketHeavy</li>
+      </tags>
     </apparel>
   </VFEPirates.WarcasketDef>
 

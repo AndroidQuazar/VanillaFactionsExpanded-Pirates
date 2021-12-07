@@ -24,10 +24,10 @@
     <spectatorGerund>participate</spectatorGerund>
     <stages>
       <li>
-        <defaultDuty>Spectate</defaultDuty>
+        
 		<essential>True</essential>
-        <allowedSpectateSidesOverride>Vertical</allowedSpectateSidesOverride>
-        <spectateDistanceOverride>1</spectateDistanceOverride>
+       <defaultDuty>SpectateCircle</defaultDuty>
+        <spectateDistanceOverride>5~7</spectateDistanceOverride>
         <spectatorsRequired>true</spectatorsRequired>
         <endTriggers>
           <li Class="StageEndTrigger_DurationPercentage">

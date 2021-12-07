@@ -273,10 +273,10 @@
         <li>Middle</li>
         <li>Shell</li>
       </layers>
-    </apparel>
       <tags>
 		<li>WarcasketVeteran</li>
       </tags>
+    </apparel>
   </VFEPirates.WarcasketDef>
   
   <!-- Recon warcasket -->

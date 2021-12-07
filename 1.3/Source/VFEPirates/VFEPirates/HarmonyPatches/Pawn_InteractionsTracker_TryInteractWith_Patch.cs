@@ -13,16 +13,20 @@ namespace VFEPirates
         [HarmonyPostfix]
         static void AddInteractionThoughts(Pawn ___pawn, bool __result)
         {
-            if (__result && ___pawn?.Ideo?.HasPrecept(VFEP_DefOf.VFEP_Camaraderie_Respected) == true )
-            {
-                ___pawn.needs?.mood?.thoughts?.memories?.TryGainMemory(VFEP_DefOf.VFEP_Camaraderie_Respected_Memory, null, ___pawn?.Ideo?.GetPrecept(VFEP_DefOf.VFEP_Camaraderie_Respected));
+            if (ModsConfig.IdeologyActive) {
+                if (__result && ___pawn?.Ideo?.HasPrecept(VFEP_DefOf.VFEP_Camaraderie_Respected) == true)
+                {
+                    ___pawn.needs?.mood?.thoughts?.memories?.TryGainMemory(VFEP_DefOf.VFEP_Camaraderie_Respected_Memory, null, ___pawn?.Ideo?.GetPrecept(VFEP_DefOf.VFEP_Camaraderie_Respected));
+
+                }
+                if (__result && ___pawn?.Ideo?.HasPrecept(VFEP_DefOf.VFEP_Camaraderie_Exalted) == true)
+                {
+                    ___pawn.needs?.mood?.thoughts?.memories?.TryGainMemory(VFEP_DefOf.VFEP_Camaraderie_Exalted_Memory, null, ___pawn?.Ideo?.GetPrecept(VFEP_DefOf.VFEP_Camaraderie_Exalted));
+
+                }
 
             }
-            if (__result && ___pawn?.Ideo?.HasPrecept(VFEP_DefOf.VFEP_Camaraderie_Exalted) == true)
-            {
-                ___pawn.needs?.mood?.thoughts?.memories?.TryGainMemory(VFEP_DefOf.VFEP_Camaraderie_Exalted_Memory, null, ___pawn?.Ideo?.GetPrecept(VFEP_DefOf.VFEP_Camaraderie_Exalted));
-
-            }
+            
         }
     }
 

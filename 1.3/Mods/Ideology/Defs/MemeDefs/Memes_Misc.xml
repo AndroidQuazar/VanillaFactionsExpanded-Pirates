@@ -19,7 +19,7 @@
 				<li>memeAdjective->plundering</li>
 				<li>memeAdjective->mutinous</li>
 				<li>memeAdjective->piratical</li>				
-				<li>memeLeaderNoun->captain</li>
+				
 				<li>memeLeaderNoun->skipper</li>
 				<li>memeLeaderNoun->commander</li>
 				<li>memeLeaderNoun->boss</li>				
@@ -100,6 +100,12 @@
 				<member>crewmember</member>
 			</li>
 		</symbolPacks>
+		<requiredRituals>
+			<li>
+				<precept>VFEP_SingingShanties</precept>
+				<pattern>VFEP_SingingShantiesPattern</pattern>
+			</li>
+		</requiredRituals>
 	</MemeDef>
 	
 </Defs>

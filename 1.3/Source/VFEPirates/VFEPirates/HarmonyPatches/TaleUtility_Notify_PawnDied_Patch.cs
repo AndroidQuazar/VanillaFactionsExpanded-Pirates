@@ -14,7 +14,7 @@ namespace VFEPirates
         {
            
 
-            if (victim?.RaceProps?.Humanlike == true && victim.IsColonist)
+            if (ModsConfig.IdeologyActive&&victim?.RaceProps?.Humanlike == true && victim.IsColonist)
             { 
                 Find.HistoryEventsManager.RecordEvent(new HistoryEvent(VFEP_DefOf.VFEP_CrewmanDied));
                 StaticCollectionsClass.crewMembersLost++;

@@ -41,14 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Apparels\Apparel_Warcasket.cs" />
+    <Compile Include="Apparels\Apparel_WarcasketArmor.cs" />
     <Compile Include="Defs\Defs.cs" />
-    <Compile Include="Apparel_WarcasketArmor.cs" />
     <Compile Include="Buildings\Building_WarcasketFoundry.cs" />
     <Compile Include="HarmonyPatches\GenSpawn_Spawn_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_TryInteractWith_Patch.cs" />
     <Compile Include="HarmonyPatches\TaleUtility_Notify_PawnDied_Patch.cs" />
+    <Compile Include="Jobs\JobDriver_DoWelding.cs" />
     <Compile Include="Jobs\JobDriver_EntombIn.cs" />
+    <Compile Include="Jobs\WeldingUtility.cs" />
+    <Compile Include="Jobs\WorkGiver_DoWelding.cs" />
     <Compile Include="MapComponents and GameComponents\GameComponent_LostCrewmenChecker.cs" />
+    <Compile Include="Rituals\RitualBehaviorWorker_SingingShanties.cs" />
+    <Compile Include="Rituals\RitualOutcomeEffectWorker_SingingShanties.cs" />
     <Compile Include="StaticCollectionsClass\StaticCollectionsClass.cs" />
     <Compile Include="StaticStartup.cs" />
     <Compile Include="Thoughts\Thought_Precept_Camaraderie_Exalted.cs" />

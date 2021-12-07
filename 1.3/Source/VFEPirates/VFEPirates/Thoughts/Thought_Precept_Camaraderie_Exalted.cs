@@ -8,8 +8,11 @@ namespace VFEPirates
 	{
 		protected override ThoughtState ShouldHaveThought(Pawn p, Pawn otherPawn)
 		{
-
-            if (StaticCollectionsClass.crewMembersLost == 0)
+			if (!ModsConfig.IdeologyActive)
+			{
+				return false;
+			}
+			if (StaticCollectionsClass.crewMembersLost == 0)
             {
 				return false;
 			}

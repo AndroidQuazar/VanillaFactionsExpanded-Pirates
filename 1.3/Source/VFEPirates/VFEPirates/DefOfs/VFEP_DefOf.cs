@@ -48,6 +48,15 @@ namespace VFEPirates
         public static ThingDef VFEP_WarcasketFoundry;
         public static JobDef VFEP_DoWelding;
 
+        public static ThingDef VFEP_Ship_Black;
+        public static ThingDef VFEP_Ship_Green;
+        public static ThingDef VFEP_Ship_Orange;
+        public static ThingDef VFEP_Ship_Red;
+        public static ThingDef VFEP_CrashedShip_Black;
+        public static ThingDef VFEP_CrashedShip_Green;
+        public static ThingDef VFEP_CrashedShip_Orange;
+        public static ThingDef VFEP_CrashedShip_Red;
+
         public static CurseDef VFEP_CurseOfPestilence;
     }
 }

@@ -59,6 +59,7 @@
     <Compile Include="HarmonyPatches\Page_SelectStoryteller_CanDoNext_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_TryInteractWith_Patch.cs" />
     <Compile Include="HarmonyPatches\TaleUtility_Notify_PawnDied_Patch.cs" />
+    <Compile Include="RaidStrategy\Building_CrashedShip.cs" />
     <Compile Include="Stats\StatPart_CurseOfPestilence.cs" />
     <Compile Include="Utilities\CachedData.cs" />
     <Compile Include="Jobs\JobDriver_DoWelding.cs" />
@@ -68,6 +69,9 @@
     <Compile Include="Utilities\WeldingUtility.cs" />
     <Compile Include="Jobs\WorkGiver_DoWelding.cs" />
     <Compile Include="MapComponents and GameComponents\GameComponent_LostCrewmenChecker.cs" />
+    <Compile Include="RaidStrategy\GauntletIncoming.cs" />
+    <Compile Include="RaidStrategy\PawnsArrivalModeWorker_Gauntlet.cs" />
+    <Compile Include="RaidStrategy\RaidStrategyWorker_Gauntlet.cs" />
     <Compile Include="Rituals\RitualBehaviorWorker_SingingShanties.cs" />
     <Compile Include="Rituals\RitualOutcomeEffectWorker_SingingShanties.cs" />
     <Compile Include="StaticCollectionsClass\StaticCollectionsClass.cs" />

@@ -47,17 +47,6 @@
 			<li>Mining</li>
 			<li>Constructing</li>
 		</roleDisabledWorkTags>
-		<roleApparelRequirements>
-			<li>
-				<requirement>
-					<bodyPartGroupsMatchAny>
-						<li>UpperHead</li>
-					</bodyPartGroupsMatchAny>
-					<requiredDefs>
-						<li>Apparel_Tailcap</li>
-					</requiredDefs>
-				</requirement>
-			</li>
-		</roleApparelRequirements>
+		
 	</PreceptDef>
 </Defs>

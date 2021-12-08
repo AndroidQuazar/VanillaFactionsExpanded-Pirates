@@ -7,4 +7,8 @@
 	<VFEM.MissingMaterials>Missing materials: {0}</VFEM.MissingMaterials>
 	<VFEP.Occupied>Occupied</VFEP.Occupied>
 	<VFEP.WarcasketCannotBeRemoved>Warcasket cannot be removed</VFEP.WarcasketCannotBeRemoved>
+	<VFEP.ChooseCurses>Select Your Curses</VFEP.ChooseCurses>
+	<VFEP.ChooseCurses.Desc>The more curses you select, the more pawns your storyteller will allow you to have, and the rarer big threat events will be.</VFEP.ChooseCurses.Desc>
+	<VFEP.DesiredPopMax>Desired population max: {0}</VFEP.DesiredPopMax>
+	<VFEP.DaysBigThreats>Days between Big Threats: {0}</VFEP.DaysBigThreats>
 </LanguageData>

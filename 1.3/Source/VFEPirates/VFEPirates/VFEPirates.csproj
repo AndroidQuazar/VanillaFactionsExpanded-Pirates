@@ -48,11 +48,15 @@
     <Compile Include="Curses\CurseOfDarkness.cs" />
     <Compile Include="Curses\CurseOfMind.cs" />
     <Compile Include="Curses\CurseWorker.cs" />
+    <Compile Include="Curses\Page_ChooseCurses.cs" />
     <Compile Include="Curses\GameComponent_CurseManager.cs" />
+    <Compile Include="Curses\StorytellerComp_Cursed.cs" />
     <Compile Include="Defs\Defs.cs" />
     <Compile Include="Buildings\Building_WarcasketFoundry.cs" />
     <Compile Include="HarmonyPatches\GenSpawn_Spawn_Patch.cs" />
     <Compile Include="HarmonyPatches\ITab_Pawn_Gear_DrawThingRow.cs" />
+    <Compile Include="HarmonyPatches\Page_SelectStorytellerInGame_PreClose_Patch.cs" />
+    <Compile Include="HarmonyPatches\Page_SelectStoryteller_CanDoNext_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_TryInteractWith_Patch.cs" />
     <Compile Include="HarmonyPatches\TaleUtility_Notify_PawnDied_Patch.cs" />
     <Compile Include="Stats\StatPart_CurseOfPestilence.cs" />

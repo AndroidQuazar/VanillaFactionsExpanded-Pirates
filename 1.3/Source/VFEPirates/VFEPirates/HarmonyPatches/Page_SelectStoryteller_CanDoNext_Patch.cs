@@ -1,0 +1,27 @@
+﻿using System.Linq;
+using HarmonyLib;
+using RimWorld;
+using Verse;
+
+namespace VFEPirates
+{
+    [HarmonyPatch(typeof(Page_SelectStoryteller))]
+    [HarmonyPatch("CanDoNext")]
+    public static class Page_SelectStoryteller_CanDoNext_Patch
+    {
+        [HarmonyPostfix]
+        public static void ChangeNext(Page_SelectStoryteller __instance)
+        {
+            if (Current.Game.storyteller.storytellerComps.OfType<StorytellerComp_Cursed>().Any())
+            {
+                var next = __instance.next;
+                __instance.next = new Page_ChooseCurses {prev = __instance, next = next};
+            }
+            else if (__instance.next is Page_ChooseCurses {next: var next})
+            {
+                GameComponent_CurseManager.Instance.Notify_StorytellerChanged();
+                __instance.next = next;
+            }
+        }
+    }
+}

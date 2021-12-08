@@ -15,7 +15,9 @@ namespace VFEPirates
             if (Current.ProgramState == ProgramState.Playing) doCloseButton = true;
         }
 
-        public override Vector2 InitialSize => new(CURSE_PADDING * 8 + CURSE_SIZE * 6 + 25, UI.screenHeight - 200);
+        public int CursesPerRow => CURSE_PADDING * (6 + 2) + CURSE_SIZE * 6 + 25 >= UI.screenWidth - 20f ? 4 : 6;
+
+        public override Vector2 InitialSize => new(CURSE_PADDING * (CursesPerRow + 2) + CURSE_SIZE * CursesPerRow + 25, UI.screenHeight - 200);
 
         public override void PostOpen()
         {
@@ -31,11 +33,12 @@ namespace VFEPirates
             Text.Font = GameFont.Medium;
             Widgets.Label(new Rect(0f, 0f, inRect.width, 45f), "VFEP.ChooseCurses".Translate());
             Text.Font = GameFont.Tiny;
+            Text.Anchor = TextAnchor.UpperCenter;
             Widgets.Label(new Rect(0, 50f, inRect.width, 25f), "VFEP.ChooseCurses.Desc".Translate());
             var rect = GetMainRect(inRect);
             rect.y += 20f;
             rect.height -= 20f;
-            var count = Mathf.CeilToInt(DefDatabase<CurseDef>.AllDefsListForReading.Count / 6f);
+            var count = Mathf.CeilToInt(DefDatabase<CurseDef>.AllDefsListForReading.Count / (float) CursesPerRow);
             var i = 0;
             Widgets.BeginScrollView(rect, ref scrollPos, new Rect(0, 0, rect.width - 25f, count * CURSE_SIZE + (count + 1) * CURSE_PADDING));
             var curseRect = new Rect(CURSE_PADDING, CURSE_PADDING, CURSE_SIZE, CURSE_SIZE);
@@ -44,7 +47,7 @@ namespace VFEPirates
                 DoCurse(curseRect, curse);
                 curseRect.x += CURSE_SIZE + CURSE_PADDING;
                 i++;
-                if (i >= 6)
+                if (i >= CursesPerRow)
                 {
                     curseRect.x = CURSE_PADDING;
                     curseRect.y += CURSE_SIZE + CURSE_PADDING;

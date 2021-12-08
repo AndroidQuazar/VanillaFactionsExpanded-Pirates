@@ -6,12 +6,33 @@ using Verse;
 
 namespace VFEPirates
 {
+    public class CurseCollection : IExposable
+    {
+        public CurseCollection()
+        {
+            curses = new List<CurseDef>();
+        }
+
+        public CurseCollection(CurseDef curseDef)
+        {
+            curses = new List<CurseDef> { curseDef };
+        }
+        public List<CurseDef> curses;
+        public void ExposeData()
+        {
+            Scribe_Collections.Look(ref curses, "curses");
+            if (curses is null)
+            {
+                curses ??= new List<CurseDef>();
+            }
+        }
+    }
     public class GameComponent_CurseManager : GameComponent
     {
         public static GameComponent_CurseManager Instance;
         public HashSet<CurseDef> activeCurseDefs = new();
 
-        private Dictionary<StorytellerDef, List<CurseDef>> activeCurses = new();
+        private Dictionary<StorytellerDef, CurseCollection> activeCurses = new();
 
         public HashSet<Type> activeCurseTypes = new();
 
@@ -20,8 +41,15 @@ namespace VFEPirates
             Init();
         }
 
-        public int DesiredPopulationMax => activeCurseDefs.Count;
-        public int MaxThreatBigIntervalDays => activeCurseDefs.Count;
+        public float DesiredPopulationMax(StorytellerDef storytellerDef)
+        {
+            return storytellerDef.populationIntentFactorFromPopCurve.Where(x => x.y >= 0).MinBy(x => x.y).x + activeCurseDefs.Count;
+        }
+
+        public float MaxThreatBigIntervalDays(StorytellerCompProperties_RandomMain props)
+        {
+            return props.maxThreatBigIntervalDays + activeCurseDefs.Count;
+        }
 
         public override void FinalizeInit()
         {
@@ -32,41 +60,40 @@ namespace VFEPirates
         public void Init()
         {
             Instance = this;
-            activeCurses ??= new Dictionary<StorytellerDef, List<CurseDef>>();
+            activeCurses ??= new Dictionary<StorytellerDef, CurseCollection>();
             activeCurseTypes ??= new HashSet<Type>();
             activeCurseDefs ??= new HashSet<CurseDef>();
-
             UpdateLists();
         }
 
         public void Add(CurseDef curseDef)
         {
             if (!activeCurses.ContainsKey(Find.Storyteller.def))
-                activeCurses[Find.Storyteller.def] = new List<CurseDef> {curseDef};
+                activeCurses[Find.Storyteller.def] = new CurseCollection(curseDef);
             else
-                activeCurses[Find.Storyteller.def].Add(curseDef);
+                activeCurses[Find.Storyteller.def].curses.Add(curseDef);
             UpdateLists();
         }
 
         public void Remove(CurseDef curseDef)
         {
-            if (activeCurses.ContainsKey(Find.Storyteller.def)) activeCurses[Find.Storyteller.def].Remove(curseDef);
+            if (activeCurses.ContainsKey(Find.Storyteller.def)) activeCurses[Find.Storyteller.def].curses.Remove(curseDef);
             UpdateLists();
         }
 
         public void Notify_StorytellerChanged()
         {
             if (!activeCurses.ContainsKey(Find.Storyteller.def))
-                activeCurses[Find.Storyteller.def] = new List<CurseDef>();
+                activeCurses[Find.Storyteller.def] = new CurseCollection();
             UpdateLists();
         }
 
         private void UpdateLists()
         {
-            if (Find.Storyteller?.def != null)
+            if (Find.Storyteller?.def != null && activeCurses.ContainsKey(Find.Storyteller.def))
             {
-                activeCurseTypes = activeCurses[Find.Storyteller.def].Select(x => x.workerClass).ToHashSet();
-                activeCurseDefs = activeCurses[Find.Storyteller.def].ToHashSet();
+                activeCurseTypes = activeCurses[Find.Storyteller.def].curses.Select(x => x.workerClass).ToHashSet();
+                activeCurseDefs = activeCurses[Find.Storyteller.def].curses.ToHashSet();
             }
         }
 

@@ -12,7 +12,7 @@ namespace VFEPirates
         [HarmonyPostfix]
         public static void ChangeNext(Page_SelectStoryteller __instance)
         {
-            if (Current.Game.storyteller.storytellerComps.OfType<StorytellerComp_Cursed>().Any())
+            if (CursesUtility.CursedStorytellerInCharge)
             {
                 var next = __instance.next;
                 __instance.next = new Page_ChooseCurses {prev = __instance, next = next};

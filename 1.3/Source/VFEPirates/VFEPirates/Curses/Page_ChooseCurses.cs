@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using System.Linq;
 using UnityEngine;
 using Verse;
 
@@ -58,8 +59,9 @@ namespace VFEPirates
             Widgets.EndScrollView();
             var configRect = new Rect(Current.ProgramState == ProgramState.Playing ? 0f : inRect.x + inRect.width / 2f - 100f, inRect.yMax - 50f, 200f, 50f);
             Text.Font = GameFont.Small;
-            Widgets.Label(configRect.TopHalf(), "VFEP.DesiredPopMax".Translate(GameComponent_CurseManager.Instance.DesiredPopulationMax));
-            Widgets.Label(configRect.BottomHalf(), "VFEP.DaysBigThreats".Translate(GameComponent_CurseManager.Instance.MaxThreatBigIntervalDays));
+            Widgets.Label(configRect.TopHalf(), "VFEP.DesiredPopMax".Translate(GameComponent_CurseManager.Instance.DesiredPopulationMax(Find.Storyteller.def)));
+            Widgets.Label(configRect.BottomHalf(), "VFEP.DaysBigThreats".Translate(GameComponent_CurseManager.Instance.MaxThreatBigIntervalDays
+                (Find.Storyteller.def.comps.OfType<StorytellerCompProperties_RandomMain>().First())));
             Text.Font = font;
             Text.Anchor = anchor;
             if (Current.ProgramState != ProgramState.Playing) DoBottomButtons(inRect);

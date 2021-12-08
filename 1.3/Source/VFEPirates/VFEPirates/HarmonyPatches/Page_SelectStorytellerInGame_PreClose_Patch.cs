@@ -12,7 +12,7 @@ namespace VFEPirates
         [HarmonyPostfix]
         public static void OpenCurses(Page_SelectStorytellerInGame __instance)
         {
-            if (Current.Game.storyteller.storytellerComps.OfType<StorytellerComp_Cursed>().Any()) Find.WindowStack.Add(new Page_ChooseCurses());
+            if (CursesUtility.CursedStorytellerInCharge) Find.WindowStack.Add(new Page_ChooseCurses());
             else GameComponent_CurseManager.Instance.Notify_StorytellerChanged();
         }
     }

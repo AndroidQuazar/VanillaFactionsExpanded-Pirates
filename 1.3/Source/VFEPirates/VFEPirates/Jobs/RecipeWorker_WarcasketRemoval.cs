@@ -9,9 +9,9 @@ namespace VFEPirates
 	{
         public override bool AvailableOnNow(Thing thing, BodyPartRecord part = null)
 		{
-			return true;
 			if (thing is Pawn pawn && pawn.apparel.WornApparel.Any(x => x is Apparel_Warcasket))
 			{
+				return true;
 			}
 			return false;
 		}

@@ -54,10 +54,12 @@
     <Compile Include="Defs\Defs.cs" />
     <Compile Include="Buildings\Building_WarcasketFoundry.cs" />
     <Compile Include="HarmonyPatches\GenSpawn_Spawn_Patch.cs" />
-    <Compile Include="HarmonyPatches\ITab_Pawn_Gear_DrawThingRow.cs" />
+    <Compile Include="HarmonyPatches\ITab_Pawn_Gear_DrawThingRow_Transpiler.cs" />
     <Compile Include="HarmonyPatches\Page_SelectStorytellerInGame_PreClose_Patch.cs" />
     <Compile Include="HarmonyPatches\Page_SelectStoryteller_CanDoNext_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_TryInteractWith_Patch.cs" />
+    <Compile Include="HarmonyPatches\StorytellerComp_RandomMain_ChooseRandomCategory_Transpiler.cs" />
+    <Compile Include="HarmonyPatches\StorytellerUtilityPopulation_CalculatePopulationIntent_Patch.cs" />
     <Compile Include="HarmonyPatches\TaleUtility_Notify_PawnDied_Patch.cs" />
     <Compile Include="RaidStrategy\Building_CrashedShip.cs" />
     <Compile Include="Stats\StatPart_CurseOfPestilence.cs" />
@@ -65,6 +67,7 @@
     <Compile Include="Jobs\JobDriver_DoWelding.cs" />
     <Compile Include="Jobs\JobDriver_EntombIn.cs" />
     <Compile Include="Jobs\RecipeWorker_WarcasketRemoval.cs" />
+    <Compile Include="Utilities\CursesUtility.cs" />
     <Compile Include="Utilities\HarmonyUtility.cs" />
     <Compile Include="Utilities\WeldingUtility.cs" />
     <Compile Include="Jobs\WorkGiver_DoWelding.cs" />

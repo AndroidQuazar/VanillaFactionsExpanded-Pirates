@@ -4,7 +4,7 @@
 		<defName>VFEP_NamerRoleCaptain</defName>
 		<rulePack>
 			<rulesStrings>
-				<li>r_roleName(p=7)->[firstPart][secondPart]</li>
+				<li>r_roleName(p=7)->[firstPart] [secondPart]</li>
 				<li>firstPart->swarthy</li>
 				<li>firstPart->foul-mouthed</li>
 				<li>firstPart->shady</li>

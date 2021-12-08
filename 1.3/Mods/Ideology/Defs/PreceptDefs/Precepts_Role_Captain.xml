@@ -5,7 +5,7 @@
 		<label>captain</label>
 		<description>Generally chosen for his daring and dominating character, a pirate captain is often admired for his cruelty and destructiveness.</description>
 		<iconPath>UI/Ideology/Captain</iconPath>
-		<nameMaker>NamerRoleShooter</nameMaker>
+		<nameMaker>VFEP_NamerRoleCaptain</nameMaker>
 		<roleTags>
 			<li>Captain</li>
 		</roleTags>

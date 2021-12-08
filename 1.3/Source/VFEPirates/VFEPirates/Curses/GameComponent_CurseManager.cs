@@ -31,8 +31,10 @@ namespace VFEPirates
             activeCurses ??= new Dictionary<StorytellerDef, List<CurseDef>>();
             activeCurseTypes ??= new HashSet<Type>();
             activeCurseDefs ??= new HashSet<CurseDef>();
-
-            activeCurses[Find.Storyteller.def] = DefDatabase<CurseDef>.AllDefsListForReading; // for testing only, need to remove after
+            if (Find.Storyteller?.def != null)
+            {
+                activeCurses[Find.Storyteller.def] = DefDatabase<CurseDef>.AllDefsListForReading; // for testing only, need to remove after
+            }
 
             UpdateLists();
         }

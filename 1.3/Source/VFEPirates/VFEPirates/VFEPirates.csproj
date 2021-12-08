@@ -12,7 +12,7 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
-	<LangVersion>latest</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>false</DebugSymbols>
@@ -45,6 +45,7 @@
     <Compile Include="Apparels\Apparel_Warcasket.cs" />
     <Compile Include="Apparels\Apparel_WarcasketArmor.cs" />
     <Compile Include="Curses\CurseDef.cs" />
+    <Compile Include="Curses\CurseOfDarkness.cs" />
     <Compile Include="Curses\CurseOfMind.cs" />
     <Compile Include="Curses\CurseWorker.cs" />
     <Compile Include="Curses\GameComponent_CurseManager.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="HarmonyPatches\ITab_Pawn_Gear_DrawThingRow.cs" />
     <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_TryInteractWith_Patch.cs" />
     <Compile Include="HarmonyPatches\TaleUtility_Notify_PawnDied_Patch.cs" />
+    <Compile Include="Stats\StatPart_CurseOfPestilence.cs" />
     <Compile Include="Utilities\CachedData.cs" />
     <Compile Include="Jobs\JobDriver_DoWelding.cs" />
     <Compile Include="Jobs\JobDriver_EntombIn.cs" />

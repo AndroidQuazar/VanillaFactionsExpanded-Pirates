@@ -120,7 +120,7 @@
         </fuelFilter>
         <fuelConsumptionRate>5</fuelConsumptionRate>
         <fuelCapacity>5</fuelCapacity>
-        <autoRefuelPercent>0.75</autoRefuelPercent>
+        <autoRefuelPercent>0.1</autoRefuelPercent>
         <minimumFueledThreshold>1</minimumFueledThreshold>
         <fuelMultiplier>1</fuelMultiplier>
         <factorByDifficulty>true</factorByDifficulty>
@@ -134,14 +134,14 @@
       <difficultyVar>classicMortars</difficultyVar>
       <invert>true</invert>
       <costList>
-        <ComponentIndustrial>4</ComponentIndustrial>
-        <Steel>100</Steel>
+        <WoodLog>30</WoodLog>
+        <Steel>120</Steel>
       </costList>
     </costListForDifficulty>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <building>
       <turretGunDef>VFEP_Artillery_Cannon</turretGunDef>
-	  <turretTopDrawSize>2</turretTopDrawSize>
+	  <turretTopDrawSize>3</turretTopDrawSize>
     </building>
   <uiIconPath>Things/Building/Security/DirectionalCannon_MenuIcon</uiIconPath>
   <uiIconScale>0.9</uiIconScale>
@@ -263,7 +263,7 @@
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
     </placeWorkers>
     <researchPrerequisites>
-      <li>Mortars</li>
+      <li>Smithing</li>
     </researchPrerequisites>
     <uiIconScale>1.1</uiIconScale>
   </ThingDef>

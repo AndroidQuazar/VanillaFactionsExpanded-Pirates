@@ -1,5 +1,5 @@
-﻿using RimWorld;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Verse;
 
@@ -7,19 +7,48 @@ namespace VFEPirates
 {
     public class WarcasketProject : IExposable
     {
-        public ThingDef armorDef;
-        public ThingDef shoulderPadsDef;
-        public ThingDef helmetDef;
+        public WarcasketDef armorDef;
 
         public Color colorArmor;
-        public Color colorShoulderPads;
         public Color colorHelmet;
-         
-        public float totalWorkAmount; // we could just retrieve it from all apparels, but might be too much perf impact if done every frame and tick
+        public Color colorShoulderPads;
         public float currentWorkAmountDone;
-        public void ApplyOn(Pawn pawn)
+        public WarcasketDef helmetDef;
+        public WarcasketDef shoulderPadsDef;
+
+        public float totalWorkAmount; // we could just retrieve it from all apparels, but might be too much perf impact if done every frame and tick
+
+        public void ExposeData()
         {
-            var armor = ThingMaker.MakeThing(armorDef) as Apparel_Warcasket;
+            Scribe_Defs.Look(ref armorDef, "armorDef");
+            Scribe_Defs.Look(ref shoulderPadsDef, "shoulderPadsDef");
+            Scribe_Defs.Look(ref helmetDef, "helmetDef");
+            Scribe_Values.Look(ref colorArmor, "colorArmor");
+            Scribe_Values.Look(ref colorShoulderPads, "colorShoulderPads");
+            Scribe_Values.Look(ref colorHelmet, "colorHelmet");
+            Scribe_Values.Look(ref totalWorkAmount, "totalWorkAmount");
+        }
+
+        public IEnumerable<IngredientCount> RequiredIngredients()
+        {
+            var thingCounts = new Dictionary<ThingDef, int>();
+            foreach (var thingCount in armorDef.costList
+                .Concat(helmetDef.costList)
+                .Concat(shoulderPadsDef.costList))
+                if (thingCounts.ContainsKey(thingCount.thingDef))
+                    thingCounts[thingCount.thingDef] += thingCount.count;
+                else
+                    thingCounts[thingCount.thingDef] = thingCount.count;
+            ;
+
+            var ingredientCountList = new List<IngredientCount>();
+            foreach (var data in thingCounts) ingredientCountList.Add(new ThingDefCountClass(data.Key, data.Value).ToIngredientCount());
+            return ingredientCountList;
+        }
+
+        public void ApplyOn(Pawn pawn, bool forPreview = false)
+        {
+            var armor = ThingMaker.MakeThing(armorDef) as Apparel_WarcasketArmor;
             armor.color = colorArmor;
             pawn.apparel.Wear(armor, false, true);
 
@@ -39,23 +68,9 @@ namespace VFEPirates
         {
             currentWorkAmountDone += workAmount;
             if (currentWorkAmountDone >= totalWorkAmount)
-            {
                 workDone = true;
-            }
             else
-            {
                 workDone = false;
-            }
-        }
-        public void ExposeData()
-        {
-            Scribe_Defs.Look(ref armorDef, "armorDef");
-            Scribe_Defs.Look(ref shoulderPadsDef, "shoulderPadsDef");
-            Scribe_Defs.Look(ref helmetDef, "helmetDef");
-            Scribe_Values.Look(ref colorArmor, "colorArmor");
-            Scribe_Values.Look(ref colorShoulderPads, "colorShoulderPads");
-            Scribe_Values.Look(ref colorHelmet, "colorHelmet");
-            Scribe_Values.Look(ref totalWorkAmount, "totalWorkAmount");
         }
     }
 }

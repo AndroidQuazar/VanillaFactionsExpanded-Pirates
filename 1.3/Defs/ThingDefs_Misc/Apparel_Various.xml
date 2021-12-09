@@ -451,9 +451,10 @@
   
   <!-- Privateer armour -->
   <ThingDef ParentName="ArmorMachineableBase">
-    <defName>Apparel_PowerArmor</defName>
-    <label>marine armor</label>
-    <description>A suit of powered armor. Layered plasteel-weave plates are very effective at stopping attacks, with few vulnerable joint sections. Neuro-memetic assistors allow a human to wear the armor and still move easily.\n\nArmor like this is often used by rapid-incursion space marines.</description>
+    <defName>VFEP_Apparel_Privateer</defName>
+    <label>privateer armor</label>
+    <description>A variant of marine armor with an integrated grappling hook on the shoulder. The armor is slightly less protective than standard marine armor. The launcher does not require ammunition, but time needs to be reserved between shots to wind it up again.
+Privateers usually specialize in getting in and out of dangerous situations easily. Grappling hook connects to walls and solid rock and allows the users to quickly move to the desired location.</description>
     <techLevel>Spacer</techLevel>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
@@ -490,7 +491,7 @@
       <li>ApparelArmor</li>
     </thingCategories>
     <tradeTags>
-      <li>HiTechArmor</li>
+      <li>PrivateerArmor</li>
     </tradeTags>
     <costList>
       <ComponentSpacer>4</ComponentSpacer>

@@ -46,9 +46,9 @@ namespace VFEPirates
             return ingredientCountList;
         }
 
-        public void ApplyOn(Pawn pawn, bool forPreview = false)
+        public void ApplyOn(Pawn pawn)
         {
-            var armor = ThingMaker.MakeThing(armorDef) as Apparel_WarcasketArmor;
+            var armor = ThingMaker.MakeThing(armorDef) as Apparel_Warcasket;
             armor.color = colorArmor;
             pawn.apparel.Wear(armor, false, true);
 

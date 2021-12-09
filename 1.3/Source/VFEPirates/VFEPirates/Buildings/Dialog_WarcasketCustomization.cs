@@ -71,7 +71,7 @@ namespace VFEPirates.Buildings
         private void Notify_SettingsChanged()
         {
             ClearApparel();
-            project.ApplyOn(pawn, true);
+            project.ApplyOn(pawn);
             project.totalWorkAmount = project.armorDef.GetStatValueAbstract(StatDefOf.WorkToMake) + project.shoulderPadsDef.GetStatValueAbstract(StatDefOf.WorkToMake) +
                                       project.helmetDef.GetStatValueAbstract(StatDefOf.WorkToMake);
             PortraitsCache.SetDirty(pawn);

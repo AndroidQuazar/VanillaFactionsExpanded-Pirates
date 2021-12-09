@@ -45,7 +45,6 @@
   </VFEPirates.WarcasketDef>
   
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketPartBase" Name="VFEP_WarcasketArmorBase" Abstract="True">
-	<thingClass>VFEPirates.Apparel_WarcasketArmor</thingClass>
 	<isArmor>true</isArmor>
 	<shortDescription>short desc</shortDescription>
 	<modExtensions>
@@ -63,6 +62,9 @@
 			</shellPosDrawSettings>
 			<isUnifiedApparel>true</isUnifiedApparel>
 			<showBodyInBedAlways>true</showBodyInBedAlways>
+			<secondaryApparelGraphics>
+				<li>VFEP_Warcasket_Bodysuit</li>
+			</secondaryApparelGraphics>
 		</li>
 	</modExtensions>
   </VFEPirates.WarcasketDef>
@@ -78,10 +80,14 @@
     <apparel>
       <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketBodysuit/WarcasketBodysuit</wornGraphicPath>
       <layers>
-        <li>Middle</li>
-        <li>Shell</li>
+        <li>OnSkin</li>
       </layers>
     </apparel>
+	<modExtensions>
+		<li Class="VFECore.ApparelDrawPosExtension">
+			<isUnifiedApparel>true</isUnifiedApparel>
+		</li>
+	</modExtensions>
   </VFEPirates.WarcasketDef>
   
   <!-- Basic warcasket -->
@@ -127,6 +133,14 @@
 		<li>WarcasketVeteran</li>
       </tags>
     </apparel>
+	<modExtensions>
+		<li Class="VFECore.ApparelExtension">
+			<equippedStatFactors>
+				<MoveSpeed>-0.5</MoveSpeed>
+				<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
+			</equippedStatFactors>
+		</li>
+	</modExtensions>
   </VFEPirates.WarcasketDef>
   
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketPartBase" Name="VFEP_WarcasketShoulderPadBase" Abstract="True">
@@ -235,6 +249,14 @@
 		<li>WarcasketVeteran</li>
       </tags>
     </apparel>
+	<modExtensions>
+		<li Class="VFECore.ApparelExtension">
+			<equippedStatFactors>
+				<MoveSpeed>3</MoveSpeed>
+				<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
+			</equippedStatFactors>
+		</li>
+	</modExtensions>
   </VFEPirates.WarcasketDef>
   
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">

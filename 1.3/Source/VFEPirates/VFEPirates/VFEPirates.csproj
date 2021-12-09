@@ -43,7 +43,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Apparels\Apparel_Warcasket.cs" />
-    <Compile Include="Apparels\Apparel_WarcasketArmor.cs" />
     <Compile Include="Buildings\Dialog_WarcasketCustomization.cs" />
     <Compile Include="Curses\CurseDef.cs" />
     <Compile Include="Curses\CurseOfDarkness.cs" />

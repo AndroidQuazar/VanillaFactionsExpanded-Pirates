@@ -183,5 +183,169 @@
       </tags>
     </apparel>
   </VFEPirates.WarcasketDef>
+  
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketHelmetBase">
+    <defName>VFEP_WarcasketHelmet_Aerial</defName>
+    <label>aerial warcasket helmet</label>
+    <description>Specialized warcasket helmet with superior protection for similar weight, aerodynamically designed with onboard telemetry for jump calculation.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketAerial/WarcasketAerialHelmet</texPath>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <statBases>
+      <Mass>5</Mass>
+      <ArmorRating_Sharp>1.65</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.72</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.86</ArmorRating_Heat>
+      <Insulation_Cold>4</Insulation_Cold>
+      <Insulation_Heat>2</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	  <MoveSpeed>-0.1</MoveSpeed>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.1</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <costList>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <Steel>45</Steel>
+	  <Plasteel>10</Plasteel>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketAerial/WarcasketAerialHelmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+		<li>EyeCover</li>
+      </layers>
+      <tags>
+		<li>WarcasketSpecialised</li>
+      </tags>
+    </apparel>
+  </VFEPirates.WarcasketDef>
+  
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketHelmetBase">
+    <defName>VFEP_WarcasketHelmet_Barrage</defName>
+    <label>barrage warcasket helmet</label>
+    <description>Specialized warcasket helmet with peerless protection and worse weight, with onboard rangefinders and pneumatic canisters.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketBarrage/WarcasketBarrageHelmet</texPath>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <statBases>
+      <Mass>12</Mass>
+      <ArmorRating_Sharp>2.0</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.9</ArmorRating_Blunt>
+      <ArmorRating_Heat>1.08</ArmorRating_Heat>
+      <Insulation_Cold>4</Insulation_Cold>
+      <Insulation_Heat>2</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	  <MoveSpeed>-0.2</MoveSpeed>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.1</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <costList>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <Steel>45</Steel>
+	  <Plasteel>25</Plasteel>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketBarrage/WarcasketBarrageHelmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+		<li>EyeCover</li>
+      </layers>
+      <tags>
+		<li>WarcasketSpecialised</li>
+      </tags>
+    </apparel>
+  </VFEPirates.WarcasketDef>
+  
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketHelmetBase">
+    <defName>VFEP_WarcasketHelmet_Hazard</defName>
+    <label>hazard warcasket helmet</label>
+    <description>Specialized warcasket helmet with peerless environment protection for similar weight, fitted with top-of-the-line filtration system and psychic dampeners.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketHazard/WarcasketHazardHelmet</texPath>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <statBases>
+      <Mass>5</Mass>
+      <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+      <ArmorRating_Heat>2.0</ArmorRating_Heat>
+      <Insulation_Cold>14</Insulation_Cold>
+      <Insulation_Heat>12</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	  <MoveSpeed>-0.1</MoveSpeed>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.1</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <costList>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <Steel>35</Steel>
+	  <Plasteel>30</Plasteel>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketHazard/WarcasketHazardHelmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+		<li>EyeCover</li>
+      </layers>
+      <tags>
+		<li>WarcasketSpecialised</li>
+      </tags>
+    </apparel>
+  </VFEPirates.WarcasketDef>
+  
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketHelmetBase">
+    <defName>VFEP_WarcasketHelmet_Shock</defName>
+    <label>shock warcasket helmet</label>
+    <description>Specialized warcasket helmet with superior protection for similar weight, equipped with warning and prediction systems that reduce reaction time latency.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketShock/WarcasketShockHelmet</texPath>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <statBases>
+      <Mass>10</Mass>
+      <ArmorRating_Sharp>1.65</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.24</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.86</ArmorRating_Heat>
+      <Insulation_Cold>4</Insulation_Cold>
+      <Insulation_Heat>2</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	  <MoveSpeed>-0.1</MoveSpeed>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.1</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <costList>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <Steel>40</Steel>
+	  <Plasteel>10</Plasteel>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketShock/WarcasketShockHelmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+		<li>EyeCover</li>
+      </layers>
+      <tags>
+		<li>WarcasketSpecialised</li>
+      </tags>
+    </apparel>
+  </VFEPirates.WarcasketDef>
 
 </Defs>

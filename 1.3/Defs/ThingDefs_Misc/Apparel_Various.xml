@@ -449,6 +449,363 @@
     </apparel>
   </VFEPirates.WarcasketDef>
   
+  <!-- aerial warcasket -->
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
+    <defName>VFEP_Warcasket_Aerial</defName>
+    <label>aerial warcasket</label>
+    <description>Specialized warcasket shell with superior protection for similar weight, aerodynamically designed and fitted with rocket booster injectors.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketAerial/WarcasketAerial</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>50</Mass>
+      <ArmorRating_Sharp>1.65</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.72</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.86</ArmorRating_Heat>
+      <Insulation_Cold>36</Insulation_Cold>
+      <Insulation_Heat>10</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.5</MoveSpeed>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <costList>
+      <ComponentIndustrial>8</ComponentIndustrial>
+      <Steel>145</Steel>
+	  <Plasteel>20</Plasteel>
+      <Uranium>50</Uranium>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Legs</li>
+		<li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketAerial/WarcasketAerial</wornGraphicPath>
+      <layers>
+	    <li>OnSkin</li>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <tags>
+		<li>WarcasketSpecialised</li>
+      </tags>
+    </apparel>
+  </VFEPirates.WarcasketDef>
+  
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
+    <defName>VFEP_WarcasketShoulders_Aerial</defName>
+    <label>aerial warcasket shoulders</label>
+    <description>Specialized warcasket pauldrons with superior protection and reduced weight, aerodynamically designed and fitted with rocket boosters with large exhausts.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketAerial/WarcasketAerialShoulders</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>20</Mass>
+      <ArmorRating_Sharp>1.65</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.72</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.86</ArmorRating_Heat>
+      <Insulation_Cold>20</Insulation_Cold>
+      <Insulation_Heat>6</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.1</MoveSpeed>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <costList>
+      <Steel>20</Steel>
+	  <Plasteel>20</Plasteel>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Hands</li>
+		<li>Neck</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketAerial/WarcasketAerialShoulders</wornGraphicPath>
+      <layers>
+	    <li>OnSkin</li>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <tags>
+		<li>WarcasketSpecialised</li>
+      </tags>
+    </apparel>
+  </VFEPirates.WarcasketDef>
+  
+  <!-- barrage warcasket -->
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
+    <defName>VFEP_Warcasket_Barrage</defName>
+    <label>barrage warcasket</label>
+    <description>Specialized warcasket shell with peerless protection and excessive weight, fitted with stabilisers and penetrator pistons on the legs.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketBarrage/WarcasketBarrage</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>75</Mass>
+      <ArmorRating_Sharp>2.0</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.9</ArmorRating_Blunt>
+      <ArmorRating_Heat>1.08</ArmorRating_Heat>
+      <Insulation_Cold>44</Insulation_Cold>
+      <Insulation_Heat>18</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-1.0</MoveSpeed>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <costList>
+      <ComponentIndustrial>8</ComponentIndustrial>
+      <Steel>240</Steel>
+	  <Plasteel>30</Plasteel>
+      <Uranium>50</Uranium>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Legs</li>
+		<li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketBarrage/WarcasketBarrage</wornGraphicPath>
+      <layers>
+	    <li>OnSkin</li>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <tags>
+		<li>WarcasketSpecialised</li>
+      </tags>
+    </apparel>
+  </VFEPirates.WarcasketDef>
+  
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
+    <defName>VFEP_WarcasketShoulders_Barrage</defName>
+    <label>barrage warcasket shoulders</label>
+    <description>Specialized warcasket pauldrons with peerless protection and excessive weight, fitted with arm stabilisers and shoulder-mounted grenade launchers.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketBarrage/WarcasketBarrageShoulders</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>35</Mass>
+      <ArmorRating_Sharp>2.0</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.9</ArmorRating_Blunt>
+      <ArmorRating_Heat>1.08</ArmorRating_Heat>
+      <Insulation_Cold>20</Insulation_Cold>
+      <Insulation_Heat>6</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.4</MoveSpeed>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <costList>
+      <Steel>75</Steel>
+	  <Plasteel>20</Plasteel>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Hands</li>
+		<li>Neck</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketBarrage/WarcasketBarrageShoulders</wornGraphicPath>
+      <layers>
+	    <li>OnSkin</li>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <tags>
+		<li>WarcasketSpecialised</li>
+      </tags>
+    </apparel>
+  </VFEPirates.WarcasketDef>
+  
+  <!-- hazard warcasket -->
+  
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
+    <defName>VFEP_Warcasket_Hazard</defName>
+    <label>hazard warcasket</label>
+    <description>Specialized warcasket shell with peerless environment protection for similar weight, fitted with flame retardant material.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketHazard/WarcasketHazard</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>60</Mass>
+	  <Flammability>0</Flammability>
+      <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+      <ArmorRating_Heat>2.0</ArmorRating_Heat>
+      <Insulation_Cold>75</Insulation_Cold>
+      <Insulation_Heat>72</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.5</MoveSpeed>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <costList>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <Steel>135</Steel>
+      <Uranium>50</Uranium>
+	  <DevilstrandCloth>100</DevilstrandCloth>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Legs</li>
+		<li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketHazard/WarcasketHazard</wornGraphicPath>
+      <layers>
+	    <li>OnSkin</li>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <tags>
+		<li>WarcasketSpecialised</li>
+      </tags>
+    </apparel>
+  </VFEPirates.WarcasketDef>
+  
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
+    <defName>VFEP_WarcasketShoulders_Hazard</defName>
+    <label>hazard warcasket shoulders</label>
+    <description>Specialized warcasket pauldrons with peerless environment protection and similar weight, fitted with flame retardant material.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketHazard/WarcasketHazardShoulders</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>20</Mass>
+	  <Flammability>0</Flammability>
+      <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+      <ArmorRating_Heat>2.0</ArmorRating_Heat>
+      <Insulation_Cold>22</Insulation_Cold>
+      <Insulation_Heat>14</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.4</MoveSpeed>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <costList>
+      <Steel>55</Steel>
+	  <DevilstrandCloth>50</DevilstrandCloth>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Hands</li>
+		<li>Neck</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketHazard/WarcasketHazardShoulders</wornGraphicPath>
+      <layers>
+	    <li>OnSkin</li>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <tags>
+		<li>WarcasketSpecialised</li>
+		<li>WarcasketPawnFlamer</li>
+      </tags>
+    </apparel>
+  </VFEPirates.WarcasketDef>
+  
+  <!-- shock warcasket -->
+  
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
+    <defName>VFEP_Warcasket_Shock</defName>
+    <label>shock warcasket</label>
+    <description>Specialized warcasket shell with superior protection with higher weight, fitted with impact mitigators and a large propulsion engine on the back.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketShock/WarcasketShock</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>65</Mass>
+      <ArmorRating_Sharp>1.65</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.24</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.86</ArmorRating_Heat>
+      <Insulation_Cold>36</Insulation_Cold>
+      <Insulation_Heat>10</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.75</MoveSpeed>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <costList>
+      <ComponentIndustrial>10</ComponentIndustrial>
+      <Steel>120</Steel>
+	  <Plasteel>45</Plasteel>
+      <Uranium>50</Uranium>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Legs</li>
+		<li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketShock/WarcasketShock</wornGraphicPath>
+      <layers>
+	    <li>OnSkin</li>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <tags>
+		<li>WarcasketSpecialised</li>
+      </tags>
+    </apparel>
+  </VFEPirates.WarcasketDef>
+  
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
+    <defName>VFEP_WarcasketShoulders_Shock</defName>
+    <label>shock warcasket shoulders</label>
+    <description>Specialized warcasket pauldrons with superior protection and similar weight, onboard targeting computers assist the wearer in melee in both accuracy and evasion.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketShock/WarcasketShockShoulders</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>25</Mass>
+      <ArmorRating_Sharp>1.65</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.24</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.86</ArmorRating_Heat>
+      <Insulation_Cold>7</Insulation_Cold>
+      <Insulation_Heat>3</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <costList>
+      <Steel>60</Steel>
+	  <Plasteel>10</Plasteel>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Hands</li>
+		<li>Neck</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketShock/WarcasketShockShoulders</wornGraphicPath>
+      <layers>
+	    <li>OnSkin</li>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <tags>
+		<li>WarcasketSpecialised</li>
+      </tags>
+    </apparel>
+  </VFEPirates.WarcasketDef>
+  
   <!-- Privateer armour -->
   <ThingDef ParentName="ArmorMachineableBase">
     <defName>VFEP_Apparel_Privateer</defName>

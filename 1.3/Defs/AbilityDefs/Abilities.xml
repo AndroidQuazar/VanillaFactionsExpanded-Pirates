@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <VFECore.Abilities.AbilityDef>
+        <defName>VFEP_GrapplingHook</defName>
+        <label>grappling hook</label>
+        <description>todo</description>
+        <abilityClass>VFEPirates.Ability_GrapplingHook</abilityClass>
+        <targetMode>Thing</targetMode>
+        <range>19.9</range>
+        <iconPath>UI/Abilities/SiegeModeOn</iconPath>
+        <cooldownTime>0</cooldownTime>
+        <castTime>0</castTime>
+        <chance>0</chance>
+        <modExtensions>
+            <li Class="VFEPirates.AbilityExtension_GrapplingHook">
+                <reloadIconPath>UI/Abilities/SiegeModeOff</reloadIconPath>
+                <reloadTicks>600</reloadTicks>
+            </li>
+            <li Class="VFECore.Abilities.AbilityExtension_Projectile">
+                <projectile>VFEP_Bullet_GrapplingHook</projectile>
+            </li>
+        </modExtensions>
+    </VFECore.Abilities.AbilityDef>
+    <ThingDef ParentName="BaseBullet">
+        <defName>VFEP_Bullet_GrapplingHook</defName>
+        <label>grappling hook</label>
+        <thingClass>VFEPirates.Projectile_GrapplingHook</thingClass>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Small</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <drawerType>RealtimeOnly</drawerType>
+        <tickerType>Normal</tickerType>
+        <projectile>
+            <speed>40</speed>
+        </projectile>
+    </ThingDef>
+    <ThingDef ParentName="PawnFlyerBase">
+        <defName>VFEP_GrapplingPawn</defName>
+        <thingClass>VFEPirates.PawnFlyer_Pulled</thingClass>
+        <pawnFlyer>
+            <flightDurationMin>0.2</flightDurationMin>
+            <flightSpeed>20</flightSpeed>
+        </pawnFlyer>
+    </ThingDef>
+</Defs>

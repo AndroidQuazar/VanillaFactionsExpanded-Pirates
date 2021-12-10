@@ -60,5 +60,7 @@ namespace VFEPirates
         public static WarcasketDef VFEP_Warcasket_Warcasket;
         public static WarcasketDef VFEP_WarcasketHelmet_Warcasket;
         public static WarcasketDef VFEP_WarcasketShoulders_Warcasket;
+
+        public static ThingDef VFEP_GrapplingPawn;
     }
 }

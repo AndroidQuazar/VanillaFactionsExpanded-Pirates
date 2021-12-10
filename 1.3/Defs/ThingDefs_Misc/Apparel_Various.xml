@@ -969,6 +969,11 @@ Privateers usually specialize in getting in and out of dangerous situations easi
     </colorGenerator>
     <comps>
       <li Class="CompProperties_Biocodable"/>
+      <li Class="VFECore.Abilities.CompProperties_AbilitiesApparel">
+        <abilities>
+          <li>VFEP_GrapplingHook</li>
+        </abilities>
+      </li>
     </comps>
     <thingSetMakerTags>
       <li>RewardStandardHighFreq</li>

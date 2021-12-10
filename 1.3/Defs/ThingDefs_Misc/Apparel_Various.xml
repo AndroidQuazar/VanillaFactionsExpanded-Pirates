@@ -133,6 +133,9 @@
 		<li>WarcasketVeteran</li>
       </tags>
     </apparel>
+    <researchPrerequisites>
+      <li>VFEP_Warcaskets</li>
+    </researchPrerequisites>
 	<modExtensions>
 		<li Class="VFECore.ApparelExtension">
 			<equippedStatFactors>
@@ -187,6 +190,9 @@
     <costList>
       <Steel>40</Steel>
     </costList>
+    <researchPrerequisites>
+      <li>VFEP_Warcaskets</li>
+    </researchPrerequisites>
     <apparel>
       <bodyPartGroups>
         <li>Shoulders</li>
@@ -233,6 +239,9 @@
       <Steel>130</Steel>
       <Uranium>40</Uranium>
     </costList>
+    <researchPrerequisites>
+      <li>VFEP_AdvancedWarcaskets</li>
+    </researchPrerequisites>
     <apparel>
       <bodyPartGroups>
         <li>Torso</li>
@@ -282,6 +291,9 @@
     <costList>
       <Steel>55</Steel>
     </costList>
+    <researchPrerequisites>
+      <li>VFEP_AdvancedWarcaskets</li>
+    </researchPrerequisites>
     <apparel>
       <bodyPartGroups>
         <li>Shoulders</li>
@@ -327,6 +339,9 @@
       <Steel>80</Steel>
       <Uranium>20</Uranium>
     </costList>
+    <researchPrerequisites>
+      <li>VFEP_AdvancedWarcaskets</li>
+    </researchPrerequisites>
     <apparel>
       <bodyPartGroups>
         <li>Torso</li>
@@ -369,6 +384,9 @@
     <costList>
       <Steel>40</Steel>
     </costList>
+    <researchPrerequisites>
+      <li>VFEP_AdvancedWarcaskets</li>
+    </researchPrerequisites>
     <apparel>
       <bodyPartGroups>
         <li>Shoulders</li>
@@ -414,6 +432,9 @@
       <Steel>175</Steel>
       <Uranium>50</Uranium>
     </costList>
+    <researchPrerequisites>
+      <li>VFEP_AdvancedWarcaskets</li>
+    </researchPrerequisites>
     <apparel>
       <bodyPartGroups>
         <li>Torso</li>
@@ -452,6 +473,9 @@
     <costList>
       <Steel>75</Steel>
     </costList>
+    <researchPrerequisites>
+      <li>VFEP_AdvancedWarcaskets</li>
+    </researchPrerequisites>
     <apparel>
       <bodyPartGroups>
         <li>Shoulders</li>
@@ -498,6 +522,9 @@
 	  <Plasteel>20</Plasteel>
       <Uranium>50</Uranium>
     </costList>
+    <researchPrerequisites>
+      <li>VFEP_SpecialisedWarcaskets</li>
+    </researchPrerequisites>
     <apparel>
       <bodyPartGroups>
         <li>Torso</li>
@@ -540,6 +567,9 @@
       <Steel>20</Steel>
 	  <Plasteel>20</Plasteel>
     </costList>
+    <researchPrerequisites>
+      <li>VFEP_SpecialisedWarcaskets</li>
+    </researchPrerequisites>
     <apparel>
       <bodyPartGroups>
         <li>Shoulders</li>
@@ -586,6 +616,9 @@
 	  <Plasteel>30</Plasteel>
       <Uranium>50</Uranium>
     </costList>
+    <researchPrerequisites>
+      <li>VFEP_SpecialisedWarcaskets</li>
+    </researchPrerequisites>
     <apparel>
       <bodyPartGroups>
         <li>Torso</li>
@@ -628,6 +661,9 @@
       <Steel>75</Steel>
 	  <Plasteel>20</Plasteel>
     </costList>
+    <researchPrerequisites>
+      <li>VFEP_SpecialisedWarcaskets</li>
+    </researchPrerequisites>
     <apparel>
       <bodyPartGroups>
         <li>Shoulders</li>
@@ -676,6 +712,9 @@
       <Uranium>50</Uranium>
 	  <DevilstrandCloth>100</DevilstrandCloth>
     </costList>
+    <researchPrerequisites>
+      <li>VFEP_SpecialisedWarcaskets</li>
+    </researchPrerequisites>
     <apparel>
       <bodyPartGroups>
         <li>Torso</li>
@@ -719,6 +758,9 @@
       <Steel>55</Steel>
 	  <DevilstrandCloth>50</DevilstrandCloth>
     </costList>
+    <researchPrerequisites>
+      <li>VFEP_SpecialisedWarcaskets</li>
+    </researchPrerequisites>
     <apparel>
       <bodyPartGroups>
         <li>Shoulders</li>
@@ -767,6 +809,9 @@
 	  <Plasteel>45</Plasteel>
       <Uranium>50</Uranium>
     </costList>
+    <researchPrerequisites>
+      <li>VFEP_SpecialisedWarcaskets</li>
+    </researchPrerequisites>
     <apparel>
       <bodyPartGroups>
         <li>Torso</li>
@@ -809,6 +854,9 @@
       <Steel>60</Steel>
 	  <Plasteel>10</Plasteel>
     </costList>
+    <researchPrerequisites>
+      <li>VFEP_SpecialisedWarcaskets</li>
+    </researchPrerequisites>
     <apparel>
       <bodyPartGroups>
         <li>Shoulders</li>

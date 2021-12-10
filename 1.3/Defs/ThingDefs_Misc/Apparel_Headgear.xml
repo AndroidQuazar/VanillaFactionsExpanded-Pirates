@@ -48,6 +48,9 @@
       <ComponentIndustrial>1</ComponentIndustrial>
       <Steel>40</Steel>
     </costList>
+    <researchPrerequisites>
+      <li>VFEP_Warcaskets</li>
+    </researchPrerequisites>
     <apparel>
       <bodyPartGroups>
         <li>FullHead</li>
@@ -90,6 +93,9 @@
       <ComponentIndustrial>1</ComponentIndustrial>
       <Steel>65</Steel>
     </costList>
+    <researchPrerequisites>
+      <li>VFEP_AdvancedWarcaskets</li>
+    </researchPrerequisites>
     <apparel>
       <bodyPartGroups>
         <li>FullHead</li>
@@ -129,6 +135,9 @@
       <ComponentIndustrial>1</ComponentIndustrial>
       <Steel>40</Steel>
     </costList>
+    <researchPrerequisites>
+      <li>VFEP_AdvancedWarcaskets</li>
+    </researchPrerequisites>
     <apparel>
       <bodyPartGroups>
         <li>FullHead</li>
@@ -169,6 +178,9 @@
       <ComponentIndustrial>2</ComponentIndustrial>
       <Steel>75</Steel>
     </costList>
+    <researchPrerequisites>
+      <li>VFEP_AdvancedWarcaskets</li>
+    </researchPrerequisites>
     <apparel>
       <bodyPartGroups>
         <li>FullHead</li>
@@ -210,6 +222,9 @@
       <Steel>45</Steel>
 	  <Plasteel>10</Plasteel>
     </costList>
+    <researchPrerequisites>
+      <li>VFEP_SpecialisedWarcaskets</li>
+    </researchPrerequisites>
     <apparel>
       <bodyPartGroups>
         <li>FullHead</li>
@@ -251,6 +266,9 @@
       <Steel>45</Steel>
 	  <Plasteel>25</Plasteel>
     </costList>
+    <researchPrerequisites>
+      <li>VFEP_SpecialisedWarcaskets</li>
+    </researchPrerequisites>
     <apparel>
       <bodyPartGroups>
         <li>FullHead</li>
@@ -292,6 +310,9 @@
       <Steel>35</Steel>
 	  <Plasteel>30</Plasteel>
     </costList>
+    <researchPrerequisites>
+      <li>VFEP_SpecialisedWarcaskets</li>
+    </researchPrerequisites>
     <apparel>
       <bodyPartGroups>
         <li>FullHead</li>
@@ -333,6 +354,9 @@
       <Steel>40</Steel>
 	  <Plasteel>10</Plasteel>
     </costList>
+    <researchPrerequisites>
+      <li>VFEP_SpecialisedWarcaskets</li>
+    </researchPrerequisites>
     <apparel>
       <bodyPartGroups>
         <li>FullHead</li>

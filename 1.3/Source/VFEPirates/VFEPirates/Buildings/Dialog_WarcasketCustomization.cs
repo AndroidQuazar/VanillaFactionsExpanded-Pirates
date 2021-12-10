@@ -13,15 +13,21 @@ namespace VFEPirates.Buildings
     public class Dialog_WarcasketCustomization : Window
     {
         private static readonly Color DisplayBGColor = new Color32(byte.MaxValue, byte.MaxValue, byte.MaxValue, 15);
+        private readonly List<WarcasketDef> armors;
+        private readonly List<WarcasketDef> helmets;
         private readonly Action<WarcasketProject> onAccept;
         private readonly Action onCancel;
         private readonly Pawn pawn;
         private readonly WarcasketProject project;
+        private readonly List<WarcasketDef> shoulders;
         private List<Color> allColors;
 
-        public Dialog_WarcasketCustomization(WarcasketProject project, Pawn pawn, Action<WarcasketProject> onAccept, Action onCancel)
+        public Dialog_WarcasketCustomization(Pawn pawn, Action<WarcasketProject> onAccept, Action onCancel)
         {
-            this.project = project;
+            armors = VFEPiratesMod.allArmorDefs.Where(def => def.IsResearchFinished).ToList();
+            shoulders = VFEPiratesMod.allShoulderPadsDefs.Where(def => def.IsResearchFinished).ToList();
+            helmets = VFEPiratesMod.allHelmetDefs.Where(def => def.IsResearchFinished).ToList();
+            project = new WarcasketProject(pawn, VFEP_DefOf.VFEP_Warcasket_Warcasket, VFEP_DefOf.VFEP_WarcasketShoulders_Warcasket, VFEP_DefOf.VFEP_WarcasketHelmet_Warcasket);
             this.onAccept = onAccept;
             this.onCancel = onCancel;
             this.pawn = pawn;
@@ -68,6 +74,19 @@ namespace VFEPirates.Buildings
             Close();
         }
 
+        public override void PostOpen()
+        {
+            base.PostOpen();
+
+            if (armors.NullOrEmpty() || shoulders.NullOrEmpty() || helmets.NullOrEmpty())
+            {
+                if (PawnUtility.ShouldSendNotificationAbout(pawn))
+                    Messages.Message("VFEP.NoWarcaskets".Translate(), new LookTargets(Gen.YieldSingle(pawn)), MessageTypeDefOf.RejectInput);
+                onCancel();
+                Close();
+            }
+        }
+
         private void Notify_SettingsChanged()
         {
             ClearApparel();
@@ -98,17 +117,17 @@ namespace VFEPirates.Buildings
             inRect.y += 5f;
             Text.Anchor = TextAnchor.UpperLeft;
             var partsRect = inRect.TakeTopPart(450);
-            DoPartsSelect(partsRect.TakeRightPart(300f).ContractedBy(5f), "VFEP.Helmet".Translate(), VFEPiratesMod.allHelmetDefs, project.helmetDef, def =>
+            DoPartsSelect(partsRect.TakeRightPart(300f).ContractedBy(5f), "VFEP.Helmet".Translate(), helmets, project.helmetDef, def =>
             {
                 project.helmetDef = def;
                 Notify_SettingsChanged();
             }, ref project.colorHelmet);
-            DoPartsSelect(partsRect.TakeRightPart(300f).ContractedBy(5f), "VFEP.Shoulderpads".Translate(), VFEPiratesMod.allShoulderPadsDefs, project.shoulderPadsDef, def =>
+            DoPartsSelect(partsRect.TakeRightPart(300f).ContractedBy(5f), "VFEP.Shoulderpads".Translate(), shoulders, project.shoulderPadsDef, def =>
             {
                 project.shoulderPadsDef = def;
                 Notify_SettingsChanged();
             }, ref project.colorShoulderPads);
-            DoPartsSelect(partsRect.TakeRightPart(300f).ContractedBy(5f), "VFEP.ArmorFrame".Translate(), VFEPiratesMod.allArmorDefs, project.armorDef, def =>
+            DoPartsSelect(partsRect.TakeRightPart(300f).ContractedBy(5f), "VFEP.ArmorFrame".Translate(), armors, project.armorDef, def =>
             {
                 project.armorDef = def;
                 Notify_SettingsChanged();
@@ -138,7 +157,7 @@ namespace VFEPirates.Buildings
             if (Widgets.ButtonText(buttonsRect.RightHalf().ContractedBy(5f), "Accept".Translate())) OnAcceptKeyPressed();
             Text.Font = GameFont.Tiny;
             Text.Anchor = TextAnchor.UpperLeft;
-            Widgets.Label(inRect.LeftPartPixels(inRect.width - 250f), "VFEP.WarcasketText".Translate().Colorize(ColoredText.SubtleGrayColor));
+            Widgets.Label(inRect.LeftPartPixels(inRect.width - 243f), "VFEP.WarcasketText".Translate().Colorize(ColoredText.SubtleGrayColor));
             Text.Font = font;
             Text.Anchor = anchor;
         }
@@ -202,7 +221,7 @@ namespace VFEPirates.Buildings
             Widgets.DrawAtlas(selectMiddleRect, Widgets.ButtonSubtleAtlas);
             GUI.color = Color.white;
             Widgets.Label(selectMiddleRect.ContractedBy(3f), current.LabelCap);
-            if (Widgets.ButtonInvisible(selectMiddleRect))
+            if (Widgets.ButtonInvisible(selectMiddleRect) && options.Count > 1)
                 Find.WindowStack.Add(new FloatMenu(options.Except(current).Select(opt => new FloatMenuOption(opt.LabelCap, () => setCurrent(opt))).ToList()));
 
             if (Mouse.IsOver(selectionRect)) GUI.color = GenUI.MouseoverColor;

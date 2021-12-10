@@ -9,16 +9,15 @@ namespace VFEPirates
         public static JobDef VFEP_EntombIn;
         public static ThingDef VFEP_Warcasket_Bodysuit;
 
-        [MayRequireIdeology]
-        public static PreceptDef VFEP_Camaraderie_Respected;
-        [MayRequireIdeology]
-        public static ThoughtDef VFEP_Camaraderie_Respected_Memory;
-        [MayRequireIdeology]
-        public static PreceptDef VFEP_Camaraderie_Exalted;
-        [MayRequireIdeology]
-        public static ThoughtDef VFEP_Camaraderie_Exalted_Memory;
-        [MayRequireIdeology]
-        public static HistoryEventDef VFEP_CrewmanDied;
+        [MayRequireIdeology] public static PreceptDef VFEP_Camaraderie_Respected;
+
+        [MayRequireIdeology] public static ThoughtDef VFEP_Camaraderie_Respected_Memory;
+
+        [MayRequireIdeology] public static PreceptDef VFEP_Camaraderie_Exalted;
+
+        [MayRequireIdeology] public static ThoughtDef VFEP_Camaraderie_Exalted_Memory;
+
+        [MayRequireIdeology] public static HistoryEventDef VFEP_CrewmanDied;
 
         public static SoundDef VFEP_RitualSustainer_Pirate;
 
@@ -44,7 +43,6 @@ namespace VFEPirates
         public static ThoughtDef MyKinDied;
 
 
-
         public static ThingDef VFEP_WarcasketFoundry;
         public static JobDef VFEP_DoWelding;
 
@@ -58,5 +56,9 @@ namespace VFEPirates
         public static ThingDef VFEP_CrashedShip_Red;
 
         public static CurseDef VFEP_CurseOfPestilence;
+
+        public static WarcasketDef VFEP_Warcasket_Warcasket;
+        public static WarcasketDef VFEP_WarcasketHelmet_Warcasket;
+        public static WarcasketDef VFEP_WarcasketShoulders_Warcasket;
     }
 }

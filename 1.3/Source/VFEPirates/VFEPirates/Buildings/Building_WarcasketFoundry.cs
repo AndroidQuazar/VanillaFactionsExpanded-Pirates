@@ -72,6 +72,9 @@ namespace VFEPirates
         public string CannotUseNowReason(Pawn selPawn)
         {
             if (!compPower.PowerOn) return "NoPower".Translate();
+            if (!VFEPiratesMod.allShoulderPadsDefs.Any(d => d.IsResearchFinished) || !VFEPiratesMod.allShoulderPadsDefs.Any(d => d.IsResearchFinished) ||
+                !VFEPiratesMod.allShoulderPadsDefs.Any(d => d.IsResearchFinished))
+                return "VFEP.NoWarcaskets".Translate();
             return null;
         }
 
@@ -82,6 +85,7 @@ namespace VFEPirates
             failReason = null;
             if (!compPower.PowerOn) failReason = "NoPower".Translate();
             if (!OccupantAliveAndPresent) return false;
+            if (curWarcasketProject is null) return false;
             return failReason is null;
         }
 
@@ -93,21 +97,7 @@ namespace VFEPirates
 
         public void OpenCustomizationWindow(Pawn entombedPawn, Action onCancel)
         {
-            var armor = VFEPiratesMod.allArmorDefs.RandomElement();
-            var shoulderPads = VFEPiratesMod.allShoulderPadsDefs.RandomElement();
-            var helmet = VFEPiratesMod.allHelmetDefs.RandomElement();
-            curWarcasketProject = new WarcasketProject
-            {
-                armorDef = armor,
-                shoulderPadsDef = shoulderPads,
-                helmetDef = helmet,
-                colorArmor = entombedPawn.story.favoriteColor ?? Color.white,
-                colorHelmet = entombedPawn.story.favoriteColor ?? Color.white,
-                colorShoulderPads = entombedPawn.story.favoriteColor ?? Color.white,
-                totalWorkAmount = armor.GetStatValueAbstract(StatDefOf.WorkToMake) + shoulderPads.GetStatValueAbstract(StatDefOf.WorkToMake) +
-                                  helmet.GetStatValueAbstract(StatDefOf.WorkToMake)
-            };
-            Find.WindowStack.Add(new Dialog_WarcasketCustomization(curWarcasketProject, entombedPawn, project => curWarcasketProject = project, onCancel));
+            Find.WindowStack.Add(new Dialog_WarcasketCustomization(entombedPawn, project => curWarcasketProject = project, onCancel));
         }
 
         public override IEnumerable<Gizmo> GetGizmos()
@@ -144,7 +134,7 @@ namespace VFEPirates
         public override void Draw()
         {
             base.Draw();
-            if (occupant != null)
+            if (occupant != null && curWarcasketProject != null)
             {
                 var pos = this.TrueCenter();
                 pos.y += yOffset;

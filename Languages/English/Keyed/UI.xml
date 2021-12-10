@@ -5,9 +5,11 @@
     <VFEP.DesiredPopMax>Desired population max: {0}</VFEP.DesiredPopMax>
     <VFEP.DaysBigThreats>Days between Big Threats: {0}</VFEP.DaysBigThreats>
     <VFEP.WarcasketCustom>Warcasket Customization</VFEP.WarcasketCustom>
-    <VFEP.WarcasketText>Three columns where you select an Armor frame, a Shoulder pads and a Helmet. You can cycle through all researched warcasket elements. As you change it, it updates the render above with a new helmet/shoulder pads/armor, whatever you change.
-        Pressing the Information button opens up the item page of that specific armor piece. It does NOT close this window. It opens up above it.
-        The description under armor elements is actually not the full item description, but a ‘short description’. It will be explained below. Essentially each warcasket item has a long description and a short description.</VFEP.WarcasketText>
+    <VFEP.WarcasketText>When you press Accept, a crafter you’ve chosen will bring the resources onto the frame and begin
+assembling a warcasket. The speed of the assembly depends on the crafting skill of your crafter.
+Once the process is completed, a warcasket will leave the platform. Be careful, as the pawn
+on the platform can still die of hunger when on the platform - you should prioritize the warcasket
+assembly over other tasks.</VFEP.WarcasketText>
     <VFEP.WorkAmount>Work Amount:</VFEP.WorkAmount>
     <VFEP.Crafter>Crafter:</VFEP.Crafter>
     <VFEP.Helmet>Helmet:</VFEP.Helmet>
@@ -16,4 +18,5 @@
     <VFEP.TotalCost>Total Cost:</VFEP.TotalCost>
     <VFEP.ResourceCost>Resource Cost:</VFEP.ResourceCost>
     <VFEP.ResearchText>Ressearch more warcasket technology to unlock more armor pieces.</VFEP.ResearchText>
+    <VFEP.NoWarcaskets>You don't know how to build any warcaskets.</VFEP.NoWarcaskets>
 </LanguageData>

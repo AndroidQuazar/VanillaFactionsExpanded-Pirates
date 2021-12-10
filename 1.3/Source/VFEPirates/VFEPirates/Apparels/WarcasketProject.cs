@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using RimWorld;
 using UnityEngine;
 using Verse;
 
@@ -17,6 +18,20 @@ namespace VFEPirates
         public WarcasketDef shoulderPadsDef;
 
         public float totalWorkAmount; // we could just retrieve it from all apparels, but might be too much perf impact if done every frame and tick
+
+        public WarcasketProject()
+        {
+        }
+
+        public WarcasketProject(Pawn pawn, WarcasketDef armor, WarcasketDef shoulders, WarcasketDef helmet)
+        {
+            armorDef = armor;
+            shoulderPadsDef = shoulders;
+            helmetDef = helmet;
+            colorArmor = colorHelmet = colorShoulderPads = pawn?.story?.favoriteColor ?? Color.white;
+            totalWorkAmount = armor.GetStatValueAbstract(StatDefOf.WorkToMake) + shoulders.GetStatValueAbstract(StatDefOf.WorkToMake) +
+                              helmet.GetStatValueAbstract(StatDefOf.WorkToMake);
+        }
 
         public void ExposeData()
         {

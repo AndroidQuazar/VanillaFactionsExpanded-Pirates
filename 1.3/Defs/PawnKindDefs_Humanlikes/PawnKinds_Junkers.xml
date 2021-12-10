@@ -166,6 +166,7 @@
     <label>hussar</label>
     <combatPower>300</combatPower>
     <maxGenerationAge>55</maxGenerationAge>
+	<factionLeader>true</factionLeader>
     <apparelMoney>3200~5200</apparelMoney>
     <apparelTags>
       <li>WarcasketHussar</li>
@@ -201,6 +202,7 @@
     <label>pyro</label>
     <combatPower>300</combatPower>
     <maxGenerationAge>55</maxGenerationAge>
+	<factionLeader>true</factionLeader>
     <apparelMoney>3200~5200</apparelMoney>
     <apparelTags>
       <li>WarcasketFlamer</li>
@@ -236,6 +238,7 @@
     <label>artillery</label>
     <combatPower>300</combatPower>
     <maxGenerationAge>55</maxGenerationAge>
+	<factionLeader>true</factionLeader>
     <apparelMoney>3200~5200</apparelMoney>
     <apparelTags>
       <li>WarcasketSuperHeavy</li>

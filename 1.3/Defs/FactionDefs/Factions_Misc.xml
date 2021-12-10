@@ -162,12 +162,15 @@ Mercenaries utilise spacer-tech weapons and armors to eliminate the targets of t
     <factionIconPath>UI/FactionIcons/MercsOutpost</factionIconPath>
     <factionNameMaker>NamerFactionPirate</factionNameMaker>
     <settlementNameMaker>NamerSettlementPirate</settlementNameMaker>
+    <fixedLeaderKinds>
+      <li>VFEP_General</li>
+    </fixedLeaderKinds>
     <colorSpectrum>
       <li>(0.74, 0.33, 0.33)</li>
       <li>(0.95, 0.46, 0.46)</li>
     </colorSpectrum>
     <permanentEnemy>false</permanentEnemy>
-    <techLevel>Industrial</techLevel>
+    <techLevel>Spacer</techLevel>
     <allowedCultures><li>VFEP_Khanate</li></allowedCultures>
     <requiredMemes>
       <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
@@ -205,32 +208,21 @@ Mercenaries utilise spacer-tech weapons and armors to eliminate the targets of t
         <kindDef>Combat</kindDef>
         <commonality>30</commonality>
         <options>
-          <VFEP_Scrapper>10</VFEP_Scrapper>
-          <VFEP_Footsoldier>8</VFEP_Footsoldier>
-          <VFEP_Veteran>2</VFEP_Veteran>
-        </options>
-      </li>
-      <li>
-        <!-- Normal fights, melee only -->
-        <kindDef>Combat</kindDef>
-        <commonality>30</commonality>
-        <disallowedStrategies>
-          <li>Siege</li>
-        </disallowedStrategies>
-        <options>
-          <VFEP_Hussar>10</VFEP_Hussar>
+          <VFEP_Private>10</VFEP_Private>
+          <VFEP_Corporal>6</VFEP_Corporal>
+          <VFEP_Sergeant>2</VFEP_Sergeant>
         </options>
       </li>
       <li>
         <!-- Normal fights -->
         <kindDef>Combat</kindDef>
-        <commonality>30</commonality>
+        <commonality>60</commonality>
         <options>
-          <VFEP_Scrapper>2</VFEP_Scrapper>
-          <VFEP_Footsoldier>6</VFEP_Footsoldier>
-          <VFEP_Veteran>4</VFEP_Veteran>
-          <VFEP_HeavyWeaponsPlatform>2</VFEP_HeavyWeaponsPlatform>
-          <VFEP_Hussar>3</VFEP_Hussar>
+          <VFEP_Private>2</VFEP_Private>
+          <VFEP_Corporal>6</VFEP_Corporal>
+          <VFEP_Sergeant>4</VFEP_Sergeant>
+          <VFEP_SergeantMajor>3</VFEP_SergeantMajor>
+          <VFEP_Lieutenant>2</VFEP_Lieutenant>
         </options>
       </li>
       <li>
@@ -238,24 +230,25 @@ Mercenaries utilise spacer-tech weapons and armors to eliminate the targets of t
         <kindDef>Combat</kindDef>
         <commonality>10</commonality>
         <options>
-          <VFEP_Veteran>10</VFEP_Veteran>
-          <VFEP_HeavyWeaponsPlatform>5</VFEP_HeavyWeaponsPlatform>
-          <VFEP_Hussar>8</VFEP_Hussar>
-          <VFEP_Pyro>4</VFEP_Pyro>
-          <VFEP_Artillery>2</VFEP_Artillery>
+		  <VFEP_SergeantMajor>3</VFEP_SergeantMajor>
+          <VFEP_Lieutenant>6</VFEP_Lieutenant>
+          <VFEP_Captain>4</VFEP_Captain>
+          <VFEP_Major>2</VFEP_Major>
+          <VFEP_General>1</VFEP_General>
         </options>
       </li>
       <li>
         <!-- Base defense -->
         <kindDef>Settlement</kindDef>
         <options>
-          <VFEP_Scrapper>10</VFEP_Scrapper>
-          <VFEP_Footsoldier>8</VFEP_Footsoldier>
-          <VFEP_Veteran>6</VFEP_Veteran>
-          <VFEP_HeavyWeaponsPlatform>5</VFEP_HeavyWeaponsPlatform>
-          <VFEP_Hussar>5</VFEP_Hussar>
-          <VFEP_Pyro>2</VFEP_Pyro>
-          <VFEP_Artillery>2</VFEP_Artillery>
+          <VFEP_Private>10</VFEP_Private>
+          <VFEP_Corporal>6</VFEP_Corporal>
+          <VFEP_Sergeant>2</VFEP_Sergeant>
+		  <VFEP_SergeantMajor>3</VFEP_SergeantMajor>
+          <VFEP_Lieutenant>6</VFEP_Lieutenant>
+          <VFEP_Captain>4</VFEP_Captain>
+          <VFEP_Major>2</VFEP_Major>
+          <VFEP_General>1</VFEP_General>
         </options>
       </li>
     </pawnGroupMakers>

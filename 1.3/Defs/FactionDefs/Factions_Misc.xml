@@ -171,7 +171,7 @@ Mercenaries utilise spacer-tech weapons and armors to eliminate the targets of t
     </colorSpectrum>
     <permanentEnemy>false</permanentEnemy>
     <techLevel>Spacer</techLevel>
-    <allowedCultures><li>VFEP_Khanate</li></allowedCultures>
+    <allowedCultures><li>Kriminul</li></allowedCultures>
     <requiredMemes>
       <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
       <li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>

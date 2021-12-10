@@ -59,101 +59,61 @@ Junkers utilise warcasket technology and seal themselves in metal tombs in which
     </maxPawnCostPerTotalPointsCurve>
     <pawnGroupMakers>
       <li>
-        <!-- Normal fights, ranged with melee mix-ins -->
+        <!-- Normal fights, weak mix -->
         <kindDef>Combat</kindDef>
-        <commonality>100</commonality>
+        <commonality>30</commonality>
         <options>
-          <Drifter>10</Drifter>
-          <Thrasher>3</Thrasher>
-          <Scavenger>10</Scavenger>
-          <Pirate>10</Pirate>
-          <Grenadier_EMP>0.25</Grenadier_EMP>
-          <Grenadier_Smoke>0.25</Grenadier_Smoke>
-          <Grenadier_Destructive>2</Grenadier_Destructive>
-          <Mercenary_Gunner>10</Mercenary_Gunner>
-          <Mercenary_Heavy>6</Mercenary_Heavy>
-          <Mercenary_Slasher>3</Mercenary_Slasher>
-          <Mercenary_Sniper>7</Mercenary_Sniper>
-          <Mercenary_Elite>10</Mercenary_Elite>
-          <PirateBoss>5</PirateBoss>
+          <VFEP_Scrapper>10</VFEP_Scrapper>
+          <VFEP_Footsoldier>8</VFEP_Footsoldier>
+          <VFEP_Veteran>2</VFEP_Veteran>
         </options>
       </li>
       <li>
-        <!-- Normal fights, melee-only -->
+        <!-- Normal fights, melee only -->
         <kindDef>Combat</kindDef>
         <commonality>30</commonality>
         <disallowedStrategies>
           <li>Siege</li>
         </disallowedStrategies>
         <options>
-          <Thrasher>10</Thrasher>
-          <Mercenary_Slasher>10</Mercenary_Slasher>
-          <PirateBoss>5</PirateBoss>
+          <VFEP_Hussar>10</VFEP_Hussar>
         </options>
       </li>
       <li>
-        <!-- Normal fights, ranged only -->
+        <!-- Normal fights -->
         <kindDef>Combat</kindDef>
-        <commonality>20</commonality>
+        <commonality>30</commonality>
         <options>
-          <Scavenger>10</Scavenger>
-          <Pirate>10</Pirate>
-          <Grenadier_EMP>0.25</Grenadier_EMP>
-          <Grenadier_Smoke>0.25</Grenadier_Smoke>
-          <Grenadier_Destructive>2</Grenadier_Destructive>
-          <Mercenary_Gunner>10</Mercenary_Gunner>
-          <Mercenary_Heavy>6</Mercenary_Heavy>
-          <Mercenary_Sniper>7</Mercenary_Sniper>
-          <Mercenary_Elite>10</Mercenary_Elite>
-          <PirateBoss>5</PirateBoss>
+          <VFEP_Scrapper>2</VFEP_Scrapper>
+          <VFEP_Footsoldier>6</VFEP_Footsoldier>
+          <VFEP_Veteran>4</VFEP_Veteran>
+          <VFEP_HeavyWeaponsPlatform>2</VFEP_HeavyWeaponsPlatform>
+          <VFEP_Hussar>3</VFEP_Hussar>
         </options>
       </li>
       <li>
-        <!-- Normal fights, explosives with ranged mix-ins -->
-        <kindDef>Combat</kindDef>
-        <commonality>15</commonality>
-        <disallowedStrategies>
-          <li>Siege</li>
-        </disallowedStrategies>
-        <options>
-          <Grenadier_EMP>0.5</Grenadier_EMP>
-          <Grenadier_Smoke>0.5</Grenadier_Smoke>
-          <Grenadier_Destructive>10</Grenadier_Destructive>
-          <Mercenary_Gunner>1</Mercenary_Gunner>
-          <Mercenary_Heavy>10</Mercenary_Heavy>
-          <Mercenary_Elite>1</Mercenary_Elite>
-          <PirateBoss>1</PirateBoss>
-        </options>
-      </li>
-      <li>
-        <!-- Normal fights, snipers only -->
+        <!-- Normal fights, strong mix -->
         <kindDef>Combat</kindDef>
         <commonality>10</commonality>
         <options>
-          <Mercenary_Sniper>10</Mercenary_Sniper>
+          <VFEP_Veteran>10</VFEP_Veteran>
+          <VFEP_HeavyWeaponsPlatform>5</VFEP_HeavyWeaponsPlatform>
+          <VFEP_Hussar>8</VFEP_Hussar>
+          <VFEP_Pyro>4</VFEP_Pyro>
+          <VFEP_Artillery>2</VFEP_Artillery>
         </options>
       </li>
       <li>
-        <!-- Normal fights, drifters only (very rare) -->
-        <kindDef>Combat</kindDef>
-        <commonality>2.5</commonality>
-        <maxTotalPoints>1000</maxTotalPoints>
-        <options>
-          <Drifter>10</Drifter>
-        </options>
-      </li>
-      <li>
-        <!-- Base defense, mainly ranged with melee mix-ins -->
+        <!-- Base defense -->
         <kindDef>Settlement</kindDef>
         <options>
-          <Thrasher>3</Thrasher>
-          <Pirate>10</Pirate>
-          <Grenadier_Destructive>2</Grenadier_Destructive>
-          <Mercenary_Slasher>3</Mercenary_Slasher>
-          <Mercenary_Sniper>10</Mercenary_Sniper>
-          <Mercenary_Gunner>10</Mercenary_Gunner>
-          <Mercenary_Elite>10</Mercenary_Elite>
-          <PirateBoss>10</PirateBoss>
+          <VFEP_Scrapper>10</VFEP_Scrapper>
+          <VFEP_Footsoldier>8</VFEP_Footsoldier>
+          <VFEP_Veteran>6</VFEP_Veteran>
+          <VFEP_HeavyWeaponsPlatform>5</VFEP_HeavyWeaponsPlatform>
+          <VFEP_Hussar>5</VFEP_Hussar>
+          <VFEP_Pyro>2</VFEP_Pyro>
+          <VFEP_Artillery>2</VFEP_Artillery>
         </options>
       </li>
     </pawnGroupMakers>

@@ -36,6 +36,11 @@
     <tradeTags>
       <li>Warcasket</li> <!-- Won't be actually used anywhere -->
     </tradeTags>
+    <apparel>
+      <tags>
+        <li>WarcasketAll</li>
+      </tags>
+    </apparel>
     <comps>
       <li Class="CompProperties_Forbiddable"/>
       <li>

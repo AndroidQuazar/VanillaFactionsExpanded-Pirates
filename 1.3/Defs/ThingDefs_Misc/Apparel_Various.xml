@@ -1014,7 +1014,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
       </recipeUsers>
     </recipeMaker>
     <graphicData>
-      <texPath>Things/Pawn/Humanlike/Rumsuit/Rumsuit</texPath>
+      <texPath>Things/Pawn/Humanlike/Rumsuit/RumSuit</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <generateCommonality>0</generateCommonality>

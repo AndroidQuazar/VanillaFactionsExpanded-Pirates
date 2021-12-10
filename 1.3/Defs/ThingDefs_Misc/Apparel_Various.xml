@@ -997,5 +997,93 @@ Privateers usually specialize in getting in and out of dangerous situations easi
   </ThingDef>
   
   <!-- rumsuit -->
+  
+  <ThingDef ParentName="ArmorMachineableBase">
+    <defName>VFEP_Apparel_Rumsuit</defName>
+    <label>rumsuit</label>
+    <description>A large, bulky suit that allows the wearer to passively produce Rum once every 10 days. However, it is not very pleasant to wear as it feels like wearing damp, humid clothes from excessive sweating.\n\nThe suit includes a high-efficiency filter, heat-exchange filaments and salt precipitators. Urine and feces are processed in thigh pads and throughout the design are tubes that link to different catchpockets. Reprocessed bodily fluids are distilled into an alcoholic derivative of nutrient paste which can be drained when all the pockets are filled.\n\nRemoving the suit causes the accumulated liquid to evaporate, and it takes a long time to put on and properly adjust to the wearer. Due to the design, it can only be worn with an undersuit and the lack of head covering, while reducing efficiency, is purposefully done so it can be worn with head protection.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>VFEP_SweatFermentation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>DrugLab</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Rumsuit/Rumsuit</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <generateCommonality>0</generateCommonality>
+    <tradeTags>
+      <li>Rumsuit</li>
+    </tradeTags>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>8</Mass>
+      <Flammability>0.4</Flammability>
+      <ArmorRating_Sharp>0</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0</ArmorRating_Blunt>
+      <ArmorRating_Heat>0</ArmorRating_Heat>
+      <Insulation_Cold>12</Insulation_Cold>
+      <Insulation_Heat>0</Insulation_Heat>
+      <EquipDelay>4</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.8</MoveSpeed>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <costList>
+      <Chemfuel>50</Chemfuel>
+      <Steel>30</Steel>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Rumsuit/Rumsuit</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>(0.9,0.9,0.9)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.33,0.33,0.33)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.65,0.65,0.65)</only>
+        </li>
+        <li>
+          <weight>6</weight>
+          <min>(0.3,0.3,0.3)</min>
+          <max>(0.5,0.5,0.5)</max>
+        </li>
+      </options>
+    </colorGenerator>
+    <thingSetMakerTags>
+      <li>Rumsuit</li>
+    </thingSetMakerTags>
+  </ThingDef>
 
 </Defs>

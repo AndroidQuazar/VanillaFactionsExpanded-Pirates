@@ -910,7 +910,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
       </recipeUsers>
     </recipeMaker>
     <graphicData>
-      <texPath>Things/Pawn/Humanlike/Apparel/PowerArmor/PowerArmor</texPath>
+      <texPath>Things/Pawn/Humanlike/PrivateerArmor/PrivateerArmor</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <generateCommonality>2</generateCommonality>
@@ -949,7 +949,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
         <li>Arms</li>
         <li>Legs</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/PowerArmor/PowerArmor</wornGraphicPath>
+      <wornGraphicPath>Things/Pawn/Humanlike/PrivateerArmor/PrivateerArmor</wornGraphicPath>
       <layers>
         <li>Middle</li>
         <li>Shell</li>
@@ -995,5 +995,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
       <li>RewardStandardHighFreq</li>
     </thingSetMakerTags>
   </ThingDef>
+  
+  <!-- rumsuit -->
 
 </Defs>

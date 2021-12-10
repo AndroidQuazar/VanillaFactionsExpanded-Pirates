@@ -27,7 +27,7 @@
   <ThingDef ParentName="VFEP_BaseWarcasketGun">
     <defName>VFEP_WarcasketGun_Autorifle</defName>
     <label>warcasket autorifle</label>
-    <description>A portable version of the Autocannon designed for use by a warcasket. Due to a shortened barrel it has a lower range, less penetration and damage compared to the turreted version. However, it is very capable in close quarters combat which makes up for the slight accuracy loss at greater ranges.</description>
+    <description>A portable version of the autocannon designed for use by a warcasket. Due to a shortened barrel it has a lower range, less penetration and damage compared to the turreted version. However, it is very capable in close quarters combat which makes up for the slight accuracy loss at greater ranges.</description>
     <graphicData>
       <texPath>Things/Item/Weapons/WarcasketAutorifle</texPath>
     </graphicData>
@@ -352,7 +352,7 @@
   <ThingDef ParentName="VFEP_BaseWarcasketGun">
     <defName>VFEP_WarcasketGun_GrenadeLauncher</defName>
     <label>warcasket grenade launcher</label>
-    <description>A portable version of the Autocannon designed for use by a warcasket. Due to a shortened barrel it has a lower range, less penetration and damage compared to the turreted version. However, it is very capable in close quarters combat which makes up for the slight accuracy loss at greater ranges.</description>
+    <description>An upscaled version of the grenade launcher designed for use by a warcasket. A straight upgrade, it fires in bursts of 3 and benefits from recoil damping for faster recovery and better range. Like all launchers though, it has a worse miss radius compared to a hand-thrown grenade.</description>
     <graphicData>
       <texPath>Things/Item/Weapons/WarcasketGrenadeLauncher</texPath>
     </graphicData>
@@ -435,9 +435,9 @@
       </skillRequirements>
     </recipeMaker>
     <statBases>
-	  <MarketValue>1890</MarketValue>
+	  <MarketValue>2450</MarketValue>
       <WorkToMake>55000</WorkToMake>
-      <Mass>30</Mass>
+      <Mass>35</Mass>
       <AccuracyTouch>0.55</AccuracyTouch>
       <AccuracyShort>0.64</AccuracyShort>
       <AccuracyMedium>0.55</AccuracyMedium>

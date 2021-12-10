@@ -454,6 +454,10 @@
         <li>Middle</li>
         <li>Shell</li>
       </layers>
+      <tags>
+		<li>WarcasketHeavy</li>
+		<li>WarcasketCata</li>
+      </tags>
     </apparel>
   </VFEPirates.WarcasketDef>
   

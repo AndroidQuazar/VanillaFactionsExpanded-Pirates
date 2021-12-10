@@ -241,7 +241,7 @@
 		<li>EyeCover</li>
       </layers>
       <tags>
-		<li>WarcasketSpecialised</li>
+		<li>WarcasketHussar</li>
       </tags>
     </apparel>
   </VFEPirates.WarcasketDef>
@@ -287,6 +287,7 @@
       </layers>
       <tags>
 		<li>WarcasketSpecialised</li>
+		<li>WarcasketSuperHeavy</li>
       </tags>
     </apparel>
   </VFEPirates.WarcasketDef>
@@ -332,6 +333,7 @@
       </layers>
       <tags>
 		<li>WarcasketSpecialised</li>
+		<li>WarcasketFlamer</li>
       </tags>
     </apparel>
   </VFEPirates.WarcasketDef>
@@ -376,7 +378,7 @@
 		<li>EyeCover</li>
       </layers>
       <tags>
-		<li>WarcasketSpecialised</li>
+		<li>WarcasketHussar</li>
       </tags>
     </apparel>
   </VFEPirates.WarcasketDef>

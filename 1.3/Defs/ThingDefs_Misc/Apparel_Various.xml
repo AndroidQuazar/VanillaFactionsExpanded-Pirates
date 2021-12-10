@@ -503,6 +503,7 @@
       </layers>
       <tags>
 		<li>WarcasketHeavy</li>
+		<li>WarcasketCata</li>
       </tags>
     </apparel>
   </VFEPirates.WarcasketDef>
@@ -551,7 +552,7 @@
         <li>Shell</li>
       </layers>
       <tags>
-		<li>WarcasketSpecialised</li>
+		<li>WarcasketHussar</li>
       </tags>
     </apparel>
   </VFEPirates.WarcasketDef>
@@ -598,7 +599,7 @@
         <li>Shell</li>
       </layers>
       <tags>
-		<li>WarcasketSpecialised</li>
+		<li>WarcasketHussar</li>
       </tags>
     </apparel>
   </VFEPirates.WarcasketDef>
@@ -648,6 +649,7 @@
       </layers>
       <tags>
 		<li>WarcasketSpecialised</li>
+		<li>WarcasketSuperHeavy</li>
       </tags>
     </apparel>
   </VFEPirates.WarcasketDef>
@@ -695,6 +697,7 @@
       </layers>
       <tags>
 		<li>WarcasketSpecialised</li>
+		<li>WarcasketSuperHeavy</li>
       </tags>
     </apparel>
   </VFEPirates.WarcasketDef>
@@ -746,6 +749,7 @@
       </layers>
       <tags>
 		<li>WarcasketSpecialised</li>
+		<li>WarcasketFlamer</li>
       </tags>
     </apparel>
   </VFEPirates.WarcasketDef>
@@ -794,7 +798,7 @@
       </layers>
       <tags>
 		<li>WarcasketSpecialised</li>
-		<li>WarcasketPawnFlamer</li>
+		<li>WarcasketFlamer</li>
       </tags>
     </apparel>
   </VFEPirates.WarcasketDef>
@@ -844,7 +848,7 @@
         <li>Shell</li>
       </layers>
       <tags>
-		<li>WarcasketSpecialised</li>
+		<li>WarcasketHussar</li>
       </tags>
     </apparel>
   </VFEPirates.WarcasketDef>
@@ -891,7 +895,7 @@
         <li>Shell</li>
       </layers>
       <tags>
-		<li>WarcasketSpecialised</li>
+		<li>WarcasketHussar</li>
       </tags>
     </apparel>
   </VFEPirates.WarcasketDef>

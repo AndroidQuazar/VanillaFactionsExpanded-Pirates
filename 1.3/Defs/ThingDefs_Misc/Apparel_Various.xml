@@ -95,7 +95,8 @@
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
     <defName>VFEP_Warcasket_Warcasket</defName>
     <label>warcasket</label>
-    <description>Basic warcasket shell with baseline protection and weight.</description>
+    <shortDescription>Basic warcasket shell with baseline protection and weight.</shortDescription>
+    <description>Basic warcasket shell with baseline protection and weight.\n\nA 3rd generation warcasket which was the first to enter mass production, its design was based off of a combination of an upscaled astrominer’s powered rig and early iterations of bionic limb interfaces. As pirates have ample supply of “willing” human test subjects, they were deployed before power armor finished the prototype phase. The lead scientist on the project was quoted “you can’t make an omelette without breaking health and safety.”</description>
     <graphicData>
       <texPath>Things/Pawn/Warcasketlike/Warcasket/Warcasket</texPath>
     </graphicData>
@@ -170,7 +171,8 @@
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
     <defName>VFEP_WarcasketShoulders_Warcasket</defName>
     <label>warcasket shoulders</label>
-    <description>Basic warcasket pauldrons with baseline protection and weight.</description>
+    <shortDescription>Basic warcasket pauldrons with baseline protection and weight.</shortDescription>
+    <description>Basic warcasket pauldrons with baseline protection and weight.\n\nA 3rd generation warcasket which was the first to enter mass production, its design was based off of a combination of an upscaled astrominer’s powered rig and early iterations of bionic limb interfaces. As pirates have ample supply of “willing” human test subjects, they were deployed before power armor finished the prototype phase. The lead scientist on the project was quoted “you can’t make an omelette without breaking health and safety.”</description>
     <graphicData>
       <texPath>Things/Pawn/Warcasketlike/Warcasket/WarcasketShoulders</texPath>
     </graphicData>
@@ -217,7 +219,8 @@
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
     <defName>VFEP_Warcasket_Marine</defName>
     <label>marine warcasket</label>
-    <description>Advanced warcasket shell with improved protection for similar weight.</description>
+    <shortDescription>Advanced warcasket shell with improved protection for similar weight.</shortDescription>
+    <description>Advanced warcasket shell with improved protection for similar weight.\n\nThe 4th generation warcaskets entered development as power armor started to be deployed in military anti-piracy operations. While the more advanced and adjustable marine armour was successful against those who couldn’t field warcaskets, their construction was already being imitated by reverse engineering the superior power supply units and armor design improvements, along with considerably thicker plating supported by stronger hydraulics.</description>
     <graphicData>
       <texPath>Things/Pawn/Warcasketlike/WarcasketMarine/WarcasketMarine</texPath>
     </graphicData>
@@ -271,7 +274,8 @@
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
     <defName>VFEP_WarcasketShoulders_Marine</defName>
     <label>marine warcasket shoulders</label>
-    <description>Advanced warcasket pauldrons with improved protection for similar weight.</description>
+    <shortDescription>Advanced warcasket pauldrons with improved protection for similar weight.</shortDescription>
+    <description>Advanced warcasket pauldrons with improved protection for similar weight.\n\nThe 4th generation warcaskets entered development as power armor started to be deployed in military anti-piracy operations. While the more advanced and adjustable marine armour was successful against those who couldn’t field warcaskets, their construction was already being imitated by reverse engineering the superior power supply units and armor design improvements, along with considerably thicker plating supported by stronger hydraulics.</description>
     <graphicData>
       <texPath>Things/Pawn/Warcasketlike/WarcasketMarine/WarcasketMarineShoulders</texPath>
     </graphicData>
@@ -317,7 +321,8 @@
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
     <defName>VFEP_Warcasket_Recon</defName>
     <label>recon warcasket</label>
-    <description>Advanced warcasket pauldrons with improved environment protection and reduced weight.</description>
+    <shortDescription>Advanced warcasket pauldrons with improved environment protection and reduced weight.</shortDescription>
+    <description>Advanced warcasket pauldrons with improved environment protection and reduced weight.\n\n5th generation warcaskets were created with a much shorter period between generations, largely being slight specializations of the previous one. The Recon design was made with the goal of having it rapidly going behind enemy lines and taking out important personnel, such as doctors, armorers, engineers and botanists. They were typically armed with a warcasket knife to eliminate armed guards, their motto being “get busy moving or get busy dying”.</description>
     <graphicData>
       <texPath>Things/Pawn/Warcasketlike/WarcasketRecon/WarcasketRecon</texPath>
     </graphicData>
@@ -363,7 +368,8 @@
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
     <defName>VFEP_WarcasketShoulders_Recon</defName>
     <label>recon warcasket shoulders</label>
-    <description>Advanced warcasket pauldrons with improved protection for similar weight.</description>
+    <shortDescription>Advanced warcasket pauldrons with improved protection for similar weight.</shortDescription>
+    <description>Advanced warcasket pauldrons with improved protection for similar weight.\n\n5th generation warcaskets were created with a much shorter period between generations, largely being slight specializations of the previous one. The Recon design was made with the goal of having it rapidly going behind enemy lines and taking out important personnel, such as doctors, armorers, engineers and botanists. They were typically armed with a warcasket knife to eliminate armed guards, their motto being “get busy moving or get busy dying”.</description>
     <graphicData>
       <texPath>Things/Pawn/Warcasketlike/WarcasketRecon/WarcasketReconShoulders</texPath>
     </graphicData>
@@ -410,7 +416,8 @@
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
     <defName>VFEP_Warcasket_Cataphract</defName>
     <label>cataphract warcasket</label>
-    <description>Advanced warcasket shell with superior protection and worse weight.</description>
+    <shortDescription>Advanced warcasket shell with superior protection and worse weight.</shortDescription>
+    <description>Advanced warcasket shell with superior protection and worse weight.\n\n5th generation warcaskets were created with a much shorter period between generations, largely being slight specializations of the previous one. The Cataphract design was made with the goal of having it tie up as many enemy assets as possible, drawing enemy fire and laying down suppressive fire. The pilots of these suits were particularly fearless and preferred deploying with warcasket minguns, often spouting “I ain’t got time to bleed”.</description>
     <graphicData>
       <texPath>Things/Pawn/Warcasketlike/WarcasketCataphract/WarcasketCataphract</texPath>
     </graphicData>
@@ -453,7 +460,8 @@
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
     <defName>VFEP_WarcasketShoulders_Cataphract</defName>
     <label>cataphract warcasket shoulders</label>
-    <description>Advanced warcasket pauldrons with superior protection and worse weight.</description>
+    <shortDescription>Advanced warcasket pauldrons with superior protection and worse weight.</shortDescription>
+    <description>Advanced warcasket pauldrons with superior protection and worse weight.\n\n5th generation warcaskets were created with a much shorter period between generations, largely being slight specializations of the previous one. The Cataphract design was made with the goal of having it tie up as many enemy assets as possible, drawing enemy fire and laying down suppressive fire. The pilots of these suits were particularly fearless and preferred deploying with warcasket minguns, often spouting “I ain’t got time to bleed”.</description>
     <graphicData>
       <texPath>Things/Pawn/Warcasketlike/WarcasketCataphract/WarcasketCataphractShoulders</texPath>
     </graphicData>
@@ -499,7 +507,8 @@
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
     <defName>VFEP_Warcasket_Aerial</defName>
     <label>aerial warcasket</label>
-    <description>Specialized warcasket shell with superior protection for similar weight, aerodynamically designed and fitted with rocket booster injectors.</description>
+    <shortDescription>Specialized warcasket shell with superior protection for similar weight, aerodynamically designed and fitted with rocket booster injectors.</shortDescription>
+    <description>Specialized warcasket shell with superior protection for similar weight, aerodynamically designed and fitted with rocket booster injectors.\n\nThe 7th generation warcaskets came after underwhelming results in improving the baseline performance even further, instead focusing on creating designs that - while interchangeable - work better as a set. They were also the first to include plasteel in the design as it appeared more frequently in scavenging and looting. Each piece has a unique function that synergises with those of the same series, making them a truly separate class of mobile armor units.\n\nThe Aerial series is based on the Marine design with a few improvements in key areas, namely that the plating was made more aerodynamic and the addition of shoulder thrusters. The primary goal was to get the pilot behind enemy lines or even right in the middle of them to tie up high priority targets, giving them the catchphrase “death from above”.</description>
     <graphicData>
       <texPath>Things/Pawn/Warcasketlike/WarcasketAerial/WarcasketAerial</texPath>
     </graphicData>
@@ -546,7 +555,8 @@
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
     <defName>VFEP_WarcasketShoulders_Aerial</defName>
     <label>aerial warcasket shoulders</label>
-    <description>Specialized warcasket pauldrons with superior protection and reduced weight, aerodynamically designed and fitted with rocket boosters with large exhausts.</description>
+    <shortDescription>Specialized warcasket pauldrons with superior protection and reduced weight, aerodynamically designed and fitted with rocket boosters with large exhausts.</shortDescription>
+    <description>Specialized warcasket pauldrons with superior protection and reduced weight, aerodynamically designed and fitted with rocket boosters with large exhausts.\n\nThe 7th generation warcaskets came after underwhelming results in improving the baseline performance even further, instead focusing on creating designs that - while interchangeable - work better as a set. They were also the first to include plasteel in the design as it appeared more frequently in scavenging and looting. Each piece has a unique function that synergises with those of the same series, making them a truly separate class of mobile armor units.\n\nThe Aerial series is based on the Marine design with a few improvements in key areas, namely that the plating was made more aerodynamic and the addition of shoulder thrusters. The primary goal was to get the pilot behind enemy lines or even right in the middle of them to tie up high priority targets, giving them the catchphrase “death from above”.</description>
     <graphicData>
       <texPath>Things/Pawn/Warcasketlike/WarcasketAerial/WarcasketAerialShoulders</texPath>
     </graphicData>
@@ -593,7 +603,8 @@
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
     <defName>VFEP_Warcasket_Barrage</defName>
     <label>barrage warcasket</label>
-    <description>Specialized warcasket shell with peerless protection and excessive weight, fitted with stabilisers and penetrator pistons on the legs.</description>
+    <shortDescription>Specialized warcasket shell with peerless protection and excessive weight, fitted with stabilisers and penetrator pistons on the legs.</shortDescription>
+    <description>Specialized warcasket shell with peerless protection and excessive weight, fitted with stabilisers and penetrator pistons on the legs.\n\nThe 7th generation warcaskets came after underwhelming results in improving the baseline performance even further, instead focusing on creating designs that - while interchangeable - work better as a set. They were also the first to include plasteel in the design as it appeared more frequently in scavenging and looting. Each piece has a unique function that synergises with those of the same series, making them a truly separate class of mobile armor units.\n\nThe Barrage series makes numerous additions to the Cataphract series, with even heavier armour plating and the addition of weapons platform stabilizers “borrowed wholesale” from navy vessels. The objective was to put as much firepower downrange as possible while ignoring incoming enemy fire, their catchphrase being “dodge this”.</description>
     <graphicData>
       <texPath>Things/Pawn/Warcasketlike/WarcasketBarrage/WarcasketBarrage</texPath>
     </graphicData>
@@ -640,7 +651,8 @@
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
     <defName>VFEP_WarcasketShoulders_Barrage</defName>
     <label>barrage warcasket shoulders</label>
-    <description>Specialized warcasket pauldrons with peerless protection and excessive weight, fitted with arm stabilisers and shoulder-mounted grenade launchers.</description>
+    <shortDescription>Specialized warcasket pauldrons with peerless protection and excessive weight, fitted with arm stabilisers and shoulder-mounted grenade launchers.</shortDescription>
+    <description>Specialized warcasket pauldrons with peerless protection and excessive weight, fitted with arm stabilisers and shoulder-mounted grenade launchers.\n\nThe 7th generation warcaskets came after underwhelming results in improving the baseline performance even further, instead focusing on creating designs that - while interchangeable - work better as a set. They were also the first to include plasteel in the design as it appeared more frequently in scavenging and looting. Each piece has a unique function that synergises with those of the same series, making them a truly separate class of mobile armor units.\n\nThe Barrage series makes numerous additions to the Cataphract series, with even heavier armour plating and the addition of weapons platform stabilizers “borrowed wholesale” from navy vessels. The objective was to put as much firepower downrange as possible while ignoring incoming enemy fire, their catchphrase being “dodge this”.</description>
     <graphicData>
       <texPath>Things/Pawn/Warcasketlike/WarcasketBarrage/WarcasketBarrageShoulders</texPath>
     </graphicData>
@@ -688,7 +700,8 @@
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
     <defName>VFEP_Warcasket_Hazard</defName>
     <label>hazard warcasket</label>
-    <description>Specialized warcasket shell with peerless environment protection for similar weight, fitted with flame retardant material.</description>
+    <shortDescription>Specialized warcasket shell with peerless environment protection for similar weight, fitted with flame retardant material.</shortDescription>
+    <description>Specialized warcasket shell with peerless environment protection for similar weight, fitted with flame retardant material.\n\nThe 7th generation warcaskets came after underwhelming results in improving the baseline performance even further, instead focusing on creating designs that - while interchangeable - work better as a set. They were also the first to include plasteel in the design as it appeared more frequently in scavenging and looting. Each piece has a unique function that synergises with those of the same series, making them a truly separate class of mobile armor units.\n\nThe Hazard series was arguably one of the first of the 7th gen warcaskets, and was designed with utility in mind. The pilot can comfortably walk through a blazing inferno and excessive radiation, either when scavenging the remains of a battle or making its way to overload a ship’s nuclear reactor. Ironically, these pilots’ favourite saying is “I love the smell of napalm, it smells like money”.</description>
     <graphicData>
       <texPath>Things/Pawn/Warcasketlike/WarcasketHazard/WarcasketHazard</texPath>
     </graphicData>
@@ -736,7 +749,8 @@
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
     <defName>VFEP_WarcasketShoulders_Hazard</defName>
     <label>hazard warcasket shoulders</label>
-    <description>Specialized warcasket pauldrons with peerless environment protection and similar weight, fitted with flame retardant material.</description>
+    <shortDescription>Specialized warcasket pauldrons with peerless environment protection and similar weight, fitted with flame retardant material.</shortDescription>
+    <description>Specialized warcasket pauldrons with peerless environment protection and similar weight, fitted with flame retardant material.\n\nThe 7th generation warcaskets came after underwhelming results in improving the baseline performance even further, instead focusing on creating designs that - while interchangeable - work better as a set. They were also the first to include plasteel in the design as it appeared more frequently in scavenging and looting. Each piece has a unique function that synergises with those of the same series, making them a truly separate class of mobile armor units.\n\nThe Hazard series was arguably one of the first of the 7th gen warcaskets, and was designed with utility in mind. The pilot can comfortably walk through a blazing inferno and excessive radiation, either when scavenging the remains of a battle or making its way to overload a ship’s nuclear reactor. Ironically, these pilots’ favourite saying is “I love the smell of napalm, it smells like money”.</description>
     <graphicData>
       <texPath>Things/Pawn/Warcasketlike/WarcasketHazard/WarcasketHazardShoulders</texPath>
     </graphicData>
@@ -786,7 +800,8 @@
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
     <defName>VFEP_Warcasket_Shock</defName>
     <label>shock warcasket</label>
-    <description>Specialized warcasket shell with superior protection with higher weight, fitted with impact mitigators and a large propulsion engine on the back.</description>
+    <shortDescription>Specialized warcasket shell with superior protection with higher weight, fitted with impact mitigators and a large propulsion engine on the back.</shortDescription>
+    <description>Specialized warcasket shell with superior protection with higher weight, fitted with impact mitigators and a large propulsion engine on the back.\n\nThe 7th generation warcaskets came after underwhelming results in improving the baseline performance even further, instead focusing on creating designs that - while interchangeable - work better as a set. They were also the first to include plasteel in the design as it appeared more frequently in scavenging and looting. Each piece has a unique function that synergises with those of the same series, making them a truly separate class of mobile armor units.\n\nThe Shock series differs from the Aerial series in that the goal was not jump into action but practically be deployed from orbit right in the middle of an enemy base. Typically armed with a warcasket broadsword, they excel in melee combat while also benefiting from enemy friendly fire. Their warcry usually is “you’re all trapped here with me”.</description>
     <graphicData>
       <texPath>Things/Pawn/Warcasketlike/WarcasketShock/WarcasketShock</texPath>
     </graphicData>
@@ -833,7 +848,8 @@
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
     <defName>VFEP_WarcasketShoulders_Shock</defName>
     <label>shock warcasket shoulders</label>
-    <description>Specialized warcasket pauldrons with superior protection and similar weight, onboard targeting computers assist the wearer in melee in both accuracy and evasion.</description>
+    <shortDescription>Specialized warcasket pauldrons with superior protection and similar weight, onboard targeting computers assist the wearer in melee in both accuracy and evasion.</shortDescription>
+    <description>Specialized warcasket pauldrons with superior protection and similar weight, onboard targeting computers assist the wearer in melee in both accuracy and evasion.\n\nThe 7th generation warcaskets came after underwhelming results in improving the baseline performance even further, instead focusing on creating designs that - while interchangeable - work better as a set. They were also the first to include plasteel in the design as it appeared more frequently in scavenging and looting. Each piece has a unique function that synergises with those of the same series, making them a truly separate class of mobile armor units.\n\nThe Shock series differs from the Aerial series in that the goal was not jump into action but practically be deployed from orbit right in the middle of an enemy base. Typically armed with a warcasket broadsword, they excel in melee combat while also benefiting from enemy friendly fire. Their warcry usually is “you’re all trapped here with me”.</description>
     <graphicData>
       <texPath>Things/Pawn/Warcasketlike/WarcasketShock/WarcasketShockShoulders</texPath>
     </graphicData>

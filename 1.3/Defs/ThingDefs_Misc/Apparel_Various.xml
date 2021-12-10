@@ -1051,7 +1051,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
         <li>Arms</li>
         <li>Legs</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Humanlike/RumSuit/RumSuit</wornGraphicPath>
+      <wornGraphicPath>Things/Pawn/Humanlike/Rumsuit/RumSuit</wornGraphicPath>
       <layers>
         <li>Middle</li>
         <li>Shell</li>

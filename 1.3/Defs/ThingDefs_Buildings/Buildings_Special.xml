@@ -116,25 +116,6 @@
       <WorkToBuild>55000</WorkToBuild>
     </statBases>
 	</ThingDef>
-	
-  <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
-    <defName>VFEP_Box_Minigun</defName>
-    <label>warcasket minigun</label>
-    <description>An upscaled version of the minigun designed for use by a warcasket. It uses larger caliber rounds which are poorly made en masse due to how many rounds need to be manufactured. Thus, it has a slower rate of fire and armor penetration, but who cares because no one wants to be on the receiving end of this amount of dakka.</description>
-    <graphicData>
-      <texPath>Things/Item/WeaponsBoxed/WarcasketMinigun_OnFloor</texPath>
-    </graphicData>
-    <costList>
-      <Steel>240</Steel>
-	  <Plasteel>10</Plasteel>
-      <ComponentIndustrial>8</ComponentIndustrial>
-    </costList>
-    <statBases>
-      <MarketValue>2240</MarketValue>
-      <Mass>45</Mass>
-      <WorkToBuild>55000</WorkToBuild>
-    </statBases>
-	</ThingDef>
 
   <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
     <defName>VFEP_Box_GrenadeLauncher</defName>

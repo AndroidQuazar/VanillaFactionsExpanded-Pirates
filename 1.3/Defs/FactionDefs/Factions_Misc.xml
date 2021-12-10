@@ -47,7 +47,7 @@ Junkers utilise warcasket technology and seal themselves in metal tombs in which
     </backstoryFilters>
     <geneticVariance>0.8</geneticVariance>
     <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
-    <raidLootMaker>PirateRaidLootMaker</raidLootMaker>
+    <raidLootMaker>VFEP_JunkersRaidLootMaker</raidLootMaker>
     <maxPawnCostPerTotalPointsCurve>
       <points>
         <li>(0,35)</li>
@@ -123,7 +123,7 @@ Junkers utilise warcasket technology and seal themselves in metal tombs in which
   </FactionDef>
 
   <ThingSetMakerDef>
-    <defName>PirateRaidLootMaker</defName>
+    <defName>VFEP_JunkersRaidLootMaker</defName>
     <root Class="ThingSetMaker_MarketValue">
       <fixedParams>
         <filter>

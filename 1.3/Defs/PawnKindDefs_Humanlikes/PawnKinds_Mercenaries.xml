@@ -8,7 +8,6 @@
     <backstoryCryptosleepCommonality>0.05</backstoryCryptosleepCommonality>
     <invNutrition>2.55</invNutrition>
     <biocodeWeaponChance>0.1</biocodeWeaponChance>
-    </disallowedTraits>
     <combatEnhancingDrugsChance>0.05</combatEnhancingDrugsChance>
     <combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount>
     <skills>

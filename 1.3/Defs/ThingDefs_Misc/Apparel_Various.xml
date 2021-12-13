@@ -712,6 +712,13 @@
 		<li>WarcasketAll</li>
       </tags>
     </apparel>
+    <modExtensions>
+        <li Class="VFECore.ApparelExtension">
+            <equippedStatFactors>
+                <ShootingAccuracyPawn>1.1</ShootingAccuracyPawn>
+            </equippedStatFactors>
+        </li>
+    </modExtensions>
   </VFEPirates.WarcasketDef>
   
   <!-- hazard warcasket -->
@@ -765,6 +772,13 @@
 		<li>WarcasketAll</li>
       </tags>
     </apparel>
+    <modExtensions>
+        <li Class="VFECore.ApparelExtension">
+            <equippedStatFactors>
+                <Flammability>0</Flammability>
+            </equippedStatFactors>
+        </li>
+    </modExtensions>
   </VFEPirates.WarcasketDef>
   
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
@@ -815,6 +829,13 @@
 		<li>WarcasketAll</li>
       </tags>
     </apparel>
+    <modExtensions>
+        <li Class="VFECore.ApparelExtension">
+            <equippedStatFactors>
+                <Flammability>0.5</Flammability>
+            </equippedStatFactors>
+        </li>
+    </modExtensions>
   </VFEPirates.WarcasketDef>
   
   <!-- shock warcasket -->
@@ -914,6 +935,14 @@
 		<li>WarcasketAll</li>
       </tags>
     </apparel>
+    <modExtensions>
+        <li Class="VFECore.ApparelExtension">
+            <equippedStatFactors>
+                <MeleeHitChance>1.2</MeleeHitChance>
+				<MeleeDodgeChance>1.2</MeleeDodgeChance>
+            </equippedStatFactors>
+        </li>
+    </modExtensions>
   </VFEPirates.WarcasketDef>
   
   <!-- Privateer armour -->

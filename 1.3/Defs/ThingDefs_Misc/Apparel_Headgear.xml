@@ -343,6 +343,14 @@
 		<li>WarcasketAll</li>
       </tags>
     </apparel>
+    <modExtensions>
+        <li Class="VFECore.ApparelExtension">
+            <equippedStatFactors>
+				<PsychicSensitivity>0</PsychicSensitivity>
+				<ToxicSensitivity>0</ToxicSensitivity>
+            </equippedStatFactors>
+        </li>
+    </modExtensions>
   </VFEPirates.WarcasketDef>
   
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketHelmetBase">
@@ -389,6 +397,13 @@
 		<li>WarcasketAll</li>
       </tags>
     </apparel>
+    <modExtensions>
+        <li Class="VFECore.ApparelExtension">
+            <equippedStatFactors>
+				<MeleeDodgeChance>1.2</MeleeDodgeChance>
+            </equippedStatFactors>
+        </li>
+    </modExtensions>
   </VFEPirates.WarcasketDef>
 
 </Defs>

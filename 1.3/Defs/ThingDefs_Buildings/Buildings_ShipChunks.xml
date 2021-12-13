@@ -261,6 +261,7 @@
       <turretGunDef>VFEP_GauntletChargeCanon</turretGunDef>
       <turretBurstCooldownTime>4.8</turretBurstCooldownTime>
       <claimable>false</claimable>
+	  <turretTopDrawSize>3</turretTopDrawSize>
     </building>
     <placeWorkers>
       <li>PlaceWorker_TurretTop</li>

@@ -190,7 +190,7 @@
     <label>warcasket slugthrower</label>
     <description>An upscaled version of the pump shotgun designed for use by a warcasket. Each cartridge fired contains 4 pellets larger than slugs from a regular-sized shotgun, giving it better range, armor penetration and much better damage. The recoil is insane though, even for a warcasket’s recoil damping system.</description>
     <graphicData>
-      <texPath>Things/Item/Weapons/WarcasketUraniumSlugRifle</texPath>
+      <texPath>Things/Item/Weapons/WarcasketSlugthrower</texPath>
     </graphicData>
     <soundInteract>Interact_Shotgun</soundInteract>
     <recipeMaker>

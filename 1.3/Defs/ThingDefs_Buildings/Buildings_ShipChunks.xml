@@ -108,7 +108,7 @@
       </li>
       <li Class="CompProperties_EmptyStateGraphic">
         <graphicData>
-          <texPath>Things/Building/ShipChunks/ShipChunkCryptosleep</texPath>
+          <texPath>Things/Building/ShipChunks/ShipChunkCryptosleepOpen</texPath>
           <graphicClass>Graphic_Single</graphicClass>
           <drawSize>(2, 2)</drawSize>
         </graphicData>

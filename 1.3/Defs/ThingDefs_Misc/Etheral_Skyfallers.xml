@@ -15,7 +15,7 @@
       <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
       <shadowSize>(5.5,3.5)</shadowSize>
       <motesPerCell>1</motesPerCell>
-      <anticipationSound>Shuttle_Landing</anticipationSound>
+      <anticipationSound>VFEP_Ship_CrashLanding</anticipationSound>
       <anticipationSoundTicks>250</anticipationSoundTicks>
       <ticksToImpactRange>380~550</ticksToImpactRange>
       <angleCurve>
@@ -259,7 +259,7 @@
     <defName>VFEP_IShipChunkGauntletTurret</defName>
     <label>ship chunk gauntlet turret (incoming)</label>
     <graphicData>
-      <texPath>Things/Building/ShipChunks/ShipChunkGauntletTurret</texPath>
+      <texPath>Things/Skyfaller/ShipChunkGauntletTurret_Skyfaller</texPath>
     </graphicData>
   </ThingDef>
 

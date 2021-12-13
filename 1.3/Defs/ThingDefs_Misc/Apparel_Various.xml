@@ -325,8 +325,8 @@
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
     <defName>VFEP_Warcasket_Recon</defName>
     <label>recon warcasket</label>
-    <shortDescription>Advanced warcasket pauldrons with improved environment protection and reduced weight.</shortDescription>
-    <description>Advanced warcasket pauldrons with improved environment protection and reduced weight.\n\n5th generation warcaskets were created with a much shorter period between generations, largely being slight specializations of the previous one. The Recon design was made with the goal of having it rapidly going behind enemy lines and taking out important personnel, such as doctors, armorers, engineers and botanists. They were typically armed with a warcasket knife to eliminate armed guards, their motto being “get busy moving or get busy dying”.</description>
+    <shortDescription>Advanced warcasket shell with improved environment protection and reduced weight.</shortDescription>
+    <description>Advanced warcasket shell with improved environment protection and reduced weight.\n\n5th generation warcaskets were created with a much shorter period between generations, largely being slight specializations of the previous one. The Recon design was made with the goal of having it rapidly going behind enemy lines and taking out important personnel, such as doctors, armorers, engineers and botanists. They were typically armed with a warcasket knife to eliminate armed guards, their motto being “get busy moving or get busy dying”.</description>
     <graphicData>
       <texPath>Things/Pawn/Warcasketlike/WarcasketRecon/WarcasketRecon</texPath>
     </graphicData>

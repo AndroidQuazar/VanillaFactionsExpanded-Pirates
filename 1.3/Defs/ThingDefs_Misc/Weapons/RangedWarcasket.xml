@@ -60,7 +60,7 @@
         <range>28.9</range>
         <ticksBetweenBurstShots>17</ticksBetweenBurstShots>
         <burstShotCount>3</burstShotCount>
-        <soundCast>Shot_Minigun</soundCast>
+        <soundCast>VFEP_Shot_Minigun</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
@@ -224,7 +224,7 @@
         <range>18.9</range>
         <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
         <burstShotCount>4</burstShotCount>
-        <soundCast>Shot_Shotgun</soundCast>
+        <soundCast>VFEP_Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
@@ -395,7 +395,7 @@
         <targetParams>
           <canTargetLocations>true</canTargetLocations>
         </targetParams>
-        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCast>VFEP_Shot_GrenadeLauncher</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
@@ -465,7 +465,7 @@
         <targetParams>
           <canTargetLocations>true</canTargetLocations>
         </targetParams>
-        <soundCast>InfernoCannon_Fire</soundCast>
+        <soundCast>VFEP_Shot_HeavyFlamer</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>

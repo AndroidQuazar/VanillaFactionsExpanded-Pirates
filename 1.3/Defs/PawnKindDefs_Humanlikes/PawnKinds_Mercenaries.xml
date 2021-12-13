@@ -10,6 +10,22 @@
     <biocodeWeaponChance>0.1</biocodeWeaponChance>
     <combatEnhancingDrugsChance>0.05</combatEnhancingDrugsChance>
     <combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount>
+    <modExtensions>
+      <li Class="VFECore.PawnKindDefExtension">
+        <factionColourApparelPartList>
+          <li>Torso</li>
+          <li>Torso</li>
+          <li>Torso</li>
+          <li>Legs</li>
+        </factionColourApparelPartList>
+        <factionColourApparelLayerList>
+          <li>OnSkin</li>
+          <li>Middle</li>
+          <li>Shell</li>
+          <li>OnSkin</li>
+        </factionColourApparelLayerList>
+      </li>
+    </modExtensions>
     <skills>
       <li>
         <skill>Shooting</skill>

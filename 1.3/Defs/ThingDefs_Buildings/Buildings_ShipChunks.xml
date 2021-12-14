@@ -207,7 +207,7 @@
     <description>text.todo</description>
     <graphicData>
       <texPath>Things/Building/ShipChunks/ShipChunkGauntletTurret</texPath>
-	  <drawSize>(3,3)</drawSize>
+      <drawSize>(3,3)</drawSize>
     </graphicData>
     <costList>
       <Steel>160</Steel>
@@ -221,7 +221,7 @@
       <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
     </statBases>
     <tickerType>Normal</tickerType>
-	<size>(3,3)</size>
+    <size>(3,3)</size>
     <comps>
       <li Class="CompProperties_Explosive">
         <wickTicks>240</wickTicks>
@@ -263,7 +263,7 @@
       <turretGunDef>VFEP_GauntletChargeCanon</turretGunDef>
       <turretBurstCooldownTime>4.8</turretBurstCooldownTime>
       <claimable>false</claimable>
-	  <turretTopDrawSize>3</turretTopDrawSize>
+      <turretTopDrawSize>3</turretTopDrawSize>
     </building>
     <placeWorkers>
       <li>PlaceWorker_TurretTop</li>

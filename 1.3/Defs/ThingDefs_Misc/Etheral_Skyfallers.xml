@@ -258,9 +258,14 @@
   <ThingDef ParentName="VFEP_ChunkBase">
     <defName>VFEP_IShipChunkGauntletTurret</defName>
     <label>ship chunk gauntlet turret (incoming)</label>
+    <size>(3,3)</size>
     <graphicData>
       <texPath>Things/Skyfaller/ShipChunkGauntletTurret_Skyfaller</texPath>
+      <drawSize>(3,3)</drawSize>
     </graphicData>
+    <skyfaller>
+      <shadowSize>(3.5, 3.5)</shadowSize>
+    </skyfaller>
   </ThingDef>
 
   <ThingDef ParentName="VFEP_ChunkBase">

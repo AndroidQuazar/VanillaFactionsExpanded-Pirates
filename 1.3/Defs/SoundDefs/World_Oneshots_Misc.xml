@@ -2,29 +2,31 @@
 <Defs>
 
   <SoundDef>
-    <defName>VFEP_Shot_GauntletCannon</defName>  
-    <context>MapOnly</context>  
+    <defName>VFEP_Ship_CrashLanding</defName>  
+    <context>MapOnly</context>
     <maxSimultaneous>1</maxSimultaneous>  
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipPath>Shots/Shot_GauntletCannon</clipPath>
+            <clipFolderPath>Things/GauntletCrashing</clipFolderPath>
           </li>
         </grains>
+        <volumeRange>30~30</volumeRange>
+        <tempoAffectedByGameSpeed>true</tempoAffectedByGameSpeed>
       </li>
     </subSounds>
   </SoundDef>
   
   <SoundDef>
-    <defName>VFEP_Shot_Cannon</defName>  
+    <defName>VFEP_PowerJump_Jump</defName>  
     <context>MapOnly</context>  
     <maxSimultaneous>1</maxSimultaneous>  
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>Shots/Cannon_Fire</clipFolderPath>
+            <clipFolderPath>Abilities/PowerJump_Jump</clipFolderPath>
           </li>
         </grains>      
         <volumeRange>35~35</volumeRange>      
@@ -33,14 +35,14 @@
   </SoundDef>
   
   <SoundDef>
-    <defName>VFEP_Shot_FieldCannon</defName>  
+    <defName>VFEP_Shot_GrapplingHook</defName>  
     <context>MapOnly</context>  
     <maxSimultaneous>1</maxSimultaneous>  
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>Shots/FieldCannon_Fire</clipFolderPath>
+            <clipFolderPath>Abilities/Shot_GrapplingHook</clipFolderPath>
           </li>
         </grains>      
         <volumeRange>35~35</volumeRange>      
@@ -49,14 +51,14 @@
   </SoundDef>
   
   <SoundDef>
-    <defName>VFEP_Shot_Slugthrower</defName>  
+    <defName>VFEP_SiegeMode_Disengaged</defName>  
     <context>MapOnly</context>  
     <maxSimultaneous>1</maxSimultaneous>  
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>Shots/Shot_Slugthrower</clipFolderPath>
+            <clipFolderPath>Abilities/SiegeMode_Disengaged</clipFolderPath>
           </li>
         </grains>      
         <volumeRange>35~35</volumeRange>      
@@ -65,14 +67,14 @@
   </SoundDef>
   
   <SoundDef>
-    <defName>VFEP_Shot_HeavyFlamer</defName>  
+    <defName>VFEP_SiegeMode_Engaged</defName>  
     <context>MapOnly</context>  
     <maxSimultaneous>1</maxSimultaneous>  
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>Shots/Shot_WarcasketFlamethrower</clipFolderPath>
+            <clipFolderPath>Abilities/SiegeMode_Engaged</clipFolderPath>
           </li>
         </grains>      
         <volumeRange>35~35</volumeRange>      
@@ -81,14 +83,14 @@
   </SoundDef>
   
   <SoundDef>
-    <defName>VFEP_Shot_GrenadeLauncher</defName>  
+    <defName>VFEP_RumFinished</defName>  
     <context>MapOnly</context>  
     <maxSimultaneous>1</maxSimultaneous>  
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>Shots/Shot_WarcasketGrenadeLauncher</clipFolderPath>
+            <clipFolderPath>Things/RumFinished</clipFolderPath>
           </li>
         </grains>      
         <volumeRange>35~35</volumeRange>      
@@ -97,14 +99,14 @@
   </SoundDef>
   
   <SoundDef>
-    <defName>VFEP_Shot_Minigun</defName>  
+    <defName>VFEP_CursedCrewOST</defName>  
     <context>MapOnly</context>  
     <maxSimultaneous>1</maxSimultaneous>  
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>Shots/Shot_WarcasketMinigun</clipFolderPath>
+            <clipFolderPath>Ideology/CursedCrewOST</clipFolderPath>
           </li>
         </grains>      
         <volumeRange>35~35</volumeRange>      

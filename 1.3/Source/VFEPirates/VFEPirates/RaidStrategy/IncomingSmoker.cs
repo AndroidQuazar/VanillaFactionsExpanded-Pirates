@@ -9,7 +9,7 @@ using Verse;
 
 namespace VFEPirates
 {
-    internal class GauntletIncoming : Skyfaller
+    internal class IncomingSmoker : Skyfaller
     {
         public override void Tick()
         {

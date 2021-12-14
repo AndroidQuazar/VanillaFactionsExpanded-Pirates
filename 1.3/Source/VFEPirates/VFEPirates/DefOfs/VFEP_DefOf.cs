@@ -55,6 +55,35 @@ namespace VFEPirates
         public static ThingDef VFEP_CrashedShip_Orange;
         public static ThingDef VFEP_CrashedShip_Red;
 
+        public static ThingDef VFEP_ShipChunkDebris;
+        public static ThingDef VFEP_IShipChunkDebris;
+
+        public static ThingDef VFEP_ShipChunkBattery;
+        public static ThingDef VFEP_IShipChunkBattery;
+
+        public static ThingDef VFEP_ShipChunkCryptosleepCasket;
+        public static ThingDef VFEP_IShipChunkCryptosleepCasket;
+
+        public static ThingDef VFEP_ShipChunkVolatileEngine;
+        public static ThingDef VFEP_IShipChunkVolatileEngine;
+
+        public static ThingDef VFEP_ShipChunkFuelTank;
+        public static ThingDef VFEP_IShipChunkFuelTank;
+
+        public static ThingDef VFEP_ShipChunkGauntletTurret;
+        public static ThingDef VFEP_IShipChunkGauntletTurret;
+
+        public static ThingDef VFEP_ShipChunkReactor;
+        public static ThingDef VFEP_IShipChunkReactor;
+
+        public static ThingDef VFEP_ShipMedicalCrate;
+        public static ThingDef VFEP_IShipMedicalCrate;
+
+        public static ThingDef VFEP_ShipNutrientPasteCrate;
+        public static ThingDef VFEP_IShipNutrientPasteCrate;
+
+        public static ThingDef VFEP_SideDropPod;
+
         public static CurseDef VFEP_CurseOfPestilence;
 
         public static WarcasketDef VFEP_Warcasket_Warcasket;

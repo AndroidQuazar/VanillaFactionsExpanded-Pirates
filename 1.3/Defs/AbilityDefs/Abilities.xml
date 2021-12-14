@@ -7,14 +7,15 @@
         <abilityClass>VFEPirates.Ability_GrapplingHook</abilityClass>
         <targetMode>Thing</targetMode>
         <range>19.9</range>
-        <iconPath>UI/Abilities/SiegeModeOn</iconPath>
+        <iconPath>Things/Pawn/Humanlike/PrivateerArmor/GrapplingHook</iconPath>
         <cooldownTime>0</cooldownTime>
         <castTime>0</castTime>
         <chance>0</chance>
         <modExtensions>
             <li Class="VFEPirates.AbilityExtension_GrapplingHook">
-                <reloadIconPath>UI/Abilities/SiegeModeOff</reloadIconPath>
+                <reloadIconPath>Things/Pawn/Humanlike/PrivateerArmor/ReloadGrapplingHook</reloadIconPath>
                 <reloadTicks>600</reloadTicks>
+                <labelUnloaded>reload grappling hook</labelUnloaded>
             </li>
             <li Class="VFECore.Abilities.AbilityExtension_Projectile">
                 <projectile>VFEP_Bullet_GrapplingHook</projectile>
@@ -26,8 +27,9 @@
         <label>grappling hook</label>
         <thingClass>VFEPirates.Projectile_GrapplingHook</thingClass>
         <graphicData>
-            <texPath>Things/Projectile/Bullet_Small</texPath>
+            <texPath>Things/Pawn/Humanlike/PrivateerArmor/GrapplingHookProjectile</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.5, 0.5)</drawSize>
         </graphicData>
         <drawerType>RealtimeOnly</drawerType>
         <tickerType>Normal</tickerType>

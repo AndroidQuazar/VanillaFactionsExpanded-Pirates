@@ -53,19 +53,21 @@ namespace VFEPirates
     {
         public Command_Grapple(Pawn pawn, Ability ability) : base(pawn, ability)
         {
-            SetIcon();
+            Setup();
         }
 
         public Ability_GrapplingHook Hook => ability as Ability_GrapplingHook;
 
-        private void SetIcon()
+        private void Setup()
         {
             icon = Hook.Loaded ? Hook.def.icon : Hook.def.GetModExtension<AbilityExtension_GrapplingHook>().ReloadIcon;
+            defaultLabel = Hook.Loaded ? Hook.def.label : Hook.def.GetModExtension<AbilityExtension_GrapplingHook>().labelUnloaded;
         }
     }
 
     public class AbilityExtension_GrapplingHook : AbilityExtension_AbilityMod
     {
+        public string labelUnloaded;
         private Texture2D reloadIcon;
         public string reloadIconPath;
         public int reloadTicks;
@@ -109,6 +111,7 @@ namespace VFEPirates
         public override void Draw()
         {
             GenDraw.DrawLineBetween(Origin, DrawPos, AltitudeLayer.PawnRope.AltitudeFor(), RopeLineMat, 0.05f);
+            base.Draw();
         }
 
         protected override void Impact(Thing hitThing)

@@ -92,7 +92,7 @@ namespace VFEPirates
         public override void Tick()
         {
             base.Tick();
-            if (!OccupantAliveAndPresent) DeregisterOccupant();
+            if (!OccupantAliveAndPresent && occupant != null) DeregisterOccupant();
         }
 
         public void OpenCustomizationWindow(Pawn entombedPawn, Action onCancel)

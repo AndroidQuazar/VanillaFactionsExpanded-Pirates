@@ -62,6 +62,16 @@
         </li>
       </options>
     </colorGenerator>
+	<modExtensions>
+		<li Class="VFECore.ApparelExtension">
+			<traitsOnEquip>
+				<li>VFEP_WarcasketTrait</li>
+			</traitsOnEquip>
+			<traitsOnUnequip>
+				<li>VFEP_Shellcasket</li>
+			</traitsOnUnequip>
+		</li>
+	</modExtensions>
   </VFEPirates.WarcasketDef>
   
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketPartBase" Name="VFEP_WarcasketArmorBase" Abstract="True">
@@ -276,14 +286,6 @@
 		<li>WarcasketAll</li>
       </tags>
     </apparel>
-	<modExtensions>
-		<li Class="VFECore.ApparelExtension">
-			<equippedStatFactors>
-				<MoveSpeed>3</MoveSpeed>
-				<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
-			</equippedStatFactors>
-		</li>
-	</modExtensions>
   </VFEPirates.WarcasketDef>
   
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">

@@ -39,6 +39,7 @@
     <researchPrerequisites>
       <li>VFEP_WarcasketWeaponry</li>
     </researchPrerequisites>
+	<designatorDropdown>VFEP_WarcasketWeapon</designatorDropdown>
 	</ThingDef>
 
   <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">

@@ -17,6 +17,6 @@ assembly over other tasks.</VFEP.WarcasketText>
     <VFEP.ArmorFrame>Armor frame:</VFEP.ArmorFrame>
     <VFEP.TotalCost>Total Cost:</VFEP.TotalCost>
     <VFEP.ResourceCost>Resource Cost:</VFEP.ResourceCost>
-    <VFEP.ResearchText>Ressearch more warcasket technology to unlock more armor pieces.</VFEP.ResearchText>
-    <VFEP.NoWarcaskets>You don't know how to build any warcaskets.</VFEP.NoWarcaskets>
+    <VFEP.ResearchText>Research more warcasket technology to unlock more armor pieces.</VFEP.ResearchText>
+    <VFEP.NoWarcaskets>Research warcaskets to learn how to use the foundry.</VFEP.NoWarcaskets>
 </LanguageData>

@@ -24,7 +24,6 @@
     <apparel>
       <useDeflectMetalEffect>true</useDeflectMetalEffect>
     </apparel>
-	<generateCommonality>0</generateCommonality>
     <altitudeLayer>Item</altitudeLayer>
     <alwaysHaulable>True</alwaysHaulable>
     <tickerType>Never</tickerType>
@@ -42,6 +41,27 @@
         <compClass>CompColorable</compClass>
       </li>
     </comps>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>(0.9,0.9,0.9)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.33,0.33,0.33)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.65,0.65,0.65)</only>
+        </li>
+        <li>
+          <weight>6</weight>
+          <min>(0.3,0.3,0.3)</min>
+          <max>(0.5,0.5,0.5)</max>
+        </li>
+      </options>
+    </colorGenerator>
   </VFEPirates.WarcasketDef>
   
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketPartBase" Name="VFEP_WarcasketArmorBase" Abstract="True">
@@ -138,14 +158,6 @@
     <researchPrerequisites>
       <li>VFEP_Warcaskets</li>
     </researchPrerequisites>
-	<modExtensions>
-		<li Class="VFECore.ApparelExtension">
-			<equippedStatFactors>
-				<MoveSpeed>-0.5</MoveSpeed>
-				<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
-			</equippedStatFactors>
-		</li>
-	</modExtensions>
   </VFEPirates.WarcasketDef>
   
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketPartBase" Name="VFEP_WarcasketShoulderPadBase" Abstract="True">

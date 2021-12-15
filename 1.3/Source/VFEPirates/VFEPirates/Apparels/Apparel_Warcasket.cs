@@ -7,6 +7,12 @@ namespace VFEPirates
     public class Apparel_Warcasket : Apparel
     {
         public Color color;
+
+        public override void PostMake()
+        {
+            base.PostMake();
+            color = this.def.colorGenerator.NewRandomizedColor();
+        }
         public override Color DrawColor => color;
         public override void ExposeData()
         {

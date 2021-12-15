@@ -42,8 +42,9 @@
     <label>warcasket combat knife</label>
     <description>An upscaled version of the combat knife designed for use by a warcasket. It is only still called a knife due to size comparison to a warcasket, but it is capable of cleaving a man in half and is just as large. The preferred weapon for the faster moving warcaskets that prioritize lightly armored, isolated targets.</description>
     <graphicData>
-      <texPath>Things/Item/Weapons/WarcasketCombatKnife</texPath>
-	  <drawSize>1.5</drawSize>
+      <texPath>Things/Item/WeaponsBoxed/WarcasketCombatKnife_OnFloor</texPath>
+      <onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+	  <drawSize>1</drawSize>
     </graphicData>
     <statBases>
 	  <MarketValue>870</MarketValue>

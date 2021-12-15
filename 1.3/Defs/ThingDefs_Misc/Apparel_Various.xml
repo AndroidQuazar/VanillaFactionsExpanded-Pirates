@@ -62,16 +62,6 @@
         </li>
       </options>
     </colorGenerator>
-	<modExtensions>
-		<li Class="VFECore.ApparelExtension">
-			<traitsOnEquip>
-				<li>VFEP_WarcasketTrait</li>
-			</traitsOnEquip>
-			<traitsOnUnequip>
-				<li>VFEP_Shellcasket</li>
-			</traitsOnUnequip>
-		</li>
-	</modExtensions>
   </VFEPirates.WarcasketDef>
   
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketPartBase" Name="VFEP_WarcasketArmorBase" Abstract="True">
@@ -168,6 +158,16 @@
     <researchPrerequisites>
       <li>VFEP_Warcaskets</li>
     </researchPrerequisites>
+	<modExtensions>
+		<li Class="VFECore.ApparelExtension">
+			<traitsOnEquip>
+				<li>VFEP_WarcasketTrait</li>
+			</traitsOnEquip>
+			<traitsOnUnequip>
+				<li>VFEP_Shellcasket</li>
+			</traitsOnUnequip>
+		</li>
+	</modExtensions>
   </VFEPirates.WarcasketDef>
   
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketPartBase" Name="VFEP_WarcasketShoulderPadBase" Abstract="True">
@@ -286,6 +286,16 @@
 		<li>WarcasketAll</li>
       </tags>
     </apparel>
+	<modExtensions>
+		<li Class="VFECore.ApparelExtension">
+			<traitsOnEquip>
+				<li>VFEP_WarcasketTrait</li>
+			</traitsOnEquip>
+			<traitsOnUnequip>
+				<li>VFEP_Shellcasket</li>
+			</traitsOnUnequip>
+		</li>
+	</modExtensions>
   </VFEPirates.WarcasketDef>
   
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
@@ -382,6 +392,16 @@
 		<li>WarcasketAll</li>
       </tags>
     </apparel>
+	<modExtensions>
+		<li Class="VFECore.ApparelExtension">
+			<traitsOnEquip>
+				<li>VFEP_WarcasketTrait</li>
+			</traitsOnEquip>
+			<traitsOnUnequip>
+				<li>VFEP_Shellcasket</li>
+			</traitsOnUnequip>
+		</li>
+	</modExtensions>
   </VFEPirates.WarcasketDef>
   
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
@@ -480,6 +500,16 @@
 		<li>WarcasketAll</li>
       </tags>
     </apparel>
+	<modExtensions>
+		<li Class="VFECore.ApparelExtension">
+			<traitsOnEquip>
+				<li>VFEP_WarcasketTrait</li>
+			</traitsOnEquip>
+			<traitsOnUnequip>
+				<li>VFEP_Shellcasket</li>
+			</traitsOnUnequip>
+		</li>
+	</modExtensions>
   </VFEPirates.WarcasketDef>
   
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
@@ -578,6 +608,16 @@
 		<li>WarcasketAll</li>
       </tags>
     </apparel>
+	<modExtensions>
+		<li Class="VFECore.ApparelExtension">
+			<traitsOnEquip>
+				<li>VFEP_WarcasketTrait</li>
+			</traitsOnEquip>
+			<traitsOnUnequip>
+				<li>VFEP_Shellcasket</li>
+			</traitsOnUnequip>
+		</li>
+	</modExtensions>
   </VFEPirates.WarcasketDef>
   
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
@@ -677,6 +717,16 @@
 		<li>WarcasketAll</li>
       </tags>
     </apparel>
+	<modExtensions>
+		<li Class="VFECore.ApparelExtension">
+			<traitsOnEquip>
+				<li>VFEP_WarcasketTrait</li>
+			</traitsOnEquip>
+			<traitsOnUnequip>
+				<li>VFEP_Shellcasket</li>
+			</traitsOnUnequip>
+		</li>
+	</modExtensions>
   </VFEPirates.WarcasketDef>
   
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
@@ -791,6 +841,12 @@
             <equippedStatFactors>
                 <Flammability>0</Flammability>
             </equippedStatFactors>
+			<traitsOnEquip>
+				<li>VFEP_WarcasketTrait</li>
+			</traitsOnEquip>
+			<traitsOnUnequip>
+				<li>VFEP_Shellcasket</li>
+			</traitsOnUnequip>
         </li>
     </modExtensions>
   </VFEPirates.WarcasketDef>
@@ -901,6 +957,16 @@
 		<li>WarcasketAll</li>
       </tags>
     </apparel>
+	<modExtensions>
+		<li Class="VFECore.ApparelExtension">
+			<traitsOnEquip>
+				<li>VFEP_WarcasketTrait</li>
+			</traitsOnEquip>
+			<traitsOnUnequip>
+				<li>VFEP_Shellcasket</li>
+			</traitsOnUnequip>
+		</li>
+	</modExtensions>
   </VFEPirates.WarcasketDef>
   
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
@@ -955,6 +1021,12 @@
                 <MeleeHitChance>1.2</MeleeHitChance>
 				<MeleeDodgeChance>1.2</MeleeDodgeChance>
             </equippedStatFactors>
+			<traitsOnEquip>
+				<li>VFEP_WarcasketTrait</li>
+			</traitsOnEquip>
+			<traitsOnUnequip>
+				<li>VFEP_Shellcasket</li>
+			</traitsOnUnequip>
         </li>
     </modExtensions>
   </VFEPirates.WarcasketDef>

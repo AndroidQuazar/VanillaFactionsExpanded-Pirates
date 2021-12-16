@@ -168,8 +168,114 @@
 			</traitsOnUnequip>
 		</li>
 	</modExtensions>
+    <comps>
+      <li Class="CompProperties_Reloadable">
+        <maxCharges>100</maxCharges>
+        <ammoDef>Chemfuel</ammoDef>
+        <ammoCountPerCharge>1</ammoCountPerCharge>
+        <baseReloadTicks>60</baseReloadTicks>
+        <soundReload>Standard_Reload</soundReload>
+        <hotKey>Misc4</hotKey>
+        <chargeNoun>jump</chargeNoun>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+      </li>
+      <li Class="VFECore.Abilities.CompProperties_AbilitiesApparel">
+        <abilities>
+          <li>VFEP_PowerJump</li>
+        </abilities>
+      </li>
+    </comps>
   </VFEPirates.WarcasketDef>
+
+  <VFECore.Abilities.AbilityDef>
+  	<defName>VFEP_PowerJump</defName>
+  	<label>Power jump</label>
+  	<description>Use shoulder-mounted jump packs to travel a short distance and create a small explosion at both start and end of the flight.</description>
+  	<abilityClass>VFEPirates.Ability_PowerJump</abilityClass>
+  	<targetMode>Location</targetMode>
+  	<iconPath>UI/Abilities/PowerJump</iconPath>
+	<castTime>60</castTime>
+  </VFECore.Abilities.AbilityDef>
+
+  <ThingDef ParentName="PawnFlyerBase">
+  	<defName>VFEP_PowerJumpPawn</defName>
+  	<thingClass>VFEPirates.PawnFlyer_PowerJump</thingClass>
+  	<pawnFlyer>
+  		<flightDurationMin>0.5</flightDurationMin>
+  		<flightSpeed>12</flightSpeed>
+		<flightEffecterDef>VFEP_PowerJumpPawnEffect</flightEffecterDef>
+  	</pawnFlyer>
+  </ThingDef>
+	
+  <EffecterDef>
+    <defName>VFEP_PowerJumpPawnEffect</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SoundTriggered</subEffecterClass>
+        <spawnLocType>OnSource</spawnLocType>
+        <soundDef>JumpPackLaunch</soundDef>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <spawnLocType>OnSource</spawnLocType>
+        <fleckDef>ShotFlash</fleckDef>
+        <scale>6</scale>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+        <scale>0.5~0.6</scale>
+        <spawnLocType>OnSource</spawnLocType>
+        <positionOffset>(0,0,-0.5)</positionOffset>
+        <fleckDef>JumpFlame</fleckDef>
+        <ticksBetweenMotes>1</ticksBetweenMotes>
+        <maxMoteCount>14</maxMoteCount>
+        <speed>4~5</speed>
+        <angle>170~190</angle>
+        <absoluteAngle>true</absoluteAngle>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+        <scale>0.9~0.7</scale>
+        <spawnLocType>OnSource</spawnLocType>
+        <positionOffset>(0,0,-0.5)</positionOffset>
+        <fleckDef>JumpFlameGlow</fleckDef>
+        <ticksBetweenMotes>1</ticksBetweenMotes>
+        <maxMoteCount>14</maxMoteCount>
+        <speed>4~5</speed>
+        <angle>160~200</angle>
+        <absoluteAngle>true</absoluteAngle>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+        <scale>0.8~1.2</scale>
+        <spawnLocType>OnSource</spawnLocType>
+        <positionOffset>(0,0,-0.5)</positionOffset>
+        <fleckDef>JumpSmoke</fleckDef>
+        <ticksBetweenMotes>2</ticksBetweenMotes>
+        <maxMoteCount>8</maxMoteCount>
+        <speed>5~6</speed>
+        <angle>170~190</angle>
+        <absoluteAngle>true</absoluteAngle>
+      </li>
+    </children>
+  </EffecterDef>
   
+  <SoundDef>
+    <defName>VFEP_PowerJumpPackLand</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipPath>Misc/JumpPack/JumpPack_Land</clipPath>
+          </li>
+        </grains>
+        <volumeRange>25</volumeRange>
+        <pitchRange>1</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketPartBase" Name="VFEP_WarcasketShoulderPadBase" Abstract="True">
 	<isShoulderPads>true</isShoulderPads>
 	<shortDescription>short desc</shortDescription>

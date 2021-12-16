@@ -19,4 +19,5 @@ assembly over other tasks.</VFEP.WarcasketText>
     <VFEP.ResourceCost>Resource Cost:</VFEP.ResourceCost>
     <VFEP.ResearchText>Research more warcasket technology to unlock more armor pieces.</VFEP.ResearchText>
     <VFEP.NoWarcaskets>Research warcaskets to learn how to use the foundry.</VFEP.NoWarcaskets>
+	<VFEP.NotEnoughFuel>Not enough chemfuel for power jump.</VFEP.NotEnoughFuel>
 </LanguageData>

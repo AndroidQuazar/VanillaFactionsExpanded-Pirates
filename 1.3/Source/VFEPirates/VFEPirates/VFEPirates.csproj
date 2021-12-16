@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abilities\Ability_PowerJump.cs" />
     <Compile Include="Abilities\Ability_GrapplingHook.cs" />
     <Compile Include="Apparels\Apparel_Warcasket.cs" />
     <Compile Include="Buildings\Chunks\FilthSpawner.cs" />

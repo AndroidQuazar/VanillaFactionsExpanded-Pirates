@@ -91,5 +91,6 @@ namespace VFEPirates
         public static WarcasketDef VFEP_WarcasketShoulders_Warcasket;
 
         public static ThingDef VFEP_GrapplingPawn;
+        public static ThingDef VFEP_PowerJumpPawn;
     }
 }

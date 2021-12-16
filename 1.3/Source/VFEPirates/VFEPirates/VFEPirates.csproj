@@ -79,7 +79,6 @@
     <Compile Include="Jobs\RecipeWorker_WarcasketRemoval.cs" />
     <Compile Include="Utilities\CursesUtility.cs" />
     <Compile Include="Utilities\HarmonyUtility.cs" />
-    <Compile Include="Utilities\UIUtility.cs" />
     <Compile Include="Utilities\WeldingUtility.cs" />
     <Compile Include="Jobs\WorkGiver_DoWelding.cs" />
     <Compile Include="MapComponents and GameComponents\GameComponent_LostCrewmenChecker.cs" />

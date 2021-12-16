@@ -166,8 +166,8 @@ Mercenaries utilise spacer-tech weapons and armors to eliminate the targets of t
       <li>VFEP_General</li>
     </fixedLeaderKinds>
     <colorSpectrum>
-      <li>(0.74, 0.33, 0.33)</li>
-      <li>(0.95, 0.46, 0.46)</li>
+      <li>(0.51, 0.58, 0.26)</li>
+      <li>(0.89, 1.0, 0.45)</li>
     </colorSpectrum>
     <permanentEnemy>false</permanentEnemy>
     <techLevel>Spacer</techLevel>

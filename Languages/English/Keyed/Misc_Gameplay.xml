@@ -6,4 +6,5 @@
 	<VFEM.MissingMaterials>Missing materials: {0}</VFEM.MissingMaterials>
 	<VFEP.Occupied>Occupied</VFEP.Occupied>
 	<VFEP.WarcasketCannotBeRemoved>Warcasket cannot be removed</VFEP.WarcasketCannotBeRemoved>
+	<VFEP_NextSpawnedRumIn>Producing rum from bodily fluids in</VFEP_NextSpawnedRumIn>
 </LanguageData>

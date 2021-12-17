@@ -53,6 +53,8 @@
     <Compile Include="Buildings\Chunks\Fueled.cs" />
     <Compile Include="Buildings\Chunks\VolatileEngine.cs" />
     <Compile Include="Buildings\Dialog_WarcasketCustomization.cs" />
+    <Compile Include="Comps\CompRumSuit.cs" />
+    <Compile Include="Comps\Properties\CompProperties_RumSuit.cs" />
     <Compile Include="Curses\CurseDef.cs" />
     <Compile Include="Curses\CurseOfDarkness.cs" />
     <Compile Include="Curses\CurseOfMind.cs" />
@@ -74,6 +76,7 @@
     <Compile Include="RaidStrategy\Building_CrashedShip.cs" />
     <Compile Include="ScenPart_LowOrbitCrash.cs" />
     <Compile Include="Stats\StatPart_CurseOfPestilence.cs" />
+    <Compile Include="Thoughts\ThoughtWorker_RumSuit.cs" />
     <Compile Include="Utilities\CachedData.cs" />
     <Compile Include="Jobs\JobDriver_DoWelding.cs" />
     <Compile Include="Jobs\JobDriver_EntombIn.cs" />
@@ -99,7 +102,6 @@
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">
       <Version>1.3.3200</Version>
-      <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>
     <PackageReference Include="Lib.Harmony">
       <Version>2.1.1</Version>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<VFEPirates.WarcasketDef Name="VFEP_WarcasketPartBase" Abstract="True">
 		<tradeability>None</tradeability>
@@ -85,10 +85,9 @@
 				<secondaryApparelGraphics>
 					<li>VFEP_Warcasket_Bodysuit</li>
 				</secondaryApparelGraphics>
-</li>
+			</li>
 		</modExtensions>
 	</VFEPirates.WarcasketDef>
-
 	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketPartBase">
 		<defName>VFEP_Warcasket_Bodysuit</defName>
 		<label>warcasket bodysuit</label>
@@ -109,9 +108,7 @@
 			</li>
 		</modExtensions>
 	</VFEPirates.WarcasketDef>
-
 	<!-- Basic warcasket -->
-
 	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
 		<defName>VFEP_Warcasket_Warcasket</defName>
 		<label>warcasket</label>
@@ -166,7 +163,7 @@
 				<traitsOnUnequip>
 					<li>VFEP_Shellcasket</li>
 				</traitsOnUnequip>
-</li>
+			</li>
 		</modExtensions>
 		<comps>
 			<li Class="CompProperties_Reloadable">
@@ -184,9 +181,10 @@
 					<li>VFEP_PowerJump</li>
 					<li>VFEP_SiegeMode</li>
 				</abilities>
-</li>
+			</li>
 		</comps>
 	</VFEPirates.WarcasketDef>
+	
 
 	<VFECore.Abilities.AbilityDef>
 		<defName>VFEP_SiegeMode</defName>
@@ -238,211 +236,7 @@
 			</li>
 		</modExtensions>
 	</VFECore.Abilities.AbilityDef>
-
-	<ThingDef ParentName="PawnFlyerBase">
-		<defName>VFEP_PowerJumpPawn</defName>
-		<thingClass>VFEPirates.PawnFlyer_PowerJump</thingClass>
-		<pawnFlyer>
-			<flightDurationMin>0.5</flightDurationMin>
-			<flightSpeed>12</flightSpeed>
-			<flightEffecterDef>VFEP_PowerJumpPawnEffect</flightEffecterDef>
-		</pawnFlyer>
-	</ThingDef>
-
-	<EffecterDef>
-		<defName>VFEP_PowerJumpPawnEffect</defName>
-		<children>
-			<li>
-				<subEffecterClass>SubEffecter_SoundTriggered</subEffecterClass>
-				<spawnLocType>OnSource</spawnLocType>
-				<soundDef>JumpPackLaunch</soundDef>
-			</li>
-			<li>
-				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-				<spawnLocType>OnSource</spawnLocType>
-				<fleckDef>ShotFlash</fleckDef>
-				<scale>6</scale>
-			</li>
-			<li>
-				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
-				<scale>0.5~0.6</scale>
-				<spawnLocType>OnSource</spawnLocType>
-				<positionOffset>(0,0,-0.5)</positionOffset>
-				<fleckDef>JumpFlame</fleckDef>
-				<ticksBetweenMotes>1</ticksBetweenMotes>
-				<maxMoteCount>14</maxMoteCount>
-				<speed>4~5</speed>
-				<angle>170~190</angle>
-				<absoluteAngle>true</absoluteAngle>
-			</li>
-			<li>
-				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
-				<scale>0.9~0.7</scale>
-				<spawnLocType>OnSource</spawnLocType>
-				<positionOffset>(0,0,-0.5)</positionOffset>
-				<fleckDef>JumpFlameGlow</fleckDef>
-				<ticksBetweenMotes>1</ticksBetweenMotes>
-				<maxMoteCount>14</maxMoteCount>
-				<speed>4~5</speed>
-				<angle>160~200</angle>
-				<absoluteAngle>true</absoluteAngle>
-			</li>
-			<li>
-				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
-				<scale>0.8~1.2</scale>
-				<spawnLocType>OnSource</spawnLocType>
-				<positionOffset>(0,0,-0.5)</positionOffset>
-				<fleckDef>JumpSmoke</fleckDef>
-				<ticksBetweenMotes>2</ticksBetweenMotes>
-				<maxMoteCount>8</maxMoteCount>
-				<speed>5~6</speed>
-				<angle>170~190</angle>
-				<absoluteAngle>true</absoluteAngle>
-			</li>
-		</children>
-	</EffecterDef>
-
-	<SoundDef>
-		<defName>VFEP_PowerJumpPackLand</defName>
-		<context>MapOnly</context>
-		<maxSimultaneous>1</maxSimultaneous>
-		<subSounds>
-			<li>
-				<grains>
-					<li Class="AudioGrain_Folder">
-						<clipPath>Misc/JumpPack/JumpPack_Land</clipPath>
-					</li>
-				</grains>
-				<volumeRange>25</volumeRange>
-				<pitchRange>1</pitchRange>
-			</li>
-		</subSounds>
-	</SoundDef>
-
-	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketPartBase" Name="VFEP_WarcasketShoulderPadBase" Abstract="True">
-		<isShoulderPads>true</isShoulderPads>
-		<shortDescription>short desc</shortDescription>
-		<modExtensions>
-			<li Class="VFECore.ApparelDrawPosExtension">
-				<shellPosDrawSettings>
-					<drawPosNorthOffset>(0, 0.2, 0)</drawPosNorthOffset>
-					<drawPosSouthOffset>(0, 0.1, 0)</drawPosSouthOffset>
-					<drawPosWestOffset>(0, 0.1, 0)</drawPosWestOffset>
-					<drawPosEastOffset>(0, 0.1, 0)</drawPosEastOffset>
-				</shellPosDrawSettings>
-				<isUnifiedApparel>true</isUnifiedApparel>
-				<showBodyInBedAlways>true</showBodyInBedAlways>
-				<secondaryApparelGraphics>
-					<li>VFEP_Warcasket_Bodysuit</li>
-				</secondaryApparelGraphics>
-</li>
-		</modExtensions>
-	</VFEPirates.WarcasketDef>
-
-	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketPartBase">
-		<defName>VFEP_Warcasket_Bodysuit</defName>
-		<label>warcasket bodysuit</label>
-		<description>Basic bodysuit that serves as a base for warcasket shells.</description>
-		<thingClass>Apparel</thingClass>
-		<graphicData>
-			<texPath>Things/Pawn/Warcasketlike/WarcasketBodysuit/WarcasketBodysuit</texPath>
-		</graphicData>
-		<apparel>
-			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketBodysuit/WarcasketBodysuit</wornGraphicPath>
-			<layers>
-				<li>OnSkin</li>
-			</layers>
-		</apparel>
-		<modExtensions>
-			<li Class="VFECore.ApparelDrawPosExtension">
-				<isUnifiedApparel>true</isUnifiedApparel>
-			</li>
-		</modExtensions>
-	</VFEPirates.WarcasketDef>
-	<!-- Basic warcasket -->
-	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
-		<defName>VFEP_Warcasket_Warcasket</defName>
-		<label>warcasket</label>
-		<shortDescription>Basic warcasket shell with baseline protection and weight.</shortDescription>
-		<description>Basic warcasket shell with baseline protection and weight.\n\nA 3rd generation warcasket which was the first to enter mass production, its design was based off of a combination of an upscaled astrominer’s powered rig and early iterations of bionic limb interfaces. As pirates have ample supply of “willing” human test subjects, they were deployed before power armor finished the prototype phase. The lead scientist on the project was quoted “you can’t make an omelette without breaking health and safety.”</description>
-		<graphicData>
-			<texPath>Things/Pawn/Warcasketlike/Warcasket/Warcasket</texPath>
-		</graphicData>
-		<statBases>
-			<Mass>50</Mass>
-			<ArmorRating_Sharp>1.06</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.55</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.64</ArmorRating_Heat>
-			<Insulation_Cold>20</Insulation_Cold>
-			<Insulation_Heat>7</Insulation_Heat>
-			<EquipDelay>1</EquipDelay>
-		</statBases>
-		<equippedStatOffsets>
-			<MoveSpeed>-0.5</MoveSpeed>
-			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
-		</equippedStatOffsets>
-		<costList>
-			<ComponentIndustrial>2</ComponentIndustrial>
-			<Steel>80</Steel>
-			<Uranium>20</Uranium>
-		</costList>
-		<apparel>
-			<bodyPartGroups>
-				<li>Torso</li>
-				<li>Legs</li>
-				<li>Feet</li>
-			</bodyPartGroups>
-			<wornGraphicPath>Things/Pawn/Warcasketlike/Warcasket/Warcasket</wornGraphicPath>
-			<layers>
-				<li>Middle</li>
-				<li>Shell</li>
-			</layers>
-			<tags>
-				<li>Warcasket</li>
-				<li>WarcasketVeteran</li>
-				<li>WarcasketAll</li>
-			</tags>
-		</apparel>
-		<researchPrerequisites>
-			<li>VFEP_Warcaskets</li>
-		</researchPrerequisites>
-		<modExtensions>
-			<li Class="VFECore.ApparelExtension">
-				<traitsOnEquip>
-					<li>VFEP_WarcasketTrait</li>
-				</traitsOnEquip>
-				<traitsOnUnequip>
-					<li>VFEP_Shellcasket</li>
-				</traitsOnUnequip>
-</li>
-		</modExtensions>
-		<comps>
-			<li Class="CompProperties_Reloadable">
-				<maxCharges>100</maxCharges>
-				<ammoDef>Chemfuel</ammoDef>
-				<ammoCountPerCharge>1</ammoCountPerCharge>
-				<baseReloadTicks>60</baseReloadTicks>
-				<soundReload>Standard_Reload</soundReload>
-				<hotKey>Misc4</hotKey>
-				<chargeNoun>jump</chargeNoun>
-				<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
-			</li>
-			<li Class="VFECore.Abilities.CompProperties_AbilitiesApparel">
-				<abilities>
-					<li>VFEP_PowerJump</li>
-				</abilities>
-</li>
-		</comps>
-	</VFEPirates.WarcasketDef>
-	<VFECore.Abilities.AbilityDef>
-		<defName>VFEP_PowerJump</defName>
-		<label>Power jump</label>
-		<description>Use shoulder-mounted jump packs to travel a short distance and create a small explosion at both start and end of the flight.</description>
-		<abilityClass>VFEPirates.Ability_PowerJump</abilityClass>
-		<targetMode>Location</targetMode>
-		<iconPath>UI/Abilities/PowerJump</iconPath>
-		<castTime>60</castTime>
-	</VFECore.Abilities.AbilityDef>
+	
 	<ThingDef ParentName="PawnFlyerBase">
 		<defName>VFEP_PowerJumpPawn</defName>
 		<thingClass>VFEPirates.PawnFlyer_PowerJump</thingClass>
@@ -746,7 +540,7 @@
 				<traitsOnUnequip>
 					<li>VFEP_Shellcasket</li>
 				</traitsOnUnequip>
-</li>
+			</li>
 		</modExtensions>
 	</VFEPirates.WarcasketDef>
 	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
@@ -852,7 +646,7 @@
 				<traitsOnUnequip>
 					<li>VFEP_Shellcasket</li>
 				</traitsOnUnequip>
-</li>
+			</li>
 		</modExtensions>
 	</VFEPirates.WarcasketDef>
 	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
@@ -958,7 +752,7 @@
 				<traitsOnUnequip>
 					<li>VFEP_Shellcasket</li>
 				</traitsOnUnequip>
-</li>
+			</li>
 		</modExtensions>
 	</VFEPirates.WarcasketDef>
 	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
@@ -1065,7 +859,7 @@
 				<traitsOnUnequip>
 					<li>VFEP_Shellcasket</li>
 				</traitsOnUnequip>
-</li>
+			</li>
 		</modExtensions>
 	</VFEPirates.WarcasketDef>
 	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
@@ -1184,7 +978,7 @@
 				<traitsOnUnequip>
 					<li>VFEP_Shellcasket</li>
 				</traitsOnUnequip>
-</li>
+			</li>
 		</modExtensions>
 	</VFEPirates.WarcasketDef>
 	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
@@ -1299,7 +1093,7 @@
 				<traitsOnUnequip>
 					<li>VFEP_Shellcasket</li>
 				</traitsOnUnequip>
-</li>
+			</li>
 		</modExtensions>
 	</VFEPirates.WarcasketDef>
 	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
@@ -1360,7 +1154,7 @@
 				<traitsOnUnequip>
 					<li>VFEP_Shellcasket</li>
 				</traitsOnUnequip>
-</li>
+			</li>
 		</modExtensions>
 	</VFEPirates.WarcasketDef>
 	<!-- Privateer armour -->
@@ -1460,7 +1254,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 				<abilities>
 					<li>VFEP_GrapplingHook</li>
 				</abilities>
-</li>
+			</li>
 		</comps>
 		<thingSetMakerTags>
 			<li>RewardStandardHighFreq</li>

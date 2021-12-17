@@ -10,8 +10,6 @@ namespace VFEPirates
 
         public CompProperties_RumSuit PropsSpawner => (CompProperties_RumSuit)props;
 
-      
-
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             if (!respawningAfterLoad)
@@ -23,11 +21,13 @@ namespace VFEPirates
         public override void CompTick()
         {
             TickInterval(1);
+            Log.Message("TEST");
         }
 
         public override void CompTickRare()
         {
             TickInterval(250);
+            Log.Message("TEST");
         }
 
         public override void Notify_Unequipped(Pawn pawn)

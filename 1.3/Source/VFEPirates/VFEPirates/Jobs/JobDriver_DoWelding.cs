@@ -14,6 +14,7 @@ namespace VFEPirates
 		public Building_WarcasketFoundry Foundry => TargetA.Thing as Building_WarcasketFoundry;
 		public override bool TryMakePreToilReservations(bool errorOnFailed)
 		{
+			pawn.jobs.debugLog = true;
 			if (!pawn.Reserve(job.GetTarget(TargetIndex.A), job, 1, -1, null, errorOnFailed))
 			{
 				return false;
@@ -34,23 +35,34 @@ namespace VFEPirates
 				return thing.Spawned && thing is Building_WarcasketFoundry foundry && foundry.ReadyForWelding(pawn, out _) ? JobCondition.Ongoing : JobCondition.Incompletable;
 			});
 			this.FailOnBurningImmobile(TargetIndex.A);
-			Toil gotoFoundry = Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.ClosestTouch);
-			yield return Toils_Jump.JumpIf(gotoFoundry, () => job.GetTargetQueue(TargetIndex.B).NullOrEmpty());
-			foreach (Toil item in CollectIngredientsToils(TargetIndex.B, TargetIndex.A, TargetIndex.C))
-			{
-				yield return item;
+			Toil gotoFoundry = Toils_Goto.GotoCell(TargetIndex.A, PathEndMode.ClosestTouch);
+			if (job.targetQueueB != null)
+            {
+				yield return Toils_Jump.JumpIf(gotoFoundry, () => job.GetTargetQueue(TargetIndex.B).NullOrEmpty());
+				foreach (Toil item in CollectIngredientsToils(TargetIndex.B, TargetIndex.A, TargetIndex.C))
+				{
+					yield return item;
+				}
 			}
 			yield return gotoFoundry;
 			yield return new Toil
 			{
+				initAction = () => job.SetTarget(TargetIndex.C, Foundry.occupant)
+			};
+			yield return Toils_Goto.GotoThing(TargetIndex.C, PathEndMode.ClosestTouch);
+			yield return new Toil
+			{
 				initAction = delegate
 				{
-					for (var i = job.placedThings.Count - 1; i >= 0; i--)
-					{
-						job.placedThings[i].thing?.Destroy();
+					if (job.targetQueueB != null && job.placedThings != null)
+                    {
+						for (var i = job.placedThings.Count - 1; i >= 0; i--)
+						{
+							job.placedThings[i].thing?.Destroy();
+						}
+						pawn.Map.physicalInteractionReservationManager.ReleaseClaimedBy(pawn, job);
+						job.placedThings = null;
 					}
-					pawn.Map.physicalInteractionReservationManager.ReleaseClaimedBy(pawn, job);
-					job.placedThings = null;
 				},
 				tickAction = delegate
                 {
@@ -72,17 +84,7 @@ namespace VFEPirates
 			yield return extract;
 			Toil getToHaulTarget = Toils_Goto.GotoThing(ingredientInd, PathEndMode.ClosestTouch).FailOnDespawnedNullOrForbidden(ingredientInd).FailOnSomeonePhysicallyInteracting(ingredientInd);
 			yield return getToHaulTarget;
-			yield return new Toil
-			{
-				initAction = () => Log.Message("Start carry 1: " + ingredientInd + " - " + job.GetTarget(ingredientInd) + " - " 
-				+ pawn.Map.reservationManager.FirstRespectedReserver(job.GetTarget(ingredientInd), pawn))
-			};
 			yield return Toils_Haul.StartCarryThing(ingredientInd, putRemainderInQueue: true, subtractNumTakenFromJobCount, failIfStackCountLessThanJobCount);
-			yield return new Toil
-			{
-				initAction = () => Log.Message("Start carry 2: " + ingredientInd + " - " + job.GetTarget(ingredientInd) + " - "
-				+ pawn.Map.reservationManager.FirstRespectedReserver(job.GetTarget(ingredientInd), pawn))
-			};
 			yield return JobDriver_DoBill.JumpToCollectNextIntoHandsForBill(getToHaulTarget, TargetIndex.B);
 			yield return Toils_Goto.GotoThing(billGiverInd, PathEndMode.OnCell).FailOnDestroyedOrNull(ingredientInd);
 			Toil findPlaceTarget = Toils_JobTransforms.SetTargetToIngredientPlaceCell(billGiverInd, ingredientInd, ingredientPlaceCellInd);

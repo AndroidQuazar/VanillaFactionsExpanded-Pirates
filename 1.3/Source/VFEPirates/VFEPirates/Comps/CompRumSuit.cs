@@ -80,7 +80,6 @@ namespace VFEPirates
                 ResetCountdown();
                 TryDoSpawn();
             }
-            TryDoSpawn();
         }
 
         public bool TryDoSpawn()

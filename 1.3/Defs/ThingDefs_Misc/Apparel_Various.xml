@@ -909,6 +909,41 @@
 				<li>WarcasketAll</li>
 			</tags>
 		</apparel>
+		<comps>
+			<li Class="CompProperties_Reloadable">
+				<maxCharges>2</maxCharges>
+				<ammoDef>Steel</ammoDef>
+				<ammoCountPerCharge>25</ammoCountPerCharge>
+				<baseReloadTicks>60</baseReloadTicks>
+				<soundReload>Standard_Reload</soundReload>
+				<hotKey>Misc4</hotKey>
+				<chargeNoun>grenade</chargeNoun>
+				<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+			</li>
+		</comps>
+		<verbs>
+			<li Class="VFEPirates.VerbProps_MultipleProjectiles">
+				<label>launch frag grenade</label>
+				<verbClass>VFEPirates.Verb_LaunchProjectileStaticMultiple</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<onlyManualCast>True</onlyManualCast>
+				<range>12.9</range>
+				<forcedMissRadius>1.9</forcedMissRadius>
+				<warmupTime>1.5</warmupTime>
+				<noiseRadius>4</noiseRadius>
+				<projectileCount>2</projectileCount>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<soundCast>Shot_IncendiaryLauncher</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>14</muzzleFlashScale>
+				<drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+				<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<defaultProjectile>VFEP_Proj_GrenadierGrenade</defaultProjectile>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
 		<modExtensions>
 			<li Class="VFECore.ApparelExtension">
 				<equippedStatFactors>
@@ -917,6 +952,15 @@
 			</li>
 		</modExtensions>
 	</VFEPirates.WarcasketDef>
+	
+	<ThingDef ParentName="BaseFragGrenadeProjectile">
+		<defName>VFEP_Proj_GrenadierGrenade</defName>
+		<label>frag grenade</label>
+		<projectile>
+		<speed>16</speed>
+		</projectile>
+	</ThingDef>
+  
 	<!-- hazard warcasket -->
 	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
 		<defName>VFEP_Warcasket_Hazard</defName>
@@ -1085,6 +1129,23 @@
 				<li>WarcasketAll</li>
 			</tags>
 		</apparel>
+		<comps>
+			<li Class="CompProperties_Reloadable">
+				<maxCharges>100</maxCharges>
+				<ammoDef>Chemfuel</ammoDef>
+				<ammoCountPerCharge>1</ammoCountPerCharge>
+				<baseReloadTicks>60</baseReloadTicks>
+				<soundReload>Standard_Reload</soundReload>
+				<hotKey>Misc4</hotKey>
+				<chargeNoun>jump</chargeNoun>
+				<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+			</li>
+			<li Class="VFECore.Abilities.CompProperties_AbilitiesApparel">
+				<abilities>
+					<li>VFEP_BlastOff</li>
+				</abilities>
+			</li>
+		</comps>
 		<modExtensions>
 			<li Class="VFECore.ApparelExtension">
 				<traitsOnEquip>
@@ -1096,6 +1157,25 @@
 			</li>
 		</modExtensions>
 	</VFEPirates.WarcasketDef>
+
+	<VFECore.Abilities.AbilityDef>
+		<defName>VFEP_BlastOff</defName>
+		<label>Blast off</label>
+		<description>Fire a large propulsion engine strapped to the back of your armor and designate a location on the world map to drop pod into. This will create a large explosion at the destination, but will most likely leave you stranded without fuel for the trip back.</description>
+		<abilityClass>VFEPirates.Ability_BlastOff</abilityClass>
+		<targetMode>Location</targetMode>
+		<iconPath>UI/Abilities/BlastOff</iconPath>
+		<castTime>60</castTime>
+		<modExtensions>
+			<li Class="VFEPirates.BlastOffExtension">
+				<powerJumpRange>15</powerJumpRange>
+				<powerJumpDetonationRadius>3</powerJumpDetonationRadius>
+				<fuelConsumption>20</fuelConsumption>
+				<detonationDamageAmount>15</detonationDamageAmount>
+			</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	
 	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
 		<defName>VFEP_WarcasketShoulders_Shock</defName>
 		<label>shock warcasket shoulders</label>

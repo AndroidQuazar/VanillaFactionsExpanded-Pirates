@@ -95,6 +95,5 @@ namespace VFEPirates
         public static ThingDef VFEP_PowerJumpPawn;
 
         public static ThingDef VFEP_Apparel_Rumsuit;
-        public static ThingDef VFEP_Rum;
     }
 }

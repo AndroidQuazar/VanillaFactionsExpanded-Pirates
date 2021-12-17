@@ -1,9 +1,31 @@
 ﻿using System.Collections.Generic;
+using System.Text;
+using HarmonyLib;
 using RimWorld;
 using Verse;
 using Verse.Sound;
 namespace VFEPirates
 {
+    [HarmonyPatch(typeof(Pawn), nameof(Pawn.GetInspectString))]
+    public static class Pawn_GetInspectString_Patch
+    {
+        public static void Postfix(ref string __result, Pawn __instance)
+        {
+            var sb = new StringBuilder(__result);
+            if (__instance.apparel != null)
+            {
+                foreach (var apparel in __instance.apparel.WornApparel)
+                {
+                    var comp = apparel.GetComp<CompRumSuit>();
+                    if (comp != null)
+                    {
+                        sb.AppendLine("\n" + comp.CompInspectStringExtra());
+                    }
+                }
+            }
+            __result = sb.ToString().TrimEndNewlines();
+        }
+    }
     public class CompRumSuit : ThingComp
     {
         private int ticksUntilSpawn;
@@ -21,13 +43,11 @@ namespace VFEPirates
         public override void CompTick()
         {
             TickInterval(1);
-            Log.Message("TEST");
         }
 
         public override void CompTickRare()
         {
             TickInterval(250);
-            Log.Message("TEST");
         }
 
         public override void Notify_Unequipped(Pawn pawn)
@@ -36,28 +56,21 @@ namespace VFEPirates
             ResetCountdown();
         }
 
+        public Apparel Apparel => this.parent as Apparel;
+        public Pawn Wearer => Apparel.Wearer;
         private void TickInterval(int interval)
         {
-            if (!parent.Spawned)
+            if (Wearer is null)
             {
                 return;
             }
-
-            Apparel apparel = parent as Apparel;
-
-            if (apparel.Wearer == null)
-            {
-                return;
-            }
-
-            else if (parent.Position.Fogged(parent.Map))
+            else if (Wearer.Position.Fogged(Wearer.Map))
             {
                 return;
             }
             
-                ticksUntilSpawn -= interval;
-                CheckShouldSpawn();
-            
+            ticksUntilSpawn -= interval;
+            CheckShouldSpawn();
         }
 
         private void CheckShouldSpawn()
@@ -67,11 +80,12 @@ namespace VFEPirates
                 ResetCountdown();
                 TryDoSpawn();
             }
+            TryDoSpawn();
         }
 
         public bool TryDoSpawn()
         {
-            if (!parent.Spawned)
+            if (!Wearer.Spawned)
             {
                 return false;
             }
@@ -80,12 +94,12 @@ namespace VFEPirates
                 int num = 0;
                 for (int i = 0; i < 9; i++)
                 {
-                    IntVec3 c = parent.Position + GenAdj.AdjacentCellsAndInside[i];
-                    if (!c.InBounds(parent.Map))
+                    IntVec3 c = Wearer.Position + GenAdj.AdjacentCellsAndInside[i];
+                    if (!c.InBounds(Wearer.Map))
                     {
                         continue;
                     }
-                    List<Thing> thingList = c.GetThingList(parent.Map);
+                    List<Thing> thingList = c.GetThingList(Wearer.Map);
                     for (int j = 0; j < thingList.Count; j++)
                     {
                         if (thingList[j].def == PropsSpawner.thingToSpawn)
@@ -99,32 +113,30 @@ namespace VFEPirates
                     }
                 }
             }
-            if (TryFindSpawnCell(parent, PropsSpawner.thingToSpawn, PropsSpawner.spawnCount, out var result))
+            if (TryFindSpawnCell(Wearer, PropsSpawner.thingToSpawn, PropsSpawner.spawnCount, out var result))
             {
                 Thing thing = ThingMaker.MakeThing(PropsSpawner.thingToSpawn);
                 thing.stackCount = PropsSpawner.spawnCount;
                 if (thing == null)
                 {
-                    Log.Error("Could not spawn anything for " + parent);
+                    Log.Error("Could not spawn anything for " + Wearer);
                 }
-                if (PropsSpawner.inheritFaction && thing.Faction != parent.Faction)
+                if (PropsSpawner.inheritFaction && thing.Faction != Wearer.Faction)
                 {
-                    thing.SetFaction(parent.Faction);
+                    thing.SetFaction(Wearer.Faction);
                 }
-                GenPlace.TryPlaceThing(thing, result, parent.Map, ThingPlaceMode.Direct, out var lastResultingThing);
+                GenPlace.TryPlaceThing(thing, result, Wearer.Map, ThingPlaceMode.Direct, out var lastResultingThing);
                 if (PropsSpawner.spawnForbidden)
                 {
                     lastResultingThing.SetForbidden(value: true);
                 }
-                if (PropsSpawner.showMessageIfOwned && parent.Faction == Faction.OfPlayer)
+                if (PropsSpawner.showMessageIfOwned && Wearer.Faction == Faction.OfPlayer)
                 {
                     Messages.Message("MessageCompSpawnerSpawnedItem".Translate(PropsSpawner.thingToSpawn.LabelCap), thing, MessageTypeDefOf.PositiveEvent);
                 }
 
-                VFEP_DefOf.VFEP_RumFinished.PlayOneShot(new TargetInfo(parent.Position, parent.Map, false));
+                VFEP_DefOf.VFEP_RumFinished.PlayOneShot(new TargetInfo(Wearer.Position, Wearer.Map, false));
                 return true;
-
-
             }
             return false;
         }
@@ -181,6 +193,7 @@ namespace VFEPirates
 
       
 
+        
         public override string CompInspectStringExtra()
         {
             Apparel apparel = parent as Apparel;

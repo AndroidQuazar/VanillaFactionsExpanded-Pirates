@@ -1266,6 +1266,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 		<label>rumsuit</label>
 		<description>A large, bulky suit that allows the wearer to passively produce Rum once every 10 days. However, it is not very pleasant to wear as it feels like wearing damp, humid clothes from excessive sweating.\n\nThe suit includes a high-efficiency filter, heat-exchange filaments and salt precipitators. Urine and feces are processed in thigh pads and throughout the design are tubes that link to different catchpockets. Reprocessed bodily fluids are distilled into an alcoholic derivative of nutrient paste which can be drained when all the pockets are filled.\n\nRemoving the suit causes the accumulated liquid to evaporate, and it takes a long time to put on and properly adjust to the wearer. Due to the design, it can only be worn with an undersuit and the lack of head covering, while reducing efficiency, is purposefully done so it can be worn with head protection.</description>
 		<techLevel>Industrial</techLevel>
+		<tickerType>Normal</tickerType>
 		<recipeMaker>
 			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
 			<researchPrerequisite>VFEP_SweatFermentation</researchPrerequisite>
@@ -1333,7 +1334,8 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 				<spawnForbidden>false</spawnForbidden>
 				<writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
 				<showMessageIfOwned>false</showMessageIfOwned>
-				<inheritFaction>true</inheritFaction>
+				<inheritFaction>false</inheritFaction>
+				<thingToSpawn>VFEP_Rum</thingToSpawn>
 			</li>
 		</comps>
 	</ThingDef>

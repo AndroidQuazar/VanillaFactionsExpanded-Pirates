@@ -4,7 +4,7 @@ namespace VFEPirates
 {
     public class CompProperties_RumSuit : CompProperties
     {
-        public ThingDef thingToSpawn = VFEP_DefOf.VFEP_Rum;
+        public ThingDef thingToSpawn;
 
         public int spawnCount = 1;
 

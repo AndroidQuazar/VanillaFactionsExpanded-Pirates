@@ -4,22 +4,36 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UIElements;
 using Verse;
+using Verse.Sound;
 using VFECore.Abilities;
 using Ability = VFECore.Abilities.Ability;
 using Command_Ability = VFECore.Abilities.Command_Ability;
 
 namespace VFEPirates
 {
+    public class PowerJumpExtension : DefModExtension
+    {
+        public float powerJumpDetonationRadius;
+        public float powerJumpRange;
+        public float fuelConsumption;
+        public int detonationDamageAmount;
+        public SoundDef powerJumpSoundActivated;
+    }
     public class Ability_PowerJump : Ability
     {
+        public float Range => this.def.GetModExtension<PowerJumpExtension>().powerJumpRange;
+        public float FuelConsumption => this.def.GetModExtension<PowerJumpExtension>().fuelConsumption;
+        public float DetonationRadius => this.def.GetModExtension<PowerJumpExtension>().powerJumpDetonationRadius;
+        public int DetonationDamageAmount => this.def.GetModExtension<PowerJumpExtension>().detonationDamageAmount;
+        public SoundDef PowerJumpSoundActivated => this.def.GetModExtension<PowerJumpExtension>().powerJumpSoundActivated;
         public override bool CanHitTarget(LocalTargetInfo target)
         {
-            return target.Cell.WalkableBy(pawn.Map, pawn) && target.Cell.DistanceTo(pawn.Position) <= 15f;
+            return target.Cell.WalkableBy(pawn.Map, pawn) && target.Cell.DistanceTo(pawn.Position) <= Range;
         }
-        public override Command_Action GetGizmo()
+        public override Gizmo GetGizmo()
         {
             Command_Ability action = new Command_Ability(this.pawn, this);
-            if (this.holder.TryGetComp<CompReloadable>().RemainingCharges < 20)
+            if (this.holder.TryGetComp<CompReloadable>().RemainingCharges < FuelConsumption)
             {
                 action.Disable("VFEP.NotEnoughFuel".Translate());
             }
@@ -29,17 +43,22 @@ namespace VFEPirates
         {
             base.Cast(target);
             var map = this.pawn.Map;
+            var position = this.pawn.Position;
             var comp = this.holder.TryGetComp<CompReloadable>();
-            for (var i = 0; i < 20; i++)
+            for (var i = 0; i < FuelConsumption; i++)
             {
                 comp.UsedOnce();
             }
-
+            var sound = PowerJumpSoundActivated;
+            if (sound != null)
+            {
+                sound.PlayOneShot(new TargetInfo(position, map));
+            }
             AbilityPawnFlyer flyer = (PawnFlyer_PowerJump)PawnFlyer.MakeFlyer(VFEP_DefOf.VFEP_PowerJumpPawn, this.pawn, target.Cell);
             flyer.ability = this;
             flyer.target = target.CenterVector3;
             GenSpawn.Spawn(flyer, target.Cell, map);
-            GenExplosion.DoExplosion(this.pawn.Position, map, 3f, DamageDefOf.Bomb, pawn, 15, ignoredThings: new List<Thing> { pawn });
+            GenExplosion.DoExplosion(position, map, DetonationRadius, DamageDefOf.Bomb, pawn, DetonationDamageAmount, ignoredThings: new List<Thing> { pawn });
         }
     }
 
@@ -77,7 +96,8 @@ namespace VFEPirates
         {
             Pawn pawn = this.FlyingPawn;
             base.RespawnPawn();
-            GenExplosion.DoExplosion(Position, Map, 3f, DamageDefOf.Bomb, pawn, 15, ignoredThings: new List<Thing> { pawn });
+            var powerJumpAbility = this.ability as Ability_PowerJump;
+            GenExplosion.DoExplosion(Position, Map, powerJumpAbility.DetonationRadius, DamageDefOf.Bomb, pawn, powerJumpAbility.DetonationDamageAmount, ignoredThings: new List<Thing> { pawn });
         }
     }
 }

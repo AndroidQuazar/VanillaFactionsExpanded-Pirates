@@ -20,4 +20,7 @@ assembly over other tasks.</VFEP.WarcasketText>
     <VFEP.ResearchText>Research more warcasket technology to unlock more armor pieces.</VFEP.ResearchText>
     <VFEP.NoWarcaskets>Research warcaskets to learn how to use the foundry.</VFEP.NoWarcaskets>
 	<VFEP.NotEnoughFuel>Not enough chemfuel for power jump.</VFEP.NotEnoughFuel>
+	<VFEP.SiegeModeOff>Siege mode off</VFEP.SiegeModeOff>
+	<VFEP.SiegeModeOn>Siege mode on</VFEP.SiegeModeOn>
+	
 </LanguageData>

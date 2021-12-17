@@ -56,6 +56,7 @@
     <maxSimultaneous>1</maxSimultaneous>  
     <subSounds>
       <li>
+        <onCamera>True</onCamera>
         <grains>
           <li Class="AudioGrain_Folder">
             <clipFolderPath>Abilities/SiegeMode_Disengaged</clipFolderPath>
@@ -72,6 +73,7 @@
     <maxSimultaneous>1</maxSimultaneous>  
     <subSounds>
       <li>
+        <onCamera>True</onCamera>
         <grains>
           <li Class="AudioGrain_Folder">
             <clipFolderPath>Abilities/SiegeMode_Engaged</clipFolderPath>

@@ -42,6 +42,7 @@ namespace VFEPirates
             Scribe_Values.Look(ref colorShoulderPads, "colorShoulderPads");
             Scribe_Values.Look(ref colorHelmet, "colorHelmet");
             Scribe_Values.Look(ref totalWorkAmount, "totalWorkAmount");
+            Scribe_Values.Look(ref currentWorkAmountDone, "currentWorkAmountDone");
         }
 
         public IEnumerable<IngredientCount> RequiredIngredients()

@@ -40,7 +40,7 @@ namespace VFEPirates
 
         public override int GetCastTimeForPawn() => Loaded ? 0 : def.GetModExtension<AbilityExtension_GrapplingHook>().reloadTicks;
         public override float GetRangeForPawn() => Loaded ? base.GetRangeForPawn() : 0f;
-        public override Command_Action GetGizmo() => new Command_Grapple(pawn, this);
+        public override Gizmo GetGizmo() => new Command_Grapple(pawn, this);
 
         public override void ExposeData()
         {

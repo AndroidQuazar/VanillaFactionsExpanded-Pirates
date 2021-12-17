@@ -1,1355 +1,1546 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-  <VFEPirates.WarcasketDef Name="VFEP_WarcasketPartBase" Abstract="True">
-    <tradeability>None</tradeability>
-	<thingClass>VFEPirates.Apparel_Warcasket</thingClass>
-    <graphicData>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <category>Item</category>
-    <drawerType>MapMeshOnly</drawerType>
-    <selectable>True</selectable>
-    <pathCost>14</pathCost>
-    <useHitPoints>False</useHitPoints>
-    <techLevel>Industrial</techLevel>
-    <drawGUIOverlay>true</drawGUIOverlay>
-	<destroyOnDrop>true</destroyOnDrop>
-    <statBases>
-      <Flammability>1.0</Flammability>
-      <DeteriorationRate>0</DeteriorationRate>
-      <Beauty>-3</Beauty>
-	  <WorkToMake>1000</WorkToMake>
-    </statBases>
-    <apparel>
-      <useDeflectMetalEffect>true</useDeflectMetalEffect>
-    </apparel>
-    <altitudeLayer>Item</altitudeLayer>
-    <alwaysHaulable>True</alwaysHaulable>
-    <tickerType>Never</tickerType>
-    <burnableByRecipe>false</burnableByRecipe>
-    <smeltable>false</smeltable>
-    <thingSetMakerTags>
-      <li>Warcasket</li> <!-- Won't be actually used anywhere -->
-    </thingSetMakerTags>
-    <tradeTags>
-      <li>Warcasket</li> <!-- Won't be actually used anywhere -->
-    </tradeTags>
-    <comps>
-      <li Class="CompProperties_Forbiddable"/>
-      <li>
-        <compClass>CompColorable</compClass>
-      </li>
-    </comps>
-    <colorGenerator Class="ColorGenerator_Options">
-      <options>
-        <li>
-          <weight>10</weight>
-          <only>(0.9,0.9,0.9)</only>
-        </li>
-        <li>
-          <weight>10</weight>
-          <only>(0.33,0.33,0.33)</only>
-        </li>
-        <li>
-          <weight>10</weight>
-          <only>(0.65,0.65,0.65)</only>
-        </li>
-        <li>
-          <weight>6</weight>
-          <min>(0.3,0.3,0.3)</min>
-          <max>(0.5,0.5,0.5)</max>
-        </li>
-      </options>
-    </colorGenerator>
-  </VFEPirates.WarcasketDef>
-  
-  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketPartBase" Name="VFEP_WarcasketArmorBase" Abstract="True">
-	<isArmor>true</isArmor>
-	<shortDescription>short desc</shortDescription>
-	<modExtensions>
-		<li Class="VFECore.ApparelDrawPosExtension">
-			<shellPosDrawSettings>
-				<drawPosNorthOffset>(0, 0.1, 0)</drawPosNorthOffset>
-				<drawPosSouthOffset>(0, 0, 0)</drawPosSouthOffset>
-				<drawPosWestOffset>(-0.03, 0, 0)</drawPosWestOffset>
-				<drawPosEastOffset>(0.03, 0, 0)</drawPosEastOffset>
-				<!--
+	<VFEPirates.WarcasketDef Name="VFEP_WarcasketPartBase" Abstract="True">
+		<tradeability>None</tradeability>
+		<thingClass>VFEPirates.Apparel_Warcasket</thingClass>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<category>Item</category>
+		<drawerType>MapMeshOnly</drawerType>
+		<selectable>True</selectable>
+		<pathCost>14</pathCost>
+		<useHitPoints>False</useHitPoints>
+		<techLevel>Industrial</techLevel>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<destroyOnDrop>true</destroyOnDrop>
+		<statBases>
+			<Flammability>1.0</Flammability>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Beauty>-3</Beauty>
+			<WorkToMake>1000</WorkToMake>
+		</statBases>
+		<apparel>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>True</alwaysHaulable>
+		<tickerType>Never</tickerType>
+		<burnableByRecipe>false</burnableByRecipe>
+		<smeltable>false</smeltable>
+		<thingSetMakerTags>
+			<li>Warcasket</li>
+			<!-- Won't be actually used anywhere -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>Warcasket</li>
+			<!-- Won't be actually used anywhere -->
+		</tradeTags>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li>
+				<compClass>CompColorable</compClass>
+			</li>
+		</comps>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.9,0.9,0.9)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.3,0.3,0.3)</min>
+					<max>(0.5,0.5,0.5)</max>
+				</li>
+			</options>
+		</colorGenerator>
+	</VFEPirates.WarcasketDef>
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketPartBase" Name="VFEP_WarcasketArmorBase" Abstract="True">
+		<isArmor>true</isArmor>
+		<shortDescription>short desc</shortDescription>
+		<modExtensions>
+			<li Class="VFECore.ApparelDrawPosExtension">
+				<shellPosDrawSettings>
+					<drawPosNorthOffset>(0, 0.1, 0)</drawPosNorthOffset>
+					<drawPosSouthOffset>(0, 0, 0)</drawPosSouthOffset>
+					<drawPosWestOffset>(-0.03, 0, 0)</drawPosWestOffset>
+					<drawPosEastOffset>(0.03, 0, 0)</drawPosEastOffset>
+					<!--
 				<drawNorthSize>(2, 2)</drawNorthSize>
 				<drawSouthSize>(2, 2)</drawSouthSize>
 				<drawWestSize>(2, 2)</drawWestSize>
 				<drawEastSize>(2, 2)</drawEastSize>-->
-			</shellPosDrawSettings>
-			<isUnifiedApparel>true</isUnifiedApparel>
-			<showBodyInBedAlways>true</showBodyInBedAlways>
-			<secondaryApparelGraphics>
-				<li>VFEP_Warcasket_Bodysuit</li>
-			</secondaryApparelGraphics>
-		</li>
-	</modExtensions>
-  </VFEPirates.WarcasketDef>
-  
-  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketPartBase">
-    <defName>VFEP_Warcasket_Bodysuit</defName>
-    <label>warcasket bodysuit</label>
-    <description>Basic bodysuit that serves as a base for warcasket shells.</description>
-	<thingClass>Apparel</thingClass>
-    <graphicData>
-      <texPath>Things/Pawn/Warcasketlike/WarcasketBodysuit/WarcasketBodysuit</texPath>
-    </graphicData>
-    <apparel>
-      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketBodysuit/WarcasketBodysuit</wornGraphicPath>
-      <layers>
-        <li>OnSkin</li>
-      </layers>
-    </apparel>
-	<modExtensions>
-		<li Class="VFECore.ApparelDrawPosExtension">
-			<isUnifiedApparel>true</isUnifiedApparel>
-		</li>
-	</modExtensions>
-  </VFEPirates.WarcasketDef>
-  
-  <!-- Basic warcasket -->
+				</shellPosDrawSettings>
+				<isUnifiedApparel>true</isUnifiedApparel>
+				<showBodyInBedAlways>true</showBodyInBedAlways>
+				<secondaryApparelGraphics>
+					<li>VFEP_Warcasket_Bodysuit</li>
+				</secondaryApparelGraphics>
+</li>
+		</modExtensions>
+	</VFEPirates.WarcasketDef>
 
-  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
-    <defName>VFEP_Warcasket_Warcasket</defName>
-    <label>warcasket</label>
-    <shortDescription>Basic warcasket shell with baseline protection and weight.</shortDescription>
-    <description>Basic warcasket shell with baseline protection and weight.\n\nA 3rd generation warcasket which was the first to enter mass production, its design was based off of a combination of an upscaled astrominer’s powered rig and early iterations of bionic limb interfaces. As pirates have ample supply of “willing” human test subjects, they were deployed before power armor finished the prototype phase. The lead scientist on the project was quoted “you can’t make an omelette without breaking health and safety.”</description>
-    <graphicData>
-      <texPath>Things/Pawn/Warcasketlike/Warcasket/Warcasket</texPath>
-    </graphicData>
-    <statBases>
-      <Mass>50</Mass>
-      <ArmorRating_Sharp>1.06</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.55</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.64</ArmorRating_Heat>
-      <Insulation_Cold>20</Insulation_Cold>
-      <Insulation_Heat>7</Insulation_Heat>
-      <EquipDelay>1</EquipDelay>
-    </statBases>
-    <equippedStatOffsets>
-      <MoveSpeed>-0.5</MoveSpeed>
-      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
-    </equippedStatOffsets>
-    <costList>
-      <ComponentIndustrial>2</ComponentIndustrial>
-      <Steel>80</Steel>
-      <Uranium>20</Uranium>
-    </costList>
-    <apparel>
-      <bodyPartGroups>
-        <li>Torso</li>
-        <li>Legs</li>
-		<li>Feet</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Warcasketlike/Warcasket/Warcasket</wornGraphicPath>
-      <layers>
-        <li>Middle</li>
-        <li>Shell</li>
-      </layers>
-      <tags>
-        <li>Warcasket</li>
-		<li>WarcasketVeteran</li>
-		<li>WarcasketAll</li>
-      </tags>
-    </apparel>
-    <researchPrerequisites>
-      <li>VFEP_Warcaskets</li>
-    </researchPrerequisites>
-	<modExtensions>
-		<li Class="VFECore.ApparelExtension">
-			<traitsOnEquip>
-				<li>VFEP_WarcasketTrait</li>
-			</traitsOnEquip>
-			<traitsOnUnequip>
-				<li>VFEP_Shellcasket</li>
-			</traitsOnUnequip>
-		</li>
-	</modExtensions>
-    <comps>
-      <li Class="CompProperties_Reloadable">
-        <maxCharges>100</maxCharges>
-        <ammoDef>Chemfuel</ammoDef>
-        <ammoCountPerCharge>1</ammoCountPerCharge>
-        <baseReloadTicks>60</baseReloadTicks>
-        <soundReload>Standard_Reload</soundReload>
-        <hotKey>Misc4</hotKey>
-        <chargeNoun>jump</chargeNoun>
-        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
-      </li>
-      <li Class="VFECore.Abilities.CompProperties_AbilitiesApparel">
-        <abilities>
-          <li>VFEP_PowerJump</li>
-		  <li>VFEP_SiegeMode</li>
-        </abilities>
-      </li>
-    </comps>
-  </VFEPirates.WarcasketDef>
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketPartBase">
+		<defName>VFEP_Warcasket_Bodysuit</defName>
+		<label>warcasket bodysuit</label>
+		<description>Basic bodysuit that serves as a base for warcasket shells.</description>
+		<thingClass>Apparel</thingClass>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/WarcasketBodysuit/WarcasketBodysuit</texPath>
+		</graphicData>
+		<apparel>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketBodysuit/WarcasketBodysuit</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+		</apparel>
+		<modExtensions>
+			<li Class="VFECore.ApparelDrawPosExtension">
+				<isUnifiedApparel>true</isUnifiedApparel>
+			</li>
+		</modExtensions>
+	</VFEPirates.WarcasketDef>
 
-  <VFECore.Abilities.AbilityDef>
-  	<defName>VFEP_SiegeMode</defName>
-  	<label>Siege Mode</label>
-  	<description>Drill yourself into the ground in order to gain more stability and turn yourself into a stationary artillery unit, increasing the attack range and reload efficiency drastically.</description>
-  	<abilityClass>VFEPirates.Ability_SiegeMode</abilityClass>
-  	<targetMode>Self</targetMode>
-  	<iconPath>UI/Abilities/SiegeModeOn</iconPath>
-	<cooldownTime>600</cooldownTime>
-	<modExtensions>
-		<li Class="VFEPirates.SiegeModeExtension">
-			<siegeModeHediff>VFEP_SiegeMode</siegeModeHediff>
-			<soundEnabled>VFEP_SiegeMode_Engaged</soundEnabled>
-			<soundDisabled>VFEP_SiegeMode_Disengaged</soundDisabled>
-		</li>
-	</modExtensions>
-  </VFECore.Abilities.AbilityDef>
-  
- <HediffDef>
-    <defName>VFEP_SiegeMode</defName>
-    <label>siege mode</label>
-    <labelNoun>siege mode</labelNoun>
-    <description>siege mode.</description>
-	<hediffClass>VFEPirates.Hediff_SiegeMode</hediffClass>
-    <stages>
-      <li>
-		<statOffsets>
-			<VEF_VerbRangeFactor>0.25</VEF_VerbRangeFactor>
-			<VEF_VerbCooldownFactor>-0.25</VEF_VerbCooldownFactor>
-		</statOffsets>
-      </li>
-    </stages>
-  </HediffDef>
-  
-  <VFECore.Abilities.AbilityDef>
-  	<defName>VFEP_PowerJump</defName>
-  	<label>Power jump</label>
-  	<description>Use shoulder-mounted jump packs to travel a short distance and create a small explosion at both start and end of the flight.</description>
-  	<abilityClass>VFEPirates.Ability_PowerJump</abilityClass>
-  	<targetMode>Location</targetMode>
-  	<iconPath>UI/Abilities/PowerJump</iconPath>
-	<castTime>60</castTime>
-	<modExtensions>
-		<li Class="VFEPirates.PowerJumpExtension">
-			<powerJumpRange>15</powerJumpRange>
-			<powerJumpDetonationRadius>3</powerJumpDetonationRadius>
-			<fuelConsumption>20</fuelConsumption>
-			<detonationDamageAmount>15</detonationDamageAmount>
-		</li>
-	</modExtensions>
-  </VFECore.Abilities.AbilityDef>
+	<!-- Basic warcasket -->
 
-  <ThingDef ParentName="PawnFlyerBase">
-  	<defName>VFEP_PowerJumpPawn</defName>
-  	<thingClass>VFEPirates.PawnFlyer_PowerJump</thingClass>
-  	<pawnFlyer>
-  		<flightDurationMin>0.5</flightDurationMin>
-  		<flightSpeed>12</flightSpeed>
-		<flightEffecterDef>VFEP_PowerJumpPawnEffect</flightEffecterDef>
-  	</pawnFlyer>
-  </ThingDef>
-	
-  <EffecterDef>
-    <defName>VFEP_PowerJumpPawnEffect</defName>
-    <children>
-      <li>
-        <subEffecterClass>SubEffecter_SoundTriggered</subEffecterClass>
-        <spawnLocType>OnSource</spawnLocType>
-        <soundDef>JumpPackLaunch</soundDef>
-      </li>
-      <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <spawnLocType>OnSource</spawnLocType>
-        <fleckDef>ShotFlash</fleckDef>
-        <scale>6</scale>
-      </li>
-      <li>
-        <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
-        <scale>0.5~0.6</scale>
-        <spawnLocType>OnSource</spawnLocType>
-        <positionOffset>(0,0,-0.5)</positionOffset>
-        <fleckDef>JumpFlame</fleckDef>
-        <ticksBetweenMotes>1</ticksBetweenMotes>
-        <maxMoteCount>14</maxMoteCount>
-        <speed>4~5</speed>
-        <angle>170~190</angle>
-        <absoluteAngle>true</absoluteAngle>
-      </li>
-      <li>
-        <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
-        <scale>0.9~0.7</scale>
-        <spawnLocType>OnSource</spawnLocType>
-        <positionOffset>(0,0,-0.5)</positionOffset>
-        <fleckDef>JumpFlameGlow</fleckDef>
-        <ticksBetweenMotes>1</ticksBetweenMotes>
-        <maxMoteCount>14</maxMoteCount>
-        <speed>4~5</speed>
-        <angle>160~200</angle>
-        <absoluteAngle>true</absoluteAngle>
-      </li>
-      <li>
-        <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
-        <scale>0.8~1.2</scale>
-        <spawnLocType>OnSource</spawnLocType>
-        <positionOffset>(0,0,-0.5)</positionOffset>
-        <fleckDef>JumpSmoke</fleckDef>
-        <ticksBetweenMotes>2</ticksBetweenMotes>
-        <maxMoteCount>8</maxMoteCount>
-        <speed>5~6</speed>
-        <angle>170~190</angle>
-        <absoluteAngle>true</absoluteAngle>
-      </li>
-    </children>
-  </EffecterDef>
-  
-  <SoundDef>
-    <defName>VFEP_PowerJumpPackLand</defName>
-    <context>MapOnly</context>
-    <maxSimultaneous>1</maxSimultaneous>
-    <subSounds>
-      <li>
-        <grains>
-          <li Class="AudioGrain_Folder">
-            <clipPath>Misc/JumpPack/JumpPack_Land</clipPath>
-          </li>
-        </grains>
-        <volumeRange>25</volumeRange>
-        <pitchRange>1</pitchRange>
-      </li>
-    </subSounds>
-  </SoundDef>
-  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketPartBase" Name="VFEP_WarcasketShoulderPadBase" Abstract="True">
-	<isShoulderPads>true</isShoulderPads>
-	<shortDescription>short desc</shortDescription>
-	<modExtensions>
-		<li Class="VFECore.ApparelDrawPosExtension">
-			<shellPosDrawSettings>
-				<drawPosNorthOffset>(0, 0.2, 0)</drawPosNorthOffset>
-				<drawPosSouthOffset>(0, 0.1, 0)</drawPosSouthOffset>
-				<drawPosWestOffset>(0, 0.1, 0)</drawPosWestOffset>
-				<drawPosEastOffset>(0, 0.1, 0)</drawPosEastOffset>
-				<!--
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
+		<defName>VFEP_Warcasket_Warcasket</defName>
+		<label>warcasket</label>
+		<shortDescription>Basic warcasket shell with baseline protection and weight.</shortDescription>
+		<description>Basic warcasket shell with baseline protection and weight.\n\nA 3rd generation warcasket which was the first to enter mass production, its design was based off of a combination of an upscaled astrominer’s powered rig and early iterations of bionic limb interfaces. As pirates have ample supply of “willing” human test subjects, they were deployed before power armor finished the prototype phase. The lead scientist on the project was quoted “you can’t make an omelette without breaking health and safety.”</description>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/Warcasket/Warcasket</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>50</Mass>
+			<ArmorRating_Sharp>1.06</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.55</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.64</ArmorRating_Heat>
+			<Insulation_Cold>20</Insulation_Cold>
+			<Insulation_Heat>7</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.5</MoveSpeed>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<costList>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<Steel>80</Steel>
+			<Uranium>20</Uranium>
+		</costList>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Legs</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/Warcasket/Warcasket</wornGraphicPath>
+			<layers>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>Warcasket</li>
+				<li>WarcasketVeteran</li>
+				<li>WarcasketAll</li>
+			</tags>
+		</apparel>
+		<researchPrerequisites>
+			<li>VFEP_Warcaskets</li>
+		</researchPrerequisites>
+		<modExtensions>
+			<li Class="VFECore.ApparelExtension">
+				<traitsOnEquip>
+					<li>VFEP_WarcasketTrait</li>
+				</traitsOnEquip>
+				<traitsOnUnequip>
+					<li>VFEP_Shellcasket</li>
+				</traitsOnUnequip>
+</li>
+		</modExtensions>
+		<comps>
+			<li Class="CompProperties_Reloadable">
+				<maxCharges>100</maxCharges>
+				<ammoDef>Chemfuel</ammoDef>
+				<ammoCountPerCharge>1</ammoCountPerCharge>
+				<baseReloadTicks>60</baseReloadTicks>
+				<soundReload>Standard_Reload</soundReload>
+				<hotKey>Misc4</hotKey>
+				<chargeNoun>jump</chargeNoun>
+				<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+			</li>
+			<li Class="VFECore.Abilities.CompProperties_AbilitiesApparel">
+				<abilities>
+					<li>VFEP_PowerJump</li>
+					<li>VFEP_SiegeMode</li>
+				</abilities>
+</li>
+		</comps>
+	</VFEPirates.WarcasketDef>
+
+	<VFECore.Abilities.AbilityDef>
+		<defName>VFEP_SiegeMode</defName>
+		<label>Siege Mode</label>
+		<description>Drill yourself into the ground in order to gain more stability and turn yourself into a stationary artillery unit, increasing the attack range and reload efficiency drastically.</description>
+		<abilityClass>VFEPirates.Ability_SiegeMode</abilityClass>
+		<targetMode>Self</targetMode>
+		<iconPath>UI/Abilities/SiegeModeOn</iconPath>
+		<cooldownTime>600</cooldownTime>
+		<modExtensions>
+			<li Class="VFEPirates.SiegeModeExtension">
+				<siegeModeHediff>VFEP_SiegeMode</siegeModeHediff>
+				<soundEnabled>VFEP_SiegeMode_Engaged</soundEnabled>
+				<soundDisabled>VFEP_SiegeMode_Disengaged</soundDisabled>
+			</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+
+	<HediffDef>
+		<defName>VFEP_SiegeMode</defName>
+		<label>siege mode</label>
+		<labelNoun>siege mode</labelNoun>
+		<description>siege mode.</description>
+		<hediffClass>VFEPirates.Hediff_SiegeMode</hediffClass>
+		<stages>
+			<li>
+				<statOffsets>
+					<VEF_VerbRangeFactor>0.25</VEF_VerbRangeFactor>
+					<VEF_VerbCooldownFactor>-0.25</VEF_VerbCooldownFactor>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<VFECore.Abilities.AbilityDef>
+		<defName>VFEP_PowerJump</defName>
+		<label>Power jump</label>
+		<description>Use shoulder-mounted jump packs to travel a short distance and create a small explosion at both start and end of the flight.</description>
+		<abilityClass>VFEPirates.Ability_PowerJump</abilityClass>
+		<targetMode>Location</targetMode>
+		<iconPath>UI/Abilities/PowerJump</iconPath>
+		<castTime>60</castTime>
+		<modExtensions>
+			<li Class="VFEPirates.PowerJumpExtension">
+				<powerJumpRange>15</powerJumpRange>
+				<powerJumpDetonationRadius>3</powerJumpDetonationRadius>
+				<fuelConsumption>20</fuelConsumption>
+				<detonationDamageAmount>15</detonationDamageAmount>
+			</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+
+	<ThingDef ParentName="PawnFlyerBase">
+		<defName>VFEP_PowerJumpPawn</defName>
+		<thingClass>VFEPirates.PawnFlyer_PowerJump</thingClass>
+		<pawnFlyer>
+			<flightDurationMin>0.5</flightDurationMin>
+			<flightSpeed>12</flightSpeed>
+			<flightEffecterDef>VFEP_PowerJumpPawnEffect</flightEffecterDef>
+		</pawnFlyer>
+	</ThingDef>
+
+	<EffecterDef>
+		<defName>VFEP_PowerJumpPawnEffect</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SoundTriggered</subEffecterClass>
+				<spawnLocType>OnSource</spawnLocType>
+				<soundDef>JumpPackLaunch</soundDef>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<spawnLocType>OnSource</spawnLocType>
+				<fleckDef>ShotFlash</fleckDef>
+				<scale>6</scale>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<scale>0.5~0.6</scale>
+				<spawnLocType>OnSource</spawnLocType>
+				<positionOffset>(0,0,-0.5)</positionOffset>
+				<fleckDef>JumpFlame</fleckDef>
+				<ticksBetweenMotes>1</ticksBetweenMotes>
+				<maxMoteCount>14</maxMoteCount>
+				<speed>4~5</speed>
+				<angle>170~190</angle>
+				<absoluteAngle>true</absoluteAngle>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<scale>0.9~0.7</scale>
+				<spawnLocType>OnSource</spawnLocType>
+				<positionOffset>(0,0,-0.5)</positionOffset>
+				<fleckDef>JumpFlameGlow</fleckDef>
+				<ticksBetweenMotes>1</ticksBetweenMotes>
+				<maxMoteCount>14</maxMoteCount>
+				<speed>4~5</speed>
+				<angle>160~200</angle>
+				<absoluteAngle>true</absoluteAngle>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<scale>0.8~1.2</scale>
+				<spawnLocType>OnSource</spawnLocType>
+				<positionOffset>(0,0,-0.5)</positionOffset>
+				<fleckDef>JumpSmoke</fleckDef>
+				<ticksBetweenMotes>2</ticksBetweenMotes>
+				<maxMoteCount>8</maxMoteCount>
+				<speed>5~6</speed>
+				<angle>170~190</angle>
+				<absoluteAngle>true</absoluteAngle>
+			</li>
+		</children>
+	</EffecterDef>
+
+	<SoundDef>
+		<defName>VFEP_PowerJumpPackLand</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipPath>Misc/JumpPack/JumpPack_Land</clipPath>
+					</li>
+				</grains>
+				<volumeRange>25</volumeRange>
+				<pitchRange>1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketPartBase" Name="VFEP_WarcasketShoulderPadBase" Abstract="True">
+		<isShoulderPads>true</isShoulderPads>
+		<shortDescription>short desc</shortDescription>
+		<modExtensions>
+			<li Class="VFECore.ApparelDrawPosExtension">
+				<shellPosDrawSettings>
+					<drawPosNorthOffset>(0, 0.2, 0)</drawPosNorthOffset>
+					<drawPosSouthOffset>(0, 0.1, 0)</drawPosSouthOffset>
+					<drawPosWestOffset>(0, 0.1, 0)</drawPosWestOffset>
+					<drawPosEastOffset>(0, 0.1, 0)</drawPosEastOffset>
+				</shellPosDrawSettings>
+				<isUnifiedApparel>true</isUnifiedApparel>
+				<showBodyInBedAlways>true</showBodyInBedAlways>
+				<secondaryApparelGraphics>
+					<li>VFEP_Warcasket_Bodysuit</li>
+				</secondaryApparelGraphics>
+</li>
+		</modExtensions>
+	</VFEPirates.WarcasketDef>
+
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketPartBase">
+		<defName>VFEP_Warcasket_Bodysuit</defName>
+		<label>warcasket bodysuit</label>
+		<description>Basic bodysuit that serves as a base for warcasket shells.</description>
+		<thingClass>Apparel</thingClass>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/WarcasketBodysuit/WarcasketBodysuit</texPath>
+		</graphicData>
+		<apparel>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketBodysuit/WarcasketBodysuit</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+		</apparel>
+		<modExtensions>
+			<li Class="VFECore.ApparelDrawPosExtension">
+				<isUnifiedApparel>true</isUnifiedApparel>
+			</li>
+		</modExtensions>
+	</VFEPirates.WarcasketDef>
+	<!-- Basic warcasket -->
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
+		<defName>VFEP_Warcasket_Warcasket</defName>
+		<label>warcasket</label>
+		<shortDescription>Basic warcasket shell with baseline protection and weight.</shortDescription>
+		<description>Basic warcasket shell with baseline protection and weight.\n\nA 3rd generation warcasket which was the first to enter mass production, its design was based off of a combination of an upscaled astrominer’s powered rig and early iterations of bionic limb interfaces. As pirates have ample supply of “willing” human test subjects, they were deployed before power armor finished the prototype phase. The lead scientist on the project was quoted “you can’t make an omelette without breaking health and safety.”</description>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/Warcasket/Warcasket</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>50</Mass>
+			<ArmorRating_Sharp>1.06</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.55</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.64</ArmorRating_Heat>
+			<Insulation_Cold>20</Insulation_Cold>
+			<Insulation_Heat>7</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.5</MoveSpeed>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<costList>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<Steel>80</Steel>
+			<Uranium>20</Uranium>
+		</costList>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Legs</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/Warcasket/Warcasket</wornGraphicPath>
+			<layers>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>Warcasket</li>
+				<li>WarcasketVeteran</li>
+				<li>WarcasketAll</li>
+			</tags>
+		</apparel>
+		<researchPrerequisites>
+			<li>VFEP_Warcaskets</li>
+		</researchPrerequisites>
+		<modExtensions>
+			<li Class="VFECore.ApparelExtension">
+				<traitsOnEquip>
+					<li>VFEP_WarcasketTrait</li>
+				</traitsOnEquip>
+				<traitsOnUnequip>
+					<li>VFEP_Shellcasket</li>
+				</traitsOnUnequip>
+</li>
+		</modExtensions>
+		<comps>
+			<li Class="CompProperties_Reloadable">
+				<maxCharges>100</maxCharges>
+				<ammoDef>Chemfuel</ammoDef>
+				<ammoCountPerCharge>1</ammoCountPerCharge>
+				<baseReloadTicks>60</baseReloadTicks>
+				<soundReload>Standard_Reload</soundReload>
+				<hotKey>Misc4</hotKey>
+				<chargeNoun>jump</chargeNoun>
+				<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+			</li>
+			<li Class="VFECore.Abilities.CompProperties_AbilitiesApparel">
+				<abilities>
+					<li>VFEP_PowerJump</li>
+				</abilities>
+</li>
+		</comps>
+	</VFEPirates.WarcasketDef>
+	<VFECore.Abilities.AbilityDef>
+		<defName>VFEP_PowerJump</defName>
+		<label>Power jump</label>
+		<description>Use shoulder-mounted jump packs to travel a short distance and create a small explosion at both start and end of the flight.</description>
+		<abilityClass>VFEPirates.Ability_PowerJump</abilityClass>
+		<targetMode>Location</targetMode>
+		<iconPath>UI/Abilities/PowerJump</iconPath>
+		<castTime>60</castTime>
+	</VFECore.Abilities.AbilityDef>
+	<ThingDef ParentName="PawnFlyerBase">
+		<defName>VFEP_PowerJumpPawn</defName>
+		<thingClass>VFEPirates.PawnFlyer_PowerJump</thingClass>
+		<pawnFlyer>
+			<flightDurationMin>0.5</flightDurationMin>
+			<flightSpeed>12</flightSpeed>
+			<flightEffecterDef>VFEP_PowerJumpPawnEffect</flightEffecterDef>
+		</pawnFlyer>
+	</ThingDef>
+	<EffecterDef>
+		<defName>VFEP_PowerJumpPawnEffect</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SoundTriggered</subEffecterClass>
+				<spawnLocType>OnSource</spawnLocType>
+				<soundDef>JumpPackLaunch</soundDef>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<spawnLocType>OnSource</spawnLocType>
+				<fleckDef>ShotFlash</fleckDef>
+				<scale>6</scale>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<scale>0.5~0.6</scale>
+				<spawnLocType>OnSource</spawnLocType>
+				<positionOffset>(0,0,-0.5)</positionOffset>
+				<fleckDef>JumpFlame</fleckDef>
+				<ticksBetweenMotes>1</ticksBetweenMotes>
+				<maxMoteCount>14</maxMoteCount>
+				<speed>4~5</speed>
+				<angle>170~190</angle>
+				<absoluteAngle>true</absoluteAngle>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<scale>0.9~0.7</scale>
+				<spawnLocType>OnSource</spawnLocType>
+				<positionOffset>(0,0,-0.5)</positionOffset>
+				<fleckDef>JumpFlameGlow</fleckDef>
+				<ticksBetweenMotes>1</ticksBetweenMotes>
+				<maxMoteCount>14</maxMoteCount>
+				<speed>4~5</speed>
+				<angle>160~200</angle>
+				<absoluteAngle>true</absoluteAngle>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<scale>0.8~1.2</scale>
+				<spawnLocType>OnSource</spawnLocType>
+				<positionOffset>(0,0,-0.5)</positionOffset>
+				<fleckDef>JumpSmoke</fleckDef>
+				<ticksBetweenMotes>2</ticksBetweenMotes>
+				<maxMoteCount>8</maxMoteCount>
+				<speed>5~6</speed>
+				<angle>170~190</angle>
+				<absoluteAngle>true</absoluteAngle>
+			</li>
+		</children>
+	</EffecterDef>
+	<SoundDef>
+		<defName>VFEP_PowerJumpPackLand</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipPath>Misc/JumpPack/JumpPack_Land</clipPath>
+					</li>
+				</grains>
+				<volumeRange>25</volumeRange>
+				<pitchRange>1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketPartBase" Name="VFEP_WarcasketShoulderPadBase" Abstract="True">
+		<isShoulderPads>true</isShoulderPads>
+		<shortDescription>short desc</shortDescription>
+		<modExtensions>
+			<li Class="VFECore.ApparelDrawPosExtension">
+				<shellPosDrawSettings>
+					<drawPosNorthOffset>(0, 0.2, 0)</drawPosNorthOffset>
+					<drawPosSouthOffset>(0, 0.1, 0)</drawPosSouthOffset>
+					<drawPosWestOffset>(0, 0.1, 0)</drawPosWestOffset>
+					<drawPosEastOffset>(0, 0.1, 0)</drawPosEastOffset>
+					<!--
 				<drawNorthSize>(2, 2)</drawNorthSize>
 				<drawSouthSize>(2, 2)</drawSouthSize>
 				<drawWestSize>(2, 2)</drawWestSize>
 				<drawEastSize>(2, 2)</drawEastSize> -->
-			</shellPosDrawSettings>
-			<isUnifiedApparel>true</isUnifiedApparel>
-		</li>
-	</modExtensions>
-  </VFEPirates.WarcasketDef>
-  
-  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
-    <defName>VFEP_WarcasketShoulders_Warcasket</defName>
-    <label>warcasket shoulders</label>
-    <shortDescription>Basic warcasket pauldrons with baseline protection and weight.</shortDescription>
-    <description>Basic warcasket pauldrons with baseline protection and weight.\n\nA 3rd generation warcasket which was the first to enter mass production, its design was based off of a combination of an upscaled astrominer’s powered rig and early iterations of bionic limb interfaces. As pirates have ample supply of “willing” human test subjects, they were deployed before power armor finished the prototype phase. The lead scientist on the project was quoted “you can’t make an omelette without breaking health and safety.”</description>
-    <graphicData>
-      <texPath>Things/Pawn/Warcasketlike/Warcasket/WarcasketShoulders</texPath>
-    </graphicData>
-    <statBases>
-      <Mass>20</Mass>
-      <ArmorRating_Sharp>1.06</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.55</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.64</ArmorRating_Heat>
-      <Insulation_Cold>6</Insulation_Cold>
-      <Insulation_Heat>2</Insulation_Heat>
-      <EquipDelay>1</EquipDelay>
-    </statBases>
-    <equippedStatOffsets>
-      <MoveSpeed>-0.2</MoveSpeed>
-      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
-    </equippedStatOffsets>
-    <costList>
-      <Steel>40</Steel>
-    </costList>
-    <researchPrerequisites>
-      <li>VFEP_Warcaskets</li>
-    </researchPrerequisites>
-    <apparel>
-      <bodyPartGroups>
-        <li>Shoulders</li>
-        <li>Arms</li>
-        <li>Hands</li>
-		<li>Neck</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Warcasketlike/Warcasket/WarcasketShoulders</wornGraphicPath>
-      <layers>
-	    <li>OnSkin</li>
-        <li>Middle</li>
-        <li>Shell</li>
-      </layers>
-      <tags>
-        <li>Warcasket</li>
-		<li>WarcasketVeteran</li>
-		<li>WarcasketAll</li>
-      </tags>
-    </apparel>
-  </VFEPirates.WarcasketDef>
-  
-  <!-- Marine warcasket -->
-  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
-    <defName>VFEP_Warcasket_Marine</defName>
-    <label>marine warcasket</label>
-    <shortDescription>Advanced warcasket shell with improved protection for similar weight.</shortDescription>
-    <description>Advanced warcasket shell with improved protection for similar weight.\n\nThe 4th generation warcaskets entered development as power armor started to be deployed in military anti-piracy operations. While the more advanced and adjustable marine armour was successful against those who couldn’t field warcaskets, their construction was already being imitated by reverse engineering the superior power supply units and armor design improvements, along with considerably thicker plating supported by stronger hydraulics.</description>
-    <graphicData>
-      <texPath>Things/Pawn/Warcasketlike/WarcasketMarine/WarcasketMarine</texPath>
-    </graphicData>
-    <statBases>
-      <Mass>50</Mass>
-      <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.65</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.74</ArmorRating_Heat>
-      <Insulation_Cold>24</Insulation_Cold>
-      <Insulation_Heat>8</Insulation_Heat>
-      <EquipDelay>1</EquipDelay>
-    </statBases>
-    <equippedStatOffsets>
-      <MoveSpeed>-0.5</MoveSpeed>
-      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
-    </equippedStatOffsets>
-    <costList>
-      <ComponentIndustrial>4</ComponentIndustrial>
-      <Steel>130</Steel>
-      <Uranium>40</Uranium>
-    </costList>
-    <researchPrerequisites>
-      <li>VFEP_AdvancedWarcaskets</li>
-    </researchPrerequisites>
-    <apparel>
-      <bodyPartGroups>
-        <li>Torso</li>
-        <li>Legs</li>
-		<li>Feet</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketMarine/WarcasketMarine</wornGraphicPath>
-      <layers>
-	    <li>OnSkin</li>
-        <li>Middle</li>
-        <li>Shell</li>
-      </layers>
-      <tags>
-		<li>WarcasketVeteran</li>
-		<li>WarcasketAll</li>
-      </tags>
-    </apparel>
-	<modExtensions>
-		<li Class="VFECore.ApparelExtension">
-			<traitsOnEquip>
-				<li>VFEP_WarcasketTrait</li>
-			</traitsOnEquip>
-			<traitsOnUnequip>
-				<li>VFEP_Shellcasket</li>
-			</traitsOnUnequip>
-		</li>
-	</modExtensions>
-  </VFEPirates.WarcasketDef>
-  
-  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
-    <defName>VFEP_WarcasketShoulders_Marine</defName>
-    <label>marine warcasket shoulders</label>
-    <shortDescription>Advanced warcasket pauldrons with improved protection for similar weight.</shortDescription>
-    <description>Advanced warcasket pauldrons with improved protection for similar weight.\n\nThe 4th generation warcaskets entered development as power armor started to be deployed in military anti-piracy operations. While the more advanced and adjustable marine armour was successful against those who couldn’t field warcaskets, their construction was already being imitated by reverse engineering the superior power supply units and armor design improvements, along with considerably thicker plating supported by stronger hydraulics.</description>
-    <graphicData>
-      <texPath>Things/Pawn/Warcasketlike/WarcasketMarine/WarcasketMarineShoulders</texPath>
-    </graphicData>
-    <statBases>
-      <Mass>20</Mass>
-      <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.65</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.74</ArmorRating_Heat>
-      <Insulation_Cold>7</Insulation_Cold>
-      <Insulation_Heat>2</Insulation_Heat>
-      <EquipDelay>1</EquipDelay>
-    </statBases>
-    <equippedStatOffsets>
-      <MoveSpeed>-0.2</MoveSpeed>
-      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
-    </equippedStatOffsets>
-    <costList>
-      <Steel>55</Steel>
-    </costList>
-    <researchPrerequisites>
-      <li>VFEP_AdvancedWarcaskets</li>
-    </researchPrerequisites>
-    <apparel>
-      <bodyPartGroups>
-        <li>Shoulders</li>
-        <li>Arms</li>
-        <li>Hands</li>
-		<li>Neck</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketMarine/WarcasketMarineShoulders</wornGraphicPath>
-      <layers>
-	    <li>OnSkin</li>
-        <li>Middle</li>
-        <li>Shell</li>
-      </layers>
-      <tags>
-		<li>WarcasketVeteran</li>
-		<li>WarcasketAll</li>
-      </tags>
-    </apparel>
-  </VFEPirates.WarcasketDef>
-  
-  <!-- Recon warcasket -->
-  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
-    <defName>VFEP_Warcasket_Recon</defName>
-    <label>recon warcasket</label>
-    <shortDescription>Advanced warcasket shell with improved environment protection and reduced weight.</shortDescription>
-    <description>Advanced warcasket shell with improved environment protection and reduced weight.\n\n5th generation warcaskets were created with a much shorter period between generations, largely being slight specializations of the previous one. The Recon design was made with the goal of having it rapidly going behind enemy lines and taking out important personnel, such as doctors, armorers, engineers and botanists. They were typically armed with a warcasket knife to eliminate armed guards, their motto being “get busy moving or get busy dying”.</description>
-    <graphicData>
-      <texPath>Things/Pawn/Warcasketlike/WarcasketRecon/WarcasketRecon</texPath>
-    </graphicData>
-    <statBases>
-      <Mass>40</Mass>
-      <ArmorRating_Sharp>1.02</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.6</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.66</ArmorRating_Heat>
-      <Insulation_Cold>20</Insulation_Cold>
-      <Insulation_Heat>6</Insulation_Heat>
-      <EquipDelay>1</EquipDelay>
-    </statBases>
-    <equippedStatOffsets>
-      <MoveSpeed>-0.2</MoveSpeed>
-      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
-    </equippedStatOffsets>
-    <costList>
-      <ComponentIndustrial>3</ComponentIndustrial>
-      <Steel>80</Steel>
-      <Uranium>20</Uranium>
-    </costList>
-    <researchPrerequisites>
-      <li>VFEP_AdvancedWarcaskets</li>
-    </researchPrerequisites>
-    <apparel>
-      <bodyPartGroups>
-        <li>Torso</li>
-        <li>Legs</li>
-		<li>Feet</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketRecon/WarcasketRecon</wornGraphicPath>
-      <layers>
-	    <li>OnSkin</li>
-        <li>Middle</li>
-        <li>Shell</li>
-      </layers>
-      <tags>
-		<li>WarcasketVeteran</li>
-		<li>WarcasketAll</li>
-      </tags>
-    </apparel>
-	<modExtensions>
-		<li Class="VFECore.ApparelExtension">
-			<traitsOnEquip>
-				<li>VFEP_WarcasketTrait</li>
-			</traitsOnEquip>
-			<traitsOnUnequip>
-				<li>VFEP_Shellcasket</li>
-			</traitsOnUnequip>
-		</li>
-	</modExtensions>
-  </VFEPirates.WarcasketDef>
-  
-  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
-    <defName>VFEP_WarcasketShoulders_Recon</defName>
-    <label>recon warcasket shoulders</label>
-    <shortDescription>Advanced warcasket pauldrons with improved protection for similar weight.</shortDescription>
-    <description>Advanced warcasket pauldrons with improved protection for similar weight.\n\n5th generation warcaskets were created with a much shorter period between generations, largely being slight specializations of the previous one. The Recon design was made with the goal of having it rapidly going behind enemy lines and taking out important personnel, such as doctors, armorers, engineers and botanists. They were typically armed with a warcasket knife to eliminate armed guards, their motto being “get busy moving or get busy dying”.</description>
-    <graphicData>
-      <texPath>Things/Pawn/Warcasketlike/WarcasketRecon/WarcasketReconShoulders</texPath>
-    </graphicData>
-    <statBases>
-      <Mass>15</Mass>
-      <Flammability>0</Flammability>
-      <ArmorRating_Sharp>1.02</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.6</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.66</ArmorRating_Heat>
-      <Insulation_Cold>7</Insulation_Cold>
-      <Insulation_Heat>2</Insulation_Heat>
-      <EquipDelay>14</EquipDelay>
-    </statBases>
-    <equippedStatOffsets>
-      <MoveSpeed>-0.1</MoveSpeed>
-      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
-    </equippedStatOffsets>
-    <costList>
-      <Steel>40</Steel>
-    </costList>
-    <researchPrerequisites>
-      <li>VFEP_AdvancedWarcaskets</li>
-    </researchPrerequisites>
-    <apparel>
-      <bodyPartGroups>
-        <li>Shoulders</li>
-        <li>Arms</li>
-        <li>Hands</li>
-		<li>Neck</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketRecon/WarcasketReconShoulders</wornGraphicPath>
-      <layers>
-	    <li>OnSkin</li>
-        <li>Middle</li>
-        <li>Shell</li>
-      </layers>
-      <tags>
-		<li>WarcasketVeteran</li>
-		<li>WarcasketAll</li>
-      </tags>
-    </apparel>
-  </VFEPirates.WarcasketDef>
-  
-  <!-- Cataphract warcasket -->
-  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
-    <defName>VFEP_Warcasket_Cataphract</defName>
-    <label>cataphract warcasket</label>
-    <shortDescription>Advanced warcasket shell with superior protection and worse weight.</shortDescription>
-    <description>Advanced warcasket shell with superior protection and worse weight.\n\n5th generation warcaskets were created with a much shorter period between generations, largely being slight specializations of the previous one. The Cataphract design was made with the goal of having it tie up as many enemy assets as possible, drawing enemy fire and laying down suppressive fire. The pilots of these suits were particularly fearless and preferred deploying with warcasket minguns, often spouting “I ain’t got time to bleed”.</description>
-    <graphicData>
-      <texPath>Things/Pawn/Warcasketlike/WarcasketCataphract/WarcasketCataphract</texPath>
-    </graphicData>
-    <statBases>
-      <Mass>75</Mass>
-      <ArmorRating_Sharp>1.56</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.65</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.78</ArmorRating_Heat>
-      <Insulation_Cold>43</Insulation_Cold>
-      <Insulation_Heat>14</Insulation_Heat>
-      <EquipDelay>1</EquipDelay>
-    </statBases>
-    <equippedStatOffsets>
-      <MoveSpeed>-0.85</MoveSpeed>
-      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
-    </equippedStatOffsets>
-    <costList>
-      <ComponentIndustrial>5</ComponentIndustrial>
-      <Steel>175</Steel>
-      <Uranium>50</Uranium>
-    </costList>
-    <researchPrerequisites>
-      <li>VFEP_AdvancedWarcaskets</li>
-    </researchPrerequisites>
-    <apparel>
-      <bodyPartGroups>
-        <li>Torso</li>
-        <li>Legs</li>
-		<li>Feet</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketCataphract/WarcasketCataphract</wornGraphicPath>
-      <layers>
-	    <li>OnSkin</li>
-        <li>Middle</li>
-        <li>Shell</li>
-      </layers>
-      <tags>
-		<li>WarcasketHeavy</li>
-		<li>WarcasketCata</li>
-		<li>WarcasketAll</li>
-      </tags>
-    </apparel>
-	<modExtensions>
-		<li Class="VFECore.ApparelExtension">
-			<traitsOnEquip>
-				<li>VFEP_WarcasketTrait</li>
-			</traitsOnEquip>
-			<traitsOnUnequip>
-				<li>VFEP_Shellcasket</li>
-			</traitsOnUnequip>
-		</li>
-	</modExtensions>
-  </VFEPirates.WarcasketDef>
-  
-  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
-    <defName>VFEP_WarcasketShoulders_Cataphract</defName>
-    <label>cataphract warcasket shoulders</label>
-    <shortDescription>Advanced warcasket pauldrons with superior protection and worse weight.</shortDescription>
-    <description>Advanced warcasket pauldrons with superior protection and worse weight.\n\n5th generation warcaskets were created with a much shorter period between generations, largely being slight specializations of the previous one. The Cataphract design was made with the goal of having it tie up as many enemy assets as possible, drawing enemy fire and laying down suppressive fire. The pilots of these suits were particularly fearless and preferred deploying with warcasket minguns, often spouting “I ain’t got time to bleed”.</description>
-    <graphicData>
-      <texPath>Things/Pawn/Warcasketlike/WarcasketCataphract/WarcasketCataphractShoulders</texPath>
-    </graphicData>
-    <statBases>
-      <Mass>35</Mass>
-      <ArmorRating_Sharp>1.56</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.65</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.78</ArmorRating_Heat>
-      <Insulation_Cold>18</Insulation_Cold>
-      <Insulation_Heat>6</Insulation_Heat>
-      <EquipDelay>1</EquipDelay>
-    </statBases>
-    <equippedStatOffsets>
-      <MoveSpeed>-0.35</MoveSpeed>
-      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
-    </equippedStatOffsets>
-    <costList>
-      <Steel>75</Steel>
-    </costList>
-    <researchPrerequisites>
-      <li>VFEP_AdvancedWarcaskets</li>
-    </researchPrerequisites>
-    <apparel>
-      <bodyPartGroups>
-        <li>Shoulders</li>
-        <li>Arms</li>
-        <li>Hands</li>
-		<li>Neck</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketCataphract/WarcasketCataphractShoulders</wornGraphicPath>
-      <layers>
-	    <li>OnSkin</li>
-        <li>Middle</li>
-        <li>Shell</li>
-      </layers>
-      <tags>
-		<li>WarcasketHeavy</li>
-		<li>WarcasketCata</li>
-		<li>WarcasketAll</li>
-      </tags>
-    </apparel>
-  </VFEPirates.WarcasketDef>
-  
-  <!-- aerial warcasket -->
-  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
-    <defName>VFEP_Warcasket_Aerial</defName>
-    <label>aerial warcasket</label>
-    <shortDescription>Specialized warcasket shell with superior protection for similar weight, aerodynamically designed and fitted with rocket booster injectors.</shortDescription>
-    <description>Specialized warcasket shell with superior protection for similar weight, aerodynamically designed and fitted with rocket booster injectors.\n\nThe 7th generation warcaskets came after underwhelming results in improving the baseline performance even further, instead focusing on creating designs that - while interchangeable - work better as a set. They were also the first to include plasteel in the design as it appeared more frequently in scavenging and looting. Each piece has a unique function that synergises with those of the same series, making them a truly separate class of mobile armor units.\n\nThe Aerial series is based on the Marine design with a few improvements in key areas, namely that the plating was made more aerodynamic and the addition of shoulder thrusters. The primary goal was to get the pilot behind enemy lines or even right in the middle of them to tie up high priority targets, giving them the catchphrase “death from above”.</description>
-    <graphicData>
-      <texPath>Things/Pawn/Warcasketlike/WarcasketAerial/WarcasketAerial</texPath>
-    </graphicData>
-    <statBases>
-      <Mass>50</Mass>
-      <ArmorRating_Sharp>1.65</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.72</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.86</ArmorRating_Heat>
-      <Insulation_Cold>36</Insulation_Cold>
-      <Insulation_Heat>10</Insulation_Heat>
-      <EquipDelay>1</EquipDelay>
-    </statBases>
-    <equippedStatOffsets>
-      <MoveSpeed>-0.5</MoveSpeed>
-      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
-    </equippedStatOffsets>
-    <costList>
-      <ComponentIndustrial>8</ComponentIndustrial>
-      <Steel>145</Steel>
-	  <Plasteel>20</Plasteel>
-      <Uranium>50</Uranium>
-    </costList>
-    <researchPrerequisites>
-      <li>VFEP_SpecialisedWarcaskets</li>
-    </researchPrerequisites>
-    <apparel>
-      <bodyPartGroups>
-        <li>Torso</li>
-        <li>Legs</li>
-		<li>Feet</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketAerial/WarcasketAerial</wornGraphicPath>
-      <layers>
-	    <li>OnSkin</li>
-        <li>Middle</li>
-        <li>Shell</li>
-      </layers>
-      <tags>
-		<li>WarcasketHussar</li>
-		<li>WarcasketAll</li>
-      </tags>
-    </apparel>
-	<modExtensions>
-		<li Class="VFECore.ApparelExtension">
-			<traitsOnEquip>
-				<li>VFEP_WarcasketTrait</li>
-			</traitsOnEquip>
-			<traitsOnUnequip>
-				<li>VFEP_Shellcasket</li>
-			</traitsOnUnequip>
-		</li>
-	</modExtensions>
-  </VFEPirates.WarcasketDef>
-  
-  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
-    <defName>VFEP_WarcasketShoulders_Aerial</defName>
-    <label>aerial warcasket shoulders</label>
-    <shortDescription>Specialized warcasket pauldrons with superior protection and reduced weight, aerodynamically designed and fitted with rocket boosters with large exhausts.</shortDescription>
-    <description>Specialized warcasket pauldrons with superior protection and reduced weight, aerodynamically designed and fitted with rocket boosters with large exhausts.\n\nThe 7th generation warcaskets came after underwhelming results in improving the baseline performance even further, instead focusing on creating designs that - while interchangeable - work better as a set. They were also the first to include plasteel in the design as it appeared more frequently in scavenging and looting. Each piece has a unique function that synergises with those of the same series, making them a truly separate class of mobile armor units.\n\nThe Aerial series is based on the Marine design with a few improvements in key areas, namely that the plating was made more aerodynamic and the addition of shoulder thrusters. The primary goal was to get the pilot behind enemy lines or even right in the middle of them to tie up high priority targets, giving them the catchphrase “death from above”.</description>
-    <graphicData>
-      <texPath>Things/Pawn/Warcasketlike/WarcasketAerial/WarcasketAerialShoulders</texPath>
-    </graphicData>
-    <statBases>
-      <Mass>20</Mass>
-      <ArmorRating_Sharp>1.65</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.72</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.86</ArmorRating_Heat>
-      <Insulation_Cold>20</Insulation_Cold>
-      <Insulation_Heat>6</Insulation_Heat>
-      <EquipDelay>1</EquipDelay>
-    </statBases>
-    <equippedStatOffsets>
-      <MoveSpeed>-0.1</MoveSpeed>
-      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
-    </equippedStatOffsets>
-    <costList>
-      <Steel>20</Steel>
-	  <Plasteel>20</Plasteel>
-    </costList>
-    <researchPrerequisites>
-      <li>VFEP_SpecialisedWarcaskets</li>
-    </researchPrerequisites>
-    <apparel>
-      <bodyPartGroups>
-        <li>Shoulders</li>
-        <li>Arms</li>
-        <li>Hands</li>
-		<li>Neck</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketAerial/WarcasketAerialShoulders</wornGraphicPath>
-      <layers>
-	    <li>OnSkin</li>
-        <li>Middle</li>
-        <li>Shell</li>
-      </layers>
-      <tags>
-		<li>WarcasketHussar</li>
-		<li>WarcasketAll</li>
-      </tags>
-    </apparel>
-  </VFEPirates.WarcasketDef>
-  
-  <!-- barrage warcasket -->
-  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
-    <defName>VFEP_Warcasket_Barrage</defName>
-    <label>barrage warcasket</label>
-    <shortDescription>Specialized warcasket shell with peerless protection and excessive weight, fitted with stabilisers and penetrator pistons on the legs.</shortDescription>
-    <description>Specialized warcasket shell with peerless protection and excessive weight, fitted with stabilisers and penetrator pistons on the legs.\n\nThe 7th generation warcaskets came after underwhelming results in improving the baseline performance even further, instead focusing on creating designs that - while interchangeable - work better as a set. They were also the first to include plasteel in the design as it appeared more frequently in scavenging and looting. Each piece has a unique function that synergises with those of the same series, making them a truly separate class of mobile armor units.\n\nThe Barrage series makes numerous additions to the Cataphract series, with even heavier armour plating and the addition of weapons platform stabilizers “borrowed wholesale” from navy vessels. The objective was to put as much firepower downrange as possible while ignoring incoming enemy fire, their catchphrase being “dodge this”.</description>
-    <graphicData>
-      <texPath>Things/Pawn/Warcasketlike/WarcasketBarrage/WarcasketBarrage</texPath>
-    </graphicData>
-    <statBases>
-      <Mass>75</Mass>
-      <ArmorRating_Sharp>2.0</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.9</ArmorRating_Blunt>
-      <ArmorRating_Heat>1.08</ArmorRating_Heat>
-      <Insulation_Cold>44</Insulation_Cold>
-      <Insulation_Heat>18</Insulation_Heat>
-      <EquipDelay>1</EquipDelay>
-    </statBases>
-    <equippedStatOffsets>
-      <MoveSpeed>-1.0</MoveSpeed>
-      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
-    </equippedStatOffsets>
-    <costList>
-      <ComponentIndustrial>8</ComponentIndustrial>
-      <Steel>240</Steel>
-	  <Plasteel>30</Plasteel>
-      <Uranium>50</Uranium>
-    </costList>
-    <researchPrerequisites>
-      <li>VFEP_SpecialisedWarcaskets</li>
-    </researchPrerequisites>
-    <apparel>
-      <bodyPartGroups>
-        <li>Torso</li>
-        <li>Legs</li>
-		<li>Feet</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketBarrage/WarcasketBarrage</wornGraphicPath>
-      <layers>
-	    <li>OnSkin</li>
-        <li>Middle</li>
-        <li>Shell</li>
-      </layers>
-      <tags>
-		<li>WarcasketSpecialised</li>
-		<li>WarcasketSuperHeavy</li>
-		<li>WarcasketAll</li>
-      </tags>
-    </apparel>
-	<modExtensions>
-		<li Class="VFECore.ApparelExtension">
-			<traitsOnEquip>
-				<li>VFEP_WarcasketTrait</li>
-			</traitsOnEquip>
-			<traitsOnUnequip>
-				<li>VFEP_Shellcasket</li>
-			</traitsOnUnequip>
-		</li>
-	</modExtensions>
-  </VFEPirates.WarcasketDef>
-  
-  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
-    <defName>VFEP_WarcasketShoulders_Barrage</defName>
-    <label>barrage warcasket shoulders</label>
-    <shortDescription>Specialized warcasket pauldrons with peerless protection and excessive weight, fitted with arm stabilisers and shoulder-mounted grenade launchers.</shortDescription>
-    <description>Specialized warcasket pauldrons with peerless protection and excessive weight, fitted with arm stabilisers and shoulder-mounted grenade launchers.\n\nThe 7th generation warcaskets came after underwhelming results in improving the baseline performance even further, instead focusing on creating designs that - while interchangeable - work better as a set. They were also the first to include plasteel in the design as it appeared more frequently in scavenging and looting. Each piece has a unique function that synergises with those of the same series, making them a truly separate class of mobile armor units.\n\nThe Barrage series makes numerous additions to the Cataphract series, with even heavier armour plating and the addition of weapons platform stabilizers “borrowed wholesale” from navy vessels. The objective was to put as much firepower downrange as possible while ignoring incoming enemy fire, their catchphrase being “dodge this”.</description>
-    <graphicData>
-      <texPath>Things/Pawn/Warcasketlike/WarcasketBarrage/WarcasketBarrageShoulders</texPath>
-    </graphicData>
-    <statBases>
-      <Mass>35</Mass>
-      <ArmorRating_Sharp>2.0</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.9</ArmorRating_Blunt>
-      <ArmorRating_Heat>1.08</ArmorRating_Heat>
-      <Insulation_Cold>20</Insulation_Cold>
-      <Insulation_Heat>6</Insulation_Heat>
-      <EquipDelay>1</EquipDelay>
-    </statBases>
-    <equippedStatOffsets>
-      <MoveSpeed>-0.4</MoveSpeed>
-      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
-    </equippedStatOffsets>
-    <costList>
-      <Steel>75</Steel>
-	  <Plasteel>20</Plasteel>
-    </costList>
-    <researchPrerequisites>
-      <li>VFEP_SpecialisedWarcaskets</li>
-    </researchPrerequisites>
-    <apparel>
-      <bodyPartGroups>
-        <li>Shoulders</li>
-        <li>Arms</li>
-        <li>Hands</li>
-		<li>Neck</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketBarrage/WarcasketBarrageShoulders</wornGraphicPath>
-      <layers>
-	    <li>OnSkin</li>
-        <li>Middle</li>
-        <li>Shell</li>
-      </layers>
-      <tags>
-		<li>WarcasketSpecialised</li>
-		<li>WarcasketSuperHeavy</li>
-		<li>WarcasketAll</li>
-      </tags>
-    </apparel>
-    <modExtensions>
-        <li Class="VFECore.ApparelExtension">
-            <equippedStatFactors>
-                <ShootingAccuracyPawn>1.1</ShootingAccuracyPawn>
-            </equippedStatFactors>
-        </li>
-    </modExtensions>
-  </VFEPirates.WarcasketDef>
-  
-  <!-- hazard warcasket -->
-  
-  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
-    <defName>VFEP_Warcasket_Hazard</defName>
-    <label>hazard warcasket</label>
-    <shortDescription>Specialized warcasket shell with peerless environment protection for similar weight, fitted with flame retardant material.</shortDescription>
-    <description>Specialized warcasket shell with peerless environment protection for similar weight, fitted with flame retardant material.\n\nThe 7th generation warcaskets came after underwhelming results in improving the baseline performance even further, instead focusing on creating designs that - while interchangeable - work better as a set. They were also the first to include plasteel in the design as it appeared more frequently in scavenging and looting. Each piece has a unique function that synergises with those of the same series, making them a truly separate class of mobile armor units.\n\nThe Hazard series was arguably one of the first of the 7th gen warcaskets, and was designed with utility in mind. The pilot can comfortably walk through a blazing inferno and excessive radiation, either when scavenging the remains of a battle or making its way to overload a ship’s nuclear reactor. Ironically, these pilots’ favourite saying is “I love the smell of napalm, it smells like money”.</description>
-    <graphicData>
-      <texPath>Things/Pawn/Warcasketlike/WarcasketHazard/WarcasketHazard</texPath>
-    </graphicData>
-    <statBases>
-      <Mass>60</Mass>
-	  <Flammability>0</Flammability>
-      <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.65</ArmorRating_Blunt>
-      <ArmorRating_Heat>2.0</ArmorRating_Heat>
-      <Insulation_Cold>75</Insulation_Cold>
-      <Insulation_Heat>72</Insulation_Heat>
-      <EquipDelay>1</EquipDelay>
-    </statBases>
-    <equippedStatOffsets>
-      <MoveSpeed>-0.5</MoveSpeed>
-      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
-    </equippedStatOffsets>
-    <costList>
-      <ComponentIndustrial>4</ComponentIndustrial>
-      <Steel>135</Steel>
-      <Uranium>50</Uranium>
-	  <DevilstrandCloth>100</DevilstrandCloth>
-    </costList>
-    <researchPrerequisites>
-      <li>VFEP_SpecialisedWarcaskets</li>
-    </researchPrerequisites>
-    <apparel>
-      <bodyPartGroups>
-        <li>Torso</li>
-        <li>Legs</li>
-		<li>Feet</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketHazard/WarcasketHazard</wornGraphicPath>
-      <layers>
-	    <li>OnSkin</li>
-        <li>Middle</li>
-        <li>Shell</li>
-      </layers>
-      <tags>
-		<li>WarcasketSpecialised</li>
-		<li>WarcasketFlamer</li>
-		<li>WarcasketAll</li>
-      </tags>
-    </apparel>
-    <modExtensions>
-        <li Class="VFECore.ApparelExtension">
-            <equippedStatFactors>
-                <Flammability>0</Flammability>
-            </equippedStatFactors>
-			<traitsOnEquip>
-				<li>VFEP_WarcasketTrait</li>
-			</traitsOnEquip>
-			<traitsOnUnequip>
-				<li>VFEP_Shellcasket</li>
-			</traitsOnUnequip>
-        </li>
-    </modExtensions>
-  </VFEPirates.WarcasketDef>
-  
-  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
-    <defName>VFEP_WarcasketShoulders_Hazard</defName>
-    <label>hazard warcasket shoulders</label>
-    <shortDescription>Specialized warcasket pauldrons with peerless environment protection and similar weight, fitted with flame retardant material.</shortDescription>
-    <description>Specialized warcasket pauldrons with peerless environment protection and similar weight, fitted with flame retardant material.\n\nThe 7th generation warcaskets came after underwhelming results in improving the baseline performance even further, instead focusing on creating designs that - while interchangeable - work better as a set. They were also the first to include plasteel in the design as it appeared more frequently in scavenging and looting. Each piece has a unique function that synergises with those of the same series, making them a truly separate class of mobile armor units.\n\nThe Hazard series was arguably one of the first of the 7th gen warcaskets, and was designed with utility in mind. The pilot can comfortably walk through a blazing inferno and excessive radiation, either when scavenging the remains of a battle or making its way to overload a ship’s nuclear reactor. Ironically, these pilots’ favourite saying is “I love the smell of napalm, it smells like money”.</description>
-    <graphicData>
-      <texPath>Things/Pawn/Warcasketlike/WarcasketHazard/WarcasketHazardShoulders</texPath>
-    </graphicData>
-    <statBases>
-      <Mass>20</Mass>
-	  <Flammability>0</Flammability>
-      <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.65</ArmorRating_Blunt>
-      <ArmorRating_Heat>2.0</ArmorRating_Heat>
-      <Insulation_Cold>22</Insulation_Cold>
-      <Insulation_Heat>14</Insulation_Heat>
-      <EquipDelay>1</EquipDelay>
-    </statBases>
-    <equippedStatOffsets>
-      <MoveSpeed>-0.4</MoveSpeed>
-      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
-    </equippedStatOffsets>
-    <costList>
-      <Steel>55</Steel>
-	  <DevilstrandCloth>50</DevilstrandCloth>
-    </costList>
-    <researchPrerequisites>
-      <li>VFEP_SpecialisedWarcaskets</li>
-    </researchPrerequisites>
-    <apparel>
-      <bodyPartGroups>
-        <li>Shoulders</li>
-        <li>Arms</li>
-        <li>Hands</li>
-		<li>Neck</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketHazard/WarcasketHazardShoulders</wornGraphicPath>
-      <layers>
-	    <li>OnSkin</li>
-        <li>Middle</li>
-        <li>Shell</li>
-      </layers>
-      <tags>
-		<li>WarcasketSpecialised</li>
-		<li>WarcasketFlamer</li>
-		<li>WarcasketAll</li>
-      </tags>
-    </apparel>
-    <modExtensions>
-        <li Class="VFECore.ApparelExtension">
-            <equippedStatFactors>
-                <Flammability>0.5</Flammability>
-            </equippedStatFactors>
-        </li>
-    </modExtensions>
-  </VFEPirates.WarcasketDef>
-  
-  <!-- shock warcasket -->
-  
-  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
-    <defName>VFEP_Warcasket_Shock</defName>
-    <label>shock warcasket</label>
-    <shortDescription>Specialized warcasket shell with superior protection with higher weight, fitted with impact mitigators and a large propulsion engine on the back.</shortDescription>
-    <description>Specialized warcasket shell with superior protection with higher weight, fitted with impact mitigators and a large propulsion engine on the back.\n\nThe 7th generation warcaskets came after underwhelming results in improving the baseline performance even further, instead focusing on creating designs that - while interchangeable - work better as a set. They were also the first to include plasteel in the design as it appeared more frequently in scavenging and looting. Each piece has a unique function that synergises with those of the same series, making them a truly separate class of mobile armor units.\n\nThe Shock series differs from the Aerial series in that the goal was not jump into action but practically be deployed from orbit right in the middle of an enemy base. Typically armed with a warcasket broadsword, they excel in melee combat while also benefiting from enemy friendly fire. Their warcry usually is “you’re all trapped here with me”.</description>
-    <graphicData>
-      <texPath>Things/Pawn/Warcasketlike/WarcasketShock/WarcasketShock</texPath>
-    </graphicData>
-    <statBases>
-      <Mass>65</Mass>
-      <ArmorRating_Sharp>1.65</ArmorRating_Sharp>
-      <ArmorRating_Blunt>1.24</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.86</ArmorRating_Heat>
-      <Insulation_Cold>36</Insulation_Cold>
-      <Insulation_Heat>10</Insulation_Heat>
-      <EquipDelay>1</EquipDelay>
-    </statBases>
-    <equippedStatOffsets>
-      <MoveSpeed>-0.75</MoveSpeed>
-      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
-    </equippedStatOffsets>
-    <costList>
-      <ComponentIndustrial>10</ComponentIndustrial>
-      <Steel>120</Steel>
-	  <Plasteel>45</Plasteel>
-      <Uranium>50</Uranium>
-    </costList>
-    <researchPrerequisites>
-      <li>VFEP_SpecialisedWarcaskets</li>
-    </researchPrerequisites>
-    <apparel>
-      <bodyPartGroups>
-        <li>Torso</li>
-        <li>Legs</li>
-		<li>Feet</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketShock/WarcasketShock</wornGraphicPath>
-      <layers>
-	    <li>OnSkin</li>
-        <li>Middle</li>
-        <li>Shell</li>
-      </layers>
-      <tags>
-		<li>WarcasketHussar</li>
-		<li>WarcasketAll</li>
-      </tags>
-    </apparel>
-	<modExtensions>
-		<li Class="VFECore.ApparelExtension">
-			<traitsOnEquip>
-				<li>VFEP_WarcasketTrait</li>
-			</traitsOnEquip>
-			<traitsOnUnequip>
-				<li>VFEP_Shellcasket</li>
-			</traitsOnUnequip>
-		</li>
-	</modExtensions>
-  </VFEPirates.WarcasketDef>
-  
-  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
-    <defName>VFEP_WarcasketShoulders_Shock</defName>
-    <label>shock warcasket shoulders</label>
-    <shortDescription>Specialized warcasket pauldrons with superior protection and similar weight, onboard targeting computers assist the wearer in melee in both accuracy and evasion.</shortDescription>
-    <description>Specialized warcasket pauldrons with superior protection and similar weight, onboard targeting computers assist the wearer in melee in both accuracy and evasion.\n\nThe 7th generation warcaskets came after underwhelming results in improving the baseline performance even further, instead focusing on creating designs that - while interchangeable - work better as a set. They were also the first to include plasteel in the design as it appeared more frequently in scavenging and looting. Each piece has a unique function that synergises with those of the same series, making them a truly separate class of mobile armor units.\n\nThe Shock series differs from the Aerial series in that the goal was not jump into action but practically be deployed from orbit right in the middle of an enemy base. Typically armed with a warcasket broadsword, they excel in melee combat while also benefiting from enemy friendly fire. Their warcry usually is “you’re all trapped here with me”.</description>
-    <graphicData>
-      <texPath>Things/Pawn/Warcasketlike/WarcasketShock/WarcasketShockShoulders</texPath>
-    </graphicData>
-    <statBases>
-      <Mass>25</Mass>
-      <ArmorRating_Sharp>1.65</ArmorRating_Sharp>
-      <ArmorRating_Blunt>1.24</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.86</ArmorRating_Heat>
-      <Insulation_Cold>7</Insulation_Cold>
-      <Insulation_Heat>3</Insulation_Heat>
-      <EquipDelay>1</EquipDelay>
-    </statBases>
-    <equippedStatOffsets>
-      <MoveSpeed>-0.2</MoveSpeed>
-      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
-    </equippedStatOffsets>
-    <costList>
-      <Steel>60</Steel>
-	  <Plasteel>10</Plasteel>
-    </costList>
-    <researchPrerequisites>
-      <li>VFEP_SpecialisedWarcaskets</li>
-    </researchPrerequisites>
-    <apparel>
-      <bodyPartGroups>
-        <li>Shoulders</li>
-        <li>Arms</li>
-        <li>Hands</li>
-		<li>Neck</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketShock/WarcasketShockShoulders</wornGraphicPath>
-      <layers>
-	    <li>OnSkin</li>
-        <li>Middle</li>
-        <li>Shell</li>
-      </layers>
-      <tags>
-		<li>WarcasketHussar</li>
-		<li>WarcasketAll</li>
-      </tags>
-    </apparel>
-    <modExtensions>
-        <li Class="VFECore.ApparelExtension">
-            <equippedStatFactors>
-                <MeleeHitChance>1.2</MeleeHitChance>
-				<MeleeDodgeChance>1.2</MeleeDodgeChance>
-            </equippedStatFactors>
-			<traitsOnEquip>
-				<li>VFEP_WarcasketTrait</li>
-			</traitsOnEquip>
-			<traitsOnUnequip>
-				<li>VFEP_Shellcasket</li>
-			</traitsOnUnequip>
-        </li>
-    </modExtensions>
-  </VFEPirates.WarcasketDef>
-  
-  <!-- Privateer armour -->
-  <ThingDef ParentName="ArmorMachineableBase">
-    <defName>VFEP_Apparel_Privateer</defName>
-    <label>privateer armor</label>
-    <description>A variant of marine armor with an integrated grappling hook on the shoulder. The armor is slightly less protective than standard marine armor. The launcher does not require ammunition, but time needs to be reserved between shots to wind it up again.
+				</shellPosDrawSettings>
+				<isUnifiedApparel>true</isUnifiedApparel>
+			</li>
+		</modExtensions>
+	</VFEPirates.WarcasketDef>
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
+		<defName>VFEP_WarcasketShoulders_Warcasket</defName>
+		<label>warcasket shoulders</label>
+		<shortDescription>Basic warcasket pauldrons with baseline protection and weight.</shortDescription>
+		<description>Basic warcasket pauldrons with baseline protection and weight.\n\nA 3rd generation warcasket which was the first to enter mass production, its design was based off of a combination of an upscaled astrominer’s powered rig and early iterations of bionic limb interfaces. As pirates have ample supply of “willing” human test subjects, they were deployed before power armor finished the prototype phase. The lead scientist on the project was quoted “you can’t make an omelette without breaking health and safety.”</description>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/Warcasket/WarcasketShoulders</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>20</Mass>
+			<ArmorRating_Sharp>1.06</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.55</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.64</ArmorRating_Heat>
+			<Insulation_Cold>6</Insulation_Cold>
+			<Insulation_Heat>2</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.2</MoveSpeed>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<costList>
+			<Steel>40</Steel>
+		</costList>
+		<researchPrerequisites>
+			<li>VFEP_Warcaskets</li>
+		</researchPrerequisites>
+		<apparel>
+			<bodyPartGroups>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Hands</li>
+				<li>Neck</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/Warcasket/WarcasketShoulders</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>Warcasket</li>
+				<li>WarcasketVeteran</li>
+				<li>WarcasketAll</li>
+			</tags>
+		</apparel>
+	</VFEPirates.WarcasketDef>
+	<!-- Marine warcasket -->
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
+		<defName>VFEP_Warcasket_Marine</defName>
+		<label>marine warcasket</label>
+		<shortDescription>Advanced warcasket shell with improved protection for similar weight.</shortDescription>
+		<description>Advanced warcasket shell with improved protection for similar weight.\n\nThe 4th generation warcaskets entered development as power armor started to be deployed in military anti-piracy operations. While the more advanced and adjustable marine armour was successful against those who couldn’t field warcaskets, their construction was already being imitated by reverse engineering the superior power supply units and armor design improvements, along with considerably thicker plating supported by stronger hydraulics.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/WarcasketMarine/WarcasketMarine</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>50</Mass>
+			<ArmorRating_Sharp>1.20</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.74</ArmorRating_Heat>
+			<Insulation_Cold>24</Insulation_Cold>
+			<Insulation_Heat>8</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.5</MoveSpeed>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<costList>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<Steel>130</Steel>
+			<Uranium>40</Uranium>
+		</costList>
+		<researchPrerequisites>
+			<li>VFEP_AdvancedWarcaskets</li>
+		</researchPrerequisites>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Legs</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketMarine/WarcasketMarine</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>WarcasketVeteran</li>
+				<li>WarcasketAll</li>
+			</tags>
+		</apparel>
+		<modExtensions>
+			<li Class="VFECore.ApparelExtension">
+				<traitsOnEquip>
+					<li>VFEP_WarcasketTrait</li>
+				</traitsOnEquip>
+				<traitsOnUnequip>
+					<li>VFEP_Shellcasket</li>
+				</traitsOnUnequip>
+			</li>
+		</modExtensions>
+	</VFEPirates.WarcasketDef>
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
+		<defName>VFEP_WarcasketShoulders_Marine</defName>
+		<label>marine warcasket shoulders</label>
+		<shortDescription>Advanced warcasket pauldrons with improved protection for similar weight.</shortDescription>
+		<description>Advanced warcasket pauldrons with improved protection for similar weight.\n\nThe 4th generation warcaskets entered development as power armor started to be deployed in military anti-piracy operations. While the more advanced and adjustable marine armour was successful against those who couldn’t field warcaskets, their construction was already being imitated by reverse engineering the superior power supply units and armor design improvements, along with considerably thicker plating supported by stronger hydraulics.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/WarcasketMarine/WarcasketMarineShoulders</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>20</Mass>
+			<ArmorRating_Sharp>1.20</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.74</ArmorRating_Heat>
+			<Insulation_Cold>7</Insulation_Cold>
+			<Insulation_Heat>2</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.2</MoveSpeed>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<costList>
+			<Steel>55</Steel>
+		</costList>
+		<researchPrerequisites>
+			<li>VFEP_AdvancedWarcaskets</li>
+		</researchPrerequisites>
+		<apparel>
+			<bodyPartGroups>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Hands</li>
+				<li>Neck</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketMarine/WarcasketMarineShoulders</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>WarcasketVeteran</li>
+				<li>WarcasketAll</li>
+			</tags>
+		</apparel>
+	</VFEPirates.WarcasketDef>
+	<!-- Recon warcasket -->
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
+		<defName>VFEP_Warcasket_Recon</defName>
+		<label>recon warcasket</label>
+		<shortDescription>Advanced warcasket shell with improved environment protection and reduced weight.</shortDescription>
+		<description>Advanced warcasket shell with improved environment protection and reduced weight.\n\n5th generation warcaskets were created with a much shorter period between generations, largely being slight specializations of the previous one. The Recon design was made with the goal of having it rapidly going behind enemy lines and taking out important personnel, such as doctors, armorers, engineers and botanists. They were typically armed with a warcasket knife to eliminate armed guards, their motto being “get busy moving or get busy dying”.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/WarcasketRecon/WarcasketRecon</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>40</Mass>
+			<ArmorRating_Sharp>1.02</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.6</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.66</ArmorRating_Heat>
+			<Insulation_Cold>20</Insulation_Cold>
+			<Insulation_Heat>6</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.2</MoveSpeed>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<costList>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<Steel>80</Steel>
+			<Uranium>20</Uranium>
+		</costList>
+		<researchPrerequisites>
+			<li>VFEP_AdvancedWarcaskets</li>
+		</researchPrerequisites>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Legs</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketRecon/WarcasketRecon</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>WarcasketVeteran</li>
+				<li>WarcasketAll</li>
+			</tags>
+		</apparel>
+		<modExtensions>
+			<li Class="VFECore.ApparelExtension">
+				<traitsOnEquip>
+					<li>VFEP_WarcasketTrait</li>
+				</traitsOnEquip>
+				<traitsOnUnequip>
+					<li>VFEP_Shellcasket</li>
+				</traitsOnUnequip>
+</li>
+		</modExtensions>
+	</VFEPirates.WarcasketDef>
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
+		<defName>VFEP_WarcasketShoulders_Recon</defName>
+		<label>recon warcasket shoulders</label>
+		<shortDescription>Advanced warcasket pauldrons with improved protection for similar weight.</shortDescription>
+		<description>Advanced warcasket pauldrons with improved protection for similar weight.\n\n5th generation warcaskets were created with a much shorter period between generations, largely being slight specializations of the previous one. The Recon design was made with the goal of having it rapidly going behind enemy lines and taking out important personnel, such as doctors, armorers, engineers and botanists. They were typically armed with a warcasket knife to eliminate armed guards, their motto being “get busy moving or get busy dying”.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/WarcasketRecon/WarcasketReconShoulders</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>15</Mass>
+			<Flammability>0</Flammability>
+			<ArmorRating_Sharp>1.02</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.6</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.66</ArmorRating_Heat>
+			<Insulation_Cold>7</Insulation_Cold>
+			<Insulation_Heat>2</Insulation_Heat>
+			<EquipDelay>14</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.1</MoveSpeed>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<costList>
+			<Steel>40</Steel>
+		</costList>
+		<researchPrerequisites>
+			<li>VFEP_AdvancedWarcaskets</li>
+		</researchPrerequisites>
+		<apparel>
+			<bodyPartGroups>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Hands</li>
+				<li>Neck</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketRecon/WarcasketReconShoulders</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>WarcasketVeteran</li>
+				<li>WarcasketAll</li>
+			</tags>
+		</apparel>
+	</VFEPirates.WarcasketDef>
+	<!-- Cataphract warcasket -->
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
+		<defName>VFEP_Warcasket_Cataphract</defName>
+		<label>cataphract warcasket</label>
+		<shortDescription>Advanced warcasket shell with superior protection and worse weight.</shortDescription>
+		<description>Advanced warcasket shell with superior protection and worse weight.\n\n5th generation warcaskets were created with a much shorter period between generations, largely being slight specializations of the previous one. The Cataphract design was made with the goal of having it tie up as many enemy assets as possible, drawing enemy fire and laying down suppressive fire. The pilots of these suits were particularly fearless and preferred deploying with warcasket minguns, often spouting “I ain’t got time to bleed”.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/WarcasketCataphract/WarcasketCataphract</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>75</Mass>
+			<ArmorRating_Sharp>1.56</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.78</ArmorRating_Heat>
+			<Insulation_Cold>43</Insulation_Cold>
+			<Insulation_Heat>14</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.85</MoveSpeed>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<costList>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<Steel>175</Steel>
+			<Uranium>50</Uranium>
+		</costList>
+		<researchPrerequisites>
+			<li>VFEP_AdvancedWarcaskets</li>
+		</researchPrerequisites>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Legs</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketCataphract/WarcasketCataphract</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>WarcasketHeavy</li>
+				<li>WarcasketCata</li>
+				<li>WarcasketAll</li>
+			</tags>
+		</apparel>
+		<modExtensions>
+			<li Class="VFECore.ApparelExtension">
+				<traitsOnEquip>
+					<li>VFEP_WarcasketTrait</li>
+				</traitsOnEquip>
+				<traitsOnUnequip>
+					<li>VFEP_Shellcasket</li>
+				</traitsOnUnequip>
+</li>
+		</modExtensions>
+	</VFEPirates.WarcasketDef>
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
+		<defName>VFEP_WarcasketShoulders_Cataphract</defName>
+		<label>cataphract warcasket shoulders</label>
+		<shortDescription>Advanced warcasket pauldrons with superior protection and worse weight.</shortDescription>
+		<description>Advanced warcasket pauldrons with superior protection and worse weight.\n\n5th generation warcaskets were created with a much shorter period between generations, largely being slight specializations of the previous one. The Cataphract design was made with the goal of having it tie up as many enemy assets as possible, drawing enemy fire and laying down suppressive fire. The pilots of these suits were particularly fearless and preferred deploying with warcasket minguns, often spouting “I ain’t got time to bleed”.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/WarcasketCataphract/WarcasketCataphractShoulders</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>35</Mass>
+			<ArmorRating_Sharp>1.56</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.78</ArmorRating_Heat>
+			<Insulation_Cold>18</Insulation_Cold>
+			<Insulation_Heat>6</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.35</MoveSpeed>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<costList>
+			<Steel>75</Steel>
+		</costList>
+		<researchPrerequisites>
+			<li>VFEP_AdvancedWarcaskets</li>
+		</researchPrerequisites>
+		<apparel>
+			<bodyPartGroups>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Hands</li>
+				<li>Neck</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketCataphract/WarcasketCataphractShoulders</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>WarcasketHeavy</li>
+				<li>WarcasketCata</li>
+				<li>WarcasketAll</li>
+			</tags>
+		</apparel>
+	</VFEPirates.WarcasketDef>
+	<!-- aerial warcasket -->
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
+		<defName>VFEP_Warcasket_Aerial</defName>
+		<label>aerial warcasket</label>
+		<shortDescription>Specialized warcasket shell with superior protection for similar weight, aerodynamically designed and fitted with rocket booster injectors.</shortDescription>
+		<description>Specialized warcasket shell with superior protection for similar weight, aerodynamically designed and fitted with rocket booster injectors.\n\nThe 7th generation warcaskets came after underwhelming results in improving the baseline performance even further, instead focusing on creating designs that - while interchangeable - work better as a set. They were also the first to include plasteel in the design as it appeared more frequently in scavenging and looting. Each piece has a unique function that synergises with those of the same series, making them a truly separate class of mobile armor units.\n\nThe Aerial series is based on the Marine design with a few improvements in key areas, namely that the plating was made more aerodynamic and the addition of shoulder thrusters. The primary goal was to get the pilot behind enemy lines or even right in the middle of them to tie up high priority targets, giving them the catchphrase “death from above”.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/WarcasketAerial/WarcasketAerial</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>50</Mass>
+			<ArmorRating_Sharp>1.65</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.72</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.86</ArmorRating_Heat>
+			<Insulation_Cold>36</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.5</MoveSpeed>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<costList>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<Steel>145</Steel>
+			<Plasteel>20</Plasteel>
+			<Uranium>50</Uranium>
+		</costList>
+		<researchPrerequisites>
+			<li>VFEP_SpecialisedWarcaskets</li>
+		</researchPrerequisites>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Legs</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketAerial/WarcasketAerial</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>WarcasketHussar</li>
+				<li>WarcasketAll</li>
+			</tags>
+		</apparel>
+		<modExtensions>
+			<li Class="VFECore.ApparelExtension">
+				<traitsOnEquip>
+					<li>VFEP_WarcasketTrait</li>
+				</traitsOnEquip>
+				<traitsOnUnequip>
+					<li>VFEP_Shellcasket</li>
+				</traitsOnUnequip>
+</li>
+		</modExtensions>
+	</VFEPirates.WarcasketDef>
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
+		<defName>VFEP_WarcasketShoulders_Aerial</defName>
+		<label>aerial warcasket shoulders</label>
+		<shortDescription>Specialized warcasket pauldrons with superior protection and reduced weight, aerodynamically designed and fitted with rocket boosters with large exhausts.</shortDescription>
+		<description>Specialized warcasket pauldrons with superior protection and reduced weight, aerodynamically designed and fitted with rocket boosters with large exhausts.\n\nThe 7th generation warcaskets came after underwhelming results in improving the baseline performance even further, instead focusing on creating designs that - while interchangeable - work better as a set. They were also the first to include plasteel in the design as it appeared more frequently in scavenging and looting. Each piece has a unique function that synergises with those of the same series, making them a truly separate class of mobile armor units.\n\nThe Aerial series is based on the Marine design with a few improvements in key areas, namely that the plating was made more aerodynamic and the addition of shoulder thrusters. The primary goal was to get the pilot behind enemy lines or even right in the middle of them to tie up high priority targets, giving them the catchphrase “death from above”.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/WarcasketAerial/WarcasketAerialShoulders</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>20</Mass>
+			<ArmorRating_Sharp>1.65</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.72</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.86</ArmorRating_Heat>
+			<Insulation_Cold>20</Insulation_Cold>
+			<Insulation_Heat>6</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.1</MoveSpeed>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<costList>
+			<Steel>20</Steel>
+			<Plasteel>20</Plasteel>
+		</costList>
+		<researchPrerequisites>
+			<li>VFEP_SpecialisedWarcaskets</li>
+		</researchPrerequisites>
+		<apparel>
+			<bodyPartGroups>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Hands</li>
+				<li>Neck</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketAerial/WarcasketAerialShoulders</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>WarcasketHussar</li>
+				<li>WarcasketAll</li>
+			</tags>
+		</apparel>
+	</VFEPirates.WarcasketDef>
+	<!-- barrage warcasket -->
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
+		<defName>VFEP_Warcasket_Barrage</defName>
+		<label>barrage warcasket</label>
+		<shortDescription>Specialized warcasket shell with peerless protection and excessive weight, fitted with stabilisers and penetrator pistons on the legs.</shortDescription>
+		<description>Specialized warcasket shell with peerless protection and excessive weight, fitted with stabilisers and penetrator pistons on the legs.\n\nThe 7th generation warcaskets came after underwhelming results in improving the baseline performance even further, instead focusing on creating designs that - while interchangeable - work better as a set. They were also the first to include plasteel in the design as it appeared more frequently in scavenging and looting. Each piece has a unique function that synergises with those of the same series, making them a truly separate class of mobile armor units.\n\nThe Barrage series makes numerous additions to the Cataphract series, with even heavier armour plating and the addition of weapons platform stabilizers “borrowed wholesale” from navy vessels. The objective was to put as much firepower downrange as possible while ignoring incoming enemy fire, their catchphrase being “dodge this”.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/WarcasketBarrage/WarcasketBarrage</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>75</Mass>
+			<ArmorRating_Sharp>2.0</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.9</ArmorRating_Blunt>
+			<ArmorRating_Heat>1.08</ArmorRating_Heat>
+			<Insulation_Cold>44</Insulation_Cold>
+			<Insulation_Heat>18</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-1.0</MoveSpeed>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<costList>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<Steel>240</Steel>
+			<Plasteel>30</Plasteel>
+			<Uranium>50</Uranium>
+		</costList>
+		<researchPrerequisites>
+			<li>VFEP_SpecialisedWarcaskets</li>
+		</researchPrerequisites>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Legs</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketBarrage/WarcasketBarrage</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>WarcasketSpecialised</li>
+				<li>WarcasketSuperHeavy</li>
+				<li>WarcasketAll</li>
+			</tags>
+		</apparel>
+		<modExtensions>
+			<li Class="VFECore.ApparelExtension">
+				<traitsOnEquip>
+					<li>VFEP_WarcasketTrait</li>
+				</traitsOnEquip>
+				<traitsOnUnequip>
+					<li>VFEP_Shellcasket</li>
+				</traitsOnUnequip>
+</li>
+		</modExtensions>
+	</VFEPirates.WarcasketDef>
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
+		<defName>VFEP_WarcasketShoulders_Barrage</defName>
+		<label>barrage warcasket shoulders</label>
+		<shortDescription>Specialized warcasket pauldrons with peerless protection and excessive weight, fitted with arm stabilisers and shoulder-mounted grenade launchers.</shortDescription>
+		<description>Specialized warcasket pauldrons with peerless protection and excessive weight, fitted with arm stabilisers and shoulder-mounted grenade launchers.\n\nThe 7th generation warcaskets came after underwhelming results in improving the baseline performance even further, instead focusing on creating designs that - while interchangeable - work better as a set. They were also the first to include plasteel in the design as it appeared more frequently in scavenging and looting. Each piece has a unique function that synergises with those of the same series, making them a truly separate class of mobile armor units.\n\nThe Barrage series makes numerous additions to the Cataphract series, with even heavier armour plating and the addition of weapons platform stabilizers “borrowed wholesale” from navy vessels. The objective was to put as much firepower downrange as possible while ignoring incoming enemy fire, their catchphrase being “dodge this”.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/WarcasketBarrage/WarcasketBarrageShoulders</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>35</Mass>
+			<ArmorRating_Sharp>2.0</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.9</ArmorRating_Blunt>
+			<ArmorRating_Heat>1.08</ArmorRating_Heat>
+			<Insulation_Cold>20</Insulation_Cold>
+			<Insulation_Heat>6</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.4</MoveSpeed>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<costList>
+			<Steel>75</Steel>
+			<Plasteel>20</Plasteel>
+		</costList>
+		<researchPrerequisites>
+			<li>VFEP_SpecialisedWarcaskets</li>
+		</researchPrerequisites>
+		<apparel>
+			<bodyPartGroups>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Hands</li>
+				<li>Neck</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketBarrage/WarcasketBarrageShoulders</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>WarcasketSpecialised</li>
+				<li>WarcasketSuperHeavy</li>
+				<li>WarcasketAll</li>
+			</tags>
+		</apparel>
+		<modExtensions>
+			<li Class="VFECore.ApparelExtension">
+				<equippedStatFactors>
+					<ShootingAccuracyPawn>1.1</ShootingAccuracyPawn>
+				</equippedStatFactors>
+			</li>
+		</modExtensions>
+	</VFEPirates.WarcasketDef>
+	<!-- hazard warcasket -->
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
+		<defName>VFEP_Warcasket_Hazard</defName>
+		<label>hazard warcasket</label>
+		<shortDescription>Specialized warcasket shell with peerless environment protection for similar weight, fitted with flame retardant material.</shortDescription>
+		<description>Specialized warcasket shell with peerless environment protection for similar weight, fitted with flame retardant material.\n\nThe 7th generation warcaskets came after underwhelming results in improving the baseline performance even further, instead focusing on creating designs that - while interchangeable - work better as a set. They were also the first to include plasteel in the design as it appeared more frequently in scavenging and looting. Each piece has a unique function that synergises with those of the same series, making them a truly separate class of mobile armor units.\n\nThe Hazard series was arguably one of the first of the 7th gen warcaskets, and was designed with utility in mind. The pilot can comfortably walk through a blazing inferno and excessive radiation, either when scavenging the remains of a battle or making its way to overload a ship’s nuclear reactor. Ironically, these pilots’ favourite saying is “I love the smell of napalm, it smells like money”.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/WarcasketHazard/WarcasketHazard</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>60</Mass>
+			<Flammability>0</Flammability>
+			<ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+			<ArmorRating_Heat>2.0</ArmorRating_Heat>
+			<Insulation_Cold>75</Insulation_Cold>
+			<Insulation_Heat>72</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.5</MoveSpeed>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<costList>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<Steel>135</Steel>
+			<Uranium>50</Uranium>
+			<DevilstrandCloth>100</DevilstrandCloth>
+		</costList>
+		<researchPrerequisites>
+			<li>VFEP_SpecialisedWarcaskets</li>
+		</researchPrerequisites>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Legs</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketHazard/WarcasketHazard</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>WarcasketSpecialised</li>
+				<li>WarcasketFlamer</li>
+				<li>WarcasketAll</li>
+			</tags>
+		</apparel>
+		<modExtensions>
+			<li Class="VFECore.ApparelExtension">
+				<equippedStatFactors>
+					<Flammability>0</Flammability>
+				</equippedStatFactors>
+				<traitsOnEquip>
+					<li>VFEP_WarcasketTrait</li>
+				</traitsOnEquip>
+				<traitsOnUnequip>
+					<li>VFEP_Shellcasket</li>
+				</traitsOnUnequip>
+</li>
+		</modExtensions>
+	</VFEPirates.WarcasketDef>
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
+		<defName>VFEP_WarcasketShoulders_Hazard</defName>
+		<label>hazard warcasket shoulders</label>
+		<shortDescription>Specialized warcasket pauldrons with peerless environment protection and similar weight, fitted with flame retardant material.</shortDescription>
+		<description>Specialized warcasket pauldrons with peerless environment protection and similar weight, fitted with flame retardant material.\n\nThe 7th generation warcaskets came after underwhelming results in improving the baseline performance even further, instead focusing on creating designs that - while interchangeable - work better as a set. They were also the first to include plasteel in the design as it appeared more frequently in scavenging and looting. Each piece has a unique function that synergises with those of the same series, making them a truly separate class of mobile armor units.\n\nThe Hazard series was arguably one of the first of the 7th gen warcaskets, and was designed with utility in mind. The pilot can comfortably walk through a blazing inferno and excessive radiation, either when scavenging the remains of a battle or making its way to overload a ship’s nuclear reactor. Ironically, these pilots’ favourite saying is “I love the smell of napalm, it smells like money”.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/WarcasketHazard/WarcasketHazardShoulders</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>20</Mass>
+			<Flammability>0</Flammability>
+			<ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+			<ArmorRating_Heat>2.0</ArmorRating_Heat>
+			<Insulation_Cold>22</Insulation_Cold>
+			<Insulation_Heat>14</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.4</MoveSpeed>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<costList>
+			<Steel>55</Steel>
+			<DevilstrandCloth>50</DevilstrandCloth>
+		</costList>
+		<researchPrerequisites>
+			<li>VFEP_SpecialisedWarcaskets</li>
+		</researchPrerequisites>
+		<apparel>
+			<bodyPartGroups>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Hands</li>
+				<li>Neck</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketHazard/WarcasketHazardShoulders</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>WarcasketSpecialised</li>
+				<li>WarcasketFlamer</li>
+				<li>WarcasketAll</li>
+			</tags>
+		</apparel>
+		<modExtensions>
+			<li Class="VFECore.ApparelExtension">
+				<equippedStatFactors>
+					<Flammability>0.5</Flammability>
+				</equippedStatFactors>
+			</li>
+		</modExtensions>
+	</VFEPirates.WarcasketDef>
+	<!-- shock warcasket -->
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
+		<defName>VFEP_Warcasket_Shock</defName>
+		<label>shock warcasket</label>
+		<shortDescription>Specialized warcasket shell with superior protection with higher weight, fitted with impact mitigators and a large propulsion engine on the back.</shortDescription>
+		<description>Specialized warcasket shell with superior protection with higher weight, fitted with impact mitigators and a large propulsion engine on the back.\n\nThe 7th generation warcaskets came after underwhelming results in improving the baseline performance even further, instead focusing on creating designs that - while interchangeable - work better as a set. They were also the first to include plasteel in the design as it appeared more frequently in scavenging and looting. Each piece has a unique function that synergises with those of the same series, making them a truly separate class of mobile armor units.\n\nThe Shock series differs from the Aerial series in that the goal was not jump into action but practically be deployed from orbit right in the middle of an enemy base. Typically armed with a warcasket broadsword, they excel in melee combat while also benefiting from enemy friendly fire. Their warcry usually is “you’re all trapped here with me”.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/WarcasketShock/WarcasketShock</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>65</Mass>
+			<ArmorRating_Sharp>1.65</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1.24</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.86</ArmorRating_Heat>
+			<Insulation_Cold>36</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.75</MoveSpeed>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<costList>
+			<ComponentIndustrial>10</ComponentIndustrial>
+			<Steel>120</Steel>
+			<Plasteel>45</Plasteel>
+			<Uranium>50</Uranium>
+		</costList>
+		<researchPrerequisites>
+			<li>VFEP_SpecialisedWarcaskets</li>
+		</researchPrerequisites>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Legs</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketShock/WarcasketShock</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>WarcasketHussar</li>
+				<li>WarcasketAll</li>
+			</tags>
+		</apparel>
+		<modExtensions>
+			<li Class="VFECore.ApparelExtension">
+				<traitsOnEquip>
+					<li>VFEP_WarcasketTrait</li>
+				</traitsOnEquip>
+				<traitsOnUnequip>
+					<li>VFEP_Shellcasket</li>
+				</traitsOnUnequip>
+</li>
+		</modExtensions>
+	</VFEPirates.WarcasketDef>
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
+		<defName>VFEP_WarcasketShoulders_Shock</defName>
+		<label>shock warcasket shoulders</label>
+		<shortDescription>Specialized warcasket pauldrons with superior protection and similar weight, onboard targeting computers assist the wearer in melee in both accuracy and evasion.</shortDescription>
+		<description>Specialized warcasket pauldrons with superior protection and similar weight, onboard targeting computers assist the wearer in melee in both accuracy and evasion.\n\nThe 7th generation warcaskets came after underwhelming results in improving the baseline performance even further, instead focusing on creating designs that - while interchangeable - work better as a set. They were also the first to include plasteel in the design as it appeared more frequently in scavenging and looting. Each piece has a unique function that synergises with those of the same series, making them a truly separate class of mobile armor units.\n\nThe Shock series differs from the Aerial series in that the goal was not jump into action but practically be deployed from orbit right in the middle of an enemy base. Typically armed with a warcasket broadsword, they excel in melee combat while also benefiting from enemy friendly fire. Their warcry usually is “you’re all trapped here with me”.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/WarcasketShock/WarcasketShockShoulders</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>25</Mass>
+			<ArmorRating_Sharp>1.65</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1.24</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.86</ArmorRating_Heat>
+			<Insulation_Cold>7</Insulation_Cold>
+			<Insulation_Heat>3</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.2</MoveSpeed>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<costList>
+			<Steel>60</Steel>
+			<Plasteel>10</Plasteel>
+		</costList>
+		<researchPrerequisites>
+			<li>VFEP_SpecialisedWarcaskets</li>
+		</researchPrerequisites>
+		<apparel>
+			<bodyPartGroups>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Hands</li>
+				<li>Neck</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketShock/WarcasketShockShoulders</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>WarcasketHussar</li>
+				<li>WarcasketAll</li>
+			</tags>
+		</apparel>
+		<modExtensions>
+			<li Class="VFECore.ApparelExtension">
+				<equippedStatFactors>
+					<MeleeHitChance>1.2</MeleeHitChance>
+					<MeleeDodgeChance>1.2</MeleeDodgeChance>
+				</equippedStatFactors>
+				<traitsOnEquip>
+					<li>VFEP_WarcasketTrait</li>
+				</traitsOnEquip>
+				<traitsOnUnequip>
+					<li>VFEP_Shellcasket</li>
+				</traitsOnUnequip>
+</li>
+		</modExtensions>
+	</VFEPirates.WarcasketDef>
+	<!-- Privateer armour -->
+	<ThingDef ParentName="ArmorMachineableBase">
+		<defName>VFEP_Apparel_Privateer</defName>
+		<label>privateer armor</label>
+		<description>A variant of marine armor with an integrated grappling hook on the shoulder. The armor is slightly less protective than standard marine armor. The launcher does not require ammunition, but time needs to be reserved between shots to wind it up again.
 Privateers usually specialize in getting in and out of dangerous situations easily. Grappling hook connects to walls and solid rock and allows the users to quickly move to the desired location.</description>
-    <techLevel>Spacer</techLevel>
-    <recipeMaker>
-      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
-      <researchPrerequisite>PoweredArmor</researchPrerequisite>
-      <skillRequirements>
-        <Crafting>7</Crafting>
-      </skillRequirements>
-      <recipeUsers Inherit="False">
-        <li>FabricationBench</li>
-      </recipeUsers>
-    </recipeMaker>
-    <graphicData>
-      <texPath>Things/Pawn/Humanlike/PrivateerArmor/PrivateerArmor</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <generateCommonality>2</generateCommonality>
-    <statBases>
-      <WorkToMake>60000</WorkToMake>
-      <MaxHitPoints>340</MaxHitPoints>
-      <Mass>12</Mass>
-      <Flammability>0.4</Flammability>
-      <ArmorRating_Sharp>1.01</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.49</ArmorRating_Heat>
-      <Insulation_Cold>34</Insulation_Cold>
-      <Insulation_Heat>10</Insulation_Heat>
-      <EquipDelay>14</EquipDelay>
-    </statBases>
-    <equippedStatOffsets>
-      <MoveSpeed>-0.4</MoveSpeed>
-      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
-    </equippedStatOffsets>
-    <thingCategories>
-      <li>ApparelArmor</li>
-    </thingCategories>
-    <tradeTags>
-      <li>PrivateerArmor</li>
-    </tradeTags>
-    <costList>
-      <ComponentSpacer>4</ComponentSpacer>
-      <Plasteel>120</Plasteel>
-      <Uranium>20</Uranium>
-    </costList>
-    <apparel>
-      <bodyPartGroups>
-        <li>Torso</li>
-        <li>Neck</li>
-        <li>Shoulders</li>
-        <li>Arms</li>
-        <li>Legs</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Humanlike/PrivateerArmor/PrivateerArmor</wornGraphicPath>
-      <layers>
-        <li>Middle</li>
-        <li>Shell</li>
-      </layers>
-      <defaultOutfitTags>
-        <li>Soldier</li>
-      </defaultOutfitTags>
-      <useDeflectMetalEffect>true</useDeflectMetalEffect>
-      <tags>
-        <li>VFEP_Privateer</li>
-      </tags>
-    </apparel>
-    <colorGenerator Class="ColorGenerator_Options">
-      <options>
-        <li>
-          <weight>10</weight>
-          <only>(0.9,0.9,0.9)</only>
-        </li>
-        <li>
-          <weight>10</weight>
-          <only>(0.33,0.33,0.33)</only>
-        </li>
-        <li>
-          <weight>10</weight>
-          <only>(0.65,0.65,0.65)</only>
-        </li>
-        <li>
-          <weight>6</weight>
-          <min>(0.3,0.3,0.3)</min>
-          <max>(0.5,0.5,0.5)</max>
-        </li>
-      </options>
-    </colorGenerator>
-    <comps>
-      <li Class="CompProperties_Biocodable"/>
-      <li Class="VFECore.Abilities.CompProperties_AbilitiesApparel">
-        <abilities>
-          <li>VFEP_GrapplingHook</li>
-        </abilities>
-      </li>
-    </comps>
-    <thingSetMakerTags>
-      <li>RewardStandardHighFreq</li>
-    </thingSetMakerTags>
-  </ThingDef>
-  
-  <!-- rumsuit -->
-  
-  <ThingDef ParentName="ArmorMachineableBase">
-    <defName>VFEP_Apparel_Rumsuit</defName>
-    <label>rumsuit</label>
-    <description>A large, bulky suit that allows the wearer to passively produce Rum once every 10 days. However, it is not very pleasant to wear as it feels like wearing damp, humid clothes from excessive sweating.\n\nThe suit includes a high-efficiency filter, heat-exchange filaments and salt precipitators. Urine and feces are processed in thigh pads and throughout the design are tubes that link to different catchpockets. Reprocessed bodily fluids are distilled into an alcoholic derivative of nutrient paste which can be drained when all the pockets are filled.\n\nRemoving the suit causes the accumulated liquid to evaporate, and it takes a long time to put on and properly adjust to the wearer. Due to the design, it can only be worn with an undersuit and the lack of head covering, while reducing efficiency, is purposefully done so it can be worn with head protection.</description>
-    <techLevel>Industrial</techLevel>
-    <recipeMaker>
-      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
-      <researchPrerequisite>VFEP_SweatFermentation</researchPrerequisite>
-      <skillRequirements>
-        <Crafting>6</Crafting>
-      </skillRequirements>
-      <recipeUsers Inherit="False">
-        <li>DrugLab</li>
-      </recipeUsers>
-    </recipeMaker>
-    <graphicData>
-      <texPath>Things/Pawn/Humanlike/Rumsuit/RumSuit</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <generateCommonality>0</generateCommonality>
-    <tradeTags>
-      <li>Rumsuit</li>
-    </tradeTags>
-    <statBases>
-      <WorkToMake>10000</WorkToMake>
-      <MaxHitPoints>100</MaxHitPoints>
-      <Mass>8</Mass>
-      <Flammability>0.4</Flammability>
-      <ArmorRating_Sharp>0</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0</ArmorRating_Blunt>
-      <ArmorRating_Heat>0</ArmorRating_Heat>
-      <Insulation_Cold>12</Insulation_Cold>
-      <Insulation_Heat>0</Insulation_Heat>
-      <EquipDelay>4</EquipDelay>
-    </statBases>
-    <equippedStatOffsets>
-      <MoveSpeed>-0.8</MoveSpeed>
-    </equippedStatOffsets>
-    <thingCategories>
-      <li>Apparel</li>
-    </thingCategories>
-    <costList>
-      <Chemfuel>50</Chemfuel>
-      <Steel>30</Steel>
-    </costList>
-    <apparel>
-      <bodyPartGroups>
-        <li>Torso</li>
-        <li>Neck</li>
-        <li>Shoulders</li>
-        <li>Arms</li>
-        <li>Legs</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Humanlike/Rumsuit/RumSuit</wornGraphicPath>
-      <layers>
-        <li>Middle</li>
-        <li>Shell</li>
-      </layers>
-      <defaultOutfitTags>
-        <li>Worker</li>
-      </defaultOutfitTags>
-    </apparel>
-    <thingSetMakerTags>
-      <li>Rumsuit</li>
-    </thingSetMakerTags>
-  </ThingDef>
-
+		<techLevel>Spacer</techLevel>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisite>PoweredArmor</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>7</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/PrivateerArmor/PrivateerArmor</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<generateCommonality>2</generateCommonality>
+		<statBases>
+			<WorkToMake>60000</WorkToMake>
+			<MaxHitPoints>340</MaxHitPoints>
+			<Mass>12</Mass>
+			<Flammability>0.4</Flammability>
+			<ArmorRating_Sharp>1.01</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.49</ArmorRating_Heat>
+			<Insulation_Cold>34</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat>
+			<EquipDelay>14</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.4</MoveSpeed>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<tradeTags>
+			<li>PrivateerArmor</li>
+		</tradeTags>
+		<costList>
+			<ComponentSpacer>4</ComponentSpacer>
+			<Plasteel>120</Plasteel>
+			<Uranium>20</Uranium>
+		</costList>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Humanlike/PrivateerArmor/PrivateerArmor</wornGraphicPath>
+			<layers>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+			<tags>
+				<li>VFEP_Privateer</li>
+			</tags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.9,0.9,0.9)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.3,0.3,0.3)</min>
+					<max>(0.5,0.5,0.5)</max>
+				</li>
+			</options>
+		</colorGenerator>
+		<comps>
+			<li Class="CompProperties_Biocodable"/>
+			<li Class="VFECore.Abilities.CompProperties_AbilitiesApparel">
+				<abilities>
+					<li>VFEP_GrapplingHook</li>
+				</abilities>
+</li>
+		</comps>
+		<thingSetMakerTags>
+			<li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	<!-- rumsuit -->
+	<ThingDef ParentName="ArmorMachineableBase">
+		<defName>VFEP_Apparel_Rumsuit</defName>
+		<label>rumsuit</label>
+		<description>A large, bulky suit that allows the wearer to passively produce Rum once every 10 days. However, it is not very pleasant to wear as it feels like wearing damp, humid clothes from excessive sweating.\n\nThe suit includes a high-efficiency filter, heat-exchange filaments and salt precipitators. Urine and feces are processed in thigh pads and throughout the design are tubes that link to different catchpockets. Reprocessed bodily fluids are distilled into an alcoholic derivative of nutrient paste which can be drained when all the pockets are filled.\n\nRemoving the suit causes the accumulated liquid to evaporate, and it takes a long time to put on and properly adjust to the wearer. Due to the design, it can only be worn with an undersuit and the lack of head covering, while reducing efficiency, is purposefully done so it can be worn with head protection.</description>
+		<techLevel>Industrial</techLevel>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisite>VFEP_SweatFermentation</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>DrugLab</li>
+			</recipeUsers>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Rumsuit/RumSuit</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<generateCommonality>0</generateCommonality>
+		<tradeTags>
+			<li>Rumsuit</li>
+		</tradeTags>
+		<statBases>
+			<WorkToMake>10000</WorkToMake>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>8</Mass>
+			<Flammability>0.4</Flammability>
+			<ArmorRating_Sharp>0</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0</ArmorRating_Blunt>
+			<ArmorRating_Heat>0</ArmorRating_Heat>
+			<Insulation_Cold>12</Insulation_Cold>
+			<Insulation_Heat>0</Insulation_Heat>
+			<EquipDelay>4</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.8</MoveSpeed>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<costList>
+			<Chemfuel>50</Chemfuel>
+			<Steel>30</Steel>
+		</costList>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Humanlike/Rumsuit/RumSuit</wornGraphicPath>
+			<layers>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+		<thingSetMakerTags>
+			<li>Rumsuit</li>
+		</thingSetMakerTags>
+		<comps>
+			<li Class="VFEPirates.CompProperties_RumSuit">
+				<spawnIntervalRange>600000~600000</spawnIntervalRange>
+				<spawnCount>10</spawnCount>
+				<spawnForbidden>false</spawnForbidden>
+				<writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+				<showMessageIfOwned>false</showMessageIfOwned>
+				<inheritFaction>true</inheritFaction>
+			</li>
+		</comps>
+	</ThingDef>
 </Defs>

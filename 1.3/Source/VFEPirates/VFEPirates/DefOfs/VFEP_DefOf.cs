@@ -20,6 +20,7 @@ namespace VFEPirates
         [MayRequireIdeology] public static HistoryEventDef VFEP_CrewmanDied;
 
         public static SoundDef VFEP_RitualSustainer_Pirate;
+        public static SoundDef VFEP_RumFinished;
 
         public static ThoughtDef MySonDied;
         public static ThoughtDef MyDaughterDied;
@@ -92,5 +93,8 @@ namespace VFEPirates
 
         public static ThingDef VFEP_GrapplingPawn;
         public static ThingDef VFEP_PowerJumpPawn;
+
+        public static ThingDef VFEP_Apparel_Rumsuit;
+        public static ThingDef VFEP_Rum;
     }
 }

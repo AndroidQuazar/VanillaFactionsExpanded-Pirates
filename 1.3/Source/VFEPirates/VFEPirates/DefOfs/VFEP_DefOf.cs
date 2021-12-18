@@ -95,5 +95,11 @@ namespace VFEPirates
         public static ThingDef VFEP_PowerJumpPawn;
 
         public static ThingDef VFEP_Apparel_Rumsuit;
+        public static ThingDef VFEP_PawnLeaving;
+        public static WorldObjectDef VFEP_TravelingPawn;
+        public static EffecterDef VFEP_PowerJumpPawnEffect;
+        public static ThingDef VFEP_PawnIncoming;
+        public static ThingDef VFEP_ActiveDropPawn;
+
     }
 }

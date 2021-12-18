@@ -115,5 +115,21 @@
       </li>
     </subSounds>
   </SoundDef>
-  
+
+	<SoundDef>
+		<defName>VFEP_PowerJumpPackLand</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipPath>Misc/JumpPack/JumpPack_Land</clipPath>
+					</li>
+				</grains>
+				<volumeRange>25</volumeRange>
+				<pitchRange>1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
 </Defs>

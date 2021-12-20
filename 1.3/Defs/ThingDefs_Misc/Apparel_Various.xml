@@ -163,6 +163,16 @@
 				<traitsOnUnequip>
 					<li>VFEP_Shellcasket</li>
 				</traitsOnUnequip>
+				<pawnCapacityMinLevels>
+					<li>
+						<capacity>Moving</capacity>
+						<minLevel>0.7</minLevel>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<minLevel>0.7</minLevel>
+					</li>
+				</pawnCapacityMinLevels>
 			</li>
 		</modExtensions>
 		<comps>
@@ -307,6 +317,16 @@
 				<traitsOnUnequip>
 					<li>VFEP_Shellcasket</li>
 				</traitsOnUnequip>
+				<pawnCapacityMinLevels>
+					<li>
+						<capacity>Moving</capacity>
+						<minLevel>0.7</minLevel>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<minLevel>0.7</minLevel>
+					</li>
+				</pawnCapacityMinLevels>
 			</li>
 		</modExtensions>
 	</VFEPirates.WarcasketDef>
@@ -411,6 +431,16 @@
 				<traitsOnUnequip>
 					<li>VFEP_Shellcasket</li>
 				</traitsOnUnequip>
+				<pawnCapacityMinLevels>
+					<li>
+						<capacity>Moving</capacity>
+						<minLevel>0.7</minLevel>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<minLevel>0.7</minLevel>
+					</li>
+				</pawnCapacityMinLevels>
 			</li>
 		</modExtensions>
 	</VFEPirates.WarcasketDef>
@@ -517,6 +547,16 @@
 				<traitsOnUnequip>
 					<li>VFEP_Shellcasket</li>
 				</traitsOnUnequip>
+				<pawnCapacityMinLevels>
+					<li>
+						<capacity>Moving</capacity>
+						<minLevel>0.7</minLevel>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<minLevel>0.7</minLevel>
+					</li>
+				</pawnCapacityMinLevels>
 			</li>
 		</modExtensions>
 	</VFEPirates.WarcasketDef>
@@ -623,6 +663,16 @@
 				<traitsOnUnequip>
 					<li>VFEP_Shellcasket</li>
 				</traitsOnUnequip>
+				<pawnCapacityMinLevels>
+					<li>
+						<capacity>Moving</capacity>
+						<minLevel>0.7</minLevel>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<minLevel>0.7</minLevel>
+					</li>
+				</pawnCapacityMinLevels>
 			</li>
 		</modExtensions>
 	</VFEPirates.WarcasketDef>
@@ -730,6 +780,16 @@
 				<traitsOnUnequip>
 					<li>VFEP_Shellcasket</li>
 				</traitsOnUnequip>
+				<pawnCapacityMinLevels>
+					<li>
+						<capacity>Moving</capacity>
+						<minLevel>0.7</minLevel>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<minLevel>0.7</minLevel>
+					</li>
+				</pawnCapacityMinLevels>
 			</li>
 		</modExtensions>
 	</VFEPirates.WarcasketDef>
@@ -893,6 +953,16 @@
 				<traitsOnUnequip>
 					<li>VFEP_Shellcasket</li>
 				</traitsOnUnequip>
+				<pawnCapacityMinLevels>
+					<li>
+						<capacity>Moving</capacity>
+						<minLevel>0.7</minLevel>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<minLevel>0.7</minLevel>
+					</li>
+				</pawnCapacityMinLevels>
 			</li>
 		</modExtensions>
 	</VFEPirates.WarcasketDef>
@@ -1025,6 +1095,16 @@
 				<traitsOnUnequip>
 					<li>VFEP_Shellcasket</li>
 				</traitsOnUnequip>
+				<pawnCapacityMinLevels>
+					<li>
+						<capacity>Moving</capacity>
+						<minLevel>0.7</minLevel>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<minLevel>0.7</minLevel>
+					</li>
+				</pawnCapacityMinLevels>
 			</li>
 		</modExtensions>
 	</VFEPirates.WarcasketDef>

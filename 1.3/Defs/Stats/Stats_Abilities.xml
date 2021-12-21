@@ -57,17 +57,4 @@
 	<alwaysHide>true</alwaysHide>
   </StatDef>
   
-  <StatDef>
-    <defName>VFEP_SiegeModeRange </defName>
-    <label>siege mode range</label>
-    <category>BasicsPawn</category>
-    <description>The radius of siege mode.</description>
-    <defaultBaseValue>1</defaultBaseValue>
-    <minValue>0</minValue>
-    <toStringStyle>PercentOne</toStringStyle>
-    <showIfUndefined>false</showIfUndefined>
-    <displayPriorityInCategory>1014</displayPriorityInCategory>
-	<alwaysHide>true</alwaysHide>
-  </StatDef>
-  
 </Defs>

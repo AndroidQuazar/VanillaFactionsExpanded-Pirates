@@ -66,6 +66,7 @@
     <Compile Include="Curses\StorytellerComp_Cursed.cs" />
     <Compile Include="Defs\Defs.cs" />
     <Compile Include="Buildings\Building_WarcasketFoundry.cs" />
+    <Compile Include="HarmonyPatches\Building_TurretGun_DrawExtraSelectionOverlays_Transpiler.cs" />
     <Compile Include="HarmonyPatches\CompPowerBattery_AmountCanAccept_Patch.cs" />
     <Compile Include="HarmonyPatches\GenSpawn_Spawn_Patch.cs" />
     <Compile Include="HarmonyPatches\ITab_Pawn_Gear_DrawThingRow_Transpiler.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="Utilities\StaticStartup.cs" />
     <Compile Include="Thoughts\Thought_Precept_Camaraderie_Exalted.cs" />
     <Compile Include="Verbs\Verb_LaunchProjectileStaticMultiple.cs" />
+    <Compile Include="Verbs\Verb_ShootCone.cs" />
     <Compile Include="VFEPiratesMod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DefOfs\VFEP_DefOf.cs" />
@@ -104,7 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">
-      <Version>1.3.3200</Version>
+      <Version>1.3.3209-beta</Version>
     </PackageReference>
     <PackageReference Include="Lib.Harmony">
       <Version>2.1.1</Version>

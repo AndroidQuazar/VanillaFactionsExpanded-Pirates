@@ -100,6 +100,8 @@ namespace VFEPirates
         public static EffecterDef VFEP_PowerJumpPawnEffect;
         public static ThingDef VFEP_PawnIncoming;
         public static ThingDef VFEP_ActiveDropPawn;
-
+        public static StatDef VFEP_FlightSpeed;
+        public static StatDef VFEP_PowerJumpDetonationRadius;
+        public static StatDef VFEP_PowerJumpRange;
     }
 }

@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using HarmonyLib;
+using RimWorld;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -13,17 +14,15 @@ namespace VFEPirates
 {
     public class PowerJumpExtension : DefModExtension
     {
-        public float powerJumpDetonationRadius;
-        public float powerJumpRange;
         public float fuelConsumption;
         public int detonationDamageAmount;
         public SoundDef powerJumpSoundActivated;
     }
     public class Ability_PowerJump : Ability
     {
-        public float Range => this.def.GetModExtension<PowerJumpExtension>().powerJumpRange;
+        public float Range => this.pawn.GetStatValue(VFEP_DefOf.VFEP_PowerJumpRange);
         public float FuelConsumption => this.def.GetModExtension<PowerJumpExtension>().fuelConsumption;
-        public float DetonationRadius => this.def.GetModExtension<PowerJumpExtension>().powerJumpDetonationRadius;
+        public float DetonationRadius => this.pawn.GetStatValue(VFEP_DefOf.VFEP_PowerJumpDetonationRadius);
         public int DetonationDamageAmount => this.def.GetModExtension<PowerJumpExtension>().detonationDamageAmount;
         public SoundDef PowerJumpSoundActivated => this.def.GetModExtension<PowerJumpExtension>().powerJumpSoundActivated;
         public override bool CanHitTarget(LocalTargetInfo target)
@@ -64,6 +63,17 @@ namespace VFEPirates
 
     public class PawnFlyer_PowerJump : AbilityPawnFlyer
     {
+        public override void SpawnSetup(Map map, bool respawningAfterLoad)
+        {
+            base.SpawnSetup(map, respawningAfterLoad);
+            if (!respawningAfterLoad)
+            {
+                float a = Mathf.Max(Traverse.Create(this).Field<float>("flightDistance").Value, 1f) / this.FlyingPawn.GetStatValue(VFEP_DefOf.VFEP_FlightSpeed);
+                a = Mathf.Max(a, def.pawnFlyer.flightDurationMin);
+                ticksFlightTime = a.SecondsToTicks();
+                ticksFlying = 0;
+            }
+        }
         public override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
             var vector = this.position;

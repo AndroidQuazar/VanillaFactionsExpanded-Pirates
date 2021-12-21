@@ -2,7 +2,7 @@
 <Defs>
 
   <StatDef>
-    <defName>powerJumpRange</defName>
+    <defName>VFEP_PowerJumpRange</defName>
     <label>power jump range</label>
     <category>Apparel</category>
     <description>The maximum distance of a power jump.</description>
@@ -15,7 +15,7 @@
   </StatDef>
 
   <StatDef>
-    <defName>powerJumpDetonationRadius</defName>
+    <defName>VFEP_PowerJumpDetonationRadius</defName>
     <label>power jump detonation radius</label>
     <category>Apparel</category>
     <description>The radius of the area of detonation.</description>
@@ -28,8 +28,8 @@
   </StatDef>
   
   <StatDef>
-    <defName>flightSpeed</defName>
-    <label>power jump detonation radius</label>
+    <defName>VFEP_FlightSpeed</defName>
+    <label>power jump flight speed</label>
     <category>Apparel</category>
 	<toStringStyle>FloatOne</toStringStyle>
     <description>The speed of a power jump.</description>

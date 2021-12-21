@@ -60,7 +60,7 @@
         <range>28.9</range>
         <ticksBetweenBurstShots>17</ticksBetweenBurstShots>
         <burstShotCount>3</burstShotCount>
-        <soundCast>VFEP_Shot_Minigun</soundCast>
+        <soundCast>Shot_Autocannon</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
@@ -307,7 +307,7 @@
         <range>30.9</range>
         <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
         <burstShotCount>25</burstShotCount>
-        <soundCast>Shot_Minigun</soundCast>
+        <soundCast>VFEP_Shot_Minigun</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>

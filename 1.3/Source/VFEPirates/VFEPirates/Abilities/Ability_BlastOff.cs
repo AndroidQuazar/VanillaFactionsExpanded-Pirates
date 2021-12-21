@@ -98,7 +98,6 @@ namespace VFEPirates
             {
                 comp.UsedOnce();
             }
-
             var map = this.pawn.Map;
             transporter = ThingMaker.MakeThing(ThingDefOf.TransportPod) as ThingWithComps;
             GenSpawn.Spawn(transporter, this.pawn.Position, map);
@@ -124,7 +123,8 @@ namespace VFEPirates
             compTransporter.parent.Destroy();
             GenSpawn.Spawn(obj, compTransporter.parent.Position, map);
             CameraJumper.TryHideWorld();
-
+            transporter = null;
+            cachedCompTransporter = null;
         }
 
         public static string TargetingLabelGetter(GlobalTargetInfo target, int tile, int maxLaunchDistance, IEnumerable<IThingHolder> pods, Action<int, TransportPodsArrivalAction> launchAction, CompLaunchable launchable)

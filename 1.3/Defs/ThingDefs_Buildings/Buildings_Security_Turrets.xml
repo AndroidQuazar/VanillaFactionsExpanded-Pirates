@@ -51,8 +51,9 @@
       <li>VFEP_Artillery_FieldGun</li>
     </weaponTags>
     <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
+      <li Class="VFEPirates.VerbProps_ShootCone">
+        <verbClass>VFEPirates.Verb_ShootCone</verbClass>
+        <coneAngle>45</coneAngle>
         <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
         <warmupTime>4.0</warmupTime>
         <forcedMissRadius>9</forcedMissRadius>
@@ -60,7 +61,7 @@
         <isMortar>true</isMortar>
         <requireLineOfSight>true</requireLineOfSight>
         <minRange>29.9</minRange>
-        <range>500</range>
+        <range>64</range>
         <burstShotCount>1</burstShotCount>
         <soundCast>VFEP_Shot_FieldCannon</soundCast>
         <muzzleFlashScale>16</muzzleFlashScale>
@@ -162,10 +163,11 @@
       <li>VFEP_Artillery_Cabbin</li>
     </weaponTags>
     <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
+      <li Class="VFEPirates.VerbProps_ShootCone">
+        <verbClass>VFEPirates.Verb_ShootCone</verbClass>
+        <coneAngle>180</coneAngle>
         <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
-		<defaultProjectile>VFEP_Bullet_Cannonball</defaultProjectile>
+		    <defaultProjectile>VFEP_Bullet_Cannonball</defaultProjectile>
         <warmupTime>4.0</warmupTime>
         <forcedMissRadius>9</forcedMissRadius>
         <forcedMissRadiusClassicMortars>13</forcedMissRadiusClassicMortars>

@@ -225,6 +225,7 @@
     </statBases>
     <equippedStatOffsets>
 	  <MoveSpeed>-0.1</MoveSpeed>
+	  <powerJumpRange>10</powerJumpRange>
       <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.1</SlaveSuppressionOffset>
     </equippedStatOffsets>
     <costList>

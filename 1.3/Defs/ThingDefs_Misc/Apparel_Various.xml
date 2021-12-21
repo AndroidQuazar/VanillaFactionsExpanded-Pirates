@@ -609,6 +609,7 @@
 		</statBases>
 		<equippedStatOffsets>
 			<MoveSpeed>-0.5</MoveSpeed>
+			<powerJumpRange>5</powerJumpRange>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
 		</equippedStatOffsets>
 		<costList>
@@ -639,6 +640,9 @@
 		</apparel>
 		<modExtensions>
 			<li Class="VFECore.ApparelExtension">
+				<equippedStatFactors>
+					<flightSpeed>1.5</flightSpeed>
+				</equippedStatFactors>
 				<traitsOnEquip>
 					<li>VFEP_WarcasketTrait</li>
 				</traitsOnEquip>
@@ -674,9 +678,13 @@
 			<Insulation_Cold>20</Insulation_Cold>
 			<Insulation_Heat>6</Insulation_Heat>
 			<EquipDelay>1</EquipDelay>
+			<powerJumpRange>0</powerJumpRange>
+			<powerJumpDetonationRadius>3</powerJumpDetonationRadius>
+			<flightSpeed>12</flightSpeed>
 		</statBases>
 		<equippedStatOffsets>
 			<MoveSpeed>-0.1</MoveSpeed>
+			<powerJumpRange>5</powerJumpRange>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
 		</equippedStatOffsets>
 		<costList>
@@ -704,6 +712,13 @@
 				<li>WarcasketAll</li>
 			</tags>
 		</apparel>
+		<modExtensions>
+			<li Class="VFECore.ApparelExtension">
+				<equippedStatFactors>
+					<flightSpeed>1.5</flightSpeed>
+				</equippedStatFactors>
+			</li>
+		</modExtensions>
 		<comps>
 			<li Class="CompProperties_Reloadable">
 				<maxCharges>100</maxCharges>

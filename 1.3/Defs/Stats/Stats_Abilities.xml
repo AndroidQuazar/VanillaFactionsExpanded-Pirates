@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <StatDef>
+    <defName>powerJumpRange</defName>
+    <label>power jump range</label>
+    <category>Apparel</category>
+    <description>The maximum distance of a power jump.</description>
+	<toStringStyle>FloatOne</toStringStyle>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>0</minValue>
+    <hideAtValue>0</hideAtValue>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>1010</displayPriorityInCategory>
+  </StatDef>
+
+  <StatDef>
+    <defName>powerJumpDetonationRadius</defName>
+    <label>power jump detonation radius</label>
+    <category>Apparel</category>
+    <description>The radius of the area of detonation.</description>
+	<toStringStyle>FloatOne</toStringStyle>
+    <defaultBaseValue>3</defaultBaseValue>
+    <minValue>3</minValue>
+    <hideAtValue>0</hideAtValue>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>1011</displayPriorityInCategory>
+  </StatDef>
+  
+  <StatDef>
+    <defName>flightSpeed</defName>
+    <label>power jump detonation radius</label>
+    <category>Apparel</category>
+	<toStringStyle>FloatOne</toStringStyle>
+    <description>The speed of a power jump.</description>
+    <defaultBaseValue>12</defaultBaseValue>
+    <minValue>12</minValue>
+    <hideAtValue>0</hideAtValue>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>1012</displayPriorityInCategory>
+  </StatDef>
+  
+</Defs>

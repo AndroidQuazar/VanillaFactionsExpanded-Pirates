@@ -35,16 +35,11 @@ namespace VFEPirates.HarmonyPatches
         }
         public static void DrawConeForDirectionalTurret(IntVec3 center, float radius, Building_TurretGun instance)
         {
-            //Draw cone instead of radius ring for directional turret
-            if((instance.AttackVerb is Verb_ShootCone verb_ShootCone))
-            {
-                verb_ShootCone.DrawHighlight(verb_ShootCone.CurrentTarget);
-            }
-            else
+            //Don't draw radius ring for directional turrets
+            if(!(instance.AttackVerb is Verb_ShootCone))
             {
                 GenDraw.DrawRadiusRing(instance.Position, radius);
             }
         }
-
     }
 }

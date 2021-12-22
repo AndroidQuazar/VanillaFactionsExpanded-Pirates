@@ -66,7 +66,9 @@
     <Compile Include="Curses\StorytellerComp_Cursed.cs" />
     <Compile Include="Defs\Defs.cs" />
     <Compile Include="Buildings\Building_WarcasketFoundry.cs" />
+    <Compile Include="HarmonyPatches\Building_TurretGun_DrawExtraSelectionOverlays_Transpiler - Copy.cs" />
     <Compile Include="HarmonyPatches\Building_TurretGun_DrawExtraSelectionOverlays_Transpiler.cs" />
+    <Compile Include="HarmonyPatches\Building_TurretGun_IsValidTarget_Patch.cs" />
     <Compile Include="HarmonyPatches\CompPowerBattery_AmountCanAccept_Patch.cs" />
     <Compile Include="HarmonyPatches\GenSpawn_Spawn_Patch.cs" />
     <Compile Include="HarmonyPatches\ITab_Pawn_Gear_DrawThingRow_Transpiler.cs" />
@@ -76,6 +78,7 @@
     <Compile Include="HarmonyPatches\StorytellerComp_RandomMain_ChooseRandomCategory_Transpiler.cs" />
     <Compile Include="HarmonyPatches\StorytellerUtilityPopulation_CalculatePopulationIntent_Patch.cs" />
     <Compile Include="HarmonyPatches\TaleUtility_Notify_PawnDied_Patch.cs" />
+    <Compile Include="HarmonyPatches\TurretTop_get_CurRotation_Patch.cs" />
     <Compile Include="RaidStrategy\Building_CrashedShip.cs" />
     <Compile Include="ScenPart_LowOrbitCrash.cs" />
     <Compile Include="Stats\StatPart_CurseOfPestilence.cs" />

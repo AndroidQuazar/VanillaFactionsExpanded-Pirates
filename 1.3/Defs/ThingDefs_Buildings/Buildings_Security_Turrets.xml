@@ -30,7 +30,9 @@
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <building>
       <turretGunDef>VFEP_Artillery_FieldGun</turretGunDef>
-	  <turretTopDrawSize>3</turretTopDrawSize>
+	    <turretTopDrawSize>3</turretTopDrawSize>
+      <turretBurstWarmupTime>2.0</turretBurstWarmupTime>
+      <turretBurstCooldownTime>14.0</turretBurstCooldownTime>
     </building>
   <uiIconPath>Things/Building/Security/DirectionalFieldCannon_MenuIcon</uiIconPath>
   <uiIconScale>0.9</uiIconScale>
@@ -55,13 +57,13 @@
         <verbClass>VFEPirates.Verb_ShootCone</verbClass>
         <coneAngle>45</coneAngle>
         <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
-        <warmupTime>4.0</warmupTime>
+        <warmupTime>2.0</warmupTime>
         <forcedMissRadius>9</forcedMissRadius>
         <forcedMissRadiusClassicMortars>13</forcedMissRadiusClassicMortars>
         <isMortar>true</isMortar>
         <requireLineOfSight>true</requireLineOfSight>
-        <minRange>29.9</minRange>
-        <range>64</range>
+        <minRange>5</minRange>
+        <range>500</range>
         <burstShotCount>1</burstShotCount>
         <soundCast>VFEP_Shot_FieldCannon</soundCast>
         <muzzleFlashScale>16</muzzleFlashScale>
@@ -75,6 +77,7 @@
       <li Class="CompProperties_ChangeableProjectile" />
     </comps>
     <building>
+
       <fixedStorageSettings>
         <filter>
           <categories>
@@ -173,7 +176,7 @@
         <forcedMissRadiusClassicMortars>13</forcedMissRadiusClassicMortars>
         <isMortar>true</isMortar>
         <requireLineOfSight>true</requireLineOfSight>
-        <minRange>9.9</minRange>
+        <minRange>5</minRange>
         <range>50.9</range>
         <burstShotCount>1</burstShotCount>
         <soundCast>VFEP_Shot_Cannon</soundCast>

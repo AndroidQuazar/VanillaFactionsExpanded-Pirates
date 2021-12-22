@@ -55,6 +55,9 @@
 		<targetMode>Self</targetMode>
 		<iconPath>UI/Abilities/SiegeModeOn</iconPath>
 		<cooldownTime>600</cooldownTime>
+		<cooldownTimeStatFactors>
+			<VFEP_SiegeModeCooldown>1</VFEP_SiegeModeCooldown>
+		</cooldownTimeStatFactors>
 		<modExtensions>
 			<li Class="VFEPirates.SiegeModeExtension">
 				<siegeModeHediff>VFEP_SiegeMode</siegeModeHediff>

@@ -41,10 +41,9 @@
     <defName>VFEP_WarcasketMeleeWeapon_CombatKnife</defName>
     <label>warcasket combat knife</label>
     <description>An upscaled version of the combat knife designed for use by a warcasket. It is only still called a knife due to size comparison to a warcasket, but it is capable of cleaving a man in half and is just as large. The preferred weapon for the faster moving warcaskets that prioritize lightly armored, isolated targets.</description>
+	<thingClass>VFECore.ThingWithFloorGraphic</thingClass>
     <graphicData>
       <texPath>Things/Item/Weapons/WarcasketCombatKnife</texPath>
-      <onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
-	  <drawSize>1</drawSize>
     </graphicData>
     <statBases>
 	  <MarketValue>870</MarketValue>
@@ -84,6 +83,16 @@
         <Crafting>7</Crafting>
       </skillRequirements>
     </recipeMaker>
+	<modExtensions>
+		<li Class="VFECore.FloorGraphicExtension">
+			<graphicData>
+				<graphicClass>Graphic_Single</graphicClass>
+				<texPath>Things/Item/WeaponsBoxed/WarcasketCombatKnife_OnFloor</texPath>
+				<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+				<drawSize>1</drawSize>
+			</graphicData>
+		</li>
+	</modExtensions>
   </ThingDef>
   
   <ThingDef ParentName="VFEP_BaseMeleeWeapon_Warcasket">

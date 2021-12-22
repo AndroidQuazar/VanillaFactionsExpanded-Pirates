@@ -225,6 +225,7 @@
     </statBases>
     <equippedStatOffsets>
 	  <MoveSpeed>-0.1</MoveSpeed>
+	  <VFEP_PowerJumpRange>10</VFEP_PowerJumpRange>
       <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.1</SlaveSuppressionOffset>
     </equippedStatOffsets>
     <costList>
@@ -296,6 +297,13 @@
 		<li>WarcasketAll</li>
       </tags>
     </apparel>
+		<modExtensions>
+			<li Class="VFECore.ApparelExtension">
+				<equippedStatFactors>
+					<VFEP_SiegeModeRange>2</VFEP_SiegeModeRange>
+				</equippedStatFactors>
+			</li>
+		</modExtensions>
   </VFEPirates.WarcasketDef>
   
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketHelmetBase">

@@ -1,5 +1,5 @@
 ﻿using HarmonyLib;
-using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Verse;
@@ -19,7 +19,14 @@ namespace VFEPirates
         {
             foreach (var def in DefDatabase<CurseDef>.AllDefs)
             {
-                def.Worker.DoPatches(VFEPiratesMod.harmony);
+				try
+				{
+                    def.Worker.DoPatches(VFEPiratesMod.harmony);
+                }
+                catch (Exception ex)
+				{
+                    Log.Error($"Exception thrown while initializing curses. Worker = \"{def.Worker}\" Exception = {ex.Message}");
+				}
             }
         }
         private static void FillWarcasketDefLists()

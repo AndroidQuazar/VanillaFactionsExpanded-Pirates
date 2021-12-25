@@ -58,6 +58,7 @@
     <Compile Include="Comps\CompRumSuit.cs" />
     <Compile Include="Comps\Properties\CompProperties_RumSuit.cs" />
     <Compile Include="Curses\CurseDef.cs" />
+    <Compile Include="Curses\CurseOfTheEyePatch.cs" />
     <Compile Include="Curses\CurseOfGluttony.cs" />
     <Compile Include="Curses\CurseOfBlind.cs" />
     <Compile Include="Curses\CurseOfInstaKill.cs" />

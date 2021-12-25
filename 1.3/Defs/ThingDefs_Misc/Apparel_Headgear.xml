@@ -59,7 +59,6 @@
       <wornGraphicPath>Things/Pawn/Warcasketlike/Warcasket/WarcasketHelmet</wornGraphicPath>
       <layers>
         <li>Overhead</li>
-		<li>EyeCover</li>
       </layers>
       <tags>
         <li>Warcasket</li>
@@ -106,7 +105,6 @@
       <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketMarine/WarcasketMarineHelmet</wornGraphicPath>
       <layers>
         <li>Overhead</li>
-		<li>EyeCover</li>
       </layers>
       <tags>
 		<li>WarcasketVeteran</li>
@@ -150,7 +148,6 @@
       <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketRecon/WarcasketReconHelmet</wornGraphicPath>
       <layers>
         <li>Overhead</li>
-		<li>EyeCover</li>
       </layers>
       <tags>
 		<li>WarcasketVeteran</li>
@@ -195,7 +192,6 @@
       <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketCataphract/WarcasketCataphractHelmet</wornGraphicPath>
       <layers>
         <li>Overhead</li>
-		<li>EyeCover</li>
       </layers>
       <tags>
 		<li>WarcasketHeavy</li>
@@ -243,7 +239,6 @@
       <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketAerial/WarcasketAerialHelmet</wornGraphicPath>
       <layers>
         <li>Overhead</li>
-		<li>EyeCover</li>
       </layers>
       <tags>
 		<li>WarcasketHussar</li>
@@ -289,7 +284,6 @@
       <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketBarrage/WarcasketBarrageHelmet</wornGraphicPath>
       <layers>
         <li>Overhead</li>
-		<li>EyeCover</li>
       </layers>
       <tags>
 		<li>WarcasketSpecialised</li>
@@ -343,7 +337,6 @@
       <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketHazard/WarcasketHazardHelmet</wornGraphicPath>
       <layers>
         <li>Overhead</li>
-		<li>EyeCover</li>
       </layers>
       <tags>
 		<li>WarcasketSpecialised</li>
@@ -398,7 +391,6 @@
       <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketShock/WarcasketShockHelmet</wornGraphicPath>
       <layers>
         <li>Overhead</li>
-		<li>EyeCover</li>
       </layers>
       <tags>
 		<li>WarcasketHussar</li>

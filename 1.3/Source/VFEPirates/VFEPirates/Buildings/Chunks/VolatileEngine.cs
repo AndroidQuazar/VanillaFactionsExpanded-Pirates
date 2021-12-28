@@ -83,5 +83,16 @@ namespace VFEPirates
                 }
             }
         }
+
+        public override string CompInspectStringExtra()
+        {
+            int tickL = (6 * 2500) - ticksCount;
+            if (tickL > 0)
+            {
+                string str = "VFEP.ExplodeIn".Translate() + " " + tickL.ToStringTicksToPeriod(false) + "\n" + base.CompInspectStringExtra();
+                return str.TrimEndNewlines();
+            }
+            return base.CompInspectStringExtra();
+        }
     }
 }

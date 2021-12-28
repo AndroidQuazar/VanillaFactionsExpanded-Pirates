@@ -9,4 +9,6 @@
 	<VFEP_NextSpawnedRumIn>Producing rum from bodily fluids in</VFEP_NextSpawnedRumIn>
 	<VFEP.MessagePawnArrived>{PAWN_nameDef} have arrived.</VFEP.MessagePawnArrived>
 	<VFEP.RequiresWarcasket>Requires warcasket</VFEP.RequiresWarcasket>
+
+	<VFEP.ExplodeIn>Will explode in</VFEP.ExplodeIn>
 </LanguageData>

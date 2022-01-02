@@ -291,13 +291,6 @@
 		<li>WarcasketAll</li>
       </tags>
     </apparel>
-		<modExtensions>
-			<li Class="VFECore.ApparelExtension">
-				<equippedStatFactors>
-					<VFEP_SiegeModeRange>2</VFEP_SiegeModeRange>
-				</equippedStatFactors>
-			</li>
-		</modExtensions>
   </VFEPirates.WarcasketDef>
   
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketHelmetBase">

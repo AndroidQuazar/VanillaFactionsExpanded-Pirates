@@ -93,8 +93,6 @@
 		<castTime>60</castTime>
 		<modExtensions>
 			<li Class="VFEPirates.PowerJumpExtension">
-				<powerJumpRange>15</powerJumpRange>
-				<powerJumpDetonationRadius>3</powerJumpDetonationRadius>
 				<fuelConsumption>20</fuelConsumption>
 				<detonationDamageAmount>15</detonationDamageAmount>
 			</li>

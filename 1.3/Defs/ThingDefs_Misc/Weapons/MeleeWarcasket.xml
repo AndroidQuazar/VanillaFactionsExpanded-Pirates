@@ -128,6 +128,16 @@
 		<armorPenetration>0.5</armorPenetration>
       </li>
     </tools>
+	<modExtensions>
+		<li Class="VFECore.FloorGraphicExtension">
+			<graphicData>
+				<graphicClass>Graphic_Single</graphicClass>
+				<texPath>Things/Item/WeaponsBoxed/WarcasketBroadsword_OnFloor</texPath>
+				<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+				<drawSize>1</drawSize>
+			</graphicData>
+		</li>
+	</modExtensions>
   </ThingDef>
 
 </Defs>

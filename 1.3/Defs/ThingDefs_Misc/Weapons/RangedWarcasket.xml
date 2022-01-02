@@ -89,6 +89,16 @@
         <cooldownTime>3</cooldownTime>
       </li>
     </tools>
+	<modExtensions>
+		<li Class="VFECore.FloorGraphicExtension">
+			<graphicData>
+				<graphicClass>Graphic_Single</graphicClass>
+				<texPath>Things/Item/WeaponsBoxed/WarcasketAutorifle_OnFloor</texPath>
+				<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+				<drawSize>1</drawSize>
+			</graphicData>
+		</li>
+	</modExtensions>
   </ThingDef>
   
   <ThingDef ParentName="BaseBullet">
@@ -161,6 +171,16 @@
         <cooldownTime>3.5</cooldownTime>
       </li>
     </tools>
+	<modExtensions>
+		<li Class="VFECore.FloorGraphicExtension">
+			<graphicData>
+				<graphicClass>Graphic_Single</graphicClass>
+				<texPath>Things/Item/WeaponsBoxed/WarcasketUraniumSlugRifle_OnFloor</texPath>
+				<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+				<drawSize>1</drawSize>
+			</graphicData>
+		</li>
+	</modExtensions>
   </ThingDef>
   
   <ThingDef ParentName="BaseBullet">
@@ -233,6 +253,16 @@
         <cooldownTime>2.5</cooldownTime>
       </li>
     </tools>
+	<modExtensions>
+		<li Class="VFECore.FloorGraphicExtension">
+			<graphicData>
+				<graphicClass>Graphic_Single</graphicClass>
+				<texPath>Things/Item/WeaponsBoxed/WarcasketSlugThrower_OnFloor</texPath>
+				<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+				<drawSize>1</drawSize>
+			</graphicData>
+		</li>
+	</modExtensions>
   </ThingDef>
   
   <ThingDef ParentName="BaseBullet">
@@ -306,6 +336,16 @@
         <cooldownTime>4</cooldownTime>
       </li>
     </tools>
+	<modExtensions>
+		<li Class="VFECore.FloorGraphicExtension">
+			<graphicData>
+				<graphicClass>Graphic_Single</graphicClass>
+				<texPath>Things/Item/WeaponsBoxed/WarcasketMinigun_OnFloor</texPath>
+				<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+				<drawSize>1</drawSize>
+			</graphicData>
+		</li>
+	</modExtensions>
   </ThingDef>
   
   <ThingDef ParentName="BaseBullet">
@@ -384,6 +424,16 @@
         <cooldownTime>3</cooldownTime>
       </li>
     </tools>
+	<modExtensions>
+		<li Class="VFECore.FloorGraphicExtension">
+			<graphicData>
+				<graphicClass>Graphic_Single</graphicClass>
+				<texPath>Things/Item/WeaponsBoxed/WarcasketGrenadeLauncher_OnFloor</texPath>
+				<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+				<drawSize>1</drawSize>
+			</graphicData>
+		</li>
+	</modExtensions>
   </ThingDef>
   
   <ThingDef ParentName="VFEP_BaseWarcasketGun">
@@ -444,6 +494,16 @@
         <cooldownTime>3</cooldownTime>
       </li>
     </tools>
+	<modExtensions>
+		<li Class="VFECore.FloorGraphicExtension">
+			<graphicData>
+				<graphicClass>Graphic_Single</graphicClass>
+				<texPath>Things/Item/WeaponsBoxed/WarcasketHeavyFlamer_OnFloor</texPath>
+				<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+				<drawSize>1</drawSize>
+			</graphicData>
+		</li>
+	</modExtensions>
   </ThingDef>
   
 	<VFECore.ExpandableProjectileDef ParentName="BaseBullet">

@@ -58,7 +58,7 @@
         <coneAngle>45</coneAngle>
         <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
         <warmupTime>2.0</warmupTime>
-        <forcedMissRadius>9</forcedMissRadius>
+        <forcedMissRadius>5</forcedMissRadius>
         <forcedMissRadiusClassicMortars>13</forcedMissRadiusClassicMortars>
         <isMortar>true</isMortar>
         <requireLineOfSight>true</requireLineOfSight>

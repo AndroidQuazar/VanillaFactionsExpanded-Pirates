@@ -202,8 +202,6 @@
       <damageDef>Bomb</damageDef>
       <explosionRadius>2.9</explosionRadius>
       <ai_IsIncendiary>true</ai_IsIncendiary>
-      <arcHeightFactor>0.2</arcHeightFactor>
-      <shadowSize>0.6</shadowSize>
     </projectile>
   </ThingDef>
   

@@ -95,11 +95,6 @@ namespace VFEPirates
             if (!OccupantAliveAndPresent && occupant != null) DeregisterOccupant();
         }
 
-        public void OpenCustomizationWindow(Pawn entombedPawn, Action onCancel)
-        {
-            Find.WindowStack.Add(new Dialog_WarcasketCustomization(entombedPawn, project => curWarcasketProject = project, onCancel));
-        }
-
         public override IEnumerable<Gizmo> GetGizmos()
         {
             foreach (var g in base.GetGizmos()) yield return g;
@@ -127,7 +122,7 @@ namespace VFEPirates
 
         public void DeregisterOccupant()
         {
-            occupant.jobs.StopAll();
+            occupant?.jobs?.StopAll();
             occupant = null;
         }
 

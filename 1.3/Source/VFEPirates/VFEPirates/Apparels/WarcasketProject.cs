@@ -75,9 +75,6 @@ namespace VFEPirates
             var shoulderPads = ThingMaker.MakeThing(shoulderPadsDef) as Apparel_Warcasket;
             shoulderPads.color = colorShoulderPads;
             pawn.apparel.Wear(shoulderPads, false, true);
-
-            Log.Message(colorArmor + " - " + colorHelmet + " - " + colorShoulderPads);
-            Log.Message(armor.DrawColor + " - " + helmet.DrawColor + " - " + shoulderPads.DrawColor);
         }
 
         public void DoWork(float workAmount, out bool workDone)

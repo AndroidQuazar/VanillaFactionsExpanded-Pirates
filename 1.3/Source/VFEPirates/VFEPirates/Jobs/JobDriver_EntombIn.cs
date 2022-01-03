@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using RimWorld;
 using UnityEngine;
 using Verse;
 using Verse.AI;
+using VFEPirates.Buildings;
 
 namespace VFEPirates
 {
@@ -29,13 +31,32 @@ namespace VFEPirates
             var toil = new Toil();
             toil.initAction = delegate
             {
-                pawn.Strip();
-                Foundry.RegisterOccupant(pawn);
-                Foundry.OpenCustomizationWindow(pawn, () =>
+                var project = new WarcasketProject(pawn, VFEP_DefOf.VFEP_Warcasket_Warcasket, VFEP_DefOf.VFEP_WarcasketShoulders_Warcasket, VFEP_DefOf.VFEP_WarcasketHelmet_Warcasket);
+                var previousApparels = this.pawn.apparel.WornApparel.ListFullCopy();
+                foreach (var apparel in previousApparels)
+                {
+                    this.pawn.apparel.Remove(apparel);
+                }
+                Find.WindowStack.Add(new Dialog_WarcasketCustomization(project, pawn, onAccept: () =>
+                {
+                    Foundry.RegisterOccupant(pawn);
+                    if (pawn.IsWearingWarcasket())
+                        GenSpawn.Spawn(ThingDefOf.ChunkSlagSteel, pawn.Position, pawn.Map);
+                    foreach (var apparel in pawn.apparel.WornApparel.ToList())
+                        apparel.Destroy();
+                    foreach (var apparel in previousApparels)
+                        GenSpawn.Spawn(apparel, pawn.Position, pawn.Map);
+                    Foundry.curWarcasketProject = project;
+                }, onCancel: () =>
                 {
                     Foundry.DeregisterOccupant();
+                    foreach (var apparel in pawn.apparel.WornApparel.ToList())
+                        apparel.Destroy();
+
+                    foreach (var apparel in previousApparels)
+                        pawn.apparel.Wear(apparel);
                     EndJobWith(JobCondition.Incompletable);
-                });
+                }));
             };
             toil.tickAction = delegate { pawn.rotationTracker.FaceCell(pawn.Position + Rot4.South.FacingCell); };
             toil.socialMode = RandomSocialMode.Quiet;

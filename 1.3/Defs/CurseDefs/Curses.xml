@@ -102,7 +102,7 @@
 	<workerClass>VFEPirates.CurseOfBandana</workerClass>
   </VFEPirates.CurseDef>
 
-  <VFEPirates.CurseDef> <!-- TODO: Still needs C# -->
+  <VFEPirates.CurseDef>
 	<defName>VFEP_CurseOfTheEyePatch</defName>
 	<label>Curse of the Eye Patch</label>
 	<description>Ranged accuracy halved.</description>

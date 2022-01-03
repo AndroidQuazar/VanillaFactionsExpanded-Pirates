@@ -12,12 +12,7 @@ namespace VFEPirates
         {
             if (newThing?.def is WarcasketDef)
             {
-                Log.Message("Preventing " + newThing + " from being spawned");
                 return false;
-            }
-            else if (newThing is Apparel)
-            {
-                Log.Message("Spawning " + newThing);
             }
             return true;
         }

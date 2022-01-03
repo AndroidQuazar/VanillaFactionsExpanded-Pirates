@@ -17,11 +17,21 @@
     </tradeTags>
 	<thingSetMakerTags><li>Warcasket</li></thingSetMakerTags>
 	<relicChance>0</relicChance>
+	<recipeMaker Inherit="False" IsNull="True"/>
 	<comps>
 		<li>
 			<compClass>CompOversizedWeapon.CompOversizedWeapon</compClass>
 		</li>
 	</comps>
+	<modExtensions>
+		<li Class="HeavyWeapons.HeavyWeapon">
+			<isHeavy>true</isHeavy>
+			<supportedTraits>
+				<li>VFEP_WarcasketTrait</li>
+			</supportedTraits>
+			<disableOptionLabelKey>VFEP.RequiresWarcasket</disableOptionLabelKey>
+		</li>
+	</modExtensions>
   </ThingDef>
 
   <ThingDef ParentName="VFEP_BaseWarcasketGun">
@@ -42,11 +52,6 @@
       <AccuracyLong>0.45</AccuracyLong>
       <RangedWeapon_Cooldown>2.2</RangedWeapon_Cooldown>
     </statBases>
-    <costList>
-      <Steel>175</Steel>
-	  <Plasteel>20</Plasteel>
-      <ComponentIndustrial>3</ComponentIndustrial>
-    </costList>
     <weaponTags>
       <li>WarcasketBasic</li>
 	  <li>WarcasketVeteran</li>
@@ -84,6 +89,16 @@
         <cooldownTime>3</cooldownTime>
       </li>
     </tools>
+	<modExtensions>
+		<li Class="VFECore.FloorGraphicExtension">
+			<graphicData>
+				<graphicClass>Graphic_Single</graphicClass>
+				<texPath>Things/Item/WeaponsBoxed/WarcasketAutorifle_OnFloor</texPath>
+				<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+				<drawSize>1</drawSize>
+			</graphicData>
+		</li>
+	</modExtensions>
   </ThingDef>
   
   <ThingDef ParentName="BaseBullet">
@@ -110,11 +125,6 @@
       <texPath>Things/Item/Weapons/WarcasketUraniumSlugRifle</texPath>
     </graphicData>
     <soundInteract>Interact_Rifle</soundInteract>
-    <recipeMaker>
-      <skillRequirements>
-        <Crafting>6</Crafting>
-      </skillRequirements>
-    </recipeMaker>
     <statBases>
 	  <MarketValue>1650</MarketValue>
       <WorkToMake>48000</WorkToMake>
@@ -125,12 +135,6 @@
       <AccuracyLong>0.95</AccuracyLong>
       <RangedWeapon_Cooldown>2.2</RangedWeapon_Cooldown>
     </statBases>
-    <costList>
-      <Steel>150</Steel>
-	  <Plasteel>15</Plasteel>
-	  <Uranium>30</Uranium>
-      <ComponentIndustrial>3</ComponentIndustrial>
-    </costList>
     <weaponTags>
 	  <li>WarcasketVeteran</li>
     </weaponTags>
@@ -167,6 +171,16 @@
         <cooldownTime>3.5</cooldownTime>
       </li>
     </tools>
+	<modExtensions>
+		<li Class="VFECore.FloorGraphicExtension">
+			<graphicData>
+				<graphicClass>Graphic_Single</graphicClass>
+				<texPath>Things/Item/WeaponsBoxed/WarcasketUraniumSlugRifle_OnFloor</texPath>
+				<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+				<drawSize>1</drawSize>
+			</graphicData>
+		</li>
+	</modExtensions>
   </ThingDef>
   
   <ThingDef ParentName="BaseBullet">
@@ -193,11 +207,6 @@
       <texPath>Things/Item/Weapons/WarcasketSlugthrower</texPath>
     </graphicData>
     <soundInteract>Interact_Shotgun</soundInteract>
-    <recipeMaker>
-      <skillRequirements>
-        <Crafting>6</Crafting>
-      </skillRequirements>
-    </recipeMaker>
     <statBases>
 	  <MarketValue>1100</MarketValue>
       <WorkToMake>45000</WorkToMake>
@@ -208,10 +217,6 @@
       <AccuracyLong>0.64</AccuracyLong>
       <RangedWeapon_Cooldown>2.75</RangedWeapon_Cooldown>
     </statBases>
-    <costList>
-      <Steel>190</Steel>
-      <ComponentIndustrial>3</ComponentIndustrial>
-    </costList>
     <weaponTags>
 	  <li>WarcasketVeteran</li>
     </weaponTags>
@@ -248,6 +253,16 @@
         <cooldownTime>2.5</cooldownTime>
       </li>
     </tools>
+	<modExtensions>
+		<li Class="VFECore.FloorGraphicExtension">
+			<graphicData>
+				<graphicClass>Graphic_Single</graphicClass>
+				<texPath>Things/Item/WeaponsBoxed/WarcasketSlugThrower_OnFloor</texPath>
+				<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+				<drawSize>1</drawSize>
+			</graphicData>
+		</li>
+	</modExtensions>
   </ThingDef>
   
   <ThingDef ParentName="BaseBullet">
@@ -275,11 +290,6 @@
       <texPath>Things/Item/Weapons/WarcasketMinigun</texPath>
     </graphicData>
     <soundInteract>Interact_Rifle</soundInteract>
-    <recipeMaker>
-      <skillRequirements>
-        <Crafting>7</Crafting>
-      </skillRequirements>
-    </recipeMaker>
     <statBases>
 	  <MarketValue>2240</MarketValue>
       <WorkToMake>55000</WorkToMake>
@@ -290,11 +300,6 @@
       <AccuracyLong>0.18</AccuracyLong>
       <RangedWeapon_Cooldown>2.6</RangedWeapon_Cooldown>
     </statBases>
-    <costList>
-      <Steel>240</Steel>
-	  <Plasteel>10</Plasteel>
-      <ComponentIndustrial>8</ComponentIndustrial>
-    </costList>
     <weaponTags>
 	  <li>WarcasketHeavy</li>
     </weaponTags>
@@ -331,6 +336,16 @@
         <cooldownTime>4</cooldownTime>
       </li>
     </tools>
+	<modExtensions>
+		<li Class="VFECore.FloorGraphicExtension">
+			<graphicData>
+				<graphicClass>Graphic_Single</graphicClass>
+				<texPath>Things/Item/WeaponsBoxed/WarcasketMinigun_OnFloor</texPath>
+				<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+				<drawSize>1</drawSize>
+			</graphicData>
+		</li>
+	</modExtensions>
   </ThingDef>
   
   <ThingDef ParentName="BaseBullet">
@@ -357,11 +372,6 @@
       <texPath>Things/Item/Weapons/WarcasketGrenadeLauncher</texPath>
     </graphicData>
     <soundInteract>Interact_Rifle</soundInteract>
-    <recipeMaker>
-      <skillRequirements>
-        <Crafting>7</Crafting>
-      </skillRequirements>
-    </recipeMaker>
     <statBases>
 	  <MarketValue>1890</MarketValue>
       <WorkToMake>55000</WorkToMake>
@@ -372,11 +382,6 @@
       <AccuracyLong>0.45</AccuracyLong>
       <RangedWeapon_Cooldown>3.0</RangedWeapon_Cooldown>
     </statBases>
-    <costList>
-      <Steel>120</Steel>
-	  <Chemfuel>80</Chemfuel>
-      <ComponentIndustrial>4</ComponentIndustrial>
-    </costList>
     <weaponTags>
 	  <li>WarcasketHeavy</li>
     </weaponTags>
@@ -419,6 +424,16 @@
         <cooldownTime>3</cooldownTime>
       </li>
     </tools>
+	<modExtensions>
+		<li Class="VFECore.FloorGraphicExtension">
+			<graphicData>
+				<graphicClass>Graphic_Single</graphicClass>
+				<texPath>Things/Item/WeaponsBoxed/WarcasketGrenadeLauncher_OnFloor</texPath>
+				<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+				<drawSize>1</drawSize>
+			</graphicData>
+		</li>
+	</modExtensions>
   </ThingDef>
   
   <ThingDef ParentName="VFEP_BaseWarcasketGun">
@@ -429,11 +444,6 @@
       <texPath>Things/Item/Weapons/WarcasketHeavyFlamer</texPath>
     </graphicData>
     <soundInteract>Interact_Rifle</soundInteract>
-    <recipeMaker>
-      <skillRequirements>
-        <Crafting>7</Crafting>
-      </skillRequirements>
-    </recipeMaker>
     <statBases>
 	  <MarketValue>2450</MarketValue>
       <WorkToMake>55000</WorkToMake>
@@ -444,11 +454,6 @@
       <AccuracyLong>0.45</AccuracyLong>
       <RangedWeapon_Cooldown>7.2</RangedWeapon_Cooldown>
     </statBases>
-    <costList>
-      <Steel>200</Steel>
-	  <Chemfuel>160</Chemfuel>
-      <ComponentIndustrial>6</ComponentIndustrial>
-    </costList>
     <weaponTags>
 	  <li>WarcasketFlamer</li>
     </weaponTags>
@@ -489,6 +494,16 @@
         <cooldownTime>3</cooldownTime>
       </li>
     </tools>
+	<modExtensions>
+		<li Class="VFECore.FloorGraphicExtension">
+			<graphicData>
+				<graphicClass>Graphic_Single</graphicClass>
+				<texPath>Things/Item/WeaponsBoxed/WarcasketHeavyFlamer_OnFloor</texPath>
+				<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+				<drawSize>1</drawSize>
+			</graphicData>
+		</li>
+	</modExtensions>
   </ThingDef>
   
 	<VFECore.ExpandableProjectileDef ParentName="BaseBullet">

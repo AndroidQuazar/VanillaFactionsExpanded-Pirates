@@ -18,23 +18,21 @@
       <li>VFEP_WarcasketWeapon</li>
     </tradeTags>
 	<relicChance>0</relicChance>
-    <recipeMaker>
-      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-      <workSkill>Crafting</workSkill>
-      <effectWorking>Smith</effectWorking>
-      <soundWorking>Recipe_Smith</soundWorking>
-      <recipeUsers>
-        <li>FueledSmithy</li>
-		<li>ElectricSmithy</li>
-      </recipeUsers>
-      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
-      <researchPrerequisite>VFEP_WarcasketWeaponry</researchPrerequisite>
-    </recipeMaker>
+	<recipeMaker Inherit="False" IsNull="True"/>
 	<comps>
 		<li>
 			<compClass>CompOversizedWeapon.CompOversizedWeapon</compClass>
 		</li>
 	</comps>
+	<modExtensions>
+		<li Class="HeavyWeapons.HeavyWeapon">
+			<isHeavy>true</isHeavy>
+			<supportedTraits>
+				<li>VFEP_WarcasketTrait</li>
+			</supportedTraits>
+			<disableOptionLabelKey>VFEP.RequiresWarcasket</disableOptionLabelKey>
+		</li>
+	</modExtensions>
   </ThingDef>
 
   <ThingDef ParentName="VFEP_BaseMeleeWeapon_Warcasket">
@@ -110,9 +108,6 @@
       <Mass>30</Mass>
     </statBases>
 	<equippedAngleOffset>-35</equippedAngleOffset>
-    <costList>
-      <Steel>270</Steel>
-    </costList>
     <tools>
       <li>
         <label>point</label>
@@ -133,11 +128,16 @@
 		<armorPenetration>0.5</armorPenetration>
       </li>
     </tools>
-    <recipeMaker>
-      <skillRequirements>
-        <Crafting>7</Crafting>
-      </skillRequirements>
-    </recipeMaker>
+	<modExtensions>
+		<li Class="VFECore.FloorGraphicExtension">
+			<graphicData>
+				<graphicClass>Graphic_Single</graphicClass>
+				<texPath>Things/Item/WeaponsBoxed/WarcasketBroadsword_OnFloor</texPath>
+				<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+				<drawSize>1</drawSize>
+			</graphicData>
+		</li>
+	</modExtensions>
   </ThingDef>
 
 </Defs>

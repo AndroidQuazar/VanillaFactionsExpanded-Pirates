@@ -4,7 +4,7 @@
   <ThingDef ParentName="BuildingBase" Name="VFEP_WarcasketWeaponBoxBase" Abstract="True">
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(1.5, 1.5)</drawSize>
+      <drawSize>(1, 1)</drawSize>
       <shadowData>
         <volume>(0.8, 0.2, 0.8)</volume>
       </shadowData>
@@ -40,6 +40,7 @@
       <li>VFEP_WarcasketWeaponry</li>
     </researchPrerequisites>
 	<designatorDropdown>VFEP_WarcasketWeapon</designatorDropdown>
+    <designationCategory>Security</designationCategory>
 	</ThingDef>
 
   <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
@@ -59,6 +60,11 @@
       <Mass>30</Mass>
       <WorkToBuild>45000</WorkToBuild>
     </statBases>
+	<comps>
+		<li Class="VFEPirates.CompProperties_WeaponBox">
+			<weaponToEquip>VFEP_WarcasketGun_Autorifle</weaponToEquip>
+		</li>
+	</comps>
 	</ThingDef>
 	
   <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
@@ -79,6 +85,11 @@
       <Mass>40</Mass>
       <WorkToBuild>48000</WorkToBuild>
     </statBases>
+	<comps>
+		<li Class="VFEPirates.CompProperties_WeaponBox">
+			<weaponToEquip>VFEP_WarcasketGun_UraniumSlugRifle</weaponToEquip>
+		</li>
+	</comps>
 	</ThingDef>
 	
   <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
@@ -97,6 +108,11 @@
       <Mass>25</Mass>
       <WorkToBuild>45000</WorkToBuild>
     </statBases>
+	<comps>
+		<li Class="VFEPirates.CompProperties_WeaponBox">
+			<weaponToEquip>VFEP_WarcasketGun_Slugthrower</weaponToEquip>
+		</li>
+	</comps>
 	</ThingDef>
 	
   <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
@@ -116,6 +132,11 @@
       <Mass>45</Mass>
       <WorkToBuild>55000</WorkToBuild>
     </statBases>
+	<comps>
+		<li Class="VFEPirates.CompProperties_WeaponBox">
+			<weaponToEquip>VFEP_WarcasketGun_Minigun</weaponToEquip>
+		</li>
+	</comps>
 	</ThingDef>
 
   <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
@@ -135,6 +156,11 @@
       <Mass>30</Mass>
       <WorkToBuild>55000</WorkToBuild>
     </statBases>
+	<comps>
+		<li Class="VFEPirates.CompProperties_WeaponBox">
+			<weaponToEquip>VFEP_WarcasketGun_GrenadeLauncher</weaponToEquip>
+		</li>
+	</comps>
 	</ThingDef>
 	
   <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
@@ -154,6 +180,11 @@
       <Mass>30</Mass>
       <WorkToBuild>55000</WorkToBuild>
     </statBases>
+	<comps>
+		<li Class="VFEPirates.CompProperties_WeaponBox">
+			<weaponToEquip>VFEP_WarcasketGun_HeavyFlamer</weaponToEquip>
+		</li>
+	</comps>
 	</ThingDef>
 	
   <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
@@ -171,6 +202,11 @@
       <Mass>10</Mass>
       <WorkToBuild>25000</WorkToBuild>
     </statBases>
+	<comps>
+		<li Class="VFEPirates.CompProperties_WeaponBox">
+			<weaponToEquip>VFEP_WarcasketMeleeWeapon_CombatKnife</weaponToEquip>
+		</li>
+	</comps>
 	</ThingDef>
 
   <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
@@ -188,6 +224,11 @@
       <Mass>30</Mass>
       <WorkToBuild>35000</WorkToBuild>
     </statBases>
+	<comps>
+		<li Class="VFEPirates.CompProperties_WeaponBox">
+			<weaponToEquip>VFEP_WarcasketMeleeWeapon_Broadsword</weaponToEquip>
+		</li>
+	</comps>
 	</ThingDef>
 
 </Defs>

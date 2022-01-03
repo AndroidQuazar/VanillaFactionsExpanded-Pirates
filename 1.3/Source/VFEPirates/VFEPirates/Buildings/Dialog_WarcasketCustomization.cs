@@ -22,6 +22,8 @@ namespace VFEPirates.Buildings
         private readonly List<WarcasketDef> shoulders;
         private List<Color> allColors;
 
+        private Vector2 scrollPos;
+
         public Dialog_WarcasketCustomization(Pawn pawn, Action<WarcasketProject> onAccept, Action onCancel)
         {
             armors = VFEPiratesMod.allArmorDefs.Where(def => def.IsResearchFinished).ToList();
@@ -105,18 +107,21 @@ namespace VFEPirates.Buildings
         {
             var font = Text.Font;
             var anchor = Text.Anchor;
-            inRect = inRect.ContractedBy(20f, 0f);
+            inRect.xMax -= 20f;
             Text.Font = GameFont.Medium;
             Text.Anchor = TextAnchor.MiddleCenter;
             Widgets.Label(inRect.TakeTopPart(40f), "VFEP.WarcasketCustom".Translate());
-            inRect.y += 5f;
-            var displayRect = inRect.TakeTopPart(200f);
+            inRect.yMin += 5f;
+            var bottomRect = inRect.TakeBottomPart(200f);
+            var viewRect = new Rect(0, 0, inRect.width - 20f, 650f);
+            Widgets.BeginScrollView(inRect, ref scrollPos, viewRect);
+            var displayRect = viewRect.TakeTopPart(200f);
             DoDisplay(displayRect.TakeRightPart(300f).ContractedBy(5f), Rot4.East);
             DoDisplay(displayRect.TakeRightPart(300f).ContractedBy(5f), Rot4.North);
             DoDisplay(displayRect.TakeRightPart(300f).ContractedBy(5f), Rot4.South);
-            inRect.y += 5f;
+            viewRect.yMin += 5f;
             Text.Anchor = TextAnchor.UpperLeft;
-            var partsRect = inRect.TakeTopPart(450);
+            var partsRect = viewRect.TakeTopPart(450);
             DoPartsSelect(partsRect.TakeRightPart(300f).ContractedBy(5f), "VFEP.Helmet".Translate(), helmets, project.helmetDef, def =>
             {
                 project.helmetDef = def;
@@ -132,15 +137,15 @@ namespace VFEPirates.Buildings
                 project.armorDef = def;
                 Notify_SettingsChanged();
             }, ref project.colorArmor, true);
-            inRect.y += 5f;
             Text.Anchor = TextAnchor.MiddleLeft;
-            var infoRect = inRect.TakeTopPart(80f);
+            Widgets.EndScrollView();
+            var infoRect = bottomRect.TakeTopPart(80f);
             var workRect = infoRect.TakeRightPart(150f);
             Text.Font = GameFont.Medium;
             Widgets.Label(workRect.TopHalf(), "VFEP.WorkAmount".Translate());
             workRect = workRect.BottomHalf().ContractedBy(2f);
             Widgets.DrawHighlight(workRect);
-            workRect.x += 10f;
+            workRect.xMin += 10f;
             Text.Font = GameFont.Small;
             Widgets.Label(workRect, project.totalWorkAmount.ToString(CultureInfo.CurrentCulture));
             Text.Font = GameFont.Medium;
@@ -148,16 +153,19 @@ namespace VFEPirates.Buildings
             Text.Font = GameFont.Small;
             infoRect = infoRect.BottomHalf().ContractedBy(2f);
             Widgets.DrawHighlight(infoRect);
-            infoRect.x += 5f;
+            bottomRect.xMin += 5f;
             Widgets.Label(infoRect, project.RequiredIngredients().Join(ing => ing.ToString().Trim('(', ')')));
-            inRect.y += 5f;
-            var buttonsRect = inRect.TopPartPixels(50f).RightPartPixels(255f);
-            buttonsRect.y += 60f;
+            var textRect = bottomRect.LeftPartPixels(bottomRect.width - 300f);
+            var buttonsRect = bottomRect.RightPartPixels(290f);
+            var y = (buttonsRect.height - 60f) / 2;
+            buttonsRect.yMin += y;
+            buttonsRect.yMax -= y;
             if (Widgets.ButtonText(buttonsRect.LeftHalf().ContractedBy(5f), "Cancel".Translate())) OnCancelKeyPressed();
             if (Widgets.ButtonText(buttonsRect.RightHalf().ContractedBy(5f), "Accept".Translate())) OnAcceptKeyPressed();
             Text.Font = GameFont.Tiny;
             Text.Anchor = TextAnchor.UpperLeft;
-            Widgets.Label(inRect.LeftPartPixels(inRect.width - 243f), "VFEP.WarcasketText".Translate().Colorize(ColoredText.SubtleGrayColor));
+            textRect.yMin += 10f;
+            Widgets.Label(textRect, "VFEP.WarcasketText".Translate().Colorize(ColoredText.SubtleGrayColor));
             Text.Font = font;
             Text.Anchor = anchor;
         }

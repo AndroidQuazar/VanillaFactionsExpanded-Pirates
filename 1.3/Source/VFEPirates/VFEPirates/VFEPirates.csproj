@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HeavyWeapons">
+      <HintPath>..\..\..\..\..\VanillaExpandedFramework\1.3\Assemblies\HeavyWeapons.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -51,6 +54,7 @@
     <Compile Include="Abilities\Ability_GrapplingHook.cs" />
     <Compile Include="Abilities\Ability_SiegeMode.cs" />
     <Compile Include="Apparels\Apparel_Warcasket.cs" />
+    <Compile Include="Comps\CompWeaponBox.cs" />
     <Compile Include="Buildings\Chunks\FilthSpawner.cs" />
     <Compile Include="Buildings\Chunks\Fueled.cs" />
     <Compile Include="Buildings\Chunks\VolatileEngine.cs" />
@@ -85,6 +89,7 @@
     <Compile Include="HarmonyPatches\CompPowerBattery_AmountCanAccept_Patch.cs" />
     <Compile Include="HarmonyPatches\GenSpawn_Spawn_Patch.cs" />
     <Compile Include="HarmonyPatches\ITab_Pawn_Gear_DrawThingRow_Transpiler.cs" />
+    <Compile Include="HarmonyPatches\JobGiver_OptimizeApparel_TryGiveJob_Patch.cs" />
     <Compile Include="HarmonyPatches\Page_SelectStorytellerInGame_PreClose_Patch.cs" />
     <Compile Include="HarmonyPatches\Page_SelectStoryteller_CanDoNext_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_TryInteractWith_Patch.cs" />
@@ -92,6 +97,7 @@
     <Compile Include="HarmonyPatches\StorytellerUtilityPopulation_CalculatePopulationIntent_Patch.cs" />
     <Compile Include="HarmonyPatches\TaleUtility_Notify_PawnDied_Patch.cs" />
     <Compile Include="HarmonyPatches\TurretTop_get_CurRotation_Patch.cs" />
+    <Compile Include="Jobs\JobDriver_EquipFromWeaponBox.cs" />
     <Compile Include="RaidStrategy\Building_CrashedShip.cs" />
     <Compile Include="ScenPart_LowOrbitCrash.cs" />
     <Compile Include="Stats\StatPart_CurseOfPestilence.cs" />
@@ -102,6 +108,7 @@
     <Compile Include="Jobs\RecipeWorker_WarcasketRemoval.cs" />
     <Compile Include="Utilities\CursesUtility.cs" />
     <Compile Include="Utilities\HarmonyUtility.cs" />
+    <Compile Include="Utilities\PawnUtility.cs" />
     <Compile Include="Utilities\WeldingUtility.cs" />
     <Compile Include="Jobs\WorkGiver_DoWelding.cs" />
     <Compile Include="MapComponents and GameComponents\GameComponent_LostCrewmenChecker.cs" />

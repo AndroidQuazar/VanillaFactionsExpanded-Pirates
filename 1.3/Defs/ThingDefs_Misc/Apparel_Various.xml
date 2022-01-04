@@ -143,6 +143,7 @@
 			</bodyPartGroups>
 			<wornGraphicPath>Things/Pawn/Warcasketlike/Warcasket/Warcasket</wornGraphicPath>
 			<layers>
+			    <li>OnSkin</li>
 				<li>Middle</li>
 				<li>Shell</li>
 			</layers>

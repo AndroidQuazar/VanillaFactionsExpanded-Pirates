@@ -21,6 +21,7 @@ namespace VFEPirates
 
         public static SoundDef VFEP_RitualSustainer_Pirate;
         public static SoundDef VFEP_RumFinished;
+        public static SoundDef VFEP_ConfettiExplosion;
 
         public static ThoughtDef MySonDied;
         public static ThoughtDef MyDaughterDied;
@@ -43,6 +44,10 @@ namespace VFEPirates
         public static ThoughtDef MyCousinDied;
         public static ThoughtDef MyKinDied;
 
+        public static FleckDef VFEP_ConfettiA;
+        public static FleckDef VFEP_ConfettiB;
+        public static FleckDef VFEP_ConfettiC;
+        public static FleckDef VFEP_ConfettiD;
 
         public static ThingDef VFEP_WarcasketFoundry;
         public static JobDef VFEP_DoWelding;

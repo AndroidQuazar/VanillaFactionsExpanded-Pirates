@@ -15,24 +15,22 @@ namespace VFEPirates.Buildings
         private static readonly Color DisplayBGColor = new Color32(byte.MaxValue, byte.MaxValue, byte.MaxValue, 15);
         private readonly List<WarcasketDef> armors;
         private readonly List<WarcasketDef> helmets;
-        private readonly Action<WarcasketProject> onAccept;
+        private readonly Action onAccept;
         private readonly Action onCancel;
         private readonly Pawn pawn;
         private readonly WarcasketProject project;
         private readonly List<WarcasketDef> shoulders;
         private List<Color> allColors;
-
         private Vector2 scrollPos;
-
-        public Dialog_WarcasketCustomization(Pawn pawn, Action<WarcasketProject> onAccept, Action onCancel)
+        public Dialog_WarcasketCustomization(WarcasketProject project, Pawn pawn, Action onAccept, Action onCancel)
         {
             armors = VFEPiratesMod.allArmorDefs.Where(def => def.IsResearchFinished).ToList();
             shoulders = VFEPiratesMod.allShoulderPadsDefs.Where(def => def.IsResearchFinished).ToList();
             helmets = VFEPiratesMod.allHelmetDefs.Where(def => def.IsResearchFinished).ToList();
-            project = new WarcasketProject(pawn, VFEP_DefOf.VFEP_Warcasket_Warcasket, VFEP_DefOf.VFEP_WarcasketShoulders_Warcasket, VFEP_DefOf.VFEP_WarcasketHelmet_Warcasket);
             this.onAccept = onAccept;
             this.onCancel = onCancel;
             this.pawn = pawn;
+            this.project = project;
             forcePause = true;
             Notify_SettingsChanged();
         }
@@ -63,15 +61,13 @@ namespace VFEPirates.Buildings
         public override void OnAcceptKeyPressed()
         {
             base.OnAcceptKeyPressed();
-            ClearApparel();
-            onAccept(project);
+            onAccept();
             Close();
         }
 
         public override void OnCancelKeyPressed()
         {
             base.OnCancelKeyPressed();
-            ClearApparel();
             onCancel();
             Close();
         }
@@ -91,18 +87,11 @@ namespace VFEPirates.Buildings
 
         private void Notify_SettingsChanged()
         {
-            ClearApparel();
             project.ApplyOn(pawn);
             project.totalWorkAmount = project.armorDef.GetStatValueAbstract(StatDefOf.WorkToMake) + project.shoulderPadsDef.GetStatValueAbstract(StatDefOf.WorkToMake) +
                                       project.helmetDef.GetStatValueAbstract(StatDefOf.WorkToMake);
             PortraitsCache.SetDirty(pawn);
         }
-
-        private void ClearApparel()
-        {
-            foreach (var apparel in pawn.apparel.WornApparel.ToList()) apparel.Destroy();
-        }
-
         public override void DoWindowContents(Rect inRect)
         {
             var font = Text.Font;

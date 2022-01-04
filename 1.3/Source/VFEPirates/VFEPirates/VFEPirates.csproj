@@ -92,6 +92,8 @@
     <Compile Include="HarmonyPatches\JobGiver_OptimizeApparel_TryGiveJob_Patch.cs" />
     <Compile Include="HarmonyPatches\Page_SelectStorytellerInGame_PreClose_Patch.cs" />
     <Compile Include="HarmonyPatches\Page_SelectStoryteller_CanDoNext_Patch.cs" />
+    <Compile Include="HarmonyPatches\Pawn_AnythingToStrip_Patch.cs" />
+    <Compile Include="HarmonyPatches\Pawn_ButcherProducts_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_TryInteractWith_Patch.cs" />
     <Compile Include="HarmonyPatches\StorytellerComp_RandomMain_ChooseRandomCategory_Transpiler.cs" />
     <Compile Include="HarmonyPatches\StorytellerUtilityPopulation_CalculatePopulationIntent_Patch.cs" />

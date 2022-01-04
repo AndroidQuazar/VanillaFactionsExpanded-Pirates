@@ -58,6 +58,10 @@ namespace VFEPirates
                     {
                         var jobDef = VFEP_DefOf.VFEP_EntombIn;
                         string label = "VFEPirates.EntombInWarcasket".Translate();
+                        if (selPawn.WorkTagIsDisabled(WorkTags.Violent))
+                        {
+                            label += "VFEP.EntombInIncapableOfViolenceWarning".Translate(selPawn.Named("PAWN"));
+                        }
                         Action action = delegate
                         {
                             var job = JobMaker.MakeJob(jobDef, this);

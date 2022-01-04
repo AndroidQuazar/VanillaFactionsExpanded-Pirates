@@ -90,6 +90,7 @@
     <Compile Include="HarmonyPatches\GenSpawn_Spawn_Patch.cs" />
     <Compile Include="HarmonyPatches\ITab_Pawn_Gear_DrawThingRow_Transpiler.cs" />
     <Compile Include="HarmonyPatches\JobGiver_OptimizeApparel_TryGiveJob_Patch.cs" />
+    <Compile Include="HarmonyPatches\MentalStateHandler_TryStartMentalState_Patch.cs" />
     <Compile Include="HarmonyPatches\Page_SelectStorytellerInGame_PreClose_Patch.cs" />
     <Compile Include="HarmonyPatches\Page_SelectStoryteller_CanDoNext_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_AnythingToStrip_Patch.cs" />

@@ -22,5 +22,7 @@ assembly over other tasks.</VFEP.WarcasketText>
 	<VFEP.NotEnoughFuel>Not enough chemfuel for power jump.</VFEP.NotEnoughFuel>
 	<VFEP.SiegeModeOff>Siege mode off</VFEP.SiegeModeOff>
 	<VFEP.SiegeModeOn>Siege mode on</VFEP.SiegeModeOn>
-	
+	<VFEPirates.CannotEntomb>Cannot entomp in warcasket: {0}</VFEPirates.CannotEntomb>
+	<VFEPirates.EntombInWarcasket>Entomb in warcasket</VFEPirates.EntombInWarcasket>
+	<VFEP.EntombInIncapableOfViolenceWarning> (Warning: {PAWN_nameDef} is not capable of violence, it will make {PAWN_objective} useless.)</VFEP.EntombInIncapableOfViolenceWarning>
 </LanguageData>

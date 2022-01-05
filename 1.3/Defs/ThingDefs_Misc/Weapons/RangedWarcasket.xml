@@ -2,6 +2,7 @@
 <Defs>
 
   <ThingDef Name="VFEP_BaseWarcasketGun" ParentName="BaseGunWithQuality" Abstract="True">
+    <thingClass>VFECore.ThingWithFloorGraphic</thingClass>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
 	  <drawSize>1.7</drawSize>

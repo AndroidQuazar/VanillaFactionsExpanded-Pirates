@@ -42,6 +42,7 @@
 	<thingClass>VFECore.ThingWithFloorGraphic</thingClass>
     <graphicData>
       <texPath>Things/Item/Weapons/WarcasketCombatKnife</texPath>
+	  <drawSize>1.7</drawSize>
     </graphicData>
     <statBases>
 	  <MarketValue>870</MarketValue>

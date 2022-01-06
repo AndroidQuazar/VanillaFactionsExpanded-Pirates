@@ -8,13 +8,13 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName = "VFEP_Warcasket_Warcasket" or defName = "VFEP_Warcasket_Marine" or defName = "VFEP_Warcasket_Recon" or defName = "VFEP_Warcasket_Cataphract" or defName = "VFEP_Warcasket_Aerial" or defName = "VFEP_Warcasket_Barrage" or defName = "VFEP_Warcasket_Hazard" or defName = "VFEP_Warcasket_Shock"]/apparel/tags</xpath>
+					<xpath>/Defs/VFEPirates.WarcasketDef[defName = "VFEP_Warcasket_Warcasket" or defName = "VFEP_Warcasket_Marine" or defName = "VFEP_Warcasket_Recon" or defName = "VFEP_Warcasket_Cataphract" or defName = "VFEP_Warcasket_Aerial" or defName = "VFEP_Warcasket_Barrage" or defName = "VFEP_Warcasket_Hazard" or defName = "VFEP_Warcasket_Shock"]/apparel/tags</xpath>
 					<value>
 						<li>EVA</li>
 					</value>
 				</li>
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName = "VFEP_Warcasket_Warcasket" or defName = "VFEP_Warcasket_Marine" or defName = "VFEP_Warcasket_Recon" or defName = "VFEP_Warcasket_Cataphract" or defName = "VFEP_Warcasket_Aerial" or defName = "VFEP_Warcasket_Barrage" or defName = "VFEP_Warcasket_Hazard" or defName = "VFEP_Warcasket_Shock"]/statBases/Insulation_Cold</xpath>
+					<xpath>/Defs/VFEPirates.WarcasketDef[defName = "VFEP_Warcasket_Warcasket" or defName = "VFEP_Warcasket_Marine" or defName = "VFEP_Warcasket_Recon" or defName = "VFEP_Warcasket_Cataphract" or defName = "VFEP_Warcasket_Aerial" or defName = "VFEP_Warcasket_Barrage" or defName = "VFEP_Warcasket_Hazard" or defName = "VFEP_Warcasket_Shock"]/statBases/Insulation_Cold</xpath>
 					<value>
 						<Insulation_Cold>100</Insulation_Cold>
 					</value>

@@ -9,7 +9,7 @@ namespace VFEPirates
     {
         public static bool Prefix(Pawn ___pawn, ref bool __result)
         {
-            if (___pawn.Position.GetFirstBuilding(___pawn.Map) is Building_WarcasketFoundry foundry && foundry.occupant == ___pawn)
+            if (___pawn?.Map != null && ___pawn.Position.GetFirstBuilding(___pawn.Map) is Building_WarcasketFoundry foundry && foundry.occupant == ___pawn)
             {
                 __result = false;
                 return false;

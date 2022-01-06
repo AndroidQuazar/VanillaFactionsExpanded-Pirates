@@ -28,7 +28,7 @@ namespace VFEPirates
                 {
                     var armorDef = apparels.RandomElement();
                     var armor = ThingMaker.MakeThing(armorDef, GenStuff.RandomStuffFor(armorDef)) as Apparel;
-                    pawn.apparel.Wear(armor);
+                    pawn.apparel.Wear(armor, false, true);
                 }
             }
         }

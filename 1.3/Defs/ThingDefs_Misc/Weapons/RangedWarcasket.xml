@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ThingDef Name="VFEP_BaseWarcasketGun" ParentName="BaseGunWithQuality" Abstract="True">
+  <ThingDef Name="VFEP_BaseWarcasketGun" ParentName="BaseGun" Abstract="True">
     <thingClass>VFECore.ThingWithFloorGraphic</thingClass>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>

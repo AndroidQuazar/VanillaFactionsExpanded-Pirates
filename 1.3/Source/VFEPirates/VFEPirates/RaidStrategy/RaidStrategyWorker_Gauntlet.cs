@@ -12,7 +12,7 @@ namespace VFEPirates
         public override bool CanUseWith(IncidentParms parms, PawnGroupKindDef groupKind)
         {
             string fDefName = parms.faction.def.defName;
-            return base.CanUseWith(parms, groupKind) && (fDefName == Faction.OfPirates.def.defName || fDefName == "VFEP_Junkers" || fDefName == "VFEP_Mercenaries");
+            return base.CanUseWith(parms, groupKind) && ((Faction.OfPirates != null && fDefName == Faction.OfPirates.def.defName) || fDefName == "VFEP_Junkers" || fDefName == "VFEP_Mercenaries");
         }
     }
 }

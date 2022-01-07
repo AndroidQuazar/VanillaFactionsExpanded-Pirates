@@ -5,6 +5,7 @@ using System.Linq;
 using HarmonyLib;
 using RimWorld;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 using Verse;
 using VFECore.UItils;
 
@@ -239,7 +240,47 @@ namespace VFEPirates.Buildings
             Widgets.DrawBox(inRect, 1, Texture2D.whiteTexture);
             Widgets.DrawBoxSolid(inRect, DisplayBGColor);
             inRect = inRect.ContractedBy(3f);
-            GUI.DrawTexture(inRect, PortraitsCache.Get(pawn, inRect.size, rot));
+            var pawnTexture = GetPawnTexture(pawn, inRect.size, rot);
+            GUI.DrawTexture(inRect, pawnTexture);
+        }
+
+        public RenderTexture GetPawnTexture(Pawn pawn, Vector2 size, Rot4 rotation, Vector3 cameraOffset = default(Vector3), float cameraZoom = 1f, bool supersample = true, bool compensateForUIScale = true, bool renderHeadgear = true, bool renderClothes = true, Dictionary<Apparel, Color> overrideApparelColors = null, Color? overrideHairColor = null, bool stylingStation = false)
+        {
+            if (supersample)
+            {
+                size *= 1.25f;
+            }
+            if (compensateForUIScale)
+            {
+                size *= Prefs.UIScale;
+            }
+            float angle = 0f;
+            Vector3 positionOffset = default(Vector3);
+            if (pawn.Dead || pawn.Downed)
+            {
+                angle = 85f;
+                positionOffset.x -= 0.18f;
+                positionOffset.z -= 0.18f;
+            }
+            RenderTexture renderTexture = NewRenderTexture(size);
+            Find.PawnCacheRenderer.RenderPawn(pawn, renderTexture, cameraOffset, cameraZoom, angle, rotation, pawn.health.hediffSet.HasHead, 
+                renderBody: true, renderHeadgear, renderClothes, portrait: false, positionOffset, overrideApparelColors, overrideHairColor, stylingStation);
+            return renderTexture;
+        }
+
+        private RenderTexture pawnTexture;
+        private RenderTexture NewRenderTexture(Vector2 size)
+        {
+            if (pawnTexture is null)
+            {
+                pawnTexture = new RenderTexture((int)size.x, (int)size.y, 24)
+                {
+                    name = "Portrait",
+                    useMipMap = false,
+                    filterMode = FilterMode.Bilinear
+                };
+            }
+            return pawnTexture; 
         }
     }
 }

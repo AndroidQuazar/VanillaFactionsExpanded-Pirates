@@ -16,7 +16,13 @@
 					<li Class="VFEPirates.StatPart_CurseOfPestilence"></li>
 				</value>
 			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/StatDef[defName = "HungerRateMultiplier"]/parts</xpath>
+				<value>
+					<li Class="VFEPirates.StatPart_CurseOfGluttony"></li>
+				</value>
+			</li>
 		</operations>	
 	</Operation>
-	
 </Patch>

@@ -107,14 +107,14 @@
 	<label>Curse of the Eye Patch</label>
 	<description>Ranged accuracy halved.</description>
 	<iconPath>UI/Curses/CurseEyePatch</iconPath>
+	<workerClass>VFEPirates.CurseOfTheEyePatch</workerClass>
   </VFEPirates.CurseDef>
 
-  <VFEPirates.CurseDef>
+  <VFEPirates.CurseDef> <!-- handled with stat part -->
 	<defName>VFEP_CurseOfGluttony</defName>
 	<label>Curse of Gluttony</label>
 	<description>Hunger drops at twice the speed.</description>
 	<iconPath>UI/Curses/CurseGluttony</iconPath>
-	<workerClass>VFEPirates.CurseOfGluttony</workerClass>
   </VFEPirates.CurseDef>
 
   <VFEPirates.CurseDef>

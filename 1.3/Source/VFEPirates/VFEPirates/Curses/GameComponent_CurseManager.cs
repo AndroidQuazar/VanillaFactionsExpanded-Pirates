@@ -55,6 +55,8 @@ namespace VFEPirates
         {
             base.FinalizeInit();
             Init();
+            InitializeCurses();
+            Log.Message("Initializing curses");
         }
 
         public void Init()
@@ -97,6 +99,20 @@ namespace VFEPirates
             }
         }
 
+        private void InitializeCurses()
+        {
+            foreach (var def in DefDatabase<CurseDef>.AllDefs)
+            {
+                try
+                {
+                    def.Worker.Start();
+                }
+                catch (Exception ex)
+                {
+                    Log.Error($"Exception thrown while initializing curses. Worker = \"{def.Worker}\" Exception = {ex}");
+                }
+            }
+        }
         public override void ExposeData()
         {
             base.ExposeData();

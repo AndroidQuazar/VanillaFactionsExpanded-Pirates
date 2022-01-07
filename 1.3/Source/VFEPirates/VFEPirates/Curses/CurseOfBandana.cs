@@ -10,15 +10,15 @@ namespace VFEPirates
 {
     public class CurseOfBandana : CurseWorker
     {
-        public override void DoPatches(Harmony harmony)
+        public override void DoPatches()
         {
-            harmony.Patch(original: AccessTools.Constructor(typeof(Stance_Busy), parameters: new Type[] { typeof(int), typeof(LocalTargetInfo), typeof(Verb) }), 
-                postfix: new HarmonyMethod(AccessTools.Method(typeof(CurseOfBandana), nameof(CooldownTick))));
+            Patch(original: AccessTools.Constructor(typeof(Stance_Busy), parameters: new Type[] { typeof(int), typeof(LocalTargetInfo), typeof(Verb) }), 
+                postfix: AccessTools.Method(typeof(CurseOfBandana), nameof(CooldownTick)));
         }
 
         public static void CooldownTick(Stance_Busy __instance, int ticks, LocalTargetInfo focusTarg, Verb verb, ref int ___ticksLeft)
         {
-            if (__instance is Stance_Cooldown && IsActive(typeof(CurseOfBandana)))
+            if (__instance is Stance_Cooldown)
 			{
                 ___ticksLeft = Mathf.CeilToInt(0.1f * ticks);
             }

@@ -9,11 +9,11 @@ namespace VFEPirates
 {
     public class CurseOfConfetti : CurseWorker
     {
-        public override void DoPatches(Harmony harmony)
+        public override void DoPatches()
         {
-            harmony.Patch(original: AccessTools.Method(typeof(Pawn), nameof(Pawn.Kill)), 
-                prefix: new HarmonyMethod(AccessTools.Method(typeof(CurseOfConfetti), nameof(Prefix))),
-                postfix: new HarmonyMethod(AccessTools.Method(typeof(CurseOfConfetti), nameof(Postfix))));
+            Patch(original: AccessTools.Method(typeof(Pawn), nameof(Pawn.Kill)), 
+                prefix: AccessTools.Method(typeof(CurseOfConfetti), nameof(Prefix)),
+                postfix: AccessTools.Method(typeof(CurseOfConfetti), nameof(Postfix)));
         }
 
         public static void Prefix(DamageInfo? dinfo, Pawn __instance, ref (Map map, IntVec3 pos) __state)
@@ -23,7 +23,7 @@ namespace VFEPirates
 
         public static void Postfix(DamageInfo? dinfo, (Map map, IntVec3 pos) __state)
         {
-            if (IsActive(typeof(CurseOfConfetti)) && __state.map != null)
+            if (__state.map != null)
             {
                 FleckMaker.Static(__state.pos, __state.map, Confetti(Rand.RangeInclusive(0, 3)));
                 FleckMaker.Static(__state.pos, __state.map, Confetti(Rand.RangeInclusive(0, 3)));

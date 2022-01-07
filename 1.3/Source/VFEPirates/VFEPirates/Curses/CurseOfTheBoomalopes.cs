@@ -8,14 +8,14 @@ namespace VFEPirates
 {
     public class CurseOfTheBoomalopes : CurseWorker
     {
-        public override void DoPatches(Harmony harmony)
+        public override void DoPatches()
         {
-            //harmony.Patch(original: AccessTools.PropertyGetter(typeof(DamageInfo), nameof(DamageInfo.Amount)), prefix: new HarmonyMethod(AccessTools.Method(typeof(CurseOfTheBoomalopes), nameof(Prefix))));
+            Patch(original: AccessTools.Method(typeof(Pawn), nameof(Pawn.Kill)), prefix: AccessTools.Method(typeof(CurseOfTheBoomalopes), nameof(Prefix)));
         }
 
-        public static void Prefix(DamageInfo? dinfo, Pawn __instance)
+        public static void Prefix(DamageInfo? dinfo, Pawn __instance, Hediff exactCulprit = null)
         {
-            if (IsActive(typeof(CurseOfTheBoomalopes)))
+            if (__instance.RaceProps.Animal)
             {
                 float radius;
                 if (__instance.ageTracker.CurLifeStageIndex == 0)

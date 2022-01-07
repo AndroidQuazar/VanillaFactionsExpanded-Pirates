@@ -63,7 +63,6 @@
     <Compile Include="Comps\Properties\CompProperties_RumSuit.cs" />
     <Compile Include="Curses\CurseDef.cs" />
     <Compile Include="Curses\CurseOfTheEyePatch.cs" />
-    <Compile Include="Curses\CurseOfGluttony.cs" />
     <Compile Include="Curses\CurseOfBlind.cs" />
     <Compile Include="Curses\CurseOfInstaKill.cs" />
     <Compile Include="Curses\CurseOfInfestation.cs" />
@@ -104,6 +103,7 @@
     <Compile Include="Jobs\JobDriver_EquipFromWeaponBox.cs" />
     <Compile Include="RaidStrategy\Building_CrashedShip.cs" />
     <Compile Include="ScenPart_LowOrbitCrash.cs" />
+    <Compile Include="Stats\StatPart_CurseOfGluttony.cs" />
     <Compile Include="Stats\StatPart_CurseOfPestilence.cs" />
     <Compile Include="Thoughts\ThoughtWorker_RumSuit.cs" />
     <Compile Include="Utilities\CachedData.cs" />
@@ -111,7 +111,6 @@
     <Compile Include="Jobs\JobDriver_EntombIn.cs" />
     <Compile Include="Jobs\RecipeWorker_WarcasketRemoval.cs" />
     <Compile Include="Utilities\CursesUtility.cs" />
-    <Compile Include="Utilities\HarmonyUtility.cs" />
     <Compile Include="Utilities\PawnUtility.cs" />
     <Compile Include="Utilities\WeldingUtility.cs" />
     <Compile Include="Jobs\WorkGiver_DoWelding.cs" />

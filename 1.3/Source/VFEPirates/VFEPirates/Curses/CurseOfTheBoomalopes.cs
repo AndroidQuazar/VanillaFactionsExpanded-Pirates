@@ -10,12 +10,12 @@ namespace VFEPirates
     {
         public override void DoPatches(Harmony harmony)
         {
-            //harmony.Patch(original: AccessTools.PropertyGetter(typeof(DamageInfo), nameof(DamageInfo.Amount)), prefix: new HarmonyMethod(AccessTools.Method(typeof(CurseOfTheBoomalopes), nameof(Prefix))));
+            harmony.Patch(original: AccessTools.Method(typeof(Pawn), nameof(Pawn.Kill)), prefix: new HarmonyMethod(AccessTools.Method(typeof(CurseOfTheBoomalopes), nameof(Prefix))));
         }
 
-        public static void Prefix(DamageInfo? dinfo, Pawn __instance)
+        public static void Prefix(DamageInfo? dinfo, Pawn __instance, Hediff exactCulprit = null)
         {
-            if (IsActive(typeof(CurseOfTheBoomalopes)))
+            if (IsActive(typeof(CurseOfTheBoomalopes)) && __instance.RaceProps.Animal)
             {
                 float radius;
                 if (__instance.ageTracker.CurLifeStageIndex == 0)

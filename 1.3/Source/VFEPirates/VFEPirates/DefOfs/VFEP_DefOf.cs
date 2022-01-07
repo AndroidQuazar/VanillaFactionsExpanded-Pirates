@@ -91,6 +91,8 @@ namespace VFEPirates
         public static ThingDef VFEP_SideDropPod;
 
         public static CurseDef VFEP_CurseOfPestilence;
+        public static CurseDef VFEP_CurseOfGluttony;
+        public static CurseDef VFEP_CurseOfTheEyePatch;
 
         public static WarcasketDef VFEP_Warcasket_Warcasket;
         public static WarcasketDef VFEP_WarcasketHelmet_Warcasket;

@@ -14,6 +14,8 @@ namespace VFEPirates
         {
             harmony.Patch(original: AccessTools.Method(typeof(ShotReport), nameof(ShotReport.HitFactorFromShooter), parameters: new Type[] { typeof(float), typeof(float) }), 
                 prefix: new HarmonyMethod(AccessTools.Method(typeof(CurseOfTheEyePatch), nameof(HalfAccuracy))));
+            harmony.Patch(original: AccessTools.Method(typeof(ShotReport), nameof(ShotReport.GetTextReadout)),
+                postfix: new HarmonyMethod(AccessTools.Method(typeof(CurseOfTheEyePatch), nameof(HalfAccuracyReport))));
         }
 
         public static void HalfAccuracy(ref float accRating, float distance)
@@ -23,5 +25,13 @@ namespace VFEPirates
                 accRating /= 2;
             }
         }
+
+        public static void HalfAccuracyReport(ref string __result, float ___forcedMissRadius)
+		{
+            if (___forcedMissRadius <= 0.5f)
+			{
+                __result += $"\n  {VFEP_DefOf.VFEP_CurseOfTheEyePatch.label} - {VFEP_DefOf.VFEP_CurseOfTheEyePatch.description}";
+			}
+		}
     }
 }

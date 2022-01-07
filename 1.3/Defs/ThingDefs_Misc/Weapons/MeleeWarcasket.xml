@@ -42,6 +42,7 @@
 	<thingClass>VFECore.ThingWithFloorGraphic</thingClass>
     <graphicData>
       <texPath>Things/Item/Weapons/WarcasketCombatKnife</texPath>
+	  <drawSize>1.7</drawSize>
     </graphicData>
     <statBases>
 	  <MarketValue>870</MarketValue>
@@ -97,7 +98,8 @@
     <defName>VFEP_WarcasketMeleeWeapon_Broadsword</defName>
     <label>warcasket broadsword</label>
     <description>A very unique melee weapon exclusively made for warcaskets. It combines massive weight and a cutting force that gives it no equal in melee combat. While it was intended for use against other warcaskets, it works just as well against smaller targets that would normally be considered armored.</description>
-    <graphicData>
+    <thingClass>VFECore.ThingWithFloorGraphic</thingClass>
+	<graphicData>
       <texPath>Things/Item/Weapons/WarcasketBroadsword</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <drawSize>1.7</drawSize>

@@ -89,8 +89,10 @@
     <Compile Include="HarmonyPatches\GenSpawn_Spawn_Patch.cs" />
     <Compile Include="HarmonyPatches\ITab_Pawn_Gear_DrawThingRow_Transpiler.cs" />
     <Compile Include="HarmonyPatches\JobGiver_OptimizeApparel_TryGiveJob_Patch.cs" />
+    <Compile Include="HarmonyPatches\MentalStateHandler_TryStartMentalState_Patch.cs" />
     <Compile Include="HarmonyPatches\Page_SelectStorytellerInGame_PreClose_Patch.cs" />
     <Compile Include="HarmonyPatches\Page_SelectStoryteller_CanDoNext_Patch.cs" />
+    <Compile Include="HarmonyPatches\PawnApparelGenerator_GenerateStartingApparelFor_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_AnythingToStrip_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_ButcherProducts_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_TryInteractWith_Patch.cs" />
@@ -109,7 +111,6 @@
     <Compile Include="Jobs\JobDriver_EntombIn.cs" />
     <Compile Include="Jobs\RecipeWorker_WarcasketRemoval.cs" />
     <Compile Include="Utilities\CursesUtility.cs" />
-    <Compile Include="Utilities\HarmonyUtility.cs" />
     <Compile Include="Utilities\PawnUtility.cs" />
     <Compile Include="Utilities\WeldingUtility.cs" />
     <Compile Include="Jobs\WorkGiver_DoWelding.cs" />

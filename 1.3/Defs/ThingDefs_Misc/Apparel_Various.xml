@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<VFEPirates.WarcasketDef Name="VFEP_WarcasketPartBase" Abstract="True">
 		<tradeability>None</tradeability>
@@ -143,6 +143,7 @@
 			</bodyPartGroups>
 			<wornGraphicPath>Things/Pawn/Warcasketlike/Warcasket/Warcasket</wornGraphicPath>
 			<layers>
+			    <li>OnSkin</li>
 				<li>Middle</li>
 				<li>Shell</li>
 			</layers>
@@ -609,7 +610,7 @@
 		</statBases>
 		<equippedStatOffsets>
 			<MoveSpeed>-0.5</MoveSpeed>
-			<VFEP_PowerJumpRange>5</VFEP_PowerJumpRange>
+			<VFEP_PowerJumpRange>25</VFEP_PowerJumpRange>
 			<VFEP_PowerJumpDetonationRadius>1</VFEP_PowerJumpDetonationRadius>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
 		</equippedStatOffsets>
@@ -817,6 +818,7 @@
 		<label>barrage warcasket shoulders</label>
 		<shortDescription>Specialized warcasket pauldrons with peerless protection and excessive weight, fitted with arm stabilisers and shoulder-mounted grenade launchers.</shortDescription>
 		<description>Specialized warcasket pauldrons with peerless protection and excessive weight, fitted with arm stabilisers and shoulder-mounted grenade launchers.\n\nThe 7th generation warcaskets came after underwhelming results in improving the baseline performance even further, instead focusing on creating designs that - while interchangeable - work better as a set. They were also the first to include plasteel in the design as it appeared more frequently in scavenging and looting. Each piece has a unique function that synergises with those of the same series, making them a truly separate class of mobile armor units.\n\nThe Barrage series makes numerous additions to the Cataphract series, with even heavier armour plating and the addition of weapons platform stabilizers “borrowed wholesale” from navy vessels. The objective was to put as much firepower downrange as possible while ignoring incoming enemy fire, their catchphrase being “dodge this”.</description>
+		<tickerType>Normal</tickerType>
 		<graphicData>
 			<texPath>Things/Pawn/Warcasketlike/WarcasketBarrage/WarcasketBarrageShoulders</texPath>
 		</graphicData>
@@ -861,7 +863,7 @@
 		</apparel>
 		<comps>
 			<li Class="CompProperties_Reloadable">
-				<maxCharges>2</maxCharges>
+				<maxCharges>4</maxCharges>
 				<ammoDef>Steel</ammoDef>
 				<ammoCountPerCharge>25</ammoCountPerCharge>
 				<baseReloadTicks>60</baseReloadTicks>
@@ -881,7 +883,8 @@
 				<forcedMissRadius>1.9</forcedMissRadius>
 				<warmupTime>1.5</warmupTime>
 				<noiseRadius>4</noiseRadius>
-				<projectileCount>2</projectileCount>
+				<projectileCount>4</projectileCount>
+				<commandIcon>UI/Abilities/GrenadeBarrage</commandIcon>
 				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
 				<soundCast>Shot_IncendiaryLauncher</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>

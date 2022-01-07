@@ -12,23 +12,8 @@ namespace VFEPirates
         static StaticStartup()
         {
             FillWarcasketDefLists();
-            InitializeCurses();
         }
 
-        private static void InitializeCurses()
-        {
-            foreach (var def in DefDatabase<CurseDef>.AllDefs)
-            {
-				try
-				{
-                    def.Worker.DoPatches(VFEPiratesMod.harmony);
-                }
-                catch (Exception ex)
-				{
-                    Log.Error($"Exception thrown while initializing curses. Worker = \"{def.Worker}\" Exception = {ex.Message}");
-				}
-            }
-        }
         private static void FillWarcasketDefLists()
         {
             var apparels = DefDatabase<ThingDef>.AllDefs.OfType<WarcasketDef>().ToList();

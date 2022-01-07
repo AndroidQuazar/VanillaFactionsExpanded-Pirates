@@ -29,6 +29,10 @@ namespace VFEPirates
         {
             return target.Cell.WalkableBy(pawn.Map, pawn) && target.Cell.DistanceTo(pawn.Position) <= Range;
         }
+        public override float GetRangeForPawn()
+        {
+            return Range;
+        }
         public override Gizmo GetGizmo()
         {
             Command_Ability action = new Command_Ability(this.pawn, this);

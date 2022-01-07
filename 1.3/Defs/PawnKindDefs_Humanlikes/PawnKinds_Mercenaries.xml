@@ -80,7 +80,7 @@
     <initialResistanceRange>7~12</initialResistanceRange>
   </PawnKindDef>
   
-  <PawnKindDef ParentName="VFEP_JunkersBase">
+  <PawnKindDef ParentName="VFEP_MercenariesBase">
     <defName>VFEP_Corporal</defName>
     <label>corporal</label>
     <combatPower>150</combatPower>
@@ -120,7 +120,7 @@
     <initialResistanceRange>7~12</initialResistanceRange>
   </PawnKindDef>
   
-  <PawnKindDef ParentName="VFEP_JunkersBase">
+  <PawnKindDef ParentName="VFEP_MercenariesBase">
     <defName>VFEP_Sergeant</defName>
     <label>sergeant</label>
     <combatPower>160</combatPower>
@@ -161,7 +161,7 @@
     <combatEnhancingDrugsCount>1~2</combatEnhancingDrugsCount>
   </PawnKindDef>
   
-  <PawnKindDef ParentName="VFEP_JunkersBase">
+  <PawnKindDef ParentName="VFEP_MercenariesBase">
     <defName>VFEP_SergeantMajor</defName>
     <label>sergeant major</label>
     <combatPower>160</combatPower>
@@ -203,7 +203,7 @@
     <combatEnhancingDrugsCount>1~2</combatEnhancingDrugsCount>
   </PawnKindDef>
   
-  <PawnKindDef ParentName="VFEP_JunkersBase">
+  <PawnKindDef ParentName="VFEP_MercenariesBase">
     <defName>VFEP_Lieutenant</defName>
     <label>lieutenant</label>
     <combatPower>200</combatPower>
@@ -245,7 +245,7 @@
     <combatEnhancingDrugsCount>1~2</combatEnhancingDrugsCount>
   </PawnKindDef>
   
-  <PawnKindDef ParentName="VFEP_JunkersBase">
+  <PawnKindDef ParentName="VFEP_MercenariesBase">
     <defName>VFEP_Captain</defName>
     <label>captain</label>
     <combatPower>220</combatPower>
@@ -290,7 +290,7 @@
     <combatEnhancingDrugsCount>1~2</combatEnhancingDrugsCount>
   </PawnKindDef>
   
-  <PawnKindDef ParentName="VFEP_JunkersBase">
+  <PawnKindDef ParentName="VFEP_MercenariesBase">
     <defName>VFEP_Major</defName>
     <label>major</label>
     <combatPower>300</combatPower>
@@ -328,7 +328,7 @@
     <combatEnhancingDrugsCount>1~2</combatEnhancingDrugsCount>
   </PawnKindDef>
   
-  <PawnKindDef ParentName="VFEP_JunkersBase">
+  <PawnKindDef ParentName="VFEP_MercenariesBase">
     <defName>VFEP_General</defName>
     <label>general</label>
     <combatPower>350</combatPower>

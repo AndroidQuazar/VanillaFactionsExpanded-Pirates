@@ -18,12 +18,8 @@ namespace VFEPirates
 
         public static bool InstaKill(DamageInfo? dinfo, Hediff hediff, Pawn ___pawn)
         {
-            if (IsActive(typeof(CurseOfInstaKill)))
-			{
-                ___pawn.Kill(dinfo, hediff);
-                return false;
-            }
-            return true;
+            ___pawn.Kill(dinfo, hediff);
+            return false;
         }
     }
 }

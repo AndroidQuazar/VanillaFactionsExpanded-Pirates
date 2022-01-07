@@ -18,10 +18,7 @@ namespace VFEPirates
 
         public static void DoubleHunger(ref float __result)
         {
-            if (IsActive(typeof(CurseOfGluttony)))
-			{
-                __result *= 2;
-            }
+            __result *= 2;
         }
     }
 }

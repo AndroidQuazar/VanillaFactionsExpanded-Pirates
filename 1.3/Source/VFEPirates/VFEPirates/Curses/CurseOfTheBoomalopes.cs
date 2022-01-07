@@ -15,23 +15,20 @@ namespace VFEPirates
 
         public static void Prefix(DamageInfo? dinfo, Pawn __instance)
         {
-            if (IsActive(typeof(CurseOfTheBoomalopes)))
+            float radius;
+            if (__instance.ageTracker.CurLifeStageIndex == 0)
             {
-                float radius;
-                if (__instance.ageTracker.CurLifeStageIndex == 0)
-                {
-                    radius = 1.9f;
-                }
-                else if (__instance.ageTracker.CurLifeStageIndex == 1)
-                {
-                    radius = 2.9f;
-                }
-                else
-                {
-                    radius = 4.9f;
-                }
-                GenExplosion.DoExplosion(__instance.Position, __instance.Map, radius, DamageDefOf.Flame, __instance, -1, -1f, null, null, null, null, null, 0f, 1, false, null, 0f, 1, 0f, false, null, null);
+                radius = 1.9f;
             }
+            else if (__instance.ageTracker.CurLifeStageIndex == 1)
+            {
+                radius = 2.9f;
+            }
+            else
+            {
+                radius = 4.9f;
+            }
+            GenExplosion.DoExplosion(__instance.Position, __instance.Map, radius, DamageDefOf.Flame, __instance, -1, -1f, null, null, null, null, null, 0f, 1, false, null, 0f, 1, 0f, false, null, null);
         }
     }
 }

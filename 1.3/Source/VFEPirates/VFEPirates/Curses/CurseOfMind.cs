@@ -11,10 +11,7 @@ namespace VFEPirates
         }
 		public static void Postfix(ref float __result)
 		{
-            if (IsActive(typeof(CurseOfMind)))
-            {
-                __result *= 2f;
-            }
+            __result *= 2f;
         }
     }
 }

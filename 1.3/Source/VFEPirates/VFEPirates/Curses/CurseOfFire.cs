@@ -16,10 +16,7 @@ namespace VFEPirates
 
         public static void Postfix(ref bool __result)
         {
-            if (IsActive(typeof(CurseOfFire)))
-            {
-                __result = false;
-            }
+            __result = false;
         }
     }
 }

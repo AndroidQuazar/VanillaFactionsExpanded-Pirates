@@ -33,6 +33,6 @@ namespace VFEPirates
 			}
         }
 
-        public static ThingDef SwapForGold(ThingDef originalThingDef) => IsActive(typeof(CurseOfSteel)) ? ThingDefOf.Gold : originalThingDef;
+        public static ThingDef SwapForGold(ThingDef originalThingDef) => ThingDefOf.Gold;
     }
 }

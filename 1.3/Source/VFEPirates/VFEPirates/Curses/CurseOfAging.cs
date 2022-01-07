@@ -16,7 +16,7 @@ namespace VFEPirates
                 transpiler: AccessTools.Method(typeof(CurseOfAging), nameof(AgeTick)));
         }
 
-        public static long AgeMultiplier(long interval) => IsActive(typeof(CurseOfAging)) ? 10 * interval : interval;
+        public static long AgeMultiplier(long interval) => 10 * interval;
 
         public static IEnumerable<CodeInstruction> AgeTick(IEnumerable<CodeInstruction> instructions)
         {

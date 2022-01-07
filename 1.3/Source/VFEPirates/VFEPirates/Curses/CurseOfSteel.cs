@@ -14,10 +14,7 @@ namespace VFEPirates
 
         public static void Postfix(ref float __result)
         {
-            if (IsActive(typeof(CurseOfSteel)))
-            {
-                __result *= 2;
-            }
+            __result *= 2;
         }
     }
 }

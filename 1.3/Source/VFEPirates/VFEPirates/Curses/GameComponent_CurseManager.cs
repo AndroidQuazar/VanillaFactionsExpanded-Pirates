@@ -55,6 +55,8 @@ namespace VFEPirates
         {
             base.FinalizeInit();
             Init();
+            InitializeCurses();
+            Log.Message("Initializing curses");
         }
 
         public void Init()
@@ -97,18 +99,6 @@ namespace VFEPirates
             }
         }
 
-        public override void StartedNewGame()
-        {
-            base.StartedNewGame();
-            InitializeCurses();
-        }
-
-        public override void LoadedGame()
-        {
-            base.LoadedGame();
-            InitializeCurses();
-        }
-
         private void InitializeCurses()
         {
             foreach (var def in DefDatabase<CurseDef>.AllDefs)
@@ -119,7 +109,7 @@ namespace VFEPirates
                 }
                 catch (Exception ex)
                 {
-                    Log.Error($"Exception thrown while initializing curses. Worker = \"{def.Worker}\" Exception = {ex.Message}");
+                    Log.Error($"Exception thrown while initializing curses. Worker = \"{def.Worker}\" Exception = {ex}");
                 }
             }
         }

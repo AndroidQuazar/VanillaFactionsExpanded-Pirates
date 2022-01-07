@@ -18,7 +18,7 @@ namespace VFEPirates
 
         public static void CooldownTick(Stance_Busy __instance, int ticks, LocalTargetInfo focusTarg, Verb verb, ref int ___ticksLeft)
         {
-            if (__instance is Stance_Cooldown && IsActive(typeof(CurseOfBandana)))
+            if (__instance is Stance_Cooldown)
 			{
                 ___ticksLeft = Mathf.CeilToInt(0.1f * ticks);
             }

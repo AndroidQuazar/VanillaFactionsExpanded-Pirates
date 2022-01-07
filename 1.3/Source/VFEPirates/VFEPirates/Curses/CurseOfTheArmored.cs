@@ -25,42 +25,27 @@ namespace VFEPirates
 
         public static void AdjustedArmorPenetrationThing(Tool tool, Pawn attacker, Thing equipment, HediffComp_VerbGiver hediffCompSource, ref float __result)
         {
-            if (IsActive(typeof(CurseOfTheArmored)))
-            {
-                __result /= 2;
-            }
+            __result /= 2;
         }
 
         public static void AdjustedArmorPenetrationThingDef(Tool tool, Pawn attacker, ThingDef equipment, ThingDef equipmentStuff, HediffComp_VerbGiver hediffCompSource, ref float __result)
         {
-            if (IsActive(typeof(CurseOfTheArmored)))
-            {
-                __result /= 2;
-            }
+            __result /= 2;
         }
 
         public static void GetArmorPenetrationBase(ref float __result)
         {
-            if (IsActive(typeof(CurseOfTheArmored)))
-            {
-                __result /= 2;
-            }
+            __result /= 2;
         }
 
         public static void GetArmorPenetrationVerb(Verb verb, Pawn caster, ref float __result)
         {
-            if (IsActive(typeof(CurseOfTheArmored)))
-            {
-                __result /= 2;
-            }
+            __result /= 2;
         }
 
         public static void GetArmorPenetrationMultiplier(float weaponDamageMultiplier, StringBuilder explanation, ref float __result)
         {
-            if (IsActive(typeof(CurseOfTheArmored)))
-            {
-                __result /= 2;
-            }
+            __result /= 2;
         }
     }
 }

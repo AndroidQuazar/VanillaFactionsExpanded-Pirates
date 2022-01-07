@@ -18,10 +18,7 @@ namespace VFEPirates
 
         public static void HalfAccuracy(ref float accRating, float distance)
         {
-            if (IsActive(typeof(CurseOfTheEyePatch)))
-			{
-                accRating /= 2;
-            }
+            accRating /= 2;
         }
     }
 }

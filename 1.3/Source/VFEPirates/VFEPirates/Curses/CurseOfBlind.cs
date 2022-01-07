@@ -18,13 +18,9 @@ namespace VFEPirates
 
         public static bool MuteLetter(Letter let, string debugInfo)
         {
-            if (IsActive(typeof(CurseOfBlind)))
-			{
-                Find.Archive.Add(let);
-                let.Received();
-                return false;
-            }
-            return true;
+            Find.Archive.Add(let);
+            let.Received();
+            return false;
         }
     }
 }

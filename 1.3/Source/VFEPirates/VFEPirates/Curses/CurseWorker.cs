@@ -15,7 +15,6 @@ namespace VFEPirates
         {
 
         }
-        public static bool IsActive(Type type) => GameComponent_CurseManager.Instance.activeCurseTypes.Contains(type);
         public static bool IsActive(CurseDef def) => GameComponent_CurseManager.Instance.activeCurseDefs.Contains(def);
         public void Start()
         {
@@ -23,12 +22,15 @@ namespace VFEPirates
             Disactivate();
             if (GameComponent_CurseManager.Instance.activeCurseTypes.Contains(GetType()))
             {
+                Log.Message("Do patches this: " + GetType());
                 DoPatches();
+                OnActivate();
             }
         }
 
         public void Disactivate()
         {
+            OnDisactivate();
             if (patchedMethods.Any())
             {
                 foreach (var kvp in patchedMethods)
@@ -42,6 +44,16 @@ namespace VFEPirates
                 }
             }
             patchedMethods.Clear();
+        }
+
+        public virtual void OnActivate()
+        {
+
+        }
+
+        public virtual void OnDisactivate()
+        {
+
         }
         public virtual void DoPatches()
         {

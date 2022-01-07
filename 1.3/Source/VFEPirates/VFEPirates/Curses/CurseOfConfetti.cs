@@ -23,7 +23,7 @@ namespace VFEPirates
 
         public static void Postfix(DamageInfo? dinfo, (Map map, IntVec3 pos) __state)
         {
-            if (IsActive(typeof(CurseOfConfetti)) && __state.map != null)
+            if (__state.map != null)
             {
                 FleckMaker.Static(__state.pos, __state.map, Confetti(Rand.RangeInclusive(0, 3)));
                 FleckMaker.Static(__state.pos, __state.map, Confetti(Rand.RangeInclusive(0, 3)));

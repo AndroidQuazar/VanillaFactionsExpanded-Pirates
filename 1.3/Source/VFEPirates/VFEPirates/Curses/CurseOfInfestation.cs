@@ -18,10 +18,7 @@ namespace VFEPirates
 
         public static void Infestation(ref int hiveCount, Map map, bool spawnAnywhereIfNoGoodCell = false, bool ignoreRoofedRequirement = false, string questTag = null, IntVec3? overrideLoc = null, float? insectsPoints = null)
         {
-            if (IsActive(typeof(CurseOfInfestation)))
-			{
-                hiveCount *= 2;
-            }
+            hiveCount *= 2;
         }
     }
 }

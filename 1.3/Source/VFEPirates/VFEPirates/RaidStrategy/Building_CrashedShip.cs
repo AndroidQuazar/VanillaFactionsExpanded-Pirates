@@ -52,6 +52,7 @@ namespace VFEPirates
                 {
                     GenSpawn.Spawn(p, c, Map);
                     lord.AddPawn(p);
+                    RCellFinder.TryFindRandomCellNearWith(this.TrueCenter().ToIntVec3(), c => c.Walkable(Map), Map, out c, 3);
                 });
                 spawned = true;
             }

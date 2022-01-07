@@ -85,9 +85,15 @@ namespace VFEPirates
             if (Widgets.ButtonInvisible(rect))
             {
                 if (GameComponent_CurseManager.Instance.activeCurseDefs.Contains(curse))
+                {
                     GameComponent_CurseManager.Instance.Remove(curse);
+                    curse.Worker.Disactivate();
+                }
                 else
+                {
                     GameComponent_CurseManager.Instance.Add(curse);
+                    curse.Worker.Start();
+                }
             }
         }
     }

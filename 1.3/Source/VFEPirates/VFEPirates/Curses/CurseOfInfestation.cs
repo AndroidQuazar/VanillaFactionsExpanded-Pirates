@@ -10,10 +10,10 @@ namespace VFEPirates
 {
     public class CurseOfInfestation : CurseWorker
     {
-        public override void DoPatches(Harmony harmony)
+        public override void DoPatches()
         {
-            harmony.Patch(original: AccessTools.Method(typeof(InfestationUtility), nameof(InfestationUtility.SpawnTunnels)), 
-                prefix: new HarmonyMethod(AccessTools.Method(typeof(CurseOfInfestation), nameof(Infestation))));
+            Patch(original: AccessTools.Method(typeof(InfestationUtility), nameof(InfestationUtility.SpawnTunnels)), 
+                prefix: AccessTools.Method(typeof(CurseOfInfestation), nameof(Infestation)));
         }
 
         public static void Infestation(ref int hiveCount, Map map, bool spawnAnywhereIfNoGoodCell = false, bool ignoreRoofedRequirement = false, string questTag = null, IntVec3? overrideLoc = null, float? insectsPoints = null)

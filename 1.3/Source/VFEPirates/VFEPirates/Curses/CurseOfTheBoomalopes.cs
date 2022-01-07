@@ -8,7 +8,7 @@ namespace VFEPirates
 {
     public class CurseOfTheBoomalopes : CurseWorker
     {
-        public override void DoPatches(Harmony harmony)
+        public override void DoPatches()
         {
             //harmony.Patch(original: AccessTools.PropertyGetter(typeof(DamageInfo), nameof(DamageInfo.Amount)), prefix: new HarmonyMethod(AccessTools.Method(typeof(CurseOfTheBoomalopes), nameof(Prefix))));
         }

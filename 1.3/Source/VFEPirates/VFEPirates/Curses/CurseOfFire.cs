@@ -8,10 +8,10 @@ namespace VFEPirates
 {
     public class CurseOfFire : CurseWorker
     {
-        public override void DoPatches(Harmony harmony)
+        public override void DoPatches()
         {
-            harmony.Patch(original: AccessTools.PropertyGetter(typeof(FireWatcher), nameof(FireWatcher.LargeFireDangerPresent)), 
-                postfix: new HarmonyMethod(AccessTools.Method(typeof(CurseOfFire), nameof(Postfix))));
+            Patch(original: AccessTools.PropertyGetter(typeof(FireWatcher), nameof(FireWatcher.LargeFireDangerPresent)), 
+                postfix: AccessTools.Method(typeof(CurseOfFire), nameof(Postfix)));
         }
 
         public static void Postfix(ref bool __result)

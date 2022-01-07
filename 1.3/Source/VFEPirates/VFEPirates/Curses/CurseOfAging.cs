@@ -10,10 +10,10 @@ namespace VFEPirates
 {
     public class CurseOfAging : CurseWorker
     {
-        public override void DoPatches(Harmony harmony)
+        public override void DoPatches()
         {
-            harmony.Patch(original: AccessTools.Method(typeof(Pawn_AgeTracker), nameof(Pawn_AgeTracker.AgeTick)), 
-                transpiler: new HarmonyMethod(AccessTools.Method(typeof(CurseOfAging), nameof(AgeTick))));
+            Patch(original: AccessTools.Method(typeof(Pawn_AgeTracker), nameof(Pawn_AgeTracker.AgeTick)), 
+                transpiler: AccessTools.Method(typeof(CurseOfAging), nameof(AgeTick)));
         }
 
         public static long AgeMultiplier(long interval) => IsActive(typeof(CurseOfAging)) ? 10 * interval : interval;

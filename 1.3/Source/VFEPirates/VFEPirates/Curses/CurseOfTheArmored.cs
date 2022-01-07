@@ -9,18 +9,18 @@ namespace VFEPirates
 {
     public class CurseOfTheArmored : CurseWorker
     {
-        public override void DoPatches(Harmony harmony)
+        public override void DoPatches()
         {
-            harmony.Patch(original: AccessTools.Method(typeof(VerbProperties), nameof(VerbProperties.AdjustedArmorPenetration), parameters: new Type[] { typeof(Tool), typeof(Pawn), typeof(Thing), typeof(HediffComp_VerbGiver) }), 
-                postfix: new HarmonyMethod(AccessTools.Method(typeof(CurseOfTheArmored), nameof(AdjustedArmorPenetrationThing))));
-            harmony.Patch(original: AccessTools.Method(typeof(VerbProperties), nameof(VerbProperties.AdjustedArmorPenetration), parameters: new Type[] { typeof(Tool), typeof(Pawn), typeof(ThingDef), typeof(ThingDef), typeof(HediffComp_VerbGiver) }),
-                postfix: new HarmonyMethod(AccessTools.Method(typeof(CurseOfTheArmored), nameof(AdjustedArmorPenetrationThingDef))));
-            harmony.Patch(original: AccessTools.Method(typeof(ExtraDamage), nameof(ExtraDamage.AdjustedArmorPenetration), parameters: new Type[] { }),
-                postfix: new HarmonyMethod(AccessTools.Method(typeof(CurseOfTheArmored), nameof(GetArmorPenetrationBase))));
-            harmony.Patch(original: AccessTools.Method(typeof(ExtraDamage), nameof(ExtraDamage.AdjustedArmorPenetration), parameters: new Type[] { typeof(Verb), typeof(Pawn) }),
-                postfix: new HarmonyMethod(AccessTools.Method(typeof(CurseOfTheArmored), nameof(GetArmorPenetrationVerb))));
-            harmony.Patch(original: AccessTools.Method(typeof(ProjectileProperties), nameof(ProjectileProperties.GetArmorPenetration), parameters: new Type[] { typeof(float), typeof(StringBuilder) }), 
-                postfix: new HarmonyMethod(AccessTools.Method(typeof(CurseOfTheArmored), nameof(GetArmorPenetrationMultiplier))));
+            Patch(original: AccessTools.Method(typeof(VerbProperties), nameof(VerbProperties.AdjustedArmorPenetration), parameters: new Type[] { typeof(Tool), typeof(Pawn), typeof(Thing), typeof(HediffComp_VerbGiver) }), 
+                postfix: AccessTools.Method(typeof(CurseOfTheArmored), nameof(AdjustedArmorPenetrationThing)));
+            Patch(original: AccessTools.Method(typeof(VerbProperties), nameof(VerbProperties.AdjustedArmorPenetration), parameters: new Type[] { typeof(Tool), typeof(Pawn), typeof(ThingDef), typeof(ThingDef), typeof(HediffComp_VerbGiver) }),
+                postfix: AccessTools.Method(typeof(CurseOfTheArmored), nameof(AdjustedArmorPenetrationThingDef)));
+            Patch(original: AccessTools.Method(typeof(ExtraDamage), nameof(ExtraDamage.AdjustedArmorPenetration), parameters: new Type[] { }),
+                postfix: AccessTools.Method(typeof(CurseOfTheArmored), nameof(GetArmorPenetrationBase)));
+            Patch(original: AccessTools.Method(typeof(ExtraDamage), nameof(ExtraDamage.AdjustedArmorPenetration), parameters: new Type[] { typeof(Verb), typeof(Pawn) }),
+                postfix: AccessTools.Method(typeof(CurseOfTheArmored), nameof(GetArmorPenetrationVerb)));
+            Patch(original: AccessTools.Method(typeof(ProjectileProperties), nameof(ProjectileProperties.GetArmorPenetration), parameters: new Type[] { typeof(float), typeof(StringBuilder) }), 
+                postfix: AccessTools.Method(typeof(CurseOfTheArmored), nameof(GetArmorPenetrationMultiplier)));
         }
 
         public static void AdjustedArmorPenetrationThing(Tool tool, Pawn attacker, Thing equipment, HediffComp_VerbGiver hediffCompSource, ref float __result)

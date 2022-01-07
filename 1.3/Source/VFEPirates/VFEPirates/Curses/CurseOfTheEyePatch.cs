@@ -10,10 +10,10 @@ namespace VFEPirates
 {
     public class CurseOfTheEyePatch : CurseWorker
     {
-        public override void DoPatches(Harmony harmony)
+        public override void DoPatches()
         {
-            harmony.Patch(original: AccessTools.Method(typeof(ShotReport), nameof(ShotReport.HitFactorFromShooter), parameters: new Type[] { typeof(float), typeof(float) }), 
-                prefix: new HarmonyMethod(AccessTools.Method(typeof(CurseOfTheEyePatch), nameof(HalfAccuracy))));
+            Patch(original: AccessTools.Method(typeof(ShotReport), nameof(ShotReport.HitFactorFromShooter), parameters: new Type[] { typeof(float), typeof(float) }), 
+                prefix: AccessTools.Method(typeof(CurseOfTheEyePatch), nameof(HalfAccuracy)));
         }
 
         public static void HalfAccuracy(ref float accRating, float distance)

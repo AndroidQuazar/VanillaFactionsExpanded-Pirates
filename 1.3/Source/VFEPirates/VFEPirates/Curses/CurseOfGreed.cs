@@ -10,9 +10,9 @@ namespace VFEPirates
 {
 	public class CurseOfGreed : CurseWorker
 	{
-        public override void DoPatches(Harmony harmony)
+        public override void DoPatches()
         {
-            harmony.DoPatch(typeof(Mineable), "TrySpawnYield", transpiler: AccessTools.Method(typeof(CurseOfGreed), nameof(Transpiler)));
+            Patch(typeof(Mineable), "TrySpawnYield", transpiler: AccessTools.Method(typeof(CurseOfGreed), nameof(Transpiler)));
         }
 
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)

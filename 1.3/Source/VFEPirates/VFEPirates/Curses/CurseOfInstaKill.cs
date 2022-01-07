@@ -10,10 +10,10 @@ namespace VFEPirates
 {
     public class CurseOfInstaKill : CurseWorker
     {
-        public override void DoPatches(Harmony harmony)
+        public override void DoPatches()
         {
-            harmony.Patch(original: AccessTools.Method(typeof(Pawn_HealthTracker), "MakeDowned"), 
-                prefix: new HarmonyMethod(AccessTools.Method(typeof(CurseOfInstaKill), nameof(InstaKill))));
+            Patch(original: AccessTools.Method(typeof(Pawn_HealthTracker), "MakeDowned"), 
+                prefix: AccessTools.Method(typeof(CurseOfInstaKill), nameof(InstaKill)));
         }
 
         public static bool InstaKill(DamageInfo? dinfo, Hediff hediff, Pawn ___pawn)

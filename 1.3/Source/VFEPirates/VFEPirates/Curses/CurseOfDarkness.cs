@@ -11,13 +11,13 @@ namespace VFEPirates
     public class CurseOfDarkness : CurseWorker
     {
         public static HashSet<Map> darkenedMaps = new HashSet<Map>();
-        public override void DoPatches(Harmony harmony)
+        public override void DoPatches()
         {
-            harmony.DoPatch(typeof(DarklightUtility), "IsDarklightAt", prefix: AccessTools.Method(typeof(CurseOfDarkness), nameof(IsDarklightAtPrefix)));
-            harmony.DoPatch(typeof(GlowGrid), "RecalculateAllGlow", postfix: AccessTools.Method(typeof(CurseOfDarkness), nameof(RecalculateAllGlowPostfix)));
-            harmony.DoPatch(typeof(Building), nameof(Building.SpawnSetup), postfix: AccessTools.Method(typeof(CurseOfDarkness), nameof(MarkGlowDirty)));
-            harmony.DoPatch(typeof(Building), nameof(Building.DeSpawn), prefix: AccessTools.Method(typeof(CurseOfDarkness), nameof(MarkGlowDirty)));
-            harmony.DoPatch(typeof(GenCelestial), nameof(GenCelestial.CurCelestialSunGlow), postfix: AccessTools.Method(typeof(CurseOfDarkness), nameof(RegisterCelestialGlow)));
+            Patch(typeof(DarklightUtility), "IsDarklightAt", prefix: AccessTools.Method(typeof(CurseOfDarkness), nameof(IsDarklightAtPrefix)));
+            Patch(typeof(GlowGrid), "RecalculateAllGlow", postfix: AccessTools.Method(typeof(CurseOfDarkness), nameof(RecalculateAllGlowPostfix)));
+            Patch(typeof(Building), nameof(Building.SpawnSetup), postfix: AccessTools.Method(typeof(CurseOfDarkness), nameof(MarkGlowDirty)));
+            Patch(typeof(Building), nameof(Building.DeSpawn), prefix: AccessTools.Method(typeof(CurseOfDarkness), nameof(MarkGlowDirty)));
+            Patch(typeof(GenCelestial), nameof(GenCelestial.CurCelestialSunGlow), postfix: AccessTools.Method(typeof(CurseOfDarkness), nameof(RegisterCelestialGlow)));
         }
 
         public static bool IsDarklightAtPrefix(ref bool __result, IntVec3 position, Map map)

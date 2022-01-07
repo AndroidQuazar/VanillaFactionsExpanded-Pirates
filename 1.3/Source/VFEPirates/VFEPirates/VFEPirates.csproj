@@ -111,7 +111,6 @@
     <Compile Include="Jobs\JobDriver_EntombIn.cs" />
     <Compile Include="Jobs\RecipeWorker_WarcasketRemoval.cs" />
     <Compile Include="Utilities\CursesUtility.cs" />
-    <Compile Include="Utilities\HarmonyUtility.cs" />
     <Compile Include="Utilities\PawnUtility.cs" />
     <Compile Include="Utilities\WeldingUtility.cs" />
     <Compile Include="Jobs\WorkGiver_DoWelding.cs" />

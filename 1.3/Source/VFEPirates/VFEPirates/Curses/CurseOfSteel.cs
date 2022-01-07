@@ -7,9 +7,9 @@ namespace VFEPirates
 {
     public class CurseOfSteel : CurseWorker
     {
-        public override void DoPatches(Harmony harmony)
+        public override void DoPatches()
         {
-            harmony.Patch(original: AccessTools.PropertyGetter(typeof(DamageInfo), nameof(DamageInfo.Amount)), postfix: new HarmonyMethod(AccessTools.Method(typeof(CurseOfSteel), nameof(Postfix))));
+            Patch(original: AccessTools.PropertyGetter(typeof(DamageInfo), nameof(DamageInfo.Amount)), postfix: AccessTools.Method(typeof(CurseOfSteel), nameof(Postfix)));
         }
 
         public static void Postfix(ref float __result)

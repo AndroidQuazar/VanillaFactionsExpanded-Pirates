@@ -10,10 +10,10 @@ namespace VFEPirates
 {
     public class CurseOfBlind : CurseWorker
     {
-        public override void DoPatches(Harmony harmony)
+        public override void DoPatches()
         {
-            harmony.Patch(original: AccessTools.Method(typeof(LetterStack), nameof(LetterStack.ReceiveLetter), parameters: new Type[] { typeof(Letter), typeof(string) }), 
-                prefix: new HarmonyMethod(AccessTools.Method(typeof(CurseOfBlind), nameof(MuteLetter))));
+            Patch(original: AccessTools.Method(typeof(LetterStack), nameof(LetterStack.ReceiveLetter), parameters: new Type[] { typeof(Letter), typeof(string) }), 
+                prefix: AccessTools.Method(typeof(CurseOfBlind), nameof(MuteLetter)));
         }
 
         public static bool MuteLetter(Letter let, string debugInfo)

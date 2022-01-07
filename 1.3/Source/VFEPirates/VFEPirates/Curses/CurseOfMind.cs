@@ -5,9 +5,9 @@ namespace VFEPirates
 {
     public class CurseOfMind : CurseWorker
     {
-        public override void DoPatches(Harmony harmony)
+        public override void DoPatches()
         {
-			harmony.DoPatch(typeof(Thought), "MoodOffset", postfix: AccessTools.Method(typeof(CurseOfMind), nameof(Postfix)));
+			Patch(typeof(Thought), "MoodOffset", postfix: AccessTools.Method(typeof(CurseOfMind), nameof(Postfix)));
         }
 		public static void Postfix(ref float __result)
 		{

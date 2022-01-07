@@ -97,6 +97,32 @@ namespace VFEPirates
             }
         }
 
+        public override void StartedNewGame()
+        {
+            base.StartedNewGame();
+            InitializeCurses();
+        }
+
+        public override void LoadedGame()
+        {
+            base.LoadedGame();
+            InitializeCurses();
+        }
+
+        private void InitializeCurses()
+        {
+            foreach (var def in DefDatabase<CurseDef>.AllDefs)
+            {
+                try
+                {
+                    def.Worker.Start();
+                }
+                catch (Exception ex)
+                {
+                    Log.Error($"Exception thrown while initializing curses. Worker = \"{def.Worker}\" Exception = {ex.Message}");
+                }
+            }
+        }
         public override void ExposeData()
         {
             base.ExposeData();

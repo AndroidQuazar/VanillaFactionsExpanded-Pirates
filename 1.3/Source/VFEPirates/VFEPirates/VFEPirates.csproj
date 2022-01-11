@@ -107,6 +107,7 @@
     <Compile Include="ScenPart_LowOrbitCrash.cs" />
     <Compile Include="Stats\StatPart_CurseOfGluttony.cs" />
     <Compile Include="Stats\StatPart_CurseOfPestilence.cs" />
+    <Compile Include="Stats\StatPart_CurseOfTheEyePatch.cs" />
     <Compile Include="Thoughts\ThoughtWorker_RumSuit.cs" />
     <Compile Include="Utilities\CachedData.cs" />
     <Compile Include="Jobs\JobDriver_DoWelding.cs" />

@@ -12,10 +12,10 @@ namespace VFEPirates
     {
         public override void DoPatches()
         {
-            Patch(original: AccessTools.Method(typeof(ShotReport), nameof(ShotReport.HitFactorFromShooter), parameters: new Type[] { typeof(float), typeof(float) }), 
-                prefix: AccessTools.Method(typeof(CurseOfTheEyePatch), nameof(HalfAccuracy)));
-            Patch(original: AccessTools.Method(typeof(ShotReport), nameof(ShotReport.GetTextReadout)),
-                postfix: AccessTools.Method(typeof(CurseOfTheEyePatch), nameof(HalfAccuracyReport)));
+            //Patch(original: AccessTools.Method(typeof(ShotReport), nameof(ShotReport.HitFactorFromShooter), parameters: new Type[] { typeof(float), typeof(float) }), 
+            //    prefix: AccessTools.Method(typeof(CurseOfTheEyePatch), nameof(HalfAccuracy)));
+            //Patch(original: AccessTools.Method(typeof(ShotReport), nameof(ShotReport.GetTextReadout)),
+            //    postfix: AccessTools.Method(typeof(CurseOfTheEyePatch), nameof(HalfAccuracyReport)));
         }
 
         public static void HalfAccuracy(ref float accRating, float distance)

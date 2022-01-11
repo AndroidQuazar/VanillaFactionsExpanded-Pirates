@@ -23,6 +23,11 @@
 					<li Class="VFEPirates.StatPart_CurseOfGluttony"></li>
 				</value>
 			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/StatDef[defName = "ShootingAccuracyPawn"]/workerClass/text()</xpath>
+				<value>VFEPirates.StatWorker_ShootingAccuracy_CurseOfTheEyePatch</value>
+			</li>
 		</operations>	
 	</Operation>
 </Patch>

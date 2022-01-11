@@ -18,6 +18,7 @@ namespace VFEPirates
             Patch(typeof(Building), nameof(Building.SpawnSetup), postfix: AccessTools.Method(typeof(CurseOfDarkness), nameof(MarkGlowDirty)));
             Patch(typeof(Building), nameof(Building.DeSpawn), prefix: AccessTools.Method(typeof(CurseOfDarkness), nameof(MarkGlowDirty)));
             Patch(typeof(GenCelestial), nameof(GenCelestial.CurCelestialSunGlow), postfix: AccessTools.Method(typeof(CurseOfDarkness), nameof(RegisterCelestialGlow)));
+            Patch(typeof(SkyManager), "CurrentSkyTarget", postfix: AccessTools.Method(typeof(CurseOfDarkness), nameof(CurrentSkyTargetPostfix)));
         }
 
         public static bool IsDarklightAtPrefix(ref bool __result, IntVec3 position, Map map)
@@ -37,10 +38,12 @@ namespace VFEPirates
             {
                 var position = ___map.cellIndices.IndexToCell(i);
                 var glow = ___map.glowGrid.GameGlowAt(position);
-                if (glow <= 0)
+                if (glow <= 0.6f)
                 {
-                    __instance.glowGrid[i] = Color.black;
-                    __instance.glowGridNoCavePlants[i] = Color.black;
+                    var color = Color.black;
+                    color.a = 1f * (1f - glow);
+                    __instance.glowGrid[i] = color;
+                    __instance.glowGridNoCavePlants[i] = color;
                 }
             }
         }
@@ -49,7 +52,11 @@ namespace VFEPirates
         {
             __instance.Map.glowGrid.MarkGlowGridDirty(__instance.Position);
         }
-
+        public static void CurrentSkyTargetPostfix(ref SkyTarget __result)
+        {
+            Log.Message("__result.glow: " + __result.glow);
+            __result.colors = new SkyColorSet(Color.Lerp(__result.colors.sky, Color.black, 1f - __result.glow), __result.colors.shadow, __result.colors.overlay, __result.colors.saturation);
+        }
         public static void RegisterCelestialGlow(Map map, float __result)
         {
             if (__result <= 0)

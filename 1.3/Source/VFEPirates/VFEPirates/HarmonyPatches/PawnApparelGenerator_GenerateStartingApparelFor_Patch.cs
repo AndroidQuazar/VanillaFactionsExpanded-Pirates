@@ -1,5 +1,6 @@
 ﻿using HarmonyLib;
 using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Verse;
@@ -7,20 +8,20 @@ using Verse;
 namespace VFEPirates
 {
     [StaticConstructorOnStartup]
-    public static class PawnApparelGenerator_GenerateStartingApparelFor_Patch
+    public static class PawnGenerator_GeneratePawn_Patch
     {
-        static PawnApparelGenerator_GenerateStartingApparelFor_Patch()
+        static PawnGenerator_GeneratePawn_Patch()
         {
-            VFEPiratesMod.harmony.Patch(AccessTools.Method(typeof(PawnApparelGenerator), "GenerateStartingApparelFor"),
-                postfix: new HarmonyMethod(AccessTools.Method(typeof(PawnApparelGenerator_GenerateStartingApparelFor_Patch), nameof(Postfix))));
+            VFEPiratesMod.harmony.Patch(AccessTools.Method(typeof(PawnGenerator), "GeneratePawn", new Type[] {typeof(PawnGenerationRequest) }),
+                postfix: new HarmonyMethod(AccessTools.Method(typeof(PawnGenerator_GeneratePawn_Patch), nameof(Postfix))));
         }
-        public static void Postfix(Pawn pawn, PawnGenerationRequest request)
+        public static void Postfix(Pawn __result)
         {
-            if (pawn.IsWearingWarcasket())
+            if (__result.IsWearingWarcasket())
             {
-                CheckApparels(pawn, VFEPiratesMod.allArmorDefs);
-                CheckApparels(pawn, VFEPiratesMod.allShoulderPadsDefs);
-                CheckApparels(pawn, VFEPiratesMod.allHelmetDefs);
+                CheckApparels(__result, VFEPiratesMod.allArmorDefs);
+                CheckApparels(__result, VFEPiratesMod.allShoulderPadsDefs);
+                CheckApparels(__result, VFEPiratesMod.allHelmetDefs);
             }
             void CheckApparels(Pawn pawn, List<WarcasketDef> apparels)
             {

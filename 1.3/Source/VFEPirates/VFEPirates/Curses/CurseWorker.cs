@@ -19,12 +19,15 @@ namespace VFEPirates
         public void Start()
         {
             patchedMethods ??= new Dictionary<MethodBase, List<MethodInfo>>();
-            Disactivate();
             if (GameComponent_CurseManager.Instance.activeCurseTypes.Contains(GetType()))
             {
                 Log.Message("Do patches this: " + GetType());
                 DoPatches();
                 OnActivate();
+            }
+            else
+            {
+                Disactivate();
             }
         }
 

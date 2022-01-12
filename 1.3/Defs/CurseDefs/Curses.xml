@@ -40,11 +40,12 @@
 	<workerClass>VFEPirates.CurseOfGreed</workerClass>
   </VFEPirates.CurseDef>
 
-  <VFEPirates.CurseDef> <!-- TODO: Still needs C# -->
+  <VFEPirates.CurseDef>
 	<defName>VFEP_CurseOfTheStabbed</defName>
 	<label>Curse of the Stabbed</label>
 	<description>All Melee attack cooldowns are halved.</description>
 	<iconPath>UI/Curses/CurseStabbed</iconPath>
+	<workerClass>VFEPirates.CurseOfTheStabbed</workerClass>
   </VFEPirates.CurseDef>
 
   <VFEPirates.CurseDef>

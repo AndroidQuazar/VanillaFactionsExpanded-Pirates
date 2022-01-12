@@ -33,9 +33,9 @@ namespace VFEPirates
 
         public void Disactivate()
         {
-            OnDisactivate();
             if (patchedMethods.Any())
             {
+                OnDisactivate();
                 foreach (var kvp in patchedMethods)
                 {
                     MethodBase method = kvp.Key;

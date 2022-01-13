@@ -1,6 +1,9 @@
 ﻿using HarmonyLib;
 using RimWorld;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Reflection.Emit;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Verse;
@@ -10,15 +13,14 @@ namespace VFEPirates
 {
     public class CurseOfDarkness : CurseWorker
     {
-        public static HashSet<Map> darkenedMaps = new HashSet<Map>();
         public override void DoPatches()
         {
             Patch(typeof(DarklightUtility), "IsDarklightAt", prefix: AccessTools.Method(typeof(CurseOfDarkness), nameof(IsDarklightAtPrefix)));
             Patch(typeof(GlowGrid), "RecalculateAllGlow", postfix: AccessTools.Method(typeof(CurseOfDarkness), nameof(RecalculateAllGlowPostfix)));
             Patch(typeof(Building), nameof(Building.SpawnSetup), postfix: AccessTools.Method(typeof(CurseOfDarkness), nameof(MarkGlowDirty)));
             Patch(typeof(Building), nameof(Building.DeSpawn), prefix: AccessTools.Method(typeof(CurseOfDarkness), nameof(MarkGlowDirty)));
-            Patch(typeof(GenCelestial), nameof(GenCelestial.CurCelestialSunGlow), postfix: AccessTools.Method(typeof(CurseOfDarkness), nameof(RegisterCelestialGlow)));
             Patch(typeof(SkyManager), "CurrentSkyTarget", postfix: AccessTools.Method(typeof(CurseOfDarkness), nameof(CurrentSkyTargetPostfix)));
+            Patch(AccessTools.TypeByName("Verse.SectionLayer_Zones"), "Regenerate", transpiler: AccessTools.Method(typeof(CurseOfDarkness), nameof(DrawLayerTranspiler)));
         }
 
         public static bool IsDarklightAtPrefix(ref bool __result, IntVec3 position, Map map)
@@ -40,11 +42,13 @@ namespace VFEPirates
                 var glow = ___map.glowGrid.GameGlowAt(position);
                 if (glow <= 0.6f)
                 {
-                    var color = Color.black;
-                    color.a = 1f * (1f - glow);
-                    __instance.glowGrid[i] = color;
-                    __instance.glowGridNoCavePlants[i] = color;
+                    __instance.glowGrid[i] = Color.Lerp(__instance.glowGrid[i], Color.black, 1f - glow);
+                    __instance.glowGridNoCavePlants[i] = Color.Lerp(__instance.glowGridNoCavePlants[i], Color.black, 1f - glow);
                 }
+            }
+            foreach (var zone in ___map.zoneManager.AllZones)
+            {
+                ___map.mapDrawer.MapMeshDirty(zone.cells[0], MapMeshFlag.Zone);
             }
         }
 
@@ -54,34 +58,8 @@ namespace VFEPirates
         }
         public static void CurrentSkyTargetPostfix(ref SkyTarget __result)
         {
-            Log.Message("__result.glow: " + __result.glow);
             __result.colors = new SkyColorSet(Color.Lerp(__result.colors.sky, Color.black, 1f - __result.glow), __result.colors.shadow, __result.colors.overlay, __result.colors.saturation);
         }
-        public static void RegisterCelestialGlow(Map map, float __result)
-        {
-            if (__result <= 0)
-            {
-                if (!darkenedMaps.Contains(map))
-                {
-                    foreach (var cell in map.AllCells)
-                    {
-                        map.glowGrid.MarkGlowGridDirty(cell);
-                    }
-                    darkenedMaps.Add(map);
-                    Log.Message("Adding darkness");
-                }
-            }
-            else if (darkenedMaps.Contains(map))
-            {
-                foreach (var cell in map.AllCells)
-                {
-                    map.glowGrid.MarkGlowGridDirty(cell);
-                }
-                Log.Message("Should remove darkness");
-                darkenedMaps.Remove(map);
-            }
-        }
-
         public override void OnActivate()
         {
             base.OnActivate();
@@ -92,6 +70,31 @@ namespace VFEPirates
         {
             base.OnDisactivate();
             RefreshEvererything();
+        }
+
+        public static IEnumerable<CodeInstruction> DrawLayerTranspiler(IEnumerable<CodeInstruction> codeInstructions)
+        {
+            var codes = codeInstructions.ToList();
+            var hiddenField = AccessTools.Field(typeof(Zone), nameof(Zone.hidden));
+            for (var i = 0; i < codes.Count; i++)
+            {
+                yield return codes[i];
+                if (i > 1 && codes[i - 1].LoadsField(hiddenField) && codes[i].opcode == OpCodes.Brtrue)
+                {
+                    yield return new CodeInstruction(OpCodes.Ldloc_S, 5);
+                    yield return new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(CurseOfDarkness), nameof(CurseOfDarkness.ShouldShowZone)));
+                    yield return new CodeInstruction(OpCodes.Brfalse, codes[i].operand);
+                }
+            }
+        }
+
+        public static bool ShouldShowZone(Zone zone)
+        {
+            if (zone.cells.TrueForAll(x => zone.Map.glowGrid.GameGlowAt(x) <= 0))
+            {
+                return false;
+            }
+            return true;
         }
 
         public void RefreshEvererything()

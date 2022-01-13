@@ -33,6 +33,7 @@ namespace VFEPirates
             {
                 var project = new WarcasketProject(pawn, VFEP_DefOf.VFEP_Warcasket_Warcasket, VFEP_DefOf.VFEP_WarcasketShoulders_Warcasket, VFEP_DefOf.VFEP_WarcasketHelmet_Warcasket);
                 var previousApparels = this.pawn.apparel.WornApparel.ListFullCopy();
+                var wasWearingWarcasket = pawn.IsWearingWarcasket();
                 foreach (var apparel in previousApparels)
                 {
                     this.pawn.apparel.Remove(apparel);
@@ -40,7 +41,7 @@ namespace VFEPirates
                 Find.WindowStack.Add(new Dialog_WarcasketCustomization(project, pawn, onAccept: () =>
                 {
                     Foundry.RegisterOccupant(pawn);
-                    if (pawn.IsWearingWarcasket())
+                    if (wasWearingWarcasket)
                         GenSpawn.Spawn(ThingDefOf.ChunkSlagSteel, pawn.Position, pawn.Map);
                     foreach (var apparel in pawn.apparel.WornApparel.ToList())
                         apparel.Destroy();

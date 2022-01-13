@@ -72,11 +72,12 @@
 	<workerClass>VFEPirates.CurseOfTheBoomalopes</workerClass>
   </VFEPirates.CurseDef>
 
-  <VFEPirates.CurseDef> <!-- TODO: Still needs C# -->
+  <VFEPirates.CurseDef>
 	<defName>VFEP_CurseOfTheBeaten</defName>
 	<label>Curse of the Beaten</label>
 	<description>Can’t tend wounds without medicine.</description>
 	<iconPath>UI/Curses/CurseBeatenUp</iconPath>
+	<workerClass>VFEPirates.CurseOfTheBeaten</workerClass>
   </VFEPirates.CurseDef>
 
   <VFEPirates.CurseDef>

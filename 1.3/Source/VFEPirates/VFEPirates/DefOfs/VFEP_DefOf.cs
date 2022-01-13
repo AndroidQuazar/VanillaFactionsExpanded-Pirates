@@ -94,6 +94,7 @@ namespace VFEPirates
         public static CurseDef VFEP_CurseOfGluttony;
         public static CurseDef VFEP_CurseOfTheEyePatch;
         public static CurseDef VFEP_CurseOfTheStabbed;
+        public static CurseDef VFEP_CurseOfTheBeaten;
 
         public static WarcasketDef VFEP_Warcasket_Warcasket;
         public static WarcasketDef VFEP_WarcasketHelmet_Warcasket;

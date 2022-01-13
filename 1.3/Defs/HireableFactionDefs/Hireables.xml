@@ -12,6 +12,7 @@
             <li>Mercenary_Gunner</li>
         </pawnKinds>
         <commTag>pirates</commTag>
+        <referencedFaction>Pirate</referencedFaction>
     </VFECore.Misc.HireableFactionDef>
     <VFECore.Misc.HireableFactionDef>
         <defName>VFEP_Junkers</defName>
@@ -27,6 +28,7 @@ Junkers utilise warcasket technology and seal themselves in metal tombs in which
             <li>VFEP_HeavyWeaponsPlatform</li>
         </pawnKinds>
         <commTag>pirates</commTag>
+        <referencedFaction>VFEP_Junkers</referencedFaction>
     </VFECore.Misc.HireableFactionDef>
     <VFECore.Misc.HireableFactionDef>
         <defName>VFEP_Mercenaries</defName>
@@ -42,5 +44,6 @@ Mercenaries utilise spacer-tech weapons and armors to eliminate the targets of t
             <li>VFEP_Lieutenant</li>
         </pawnKinds>
         <commTag>pirates</commTag>
+        <referencedFaction>VFEP_Mercenaries</referencedFaction>
     </VFECore.Misc.HireableFactionDef>
 </Defs>

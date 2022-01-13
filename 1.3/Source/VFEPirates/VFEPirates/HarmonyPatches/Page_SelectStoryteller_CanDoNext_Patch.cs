@@ -1,7 +1,5 @@
-﻿using System.Linq;
-using HarmonyLib;
+﻿using HarmonyLib;
 using RimWorld;
-using Verse;
 
 namespace VFEPirates
 {
@@ -15,7 +13,7 @@ namespace VFEPirates
             if (CursesUtility.CursedStorytellerInCharge)
             {
                 var next = __instance.next;
-                __instance.next = new Page_ChooseCurses {prev = __instance, next = next};
+                next.prev = __instance.next = new Page_ChooseCurses {prev = __instance, next = next};
             }
             else if (__instance.next is Page_ChooseCurses {next: var next})
             {

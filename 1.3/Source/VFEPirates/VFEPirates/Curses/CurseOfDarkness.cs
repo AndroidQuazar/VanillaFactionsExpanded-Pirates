@@ -22,7 +22,6 @@ namespace VFEPirates
             Patch(typeof(SkyManager), "CurrentSkyTarget", postfix: AccessTools.Method(typeof(CurseOfDarkness), nameof(CurrentSkyTargetPostfix)));
             Patch(AccessTools.TypeByName("Verse.SectionLayer_Zones"), "Regenerate", transpiler: AccessTools.Method(typeof(CurseOfDarkness), nameof(DrawLayerTranspiler)));
         }
-
         public static bool IsDarklightAtPrefix(ref bool __result, IntVec3 position, Map map)
         {
             if (map.glowGrid.GameGlowAt(position) <= 0)

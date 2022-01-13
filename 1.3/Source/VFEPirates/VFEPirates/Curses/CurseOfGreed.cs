@@ -17,22 +17,18 @@ namespace VFEPirates
 
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
-            List<CodeInstruction> instructionList = instructions.ToList();
-
-            for (int i = 0; i < instructionList.Count; i++)
+            List<CodeInstruction> codes = instructions.ToList();
+            var mineableThingField = AccessTools.Field(typeof(BuildingProperties), nameof(BuildingProperties.mineableThing));
+            var makeThingMethod = AccessTools.Method(typeof(ThingMaker), "MakeThing");
+            for (int i = 0; i < codes.Count; i++)
 			{
-                CodeInstruction instruction = instructionList[i];
-
-                if (instruction.LoadsField(AccessTools.Field(typeof(BuildingProperties), nameof(BuildingProperties.mineableThing))))
-				{
-                    yield return new CodeInstruction(opcode: OpCodes.Call, operand: AccessTools.Method(typeof(CurseOfGreed), nameof(SwapForGold)));
-                    instruction = instructionList[++i];
+                if (i < codes.Count - 6 && codes[i].opcode == OpCodes.Ldarg_0 && codes[i + 3].LoadsField(mineableThingField) && codes[i + 5].Calls(makeThingMethod))
+                {
+                    yield return new CodeInstruction(opcode: OpCodes.Ldsfld, operand: AccessTools.Field(typeof(ThingDefOf), nameof(ThingDefOf.Gold))).MoveLabelsFrom(codes[i]);
+                    i += 4;
 				}
-
-                yield return instruction;
+                yield return codes[i];
 			}
         }
-
-        public static ThingDef SwapForGold(ThingDef originalThingDef) => ThingDefOf.Gold;
     }
 }

@@ -38,11 +38,14 @@ namespace VFEPirates
             for (int i = 0; i < numGridCells; i++)
             {
                 var position = ___map.cellIndices.IndexToCell(i);
-                var glow = ___map.glowGrid.GameGlowAt(position);
-                if (glow <= 0.6f)
+                if (position.Roofed(___map))
                 {
-                    __instance.glowGrid[i] = Color.Lerp(__instance.glowGrid[i], Color.black, 1f - glow);
-                    __instance.glowGridNoCavePlants[i] = Color.Lerp(__instance.glowGridNoCavePlants[i], Color.black, 1f - glow);
+                    var glow = ___map.glowGrid.GameGlowAt(position);
+                    if (glow <= 0.6f)
+                    {
+                        __instance.glowGrid[i] = Color.Lerp(__instance.glowGrid[i], Color.black, 1f - glow);
+                        __instance.glowGridNoCavePlants[i] = Color.Lerp(__instance.glowGridNoCavePlants[i], Color.black, 1f - glow);
+                    }
                 }
             }
             foreach (var zone in ___map.zoneManager.AllZones)

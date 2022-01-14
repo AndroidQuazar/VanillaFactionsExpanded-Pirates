@@ -21,21 +21,25 @@ namespace VFEPirates
         public static IEnumerable<CodeInstruction> AgeTick(IEnumerable<CodeInstruction> instructions)
         {
             List<CodeInstruction> instructionList = instructions.ToList();
-
+            bool found = false;
+            var ageBiologicalTicksIntField = AccessTools.Field(typeof(Pawn_AgeTracker), "ageBiologicalTicksInt");
             for (int i = 0; i < instructionList.Count; i++)
 			{
                 CodeInstruction instruction = instructionList[i];
-
-                if (instruction.opcode == OpCodes.Conv_I8)
+                if (i > 2 && !found && instructionList[i - 2].LoadsField(ageBiologicalTicksIntField) && instruction.opcode == OpCodes.Conv_I8)
 				{
                     yield return instruction;
                     instruction = instructionList[++i];
 
                     yield return new CodeInstruction(opcode: OpCodes.Call, AccessTools.Method(typeof(CurseOfAging), nameof(AgeMultiplier)));
-				}
-
+                    found = true;
+                }
                 yield return instruction;
 			}
+            if (!found)
+            {
+                Log.Error("CurseOfAging failed to apply transpiler");
+            }
         }
     }
 }

@@ -7,6 +7,7 @@ using RimWorld;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
 using Verse;
+using VFECore;
 using VFECore.UItils;
 
 namespace VFEPirates.Buildings
@@ -33,7 +34,9 @@ namespace VFEPirates.Buildings
             this.pawn = pawn;
             this.project = project;
             forcePause = true;
+            Pawn_ApparelTracker_Wear_Patch.doNotRunTraitsPatch = true;
             Notify_SettingsChanged();
+            Pawn_ApparelTracker_Wear_Patch.doNotRunTraitsPatch = false;
         }
 
         protected override float Margin => 5f;

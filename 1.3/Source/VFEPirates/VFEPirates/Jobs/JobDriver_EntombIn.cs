@@ -32,8 +32,8 @@ namespace VFEPirates
             toil.initAction = delegate
             {
                 var project = new WarcasketProject(pawn, VFEP_DefOf.VFEP_Warcasket_Warcasket, VFEP_DefOf.VFEP_WarcasketShoulders_Warcasket, VFEP_DefOf.VFEP_WarcasketHelmet_Warcasket);
-                var previousApparels = this.pawn.apparel.WornApparel.ListFullCopy();
                 var wasWearingWarcasket = pawn.IsWearingWarcasket();
+                var previousApparels = this.pawn.apparel.WornApparel.ListFullCopy();
                 foreach (var apparel in previousApparels)
                 {
                     this.pawn.apparel.Remove(apparel);

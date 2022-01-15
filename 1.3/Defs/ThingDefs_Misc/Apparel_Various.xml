@@ -164,6 +164,7 @@
 				<traitsOnUnequip>
 					<li>VFEP_Shellcasket</li>
 				</traitsOnUnequip>
+				<carryingCapacity>75</carryingCapacity>
 				<pawnCapacityMinLevels>
 					<li>
 						<capacity>Moving</capacity>
@@ -300,6 +301,7 @@
 				<traitsOnUnequip>
 					<li>VFEP_Shellcasket</li>
 				</traitsOnUnequip>
+				<carryingCapacity>75</carryingCapacity>
 				<pawnCapacityMinLevels>
 					<li>
 						<capacity>Moving</capacity>
@@ -414,6 +416,7 @@
 				<traitsOnUnequip>
 					<li>VFEP_Shellcasket</li>
 				</traitsOnUnequip>
+				<carryingCapacity>75</carryingCapacity>
 				<pawnCapacityMinLevels>
 					<li>
 						<capacity>Moving</capacity>
@@ -530,6 +533,7 @@
 				<traitsOnUnequip>
 					<li>VFEP_Shellcasket</li>
 				</traitsOnUnequip>
+				<carryingCapacity>75</carryingCapacity>
 				<pawnCapacityMinLevels>
 					<li>
 						<capacity>Moving</capacity>
@@ -651,6 +655,7 @@
 				<traitsOnUnequip>
 					<li>VFEP_Shellcasket</li>
 				</traitsOnUnequip>
+				<carryingCapacity>75</carryingCapacity>
 				<pawnCapacityMinLevels>
 					<li>
 						<capacity>Moving</capacity>
@@ -793,6 +798,7 @@
 				<traitsOnUnequip>
 					<li>VFEP_Shellcasket</li>
 				</traitsOnUnequip>
+				<carryingCapacity>75</carryingCapacity>
 				<pawnCapacityMinLevels>
 					<li>
 						<capacity>Moving</capacity>
@@ -975,6 +981,7 @@
 				<traitsOnUnequip>
 					<li>VFEP_Shellcasket</li>
 				</traitsOnUnequip>
+				<carryingCapacity>75</carryingCapacity>
 				<pawnCapacityMinLevels>
 					<li>
 						<capacity>Moving</capacity>
@@ -1117,6 +1124,7 @@
 				<traitsOnUnequip>
 					<li>VFEP_Shellcasket</li>
 				</traitsOnUnequip>
+				<carryingCapacity>75</carryingCapacity>
 				<pawnCapacityMinLevels>
 					<li>
 						<capacity>Moving</capacity>

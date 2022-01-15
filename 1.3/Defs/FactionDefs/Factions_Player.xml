@@ -3,7 +3,7 @@
   <FactionDef ParentName="PlayerFactionBase">
     <defName>VFEP_PlayerPirate</defName>
     <label>New Cove</label>
-    <description>A small tribe.</description>
+    <description>A small pirate cove.</description>
     <isPlayer>true</isPlayer>
     <pawnSingular>pirate</pawnSingular>
     <pawnsPlural>pirates</pawnsPlural>

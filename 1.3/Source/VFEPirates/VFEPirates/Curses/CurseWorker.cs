@@ -21,7 +21,6 @@ namespace VFEPirates
             patchedMethods ??= new Dictionary<MethodBase, List<MethodInfo>>();
             if (GameComponent_CurseManager.Instance.activeCurseTypes.Contains(GetType()))
             {
-                Log.Message("Do patches this: " + GetType());
                 DoPatches();
                 OnActivate();
             }
@@ -41,7 +40,6 @@ namespace VFEPirates
                     MethodBase method = kvp.Key;
                     foreach (var patch in kvp.Value)
                     {
-                        Log.Message("Unpatching this: " + method.FullDescription() + " for " + GetType());
                         VFEPiratesMod.harmony.Unpatch(method, patch);
                     }
                 }
@@ -69,7 +67,6 @@ namespace VFEPirates
         }
         public void Patch(MethodBase original, MethodInfo prefix = null, MethodInfo postfix = null, MethodInfo transpiler = null)
         {
-            Log.Message("Patching this: " + original.FullDescription() + " for " + GetType());
             VFEPiratesMod.harmony.Patch(original, prefix != null ? new HarmonyMethod(prefix) : null, 
                 postfix != null ? new HarmonyMethod(postfix) : null, transpiler != null ? new HarmonyMethod(transpiler) : null);
             var patches = new List<MethodInfo>();

@@ -35,7 +35,6 @@ namespace VFEPirates
 				(x.IsInGroup(BodyPartGroupDefOf.Legs) || x.IsInGroup(DefDatabase<BodyPartGroupDef>.GetNamed("Arms")))))
             {
 
-				Log.Message("Yielding " + part);
 				yield return part;
             }
         }

@@ -19,8 +19,8 @@
     <arriveModes>
       <li>VFEP_GauntletDrop</li>
     </arriveModes>
-    <letterLabelEnemy>Raid</letterLabelEnemy>
-    <arrivalTextEnemy>text.todo</arrivalTextEnemy>
+    <letterLabelEnemy>Gauntlet Raid</letterLabelEnemy>
+    <arrivalTextEnemy>They will disembark after a short while and attack.</arrivalTextEnemy>
     <letterLabelFriendly>Friendlies</letterLabelFriendly>
     <arrivalTextFriendly>They are moving in to help you immediately.</arrivalTextFriendly>
   </RaidStrategyDef>
@@ -40,8 +40,8 @@
         <li>5000, 0.3</li>
       </points>
     </pointsFactorCurve>
-    <textEnemy>text.todo (A group of {0} from {1} have dropped in right on top of you!)</textEnemy>
-    <textFriendly>text.todo (A group of friendly {0} from {1} have dropped in right on top of you!)</textFriendly>
-    <textWillArrive>text.todo ({0_pawnsPluralDef} will arrive in transport pods right on top of you.)</textWillArrive>
+    <textEnemy>A group of {0} from {1} have arrived in gauntlet ships and are crashing on top of your colony. Gauntlet ships provide covering fire and need to be destroyed immediately.</textEnemy>
+    <textFriendly>A group of friendly {0} from {1} have arrived in gauntlet ships and are crashing on top of your colony. Gauntlet ships will provide covering fire.</textFriendly>
+    <textWillArrive>They will disembark after a short while and attack.</textWillArrive>
   </PawnsArrivalModeDef>
 </Defs>

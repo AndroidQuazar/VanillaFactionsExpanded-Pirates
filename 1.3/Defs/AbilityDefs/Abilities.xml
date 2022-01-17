@@ -3,7 +3,7 @@
     <VFECore.Abilities.AbilityDef>
         <defName>VFEP_GrapplingHook</defName>
         <label>grappling hook</label>
-        <description>todo</description>
+        <description>Grappling hook connects to walls and solid rock and allows the users to quickly move to the desired location. The launcher does not require ammunition, but time needs to be reserved between shots to wind it up again.</description>
         <abilityClass>VFEPirates.Ability_GrapplingHook</abilityClass>
         <targetMode>Thing</targetMode>
         <range>19.9</range>

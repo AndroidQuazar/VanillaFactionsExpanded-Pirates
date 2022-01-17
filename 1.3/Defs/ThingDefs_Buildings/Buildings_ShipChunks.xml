@@ -44,7 +44,7 @@
   <ThingDef ParentName="VFEP_BuildingChunkBase">
     <defName>VFEP_ShipChunkDebris</defName>
     <label>ship chunk debris</label>
-    <description>text.todo</description>
+    <description>A chunk of a combat-grade spacecraft. It seems to have been torn off either by uncontrolled re-entry forces or some kind of weapon. It is densely packed with double-layer armor plating and control systems, which can be acquired by deconstructing it.</description>
     <graphicData>
       <texPath>Things/Building/ShipChunks/ShipChunkDebris</texPath>
       <graphicClass>Graphic_Random</graphicClass>
@@ -58,7 +58,7 @@
   <ThingDef ParentName="VFEP_BuildingChunkBase">
     <defName>VFEP_ShipChunkBattery</defName>
     <label>ship chunk battery</label>
-    <description>text.todo</description>
+    <description>The mangled remains of ship-borne battery, used to power systems with high power draw for short periods. It was leaps and bounds about Rimworld battery technology but it can no longer be recharged and yields decent salvage once it’s stored charge has run out.</description>
     <graphicData>
       <texPath>Things/Building/ShipChunks/ShipChunkBattery</texPath>
     </graphicData>
@@ -86,7 +86,7 @@
   <ThingDef ParentName="VFEP_BuildingChunkBase">
     <defName>VFEP_ShipChunkCryptosleepCasket</defName>
     <label>ship chunk cryptosleep casket</label>
-    <description>text.todo</description>
+    <description>A self-powered cryptosleep casket caught in the remains of their ship’s hull. The occupant can still be recovered from the module, but most of the material is worth less than scrap metal and offers little salvage.</description>
     <graphicData>
       <texPath>Things/Building/ShipChunks/ShipChunkCryptosleep</texPath>
     </graphicData>
@@ -119,7 +119,7 @@
   <ThingDef ParentName="VFEP_BuildingChunkBase">
     <defName>VFEP_ShipChunkVolatileEngine</defName>
     <label>ship chunk volatile engine</label>
-    <description>text.todo</description>
+    <description>Self-powered turbo engines for a combat-grade spacecraft, designed for atmospheric use. The control and safety system are damaged and the turbines are unable to take in enough air to cool itself. If not properly dismantled, the accumulating energy will tear itself apart.</description>
     <graphicData>
       <texPath>Things/Building/ShipChunks/ShipChunkEngine</texPath>
     </graphicData>
@@ -177,7 +177,7 @@
   <ThingDef ParentName="VFEP_BuildingChunkBase">
     <defName>VFEP_ShipChunkFuelTank</defName>
     <label>ship chunk fuel tank</label>
-    <description>text.todo</description>
+    <description>A tank of Chemfuel, punctured by the hull of its ship’s hull. Some of the fluid can be recovered while the majority is filled with grime, leaking out and creating a fire hazard. A prime target for any pyromaniac wanting to watch the world burn.</description>
     <graphicData>
       <texPath>Things/Building/ShipChunks/ShipChunkFuelTank</texPath>
     </graphicData>
@@ -204,7 +204,7 @@
   <ThingDef ParentName="VFEP_BuildingChunkBase">
     <defName>VFEP_ShipChunkGauntletTurret</defName>
     <label>ship chunk gauntlet turret</label>
-    <description>text.todo</description>
+    <description>The remains of the housing for the Gauntlet charge cannon. Powered externally, the ammunition storage is wrecked and cannot be replaced. Once the turret empties its magazine, it is still valuable salvage worth recovery.</description>
     <graphicData>
       <texPath>Things/Building/ShipChunks/ShipChunkGauntletTurret</texPath>
       <drawSize>(3,3)</drawSize>
@@ -274,7 +274,7 @@
   <ThingDef ParentName="VFEP_BuildingChunkBase">
     <defName>VFEP_ShipChunkReactor</defName>
     <label>ship chunk reactor</label>
-    <description>text.todo</description>
+    <description>The remains of a combat-grade spacecraft’s nuclear reactor, low-yield and designed to operate alongside energy storage. Surprisingly, the reactor is fully functional with no structural damage, so it can be safely used for ground operations.</description>
     <graphicData>
       <texPath>Things/Building/ShipChunks/ShipChunkReactor</texPath>
     </graphicData>
@@ -316,7 +316,7 @@
   <ThingDef ParentName="VFEP_BuildingChunkBase">
     <defName>VFEP_ShipMedicalCrate</defName>
     <label>ship medical crate</label>
-    <description>text.todo</description>
+    <description>A now-unsealed crate containing first-aid supplies. The pallet can be dismantled for steel along with recovering the supplies.</description>
     <graphicData>
       <texPath>Things/Building/ShipChunks/ShipChunkMedicine</texPath>
     </graphicData>
@@ -329,7 +329,7 @@
   <ThingDef ParentName="VFEP_BuildingChunkBase">
     <defName>VFEP_ShipNutrientPasteCrate</defName>
     <label>ship nutrient paste crate</label>
-    <description>text.todo</description>
+    <description>A now-unsealed crate containing emergency food rations. The pallet can be dismantled for steel along with recovering the supplies.</description>
     <graphicData>
       <texPath>Things/Building/ShipChunks/ShipChunkNutrientPaste</texPath>
     </graphicData>

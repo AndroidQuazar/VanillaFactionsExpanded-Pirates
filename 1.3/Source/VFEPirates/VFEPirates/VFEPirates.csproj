@@ -104,6 +104,7 @@
     <Compile Include="HarmonyPatches\StorytellerComp_RandomMain_ChooseRandomCategory_Transpiler.cs" />
     <Compile Include="HarmonyPatches\StorytellerUtilityPopulation_CalculatePopulationIntent_Patch.cs" />
     <Compile Include="HarmonyPatches\TaleUtility_Notify_PawnDied_Patch.cs" />
+    <Compile Include="HarmonyPatches\Trait_AllowsWorkType_Patch.cs" />
     <Compile Include="HarmonyPatches\TurretTop_get_CurRotation_Patch.cs" />
     <Compile Include="Jobs\JobDriver_EquipFromWeaponBox.cs" />
     <Compile Include="RaidStrategy\Building_CrashedShip.cs" />

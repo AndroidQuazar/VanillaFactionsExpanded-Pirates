@@ -9,7 +9,7 @@
     <techLevel>Industrial</techLevel>
 	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <prerequisites>
-      <li>AdvancedFabrication</li>
+      <li>Fabrication</li>
     </prerequisites>
     <researchViewX>7.0</researchViewX>
     <researchViewY>3.65</researchViewY>

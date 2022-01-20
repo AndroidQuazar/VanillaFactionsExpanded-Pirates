@@ -113,5 +113,6 @@ namespace VFEPirates
         public static StatDef VFEP_PowerJumpDetonationRadius;
         public static StatDef VFEP_PowerJumpRange;
         public static JobDef VFEP_EquipFromWeaponBox;
+        public static TraitDef VFEP_WarcasketTrait;
     }
 }

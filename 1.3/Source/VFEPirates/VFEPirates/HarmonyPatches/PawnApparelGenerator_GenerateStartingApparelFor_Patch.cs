@@ -26,18 +26,10 @@ namespace VFEPirates
                         __result.apparel.Remove(__result.apparel.WornApparel[i]);
                     }
                 }
-                foreach (var apparel in __result.apparel.WornApparel)
-                {
-                    Log.Message("Before: " + apparel + " - " + __result.apparel.IsLocked(apparel));
-                }
                 CheckApparels(__result, VFEPiratesMod.allArmorDefs);
                 CheckApparels(__result, VFEPiratesMod.allShoulderPadsDefs);
                 CheckApparels(__result, VFEPiratesMod.allHelmetDefs);
                 __result.apparel.LockAll();
-                foreach (var apparel in __result.apparel.WornApparel)
-                {
-                    Log.Message("After: " + apparel + " - " + __result.apparel.IsLocked(apparel));
-                }
             }
             void CheckApparels(Pawn pawn, List<WarcasketDef> apparels)
             {
@@ -46,7 +38,6 @@ namespace VFEPirates
                     var armorDef = apparels.RandomElement();
                     var armor = ThingMaker.MakeThing(armorDef, GenStuff.RandomStuffFor(armorDef)) as Apparel;
                     pawn.apparel.Wear(armor, false, true);
-                    Log.Message("Replacing with " + armor);
                 }
             }
         }

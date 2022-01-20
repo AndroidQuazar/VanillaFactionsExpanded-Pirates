@@ -1,5 +1,9 @@
 ﻿using HarmonyLib;
+using RimWorld;
+using System.Collections.Generic;
+using System;
 using Verse;
+using System.Linq;
 
 namespace VFEPirates
 {

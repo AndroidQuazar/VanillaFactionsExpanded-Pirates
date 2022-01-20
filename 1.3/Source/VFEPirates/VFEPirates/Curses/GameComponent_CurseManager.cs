@@ -56,7 +56,6 @@ namespace VFEPirates
             base.FinalizeInit();
             Init();
             InitializeCurses();
-            Log.Message("Initializing curses");
         }
 
         public void Init()

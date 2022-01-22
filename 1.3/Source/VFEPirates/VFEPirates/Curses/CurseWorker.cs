@@ -21,7 +21,10 @@ namespace VFEPirates
             patchedMethods ??= new Dictionary<MethodBase, List<MethodInfo>>();
             if (GameComponent_CurseManager.Instance.activeCurseTypes.Contains(GetType()))
             {
-                DoPatches();
+                if (!patchedMethods.Any())
+                {
+                    DoPatches();
+                }
                 OnActivate();
             }
             else

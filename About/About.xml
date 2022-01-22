@@ -40,4 +40,7 @@
     <li>brrainz.harmony</li>
     <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
   </loadAfter>
+	<incompatibleWith>
+		<li>n7huntsman.combatshields</li> 
+	</incompatibleWith>
 </ModMetaData>

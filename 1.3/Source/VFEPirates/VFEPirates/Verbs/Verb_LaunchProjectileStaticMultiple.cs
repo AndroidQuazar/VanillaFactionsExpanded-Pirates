@@ -17,7 +17,7 @@ namespace VFEPirates
         public int projectileCount;
     }
 
-
+    [StaticConstructorOnStartup]
 	public class Verb_LaunchProjectileStaticMultiple : Verb_LaunchProjectileStatic
     {
         public static Texture2D texture;

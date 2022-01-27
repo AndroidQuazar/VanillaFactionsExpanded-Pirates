@@ -64,7 +64,7 @@ namespace VFEPirates
             {
                 return;
             }
-            else if (Wearer.Position.Fogged(Wearer.Map))
+            else if (Wearer.PositionHeld.Fogged(Wearer.MapHeld))
             {
                 return;
             }
@@ -84,7 +84,7 @@ namespace VFEPirates
 
         public bool TryDoSpawn()
         {
-            if (!Wearer.Spawned)
+            if (Wearer.MapHeld is null)
             {
                 return false;
             }
@@ -93,12 +93,12 @@ namespace VFEPirates
                 int num = 0;
                 for (int i = 0; i < 9; i++)
                 {
-                    IntVec3 c = Wearer.Position + GenAdj.AdjacentCellsAndInside[i];
-                    if (!c.InBounds(Wearer.Map))
+                    IntVec3 c = Wearer.PositionHeld + GenAdj.AdjacentCellsAndInside[i];
+                    if (!c.InBounds(Wearer.MapHeld))
                     {
                         continue;
                     }
-                    List<Thing> thingList = c.GetThingList(Wearer.Map);
+                    List<Thing> thingList = c.GetThingList(Wearer.MapHeld);
                     for (int j = 0; j < thingList.Count; j++)
                     {
                         if (thingList[j].def == PropsSpawner.thingToSpawn)
@@ -124,7 +124,7 @@ namespace VFEPirates
                 {
                     thing.SetFaction(Wearer.Faction);
                 }
-                GenPlace.TryPlaceThing(thing, result, Wearer.Map, ThingPlaceMode.Direct, out var lastResultingThing);
+                GenPlace.TryPlaceThing(thing, result, Wearer.MapHeld, ThingPlaceMode.Direct, out var lastResultingThing);
                 if (PropsSpawner.spawnForbidden)
                 {
                     lastResultingThing.SetForbidden(value: true);
@@ -134,7 +134,7 @@ namespace VFEPirates
                     Messages.Message("MessageCompSpawnerSpawnedItem".Translate(PropsSpawner.thingToSpawn.LabelCap), thing, MessageTypeDefOf.PositiveEvent);
                 }
 
-                VFEP_DefOf.VFEP_RumFinished.PlayOneShot(new TargetInfo(Wearer.Position, Wearer.Map, false));
+                VFEP_DefOf.VFEP_RumFinished.PlayOneShot(new TargetInfo(Wearer.PositionHeld, Wearer.MapHeld, false));
                 return true;
             }
             return false;
@@ -142,24 +142,24 @@ namespace VFEPirates
 
         public static bool TryFindSpawnCell(Thing parent, ThingDef thingToSpawn, int spawnCount, out IntVec3 result)
         {
-            foreach (IntVec3 item in GenAdj.CellsAdjacent8Way(parent).InRandomOrder())
+            foreach (IntVec3 item in GenAdj.CellsAdjacent8Way(new TargetInfo(parent.PositionHeld, parent.MapHeld)).InRandomOrder())
             {
-                if (!item.Walkable(parent.Map))
+                if (!item.Walkable(parent.MapHeld))
                 {
                     continue;
                 }
-                Building edifice = item.GetEdifice(parent.Map);
+                Building edifice = item.GetEdifice(parent.MapHeld);
                 if (edifice != null && thingToSpawn.IsEdifice())
                 {
                     continue;
                 }
                 Building_Door building_Door = edifice as Building_Door;
-                if ((building_Door != null && !building_Door.FreePassage) || (parent.def.passability != Traversability.Impassable && !GenSight.LineOfSight(parent.Position, item, parent.Map)))
+                if ((building_Door != null && !building_Door.FreePassage) || (parent.def.passability != Traversability.Impassable && !GenSight.LineOfSight(parent.PositionHeld, item, parent.MapHeld)))
                 {
                     continue;
                 }
                 bool flag = false;
-                List<Thing> thingList = item.GetThingList(parent.Map);
+                List<Thing> thingList = item.GetThingList(parent.MapHeld);
                 for (int i = 0; i < thingList.Count; i++)
                 {
                     Thing thing = thingList[i];

@@ -10,14 +10,12 @@ namespace VFEPirates
 {
     public class JobDriver_EntombIn : JobDriver
     {
-        [TweakValue("00", 0, 10)] public static float zOffset = 0.67f;
         public Building_WarcasketFoundry Foundry => TargetA.Thing as Building_WarcasketFoundry;
-
         public override Vector3 ForcedBodyOffset
         {
             get
             {
-                if (pawn.Position == Foundry.Position) return new Vector3(0, 0, zOffset);
+                if (pawn.Position == Foundry.Position) return new Vector3(0, 0, 0.67f);
                 return default;
             }
         }

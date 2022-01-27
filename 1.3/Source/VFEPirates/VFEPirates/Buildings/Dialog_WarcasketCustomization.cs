@@ -34,9 +34,7 @@ namespace VFEPirates.Buildings
             this.pawn = pawn;
             this.project = project;
             forcePause = true;
-            Pawn_ApparelTracker_Wear_Patch.doNotRunTraitsPatch = true;
             Notify_SettingsChanged();
-            Pawn_ApparelTracker_Wear_Patch.doNotRunTraitsPatch = false;
         }
 
         protected override float Margin => 5f;
@@ -91,7 +89,9 @@ namespace VFEPirates.Buildings
 
         private void Notify_SettingsChanged()
         {
+            Pawn_ApparelTracker_Wear_Patch.doNotRunTraitsPatch = true;
             project.ApplyOn(pawn);
+            Pawn_ApparelTracker_Wear_Patch.doNotRunTraitsPatch = false;
             project.totalWorkAmount = project.armorDef.GetStatValueAbstract(StatDefOf.WorkToMake) + project.shoulderPadsDef.GetStatValueAbstract(StatDefOf.WorkToMake) +
                                       project.helmetDef.GetStatValueAbstract(StatDefOf.WorkToMake);
             PortraitsCache.SetDirty(pawn);
@@ -140,13 +140,14 @@ namespace VFEPirates.Buildings
             Widgets.DrawHighlight(workRect);
             workRect.xMin += 10f;
             Text.Font = GameFont.Small;
-            Widgets.Label(workRect, project.totalWorkAmount.ToString(CultureInfo.CurrentCulture));
+            Widgets.Label(workRect, ((int)project.totalWorkAmount).ToStringTicksToPeriod());
             Text.Font = GameFont.Medium;
             Widgets.Label(infoRect.TopHalf(), "VFEP.TotalCost".Translate());
             Text.Font = GameFont.Small;
             infoRect = infoRect.BottomHalf().ContractedBy(2f);
             Widgets.DrawHighlight(infoRect);
             bottomRect.xMin += 5f;
+            infoRect.xMin += 10f;
             Widgets.Label(infoRect, project.RequiredIngredients().Join(ing => ing.ToString().Trim('(', ')')));
             var textRect = bottomRect.LeftPartPixels(bottomRect.width - 300f);
             var buttonsRect = bottomRect.RightPartPixels(290f);

@@ -55,7 +55,7 @@
   <PawnKindDef ParentName="VFEP_JunkersBase">
     <defName>VFEP_Footsoldier</defName>
     <label>footsoldier</label>
-    <combatPower>150</combatPower>
+    <combatPower>300</combatPower>
     <maxGenerationAge>55</maxGenerationAge>
     <apparelMoney>3000~5000</apparelMoney>
     <apparelTags>
@@ -94,7 +94,7 @@
   <PawnKindDef ParentName="VFEP_JunkersBase">
     <defName>VFEP_Veteran</defName>
     <label>veteran</label>
-    <combatPower>200</combatPower>
+    <combatPower>400</combatPower>
     <maxGenerationAge>55</maxGenerationAge>
     <apparelMoney>3000~5000</apparelMoney>
     <apparelTags>
@@ -129,7 +129,7 @@
   <PawnKindDef ParentName="VFEP_JunkersBase">
     <defName>VFEP_HeavyWeaponsPlatform</defName>
     <label>heavy weapons platform</label>
-    <combatPower>280</combatPower>
+    <combatPower>460</combatPower>
     <maxGenerationAge>55</maxGenerationAge>
     <apparelMoney>3000~5000</apparelMoney>
     <apparelTags>
@@ -164,7 +164,7 @@
   <PawnKindDef ParentName="VFEP_JunkersBase">
     <defName>VFEP_Hussar</defName>
     <label>hussar</label>
-    <combatPower>300</combatPower>
+    <combatPower>600</combatPower>
     <maxGenerationAge>55</maxGenerationAge>
     <apparelMoney>3200~5200</apparelMoney>
     <apparelTags>
@@ -199,7 +199,7 @@
   <PawnKindDef ParentName="VFEP_JunkersBase">
     <defName>VFEP_Pyro</defName>
     <label>pyro</label>
-    <combatPower>300</combatPower>
+    <combatPower>600</combatPower>
     <maxGenerationAge>55</maxGenerationAge>
 	<factionLeader>true</factionLeader>
     <apparelMoney>3200~5200</apparelMoney>
@@ -235,7 +235,7 @@
   <PawnKindDef ParentName="VFEP_JunkersBase">
     <defName>VFEP_Artillery</defName>
     <label>artillery</label>
-    <combatPower>300</combatPower>
+    <combatPower>600</combatPower>
     <maxGenerationAge>55</maxGenerationAge>
 	<factionLeader>true</factionLeader>
     <apparelMoney>3200~5200</apparelMoney>

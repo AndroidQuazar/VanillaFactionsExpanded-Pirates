@@ -7,9 +7,8 @@
     <description>Build warcasket foundries to manufacture basic warcasket parts and outfit pawns to utilise said warcaskets.</description>
     <baseCost>3000</baseCost>
     <techLevel>Industrial</techLevel>
-	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <prerequisites>
-      <li>Fabrication</li>
+      <li>Machining</li>
     </prerequisites>
     <researchViewX>7.0</researchViewX>
     <researchViewY>3.65</researchViewY>

@@ -72,6 +72,29 @@
                         </li>
                      </comps>
                   </ThingDef>
+                  <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
+                     <defName>VFEP_Box_Railgun</defName>
+                     <label>warcasket railgun</label>
+                     <description>tbd.</description>
+                     <graphicData>
+                        <texPath>Things/Item/WeaponsBoxed/WarcasketRailgun</texPath>
+                     </graphicData>
+                     <costList>
+                        <Steel>180</Steel>
+                        <Uranium>80</Uranium>
+                        <ComponentSpacer>8</ComponentSpacer>
+                     </costList>
+                     <statBases>
+                        <MarketValue>3200</MarketValue>
+                        <Mass>45</Mass>
+                        <WorkToBuild>110000</WorkToBuild>
+                     </statBases>
+                     <comps>
+                        <li Class="VFEPirates.CompProperties_WeaponBox">
+                           <weaponToEquip>VFEP_WarcasketGun_Railgun</weaponToEquip>
+                        </li>
+                     </comps>
+                  </ThingDef>
                   <VFECore.ExpandableProjectileDef ParentName="BaseBullet">
                      <defName>VWE_Bullet_WarcasketRailgun</defName>
                      <label>railgun sabot</label>

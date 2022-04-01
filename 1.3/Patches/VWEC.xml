@@ -71,6 +71,16 @@
                            <northOffset>(0,0,-0.18)</northOffset>
                         </li>
                      </comps>
+                     <modExtensions>
+                        <li Class="VFECore.FloorGraphicExtension">
+                           <graphicData>
+                              <graphicClass>Graphic_Single</graphicClass>
+                              <texPath>Things/Item/WeaponsBoxed/WarcasketRailgun_OnFloor</texPath>
+                              <onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+                              <drawSize>1</drawSize>
+                           </graphicData>
+                        </li>
+                     </modExtensions>
                   </ThingDef>
                   <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
                      <defName>VFEP_Box_Railgun</defName>

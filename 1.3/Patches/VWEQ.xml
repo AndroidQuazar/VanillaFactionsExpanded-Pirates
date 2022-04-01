@@ -75,6 +75,28 @@
                         </li>
                      </modExtensions>
                   </ThingDef>
+                  <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
+                     <defName>VFEP_Box_FoldingGun</defName>
+                     <label>warcasket folding gun</label>
+                     <description>tbd.</description>
+                     <graphicData>
+                        <texPath>Things/Item/WeaponsBoxed/WarcasketFoldingGun_OnFloor</texPath>
+                     </graphicData>
+                     <costList>
+                        <Steel>160</Steel>
+                        <ComponentIndustrial>6</ComponentIndustrial>
+                     </costList>
+                     <statBases>
+                        <MarketValue>1650</MarketValue>
+                        <Mass>15</Mass>
+                        <WorkToBuild>45000</WorkToBuild>
+                     </statBases>
+                     <comps>
+                        <li Class="VFEPirates.CompProperties_WeaponBox">
+                           <weaponToEquip>VFEP_WarcasketGun_TearGasGrenadeLauncher</weaponToEquip>
+                        </li>
+                     </comps>
+                  </ThingDef>
                   <ThingDef ParentName="BaseBullet">
                      <defName>VFEP_Bullet_WarcasketFoldingGun</defName>
                      <label>warcasket folding gun bullet</label>

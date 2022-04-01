@@ -539,7 +539,7 @@
   <ThingDef ParentName="VFEP_BaseWarcasketGun">
     <defName>VFEP_WarcasketGun_ChargeLance</defName>
     <label>warcasket charge lance</label>
-    <description>A terror on the battlefield, the charge lance received a massive upgrade for Warcasket use. A considerably more powerful energy source gives it superior stopping power, able to fire multiple larger projectiles at a greater range with improved accuracy and penetration.</description>
+    <description>A terror on the battlefield, the charge lance received a massive upgrade for warcasket use. A considerably more powerful energy source gives it superior stopping power, able to fire multiple larger projectiles at a greater range with improved accuracy and penetration.</description>
     <graphicData>
       <texPath>Things/Item/Weapons/WarcasketChargeLance</texPath>
     </graphicData>
@@ -715,7 +715,7 @@
   <ThingDef ParentName="VFEP_BaseWarcasketGun">
     <defName>VFEP_WarcasketGun_ChargeBlaster</defName>
     <label>warcasket charge blaster</label>
-    <description>Essentially an upscaled charge minigun designed to be used by a Warcasket. While firing fewer projectiles in each burst, the ammunition has been improved with explosive payloads. Designed as a support weapon that completely invalidates cover for the unlucky bastards on the receiving end.</description>
+    <description>Essentially an upscaled charge minigun designed to be used by a warcasket. While firing fewer projectiles in each burst, the ammunition has been improved with explosive payloads. Designed as a support weapon that completely invalidates cover for the unlucky bastards on the receiving end.</description>
     <graphicData>
       <texPath>Things/Item/Weapons/WarcasketChargeBlaster</texPath>
     </graphicData>

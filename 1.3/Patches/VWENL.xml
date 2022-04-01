@@ -80,6 +80,29 @@
                         </li>
                      </modExtensions>
                   </ThingDef>
+                  <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
+                     <defName>VFEP_Box_TearGasGrenadeLauncher</defName>
+                     <label>warcasket tear gas grenade launcher</label>
+                     <description>tbd.</description>
+                     <graphicData>
+                        <texPath>Things/Item/WeaponsBoxed/WarcasketTearGasGrenadeLauncher_OnFloor</texPath>
+                     </graphicData>
+                     <costList>
+                        <Steel>150</Steel>
+                        <Neutroamine>100</Neutroamine>
+                        <ComponentIndustrial>3</ComponentIndustrial>
+                     </costList>
+                     <statBases>
+                        <MarketValue>1650</MarketValue>
+                        <Mass>25</Mass>
+                        <WorkToBuild>45000</WorkToBuild>
+                     </statBases>
+                     <comps>
+                        <li Class="VFEPirates.CompProperties_WeaponBox">
+                           <weaponToEquip>VFEP_WarcasketGun_TearGasGrenadeLauncher</weaponToEquip>
+                        </li>
+                     </comps>
+                  </ThingDef>
                </value>
             </li>
          </operations>

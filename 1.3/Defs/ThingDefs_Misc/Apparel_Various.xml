@@ -1382,4 +1382,122 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 			</li>
 		</comps>
 	</ThingDef>
+	
+<!--======================================================= UPDATE =======================================================-->	
+
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
+		<defName>VFEP_Warcasket_Siegebreaker</defName>
+		<label>siegebreaker warcasket</label>
+		<shortDescription>Specialized spacer-tech warcasket shell with standard protection, augmented with improved shield capacitors for greater durability.</shortDescription>
+		<description>Specialized spacer-tech warcasket shell with standard protection, augmented with improved shield capacitors for greater durability.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/WarcasketSiegebreaker/WarcasketSiegebreaker</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>50</Mass>
+			<ArmorRating_Sharp>2</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1</ArmorRating_Blunt>
+			<ArmorRating_Heat>1</ArmorRating_Heat>
+			<Insulation_Cold>80</Insulation_Cold>
+			<Insulation_Heat>80</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<PsychicSensitivity>-0.5</PsychicSensitivity>
+			<ToxicSensitivity>-0.5</ToxicSensitivity>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<costList>
+			<ComponentSpacer>6</ComponentSpacer>
+			<Plasteel>145</Plasteel>
+			<Uranium>50</Uranium>
+		</costList>
+		<researchPrerequisites>
+			<li>VFEP_AdvancedWarcaskets</li>
+		</researchPrerequisites>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Legs</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketSiegebreaker/WarcasketSiegebreaker</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>WarcasketVeteran</li>
+				<li>WarcasketAll</li>
+			</tags>
+		</apparel>
+		<modExtensions>
+			<li Class="VFECore.ApparelExtension">
+				<traitsOnEquip>
+					<li>VFEP_WarcasketTrait</li>
+				</traitsOnEquip>
+				<traitsOnUnequip>
+					<li>VFEP_Shellcasket</li>
+				</traitsOnUnequip>
+				<carryingCapacity>75</carryingCapacity>
+				<pawnCapacityMinLevels>
+					<li>
+						<capacity>Moving</capacity>
+						<minLevel>0.7</minLevel>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<minLevel>0.7</minLevel>
+					</li>
+				</pawnCapacityMinLevels>
+			</li>
+		</modExtensions>
+	</VFEPirates.WarcasketDef>
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
+		<defName>VFEP_WarcasketShoulders_Siegebreaker</defName>
+		<label>siegebreaker warcasket shoulders</label>
+		<shortDescription>Specialized spacer-tech warcasket pauldrons with standard protection, augmented with improved power conduits that increase shield recharge rate.</shortDescription>
+		<description>Specialized spacer-tech warcasket pauldrons with standard protection, augmented with improved power conduits that increase shield recharge rate.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/WarcasketSiegebreaker/WarcasketWarcasketSiegebreakerShoulders</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>20</Mass>
+			<ArmorRating_Sharp>2</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1</ArmorRating_Blunt>
+			<ArmorRating_Heat>1</ArmorRating_Heat>
+			<Insulation_Cold>2</Insulation_Cold>
+			<Insulation_Heat>2</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<costList>
+			<Steel>55</Steel>
+		</costList>
+		<researchPrerequisites>
+			<li>VFEP_AdvancedWarcaskets</li>
+		</researchPrerequisites>
+		<apparel>
+			<bodyPartGroups>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Hands</li>
+				<li>Neck</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketSiegebreaker/WarcasketWarcasketSiegebreakerShoulders</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>WarcasketVeteran</li>
+				<li>WarcasketAll</li>
+			</tags>
+		</apparel>
+	</VFEPirates.WarcasketDef>
+	
 </Defs>

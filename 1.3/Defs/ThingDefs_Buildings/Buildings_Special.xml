@@ -300,5 +300,30 @@
 		</li>
 	</comps>
 	</ThingDef>
+	
+  <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
+    <defName>VFEP_Box_GravityHammer</defName>
+    <label>warcasket gravity hammer</label>
+    <description>A monumental piece of anti-personnel technology that can only be properly utilized by the oversized warcaskets. Practically an engine block fitted to the end of a mech’s limb actuator, equipped with multiple pneumatic plates covering miniature repulsor generators designed for riot control. In layman’s terms, a strike from the head will launch the target backwards by several meters.</description>
+    <graphicData>
+      <texPath>Things/Item/WeaponsBoxed/WarcasketGravityHammer_OnFloor</texPath>
+    </graphicData>
+    <costList>
+      <Steel>120</Steel>
+	  <Plasteel>80</Plasteel>
+	  <ComponentSpacer>6</ComponentSpacer>
+	  <Uranium>40</Uranium>
+    </costList>
+    <statBases>
+      <MarketValue>3000</MarketValue>
+      <Mass>50</Mass>
+      <WorkToBuild>80000</WorkToBuild>
+    </statBases>
+	<comps>
+		<li Class="VFEPirates.CompProperties_WeaponBox">
+			<weaponToEquip>VFEP_WarcasketMeleeWeapon_GravityHammer</weaponToEquip>
+		</li>
+	</comps>
+	</ThingDef>
 
 </Defs>

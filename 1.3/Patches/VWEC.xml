@@ -17,7 +17,6 @@
                      <graphicData>
                         <texPath>Things/Item/Equipment/WeaponRanged/WarcasketRailgun</texPath>
                         <graphicClass>Graphic_Single</graphicClass>
-                        <drawSize>1</drawSize>
                      </graphicData>
                      <soundInteract>VWE_Interact_GaussRifle</soundInteract>
                      <statBases>

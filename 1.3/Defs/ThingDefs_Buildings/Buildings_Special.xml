@@ -230,5 +230,100 @@
 		</li>
 	</comps>
 	</ThingDef>
+	
+	<!--======================================================= UPDATE =======================================================-->
+
+  <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
+    <defName>VFEP_Box_ChargeLance</defName>
+    <label>warcasket charge lance</label>
+    <description>A terror on the battlefield, the charge lance received a massive upgrade for warcasket use. A considerably more powerful energy source gives it superior stopping power, able to fire multiple larger projectiles at a greater range with improved accuracy and penetration.</description>
+    <graphicData>
+      <texPath>Things/Item/WeaponsBoxed/WarcasketChargeLance_OnFloor</texPath>
+    </graphicData>
+    <costList>
+	  <Plasteel>100</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MarketValue>2250</MarketValue>
+      <Mass>45</Mass>
+      <WorkToBuild>75000</WorkToBuild>
+    </statBases>
+	<comps>
+		<li Class="VFEPirates.CompProperties_WeaponBox">
+			<weaponToEquip>VFEP_WarcasketGun_ChargeLance</weaponToEquip>
+		</li>
+	</comps>
+	</ThingDef>
+	
+  <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
+    <defName>VFEP_Box_HandheldCannon</defName>
+    <label>warcasket handheld cannon</label>
+    <description>Essentially a handheld smoothbore mortar that fires explosives in an arc, able to bypass enemy fortifications. Made by those who wanted to combine ancient naval warfare with modern technology. The accuracy is abysmal but the onboard fabricator ensures that artillery fire can be provided without ever needing a resupply.</description>
+    <graphicData>
+      <texPath>Things/Item/WeaponsBoxed/WarcasketHandheldCannon_OnFloor</texPath>
+    </graphicData>
+    <costList>
+	  <Steel>220</Steel>
+    </costList>
+    <statBases>
+      <MarketValue>1350</MarketValue>
+      <Mass>50</Mass>
+      <WorkToBuild>45000</WorkToBuild>
+    </statBases>
+	<comps>
+		<li Class="VFEPirates.CompProperties_WeaponBox">
+			<weaponToEquip>VFEP_WarcasketGun_HandheldCannon</weaponToEquip>
+		</li>
+	</comps>
+	</ThingDef>
+	
+  <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
+    <defName>VFEP_Box_ChargeBlaster</defName>
+    <label>warcasket charge blaster</label>
+    <description>Essentially an upscaled charge minigun designed to be used by a warcasket. While firing fewer projectiles in each burst, the ammunition has been improved with explosive payloads. Designed as a support weapon that completely invalidates cover for the unlucky bastards on the receiving end.</description>
+    <graphicData>
+      <texPath>Things/Item/WeaponsBoxed/WarcasketChargeLance_OnFloor</texPath>
+    </graphicData>
+    <costList>
+	  <Plasteel>180</Plasteel>
+      <ComponentSpacer>10</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MarketValue>2200</MarketValue>
+      <Mass>55</Mass>
+      <WorkToBuild>90000</WorkToBuild>
+    </statBases>
+	<comps>
+		<li Class="VFEPirates.CompProperties_WeaponBox">
+			<weaponToEquip>VFEP_WarcasketGun_ChargeBlaster</weaponToEquip>
+		</li>
+	</comps>
+	</ThingDef>
+	
+  <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
+    <defName>VFEP_Box_GravityHammer</defName>
+    <label>warcasket gravity hammer</label>
+    <description>A monumental piece of anti-personnel technology that can only be properly utilized by the oversized warcaskets. Practically an engine block fitted to the end of a mech’s limb actuator, equipped with multiple pneumatic plates covering miniature repulsor generators designed for riot control. In layman’s terms, a strike from the head will launch the target backwards by several meters.</description>
+    <graphicData>
+      <texPath>Things/Item/WeaponsBoxed/WarcasketGravityHammer_OnFloor</texPath>
+    </graphicData>
+    <costList>
+      <Steel>120</Steel>
+	  <Plasteel>80</Plasteel>
+	  <ComponentSpacer>6</ComponentSpacer>
+	  <Uranium>40</Uranium>
+    </costList>
+    <statBases>
+      <MarketValue>3000</MarketValue>
+      <Mass>50</Mass>
+      <WorkToBuild>80000</WorkToBuild>
+    </statBases>
+	<comps>
+		<li Class="VFEPirates.CompProperties_WeaponBox">
+			<weaponToEquip>VFEP_WarcasketMeleeWeapon_GravityHammer</weaponToEquip>
+		</li>
+	</comps>
+	</ThingDef>
 
 </Defs>

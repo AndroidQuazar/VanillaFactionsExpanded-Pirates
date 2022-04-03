@@ -25,6 +25,9 @@
                         <Mass>25</Mass>
                      </statBases>
                      <equippedAngleOffset>-65</equippedAngleOffset>
+                     <thingSetMakerTags>
+                        <li>RewardStandardLowFreq</li>
+                     </thingSetMakerTags>
                      <tools>
                         <li>
                            <label>point</label>
@@ -76,4 +79,3 @@
       </match>
    </Operation>
 </Patch>
-

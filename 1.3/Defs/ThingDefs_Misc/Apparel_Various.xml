@@ -1460,7 +1460,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 		<shortDescription>Specialized spacer-tech warcasket pauldrons with standard protection, augmented with improved power conduits that increase shield recharge rate.</shortDescription>
 		<description>Specialized spacer-tech warcasket pauldrons with standard protection, augmented with improved power conduits that increase shield recharge rate.</description>
 		<graphicData>
-			<texPath>Things/Pawn/Warcasketlike/WarcasketSiegebreaker/WarcasketWarcasketSiegebreakerShoulders</texPath>
+			<texPath>Things/Pawn/Warcasketlike/WarcasketSiegebreaker/WarcasketSiegebreakerShoulders</texPath>
 		</graphicData>
 		<statBases>
 			<Mass>20</Mass>
@@ -1487,7 +1487,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 				<li>Hands</li>
 				<li>Neck</li>
 			</bodyPartGroups>
-			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketSiegebreaker/WarcasketWarcasketSiegebreakerShoulders</wornGraphicPath>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketSiegebreaker/WarcasketSiegebreakerShoulders</wornGraphicPath>
 			<layers>
 				<li>OnSkin</li>
 				<li>Middle</li>

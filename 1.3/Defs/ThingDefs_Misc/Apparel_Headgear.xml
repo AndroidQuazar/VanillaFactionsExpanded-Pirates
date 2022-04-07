@@ -79,7 +79,6 @@
     <uiIconScale>1.25</uiIconScale>
     <statBases>
       <Mass>8</Mass>
-      <Flammability>0</Flammability>
       <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.65</ArmorRating_Blunt>
       <ArmorRating_Heat>0.74</ArmorRating_Heat>
@@ -397,6 +396,234 @@
             </equippedStatFactors>
         </li>
     </modExtensions>
+  </VFEPirates.WarcasketDef>
+  
+<!--======================================================= UPDATE =======================================================-->
+
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketHelmetBase">
+    <defName>VFEP_WarcasketHelmet_Siegebreaker</defName>
+    <label>siegebreaker warcasket helmet</label>
+    <shortDescription>Specialized spacer-tech warcasket helmet with standard protection.</shortDescription>
+    <description>Specialized spacer-tech warcasket helmet with standard protection.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketSiegebreaker/WarcasketSiegebreakerHelmet</texPath>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <statBases>
+      <Mass>8</Mass>
+	  <ArmorRating_Sharp>2</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
+	  <ArmorRating_Heat>1</ArmorRating_Heat>
+      <Insulation_Cold>5</Insulation_Cold>
+      <Insulation_Heat>2</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	  <PsychicSensitivity>0.5</PsychicSensitivity>
+	  <ToxicSensitivity>0.5</ToxicSensitivity>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.1</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <costList>
+      <ComponentSpacer>2</ComponentSpacer>
+      <Plasteel>50</Plasteel>
+    </costList>
+    <researchPrerequisites>
+      <li>VFEP_SpacerWarcaskets</li>
+    </researchPrerequisites>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketSiegebreaker/WarcasketSiegebreakerHelmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+		<li>WarcasketVeteran</li>
+		<li>WarcasketAll</li>
+      </tags>
+    </apparel>
+  </VFEPirates.WarcasketDef>
+  
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketHelmetBase">
+    <defName>VFEP_WarcasketHelmet_Guardian</defName>
+    <label>guardian warcasket helmet</label>
+    <shortDescription>Specialized spacer-tech warcasket helmet with improved impact dispersion.</shortDescription>
+    <description>Specialized spacer-tech warcasket helmet with improved impact dispersion.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketGuardian/WarcasketGuardianHelmet</texPath>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <statBases>
+      <Mass>8</Mass>
+	  <ArmorRating_Sharp>2</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+	  <ArmorRating_Heat>1</ArmorRating_Heat>
+      <Insulation_Cold>5</Insulation_Cold>
+      <Insulation_Heat>2</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	  <PsychicSensitivity>0.5</PsychicSensitivity>
+	  <ToxicSensitivity>0.5</ToxicSensitivity>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.1</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <costList>
+      <ComponentSpacer>2</ComponentSpacer>
+      <Plasteel>70</Plasteel>
+    </costList>
+    <researchPrerequisites>
+      <li>VFEP_SpacerWarcaskets</li>
+    </researchPrerequisites>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketGuardian/WarcasketGuardianHelmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+		<li>WarcasketVeteran</li>
+		<li>WarcasketAll</li>
+      </tags>
+    </apparel>
+  </VFEPirates.WarcasketDef>
+  
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketHelmetBase">
+    <defName>VFEP_WarcasketHelmet_Controller</defName>
+    <label>controller warcasket helmet</label>
+    <shortDescription>Specialized spacer-tech warcasket helmet with standard protection, equipped with a miniature combat drone deployment module but no controller.</shortDescription>
+    <description>Specialized spacer-tech warcasket helmet with standard protection, equipped with a miniature combat drone deployment module but no controller.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketController/WarcasketControllerHelmet</texPath>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <statBases>
+      <Mass>8</Mass>
+	  <ArmorRating_Sharp>2</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
+	  <ArmorRating_Heat>1</ArmorRating_Heat>
+      <Insulation_Cold>10</Insulation_Cold>
+      <Insulation_Heat>10</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	  <PsychicSensitivity>0.5</PsychicSensitivity>
+	  <ToxicSensitivity>0.5</ToxicSensitivity>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.1</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <costList>
+      <ComponentSpacer>4</ComponentSpacer>
+      <Plasteel>60</Plasteel>
+    </costList>
+    <researchPrerequisites>
+      <li>VFEP_SpacerWarcaskets</li>
+    </researchPrerequisites>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketController/WarcasketControllerHelmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+		<li>WarcasketVeteran</li>
+		<li>WarcasketAll</li>
+      </tags>
+    </apparel>
+  </VFEPirates.WarcasketDef>
+  
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketHelmetBase">
+    <defName>VFEP_WarcasketHelmet_Sarcophagus</defName>
+    <label>sarcophagus warcasket helmet</label>
+    <shortDescription>Specialized spacer-tech warcasket helmet with standard protection, equipped with onboard bionics that replace the pilot’s breathing, eating, hearing, sight, and talking functionality. Also comes standard with a consciousness stimulator.</shortDescription>
+    <description>Specialized spacer-tech warcasket helmet with standard protection, equipped with onboard bionics that replace the pilot’s breathing, eating, hearing, sight, and talking functionality. Also comes standard with a consciousness stimulator.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketSarcophagus/WarcasketSarcophagusHelmet</texPath>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <statBases>
+      <Mass>8</Mass>
+	  <ArmorRating_Sharp>2</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
+	  <ArmorRating_Heat>1</ArmorRating_Heat>
+      <Insulation_Cold>10</Insulation_Cold>
+      <Insulation_Heat>10</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	  <PsychicSensitivity>0.5</PsychicSensitivity>
+	  <ToxicSensitivity>0.5</ToxicSensitivity>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.1</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <costList>
+      <ComponentSpacer>2</ComponentSpacer>
+      <Plasteel>60</Plasteel>
+	  <MedicineUltratech>3</MedicineUltratech>
+    </costList>
+    <researchPrerequisites>
+      <li>VFEP_SpacerWarcaskets</li>
+    </researchPrerequisites>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketSarcophagus/WarcasketSarcophagusHelmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+		<li>WarcasketVeteran</li>
+		<li>WarcasketAll</li>
+      </tags>
+    </apparel>
+  </VFEPirates.WarcasketDef>
+  
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketHelmetBase">
+    <defName>VFEP_WarcasketHelmet_Brute</defName>
+    <label>brute warcasket helmet</label>
+    <shortDescription>Specialized spacer-tech warcasket helmet with standard protection, equipped with a discharge module which feeds from the shields’ capacitors.</shortDescription>
+    <description>Specialized spacer-tech warcasket helmet with standard protection, equipped with a discharge module which feeds from the shields’ capacitors.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Warcasketlike/WarcasketBrute/WarcasketBruteHelmet</texPath>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <statBases>
+      <Mass>8</Mass>
+	  <ArmorRating_Sharp>2</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
+	  <ArmorRating_Heat>1</ArmorRating_Heat>
+      <Insulation_Cold>10</Insulation_Cold>
+      <Insulation_Heat>10</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	  <PsychicSensitivity>0.5</PsychicSensitivity>
+	  <ToxicSensitivity>0.5</ToxicSensitivity>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.1</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <costList>
+      <ComponentSpacer>4</ComponentSpacer>
+      <Plasteel>60</Plasteel>
+    </costList>
+    <researchPrerequisites>
+      <li>VFEP_SpacerWarcaskets</li>
+    </researchPrerequisites>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketBrute/WarcasketBruteHelmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+		<li>WarcasketVeteran</li>
+		<li>WarcasketAll</li>
+      </tags>
+    </apparel>
   </VFEPirates.WarcasketDef>
 
 </Defs>

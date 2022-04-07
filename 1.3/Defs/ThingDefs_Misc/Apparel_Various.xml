@@ -1413,7 +1413,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 			<Uranium>50</Uranium>
 		</costList>
 		<researchPrerequisites>
-			<li>VFEP_AdvancedWarcaskets</li>
+			<li>VFEP_SpacerWarcaskets</li>
 		</researchPrerequisites>
 		<apparel>
 			<bodyPartGroups>
@@ -1467,18 +1467,18 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 			<ArmorRating_Sharp>2</ArmorRating_Sharp>
 			<ArmorRating_Blunt>1</ArmorRating_Blunt>
 			<ArmorRating_Heat>1</ArmorRating_Heat>
-			<Insulation_Cold>2</Insulation_Cold>
-			<Insulation_Heat>2</Insulation_Heat>
+			<Insulation_Cold>22</Insulation_Cold>
+			<Insulation_Heat>22</Insulation_Heat>
 			<EquipDelay>1</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
 		</equippedStatOffsets>
 		<costList>
-			<Steel>55</Steel>
+			<Plasteel>60</Plasteel>
 		</costList>
 		<researchPrerequisites>
-			<li>VFEP_AdvancedWarcaskets</li>
+			<li>VFEP_SpacerWarcaskets</li>
 		</researchPrerequisites>
 		<apparel>
 			<bodyPartGroups>
@@ -1488,6 +1488,472 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 				<li>Neck</li>
 			</bodyPartGroups>
 			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketSiegebreaker/WarcasketWarcasketSiegebreakerShoulders</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>WarcasketVeteran</li>
+				<li>WarcasketAll</li>
+			</tags>
+		</apparel>
+	</VFEPirates.WarcasketDef>
+	
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
+		<defName>VFEP_Warcasket_Guardian</defName>
+		<label>guardian warcasket</label>
+		<shortDescription>Specialized spacer-tech warcasket shell with improved impact dispersion, equipped with a powerful low-shield to support allies.</shortDescription>
+		<description>Specialized spacer-tech warcasket shell with improved impact dispersion, equipped with a powerful low-shield to support allies.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/WarcasketGuardian/WarcasketGuardian</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>50</Mass>
+			<ArmorRating_Sharp>2</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+			<ArmorRating_Heat>1</ArmorRating_Heat>
+			<Insulation_Cold>80</Insulation_Cold>
+			<Insulation_Heat>80</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<PsychicSensitivity>-0.5</PsychicSensitivity>
+			<ToxicSensitivity>-0.5</ToxicSensitivity>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<costList>
+			<ComponentSpacer>6</ComponentSpacer>
+			<Plasteel>200</Plasteel>
+			<Uranium>50</Uranium>
+		</costList>
+		<researchPrerequisites>
+			<li>VFEP_SpacerWarcaskets</li>
+		</researchPrerequisites>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Legs</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketGuardian/WarcasketGuardian</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>WarcasketVeteran</li>
+				<li>WarcasketAll</li>
+			</tags>
+		</apparel>
+		<modExtensions>
+			<li Class="VFECore.ApparelExtension">
+				<traitsOnEquip>
+					<li>VFEP_WarcasketTrait</li>
+				</traitsOnEquip>
+				<traitsOnUnequip>
+					<li>VFEP_Shellcasket</li>
+				</traitsOnUnequip>
+				<carryingCapacity>75</carryingCapacity>
+				<pawnCapacityMinLevels>
+					<li>
+						<capacity>Moving</capacity>
+						<minLevel>0.7</minLevel>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<minLevel>0.7</minLevel>
+					</li>
+				</pawnCapacityMinLevels>
+			</li>
+		</modExtensions>
+	</VFEPirates.WarcasketDef>
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
+		<defName>VFEP_WarcasketShoulders_Guardian</defName>
+		<label>guardian warcasket shoulders</label>
+		<shortDescription>Specialized spacer-tech warcasket pauldrons with improved impact dispersion, equipped with heavy magnetic modules that occasionally offer full impact mitigation.</shortDescription>
+		<description>Specialized spacer-tech warcasket pauldrons with improved impact dispersion, equipped with heavy magnetic modules that occasionally offer full impact mitigation.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/WarcasketGuardian/WarcasketGuardianShoulders</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>20</Mass>
+			<ArmorRating_Sharp>2</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+			<ArmorRating_Heat>1</ArmorRating_Heat>
+			<Insulation_Cold>22</Insulation_Cold>
+			<Insulation_Heat>22</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+		    <MoveSpeed>-0.5</MoveSpeed>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<costList>
+		    <Plasteel>80</Plasteel>
+			<Steel>60</Steel>
+		</costList>
+		<researchPrerequisites>
+			<li>VFEP_SpacerWarcaskets</li>
+		</researchPrerequisites>
+		<apparel>
+			<bodyPartGroups>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Hands</li>
+				<li>Neck</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketGuardian/WarcasketGuardianShoulders</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>WarcasketVeteran</li>
+				<li>WarcasketAll</li>
+			</tags>
+		</apparel>
+	</VFEPirates.WarcasketDef>
+	
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
+		<defName>VFEP_Warcasket_Controller</defName>
+		<label>controller warcasket</label>
+		<shortDescription>Specialized spacer-tech warcasket shell with standard protection, equipped with a controller and combat drone deployment module.</shortDescription>
+		<description>Specialized spacer-tech warcasket shell with standard protection, equipped with a controller and combat drone deployment module.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/WarcasketController/WarcasketController</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>50</Mass>
+			<ArmorRating_Sharp>2</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1</ArmorRating_Blunt>
+			<ArmorRating_Heat>1</ArmorRating_Heat>
+			<Insulation_Cold>80</Insulation_Cold>
+			<Insulation_Heat>80</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<PsychicSensitivity>-0.5</PsychicSensitivity>
+			<ToxicSensitivity>-0.5</ToxicSensitivity>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<costList>
+			<ComponentSpacer>12</ComponentSpacer>
+			<Plasteel>150</Plasteel>
+			<Uranium>50</Uranium>
+		</costList>
+		<researchPrerequisites>
+			<li>VFEP_SpacerWarcaskets</li>
+		</researchPrerequisites>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Legs</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketController/WarcasketController</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>WarcasketVeteran</li>
+				<li>WarcasketAll</li>
+			</tags>
+		</apparel>
+		<modExtensions>
+			<li Class="VFECore.ApparelExtension">
+				<traitsOnEquip>
+					<li>VFEP_WarcasketTrait</li>
+				</traitsOnEquip>
+				<traitsOnUnequip>
+					<li>VFEP_Shellcasket</li>
+				</traitsOnUnequip>
+				<carryingCapacity>75</carryingCapacity>
+				<pawnCapacityMinLevels>
+					<li>
+						<capacity>Moving</capacity>
+						<minLevel>0.7</minLevel>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<minLevel>0.7</minLevel>
+					</li>
+				</pawnCapacityMinLevels>
+			</li>
+		</modExtensions>
+	</VFEPirates.WarcasketDef>
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
+		<defName>VFEP_WarcasketShoulders_Controller</defName>
+		<label>controller warcasket shoulders</label>
+		<shortDescription>Specialized spacer-tech warcasket pauldrons with standard protection, equipped with an independent spider mine deployment module.</shortDescription>
+		<description>Specialized spacer-tech warcasket pauldrons with standard protection, equipped with an independent spider mine deployment module.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/WarcasketController/WarcasketControllerShoulders</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>20</Mass>
+			<ArmorRating_Sharp>2</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1</ArmorRating_Blunt>
+			<ArmorRating_Heat>1</ArmorRating_Heat>
+			<Insulation_Cold>22</Insulation_Cold>
+			<Insulation_Heat>22</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<costList>
+			<Plasteel>60</Plasteel>
+			<ComponentSpacer>2</ComponentSpacer>
+		</costList>
+		<researchPrerequisites>
+			<li>VFEP_SpacerWarcaskets</li>
+		</researchPrerequisites>
+		<apparel>
+			<bodyPartGroups>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Hands</li>
+				<li>Neck</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketController/WarcasketControllerShoulders</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>WarcasketVeteran</li>
+				<li>WarcasketAll</li>
+			</tags>
+		</apparel>
+	</VFEPirates.WarcasketDef>
+	
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
+		<defName>VFEP_Warcasket_Sarcophagus</defName>
+		<label>sarcophagus warcasket</label>
+		<shortDescription>Specialized spacer-tech warcasket shell with standard protection, equipped with onboard bionics that replace the pilot’s blood filtration, blood pumping, metabolism and movement functionality.</shortDescription>
+		<description>Specialized spacer-tech warcasket shell with standard protection, equipped with onboard bionics that replace the pilot’s blood filtration, blood pumping, metabolism and movement functionality.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/WarcasketSarcophagus/WarcasketSarcophagus</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>50</Mass>
+			<ArmorRating_Sharp>2</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1</ArmorRating_Blunt>
+			<ArmorRating_Heat>1</ArmorRating_Heat>
+			<Insulation_Cold>80</Insulation_Cold>
+			<Insulation_Heat>80</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<PsychicSensitivity>-0.5</PsychicSensitivity>
+			<ToxicSensitivity>-0.5</ToxicSensitivity>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<costList>
+			<ComponentSpacer>6</ComponentSpacer>
+			<Plasteel>145</Plasteel>
+			<Uranium>50</Uranium>
+			<MedicineUltratech>5</MedicineUltratech>
+		</costList>
+		<researchPrerequisites>
+			<li>VFEP_SpacerWarcaskets</li>
+		</researchPrerequisites>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Legs</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketSarcophagus/WarcasketSarcophagus</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>WarcasketVeteran</li>
+				<li>WarcasketAll</li>
+			</tags>
+		</apparel>
+		<modExtensions>
+			<li Class="VFECore.ApparelExtension">
+				<traitsOnEquip>
+					<li>VFEP_WarcasketTrait</li>
+				</traitsOnEquip>
+				<traitsOnUnequip>
+					<li>VFEP_Shellcasket</li>
+				</traitsOnUnequip>
+				<carryingCapacity>75</carryingCapacity>
+				<pawnCapacityMinLevels>
+					<li>
+						<capacity>Moving</capacity>
+						<minLevel>0.7</minLevel>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<minLevel>0.7</minLevel>
+					</li>
+				</pawnCapacityMinLevels>
+			</li>
+		</modExtensions>
+	</VFEPirates.WarcasketDef>
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
+		<defName>VFEP_WarcasketShoulders_Sarcophagus</defName>
+		<label>sarcophagus warcasket shoulders</label>
+		<shortDescription>Specialized spacer-tech warcasket pauldrons with standard protection, equipped with onboard bionics that replace the pilot’s manipulation functionality.</shortDescription>
+		<description>Specialized spacer-tech warcasket pauldrons with standard protection, equipped with onboard bionics that replace the pilot’s manipulation functionality.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/WarcasketSarcophagus/WarcasketSarcophagusShoulders</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>20</Mass>
+			<ArmorRating_Sharp>2</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1</ArmorRating_Blunt>
+			<ArmorRating_Heat>1</ArmorRating_Heat>
+			<Insulation_Cold>22</Insulation_Cold>
+			<Insulation_Heat>22</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<costList>
+			<Plasteel>60</Plasteel>
+			<MedicineUltratech>2</MedicineUltratech>
+		</costList>
+		<researchPrerequisites>
+			<li>VFEP_SpacerWarcaskets</li>
+		</researchPrerequisites>
+		<apparel>
+			<bodyPartGroups>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Hands</li>
+				<li>Neck</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketSarcophagus/WarcasketSarcophagusShoulders</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>WarcasketVeteran</li>
+				<li>WarcasketAll</li>
+			</tags>
+		</apparel>
+	</VFEPirates.WarcasketDef>
+	
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
+		<defName>VFEP_Warcasket_Brute</defName>
+		<label>brute warcasket</label>
+		<shortDescription>Specialized spacer-tech warcasket shell with improved impact dispersion, equipped with powerful, oversized capacitors feeding a personal overshield.</shortDescription>
+		<description>Specialized spacer-tech warcasket shell with improved impact dispersion, equipped with powerful, oversized capacitors feeding a personal overshield.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/WarcasketBrute/WarcasketBrute</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>50</Mass>
+			<ArmorRating_Sharp>2</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+			<ArmorRating_Heat>1</ArmorRating_Heat>
+			<Insulation_Cold>80</Insulation_Cold>
+			<Insulation_Heat>80</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<PsychicSensitivity>-0.5</PsychicSensitivity>
+			<ToxicSensitivity>-0.5</ToxicSensitivity>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<costList>
+			<ComponentSpacer>4</ComponentSpacer>
+			<Plasteel>160</Plasteel>
+			<Uranium>50</Uranium>
+		</costList>
+		<researchPrerequisites>
+			<li>VFEP_SpacerWarcaskets</li>
+		</researchPrerequisites>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Legs</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketBrute/WarcasketBrute</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>WarcasketVeteran</li>
+				<li>WarcasketAll</li>
+			</tags>
+		</apparel>
+		<modExtensions>
+			<li Class="VFECore.ApparelExtension">
+				<traitsOnEquip>
+					<li>VFEP_WarcasketTrait</li>
+				</traitsOnEquip>
+				<traitsOnUnequip>
+					<li>VFEP_Shellcasket</li>
+				</traitsOnUnequip>
+				<carryingCapacity>75</carryingCapacity>
+				<pawnCapacityMinLevels>
+					<li>
+						<capacity>Moving</capacity>
+						<minLevel>0.7</minLevel>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<minLevel>0.7</minLevel>
+					</li>
+				</pawnCapacityMinLevels>
+			</li>
+		</modExtensions>
+	</VFEPirates.WarcasketDef>
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
+		<defName>VFEP_WarcasketShoulders_Brute</defName>
+		<label>brute warcasket shoulders</label>
+		<shortDescription>Specialized spacer-tech warcasket pauldrons with improved impact dispersion, equipped with additional capacitor banks and melee assistor modules.</shortDescription>
+		<description>Specialized spacer-tech warcasket pauldrons with improved impact dispersion, equipped with additional capacitor banks and melee assistor modules.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/WarcasketBrute/WarcasketBruteShoulders</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>20</Mass>
+			<ArmorRating_Sharp>2</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+			<ArmorRating_Heat>1</ArmorRating_Heat>
+			<Insulation_Cold>22</Insulation_Cold>
+			<Insulation_Heat>22</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<costList>
+			<Plasteel>60</Plasteel>
+			<ComponentSpacer>4</ComponentSpacer>
+		</costList>
+		<researchPrerequisites>
+			<li>VFEP_SpacerWarcaskets</li>
+		</researchPrerequisites>
+		<apparel>
+			<bodyPartGroups>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Hands</li>
+				<li>Neck</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketBrute/WarcasketBruteShoulders</wornGraphicPath>
 			<layers>
 				<li>OnSkin</li>
 				<li>Middle</li>

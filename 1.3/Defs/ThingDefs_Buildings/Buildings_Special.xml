@@ -283,7 +283,7 @@
     <label>warcasket charge blaster</label>
     <description>Essentially an upscaled charge minigun designed to be used by a warcasket. While firing fewer projectiles in each burst, the ammunition has been improved with explosive payloads. Designed as a support weapon that completely invalidates cover for the unlucky bastards on the receiving end.</description>
     <graphicData>
-      <texPath>Things/Item/WeaponsBoxed/WarcasketChargeLance_OnFloor</texPath>
+      <texPath>Things/Item/WeaponsBoxed/WarcasketChargeBlaster_OnFloor</texPath>
     </graphicData>
     <costList>
 	  <Plasteel>180</Plasteel>

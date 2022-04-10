@@ -25,9 +25,16 @@
                         <Mass>25</Mass>
                      </statBases>
                      <equippedAngleOffset>-65</equippedAngleOffset>
+                     <weaponTags>
+					    <li>WarcasketMelee</li>
+                        <li>WarcasketVeteran</li>
+                     </weaponTags>
                      <thingSetMakerTags>
                         <li>RewardStandardLowFreq</li>
                      </thingSetMakerTags>
+                     <tradeTags>
+                        <li>VFEP_WarcasketWeaponExotic</li>
+                     </tradeTags>
                      <tools>
                         <li>
                            <label>point</label>

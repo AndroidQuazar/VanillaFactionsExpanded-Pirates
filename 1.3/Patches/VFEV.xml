@@ -30,6 +30,9 @@
                      <weaponTags>
                         <li>WarcasketVeteran</li>
                      </weaponTags>
+                     <tradeTags>
+                        <li>VFEP_WarcasketWeaponExotic</li>
+                     </tradeTags>
                      <thingSetMakerTags>
                         <li>RewardStandardLowFreq</li>
                      </thingSetMakerTags>

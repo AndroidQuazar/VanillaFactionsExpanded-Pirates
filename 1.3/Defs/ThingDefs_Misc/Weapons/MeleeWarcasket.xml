@@ -160,6 +160,10 @@
       <Mass>50</Mass>
     </statBases>
 	<equippedAngleOffset>-35</equippedAngleOffset>
+    <weaponTags>
+        <li>WarcasketMelee</li>
+        <li>WarcasketVeteran</li>
+    </weaponTags>
     <tools>
       <li>
         <label>head</label>

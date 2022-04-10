@@ -64,7 +64,6 @@
       </li>
     </lifeStages>
     <weaponMoney>9999~9999</weaponMoney>
-	<defaultFactionType>Mechanoid</defaultFactionType>
     <aiAvoidCover>true</aiAvoidCover>
     <destroyGearOnDrop>true</destroyGearOnDrop>
     <weaponTags>

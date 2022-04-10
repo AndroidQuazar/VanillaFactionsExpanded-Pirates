@@ -249,6 +249,9 @@
       <Mass>45</Mass>
       <WorkToBuild>75000</WorkToBuild>
     </statBases>
+    <researchPrerequisites>
+        <li>VFEP_SpacerWarcasketWeaponry</li>
+    </researchPrerequisites>
 	<comps>
 		<li Class="VFEPirates.CompProperties_WeaponBox">
 			<weaponToEquip>VFEP_WarcasketGun_ChargeLance</weaponToEquip>
@@ -294,6 +297,9 @@
       <Mass>55</Mass>
       <WorkToBuild>90000</WorkToBuild>
     </statBases>
+    <researchPrerequisites>
+        <li>VFEP_SpacerWarcasketWeaponry</li>
+    </researchPrerequisites>
 	<comps>
 		<li Class="VFEPirates.CompProperties_WeaponBox">
 			<weaponToEquip>VFEP_WarcasketGun_ChargeBlaster</weaponToEquip>

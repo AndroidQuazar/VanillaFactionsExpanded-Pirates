@@ -232,7 +232,7 @@
                      </statBases>
                      <researchPrerequisites>
                         <li>VWE_UltratechLaserWeapons</li>
-                        <li>VFEP_SpacerWarcaskets</li>
+                        <li>VFEP_SpacerWarcasketWeaponry</li>
                      </researchPrerequisites>
                      <comps>
                         <li Class="VFEPirates.CompProperties_WeaponBox">

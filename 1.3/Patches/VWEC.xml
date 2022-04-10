@@ -98,6 +98,10 @@
                         <Mass>45</Mass>
                         <WorkToBuild>110000</WorkToBuild>
                      </statBases>
+                     <researchPrerequisites>
+                        <li>VWE_MassDrivers</li>
+                        <li>VFEP_SpacerWarcasketWeaponry</li>
+                     </researchPrerequisites>
                      <comps>
                         <li Class="VFEPirates.CompProperties_WeaponBox">
                            <weaponToEquip>VFEP_WarcasketGun_Railgun</weaponToEquip>

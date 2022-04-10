@@ -91,6 +91,9 @@
                         <Mass>15</Mass>
                         <WorkToBuild>45000</WorkToBuild>
                      </statBases>
+                     <researchPrerequisites>
+                        <li>VWE_Quickdraw</li>
+                     </researchPrerequisites>
                      <comps>
                         <li Class="VFEPirates.CompProperties_WeaponBox">
                            <weaponToEquip>VFEP_WarcasketGun_TearGasGrenadeLauncher</weaponToEquip>

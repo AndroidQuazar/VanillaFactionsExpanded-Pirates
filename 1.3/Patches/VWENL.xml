@@ -97,6 +97,9 @@
                         <Mass>25</Mass>
                         <WorkToBuild>45000</WorkToBuild>
                      </statBases>
+                     <researchPrerequisites>
+                        <li>VWENL_Projectile_TearGasGrenade</li>
+                     </researchPrerequisites>
                      <comps>
                         <li Class="VFEPirates.CompProperties_WeaponBox">
                            <weaponToEquip>VFEP_WarcasketGun_TearGasGrenadeLauncher</weaponToEquip>

@@ -61,6 +61,8 @@
     <Compile Include="Buildings\Chunks\VolatileEngine.cs" />
     <Compile Include="Buildings\Dialog_WarcasketCustomization.cs" />
     <Compile Include="Comps\CompRumSuit.cs" />
+    <Compile Include="Jobs\JobGiver_GoToNearestEnemyAndExplode.cs" />
+    <Compile Include="Projectiles\Projectile_Spidermine.cs" />
     <Compile Include="Comps\Properties\CompProperties_RumSuit.cs" />
     <Compile Include="Curses\CurseDef.cs" />
     <Compile Include="Curses\CurseOfTheBeaten.cs" />
@@ -89,6 +91,7 @@
     <Compile Include="HarmonyPatches\Building_TurretGun_DrawExtraSelectionOverlays_Transpiler.cs" />
     <Compile Include="HarmonyPatches\Building_TurretGun_IsValidTarget_Patch.cs" />
     <Compile Include="HarmonyPatches\CompPowerBattery_AmountCanAccept_Patch.cs" />
+    <Compile Include="HarmonyPatches\CompReloadable_CreateVerbTargetCommand_Patch.cs" />
     <Compile Include="HarmonyPatches\GenSpawn_Spawn_Patch.cs" />
     <Compile Include="HarmonyPatches\ITab_Pawn_Gear_DrawThingRow_Transpiler.cs" />
     <Compile Include="HarmonyPatches\JobGiver_OptimizeApparel_TryGiveJob_Patch.cs" />
@@ -132,8 +135,11 @@
     <Compile Include="StaticCollectionsClass\StaticCollectionsClass.cs" />
     <Compile Include="Utilities\StaticStartup.cs" />
     <Compile Include="Thoughts\Thought_Precept_Camaraderie_Exalted.cs" />
+    <Compile Include="Comps\CompKillAfterDelay.cs" />
+    <Compile Include="Verbs\Verb_DroneDeployment.cs" />
     <Compile Include="Verbs\Verb_LaunchProjectileStaticMultiple.cs" />
     <Compile Include="Verbs\Verb_ShootCone.cs" />
+    <Compile Include="Verbs\Verb_Spidermine.cs" />
     <Compile Include="VFEPiratesMod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DefOfs\VFEP_DefOf.cs" />

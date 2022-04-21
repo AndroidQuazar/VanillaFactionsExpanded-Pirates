@@ -11,7 +11,6 @@ using Verse.Sound;
 
 namespace VFEPirates
 {
-
     public class VerbProps_MultipleProjectiles : VerbProperties
     {
         public int projectileCount;

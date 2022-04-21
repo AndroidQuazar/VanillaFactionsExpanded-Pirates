@@ -115,5 +115,9 @@ namespace VFEPirates
         public static JobDef VFEP_EquipFromWeaponBox;
         public static TraitDef VFEP_WarcasketTrait;
         public static HediffDef VFEP_HypothermicSlowdown;
+        public static PawnKindDef VFEP_Mech_Wardrone;
+        public static PawnKindDef VFEP_Mech_Spidermine;
+        public static ThingDef VFEP_WarcasketHelmet_Controller;
+        public static HediffDef VFEP_KillItself;
     }
 }

@@ -22,7 +22,6 @@
 		<stages>
 			<li>   
 				<hungerRateFactor>0.85</hungerRateFactor>
-				
 			</li>
 		</stages>
 	</HediffDef>
@@ -95,5 +94,19 @@
       </li>
     </stages>
   </HediffDef>
-
+  
+  <HediffDef>
+    <defName>VFEP_KillItself</defName>
+    <label>kill itself</label>
+    <description>.</description>
+    <defaultLabelColor>(0.8, 0.8, 1)</defaultLabelColor>
+    <lethalSeverity>1</lethalSeverity>
+	<hediffClass>VFEPirates.Hediff_KillItself</hediffClass>
+    <stages>
+      <li>
+        <label>minor</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+	</stages>
+	</HediffDef>
 </Defs>

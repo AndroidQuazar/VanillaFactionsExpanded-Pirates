@@ -1432,6 +1432,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 				<li>WarcasketAll</li>
 			</tags>
 		</apparel>
+		<tickerType>Normal</tickerType>
 		<comps>
 			<li Class="VFECore.CompProperties_ShieldBubble">
 				<compClass>VFECore.CompShieldBubble</compClass>
@@ -1564,6 +1565,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 				<li>WarcasketAll</li>
 			</tags>
 		</apparel>
+		<tickerType>Normal</tickerType>
 		<comps>
 			<li Class="VFECore.CompProperties_ShieldBubble">
 				<compClass>VFECore.CompShieldBubble</compClass>
@@ -1678,6 +1680,18 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 			<Plasteel>150</Plasteel>
 			<Uranium>50</Uranium>
 		</costList>
+		<verbs>
+		<li>
+			<verbClass>VFEPirates.Verb_DroneDeployment</verbClass>
+			<label>drone deployment</label>
+			<violent>false</violent>
+			<hasStandardCommand>true</hasStandardCommand>
+			<commandIcon>UI/Abilities/WarcasketReleaseDrones</commandIcon>
+			<targetable>false</targetable>
+			<nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+			<onlyManualCast>True</onlyManualCast>
+		</li>
+		</verbs>
 		<researchPrerequisites>
 			<li>VFEP_SpacerWarcaskets</li>
 		</researchPrerequisites>
@@ -1698,7 +1712,18 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 				<li>WarcasketAll</li>
 			</tags>
 		</apparel>
+		<tickerType>Normal</tickerType>
 		<comps>
+			<li Class="CompProperties_Reloadable">
+				<maxCharges>1</maxCharges>
+				<ammoDef>ComponentSpacer</ammoDef>
+				<ammoCountToRefill>1</ammoCountToRefill>
+				<baseReloadTicks>60</baseReloadTicks>
+				<soundReload>Standard_Reload</soundReload>
+				<hotKey>Misc4</hotKey>
+				<chargeNoun>drone deployment</chargeNoun>
+				<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+			</li>
 			<li Class="VFECore.CompProperties_ShieldBubble">
 				<compClass>VFECore.CompShieldBubble</compClass>
 				<blockRangedAttack>true</blockRangedAttack>
@@ -1737,6 +1762,17 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 			</li>
 		</modExtensions>
 	</VFEPirates.WarcasketDef>
+
+    <MVCF.ModDef>
+        <defName>VFEP</defName>
+        <label>VFE Pirates</label>
+        <description>VFE Pirates</description>
+        <Features>
+			<IntegratedToggle>true</IntegratedToggle>
+            <ApparelVerbs>true</ApparelVerbs>
+        </Features>
+    </MVCF.ModDef>
+	
 	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
 		<defName>VFEP_WarcasketShoulders_Controller</defName>
 		<label>controller warcasket shoulders</label>
@@ -1764,6 +1800,35 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 		<researchPrerequisites>
 			<li>VFEP_SpacerWarcaskets</li>
 		</researchPrerequisites>
+		<verbs>
+			<li>
+				<label>Deploy a Spider mine</label>
+				<verbClass>VFEPirates.Verb_Spidermine</verbClass>
+				<commandIcon>UI/Abilities/WarcasketDeploySpidermine</commandIcon>
+				<hasStandardCommand>true</hasStandardCommand>
+				<onlyManualCast>True</onlyManualCast>
+				<range>14.9</range>
+				<warmupTime>0.5</warmupTime>
+				<soundCast>Shot_IncendiaryLauncher</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<defaultProjectile>VFEP_SpidermineProjectile</defaultProjectile>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="MVCF.Comps.CompProperties_VerbGiver">
+				<verbProps>
+					<li>
+						<label>Deploy a Spider mine</label>
+						<visualLabel>Deploy a Spider mine</visualLabel>
+						<description>Deploy a Spider mine.</description>
+						<draw>false</draw>
+					</li>
+				</verbProps>
+			</li>
+		</comps>
 		<apparel>
 			<bodyPartGroups>
 				<li>Shoulders</li>
@@ -1783,6 +1848,18 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 			</tags>
 		</apparel>
 	</VFEPirates.WarcasketDef>
+	
+	<ThingDef ParentName="BaseGrenadeProjectile">
+		<defName>VFEP_SpidermineProjectile</defName>
+		<thingClass>VFEPirates.Projectile_Spidermine</thingClass>
+		<graphicData>
+			<texPath>Things/Pawn/Mechanoid/WarcasketSpidermine</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<speed>20</speed>
+		</projectile>
+	</ThingDef>
 	
 	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
 		<defName>VFEP_Warcasket_Sarcophagus</defName>
@@ -1832,6 +1909,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 				<li>WarcasketAll</li>
 			</tags>
 		</apparel>
+		<tickerType>Normal</tickerType>
 		<comps>
 			<li Class="VFECore.CompProperties_ShieldBubble">
 				<compClass>VFECore.CompShieldBubble</compClass>
@@ -1965,6 +2043,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 				<li>WarcasketAll</li>
 			</tags>
 		</apparel>
+		<tickerType>Normal</tickerType>
 		<comps>
 			<li Class="VFECore.CompProperties_ShieldBubble">
 				<compClass>VFECore.CompShieldBubble</compClass>

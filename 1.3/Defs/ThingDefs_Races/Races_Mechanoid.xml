@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <!-- Wardrone -->
 
@@ -25,13 +25,14 @@
       <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
     </statBases>
     <race>
+      <deathActionWorkerClass>DeathActionWorker_SmallExplosion</deathActionWorkerClass>
       <body>VFEP_Wardrone</body>
       <baseHealthScale>0.22</baseHealthScale>
       <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
       <intelligence>ToolUser</intelligence>
-      <thinkTreeMain>Mechanoid</thinkTreeMain>
+      <thinkTreeMain>VFEP_WarDrone</thinkTreeMain>
       <baseBodySize>0.25</baseBodySize>
       <lifeStageAges>
         <li>
@@ -44,6 +45,13 @@
       </lifeStageAges>
       <soundCallIntervalRange>1000~2000</soundCallIntervalRange>
     </race>
+	<comps>
+      <li Class="CompProperties_DestroyAfterDelay">
+        <delayTicks>3600</delayTicks>
+        <destroyMode>KillFinalize</destroyMode>
+		<compClass>VFEPirates.CompKillAfterDelay</compClass>
+      </li>
+	</comps>
   </ThingDef>
   
   <PawnKindDef>
@@ -94,13 +102,14 @@
       <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
     </statBases>
     <race>
+      <deathActionWorkerClass>DeathActionWorker_SmallExplosion</deathActionWorkerClass>
       <body>VFEP_Spidermine</body>
       <baseHealthScale>0.22</baseHealthScale>
       <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
       <intelligence>ToolUser</intelligence>
-      <thinkTreeMain>Mechanoid</thinkTreeMain>
+      <thinkTreeMain>VFEP_SpiderMine</thinkTreeMain>
       <baseBodySize>0.25</baseBodySize>
       <lifeStageAges>
         <li>

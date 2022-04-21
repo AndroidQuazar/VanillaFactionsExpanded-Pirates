@@ -114,5 +114,6 @@ namespace VFEPirates
         public static StatDef VFEP_PowerJumpRange;
         public static JobDef VFEP_EquipFromWeaponBox;
         public static TraitDef VFEP_WarcasketTrait;
+        public static HediffDef VFEP_HypothermicSlowdown;
     }
 }

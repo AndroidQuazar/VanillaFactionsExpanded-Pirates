@@ -2,13 +2,14 @@
 <Patch>
    <Operation Class="PatchOperationFindMod">
       <mods>
-         <li>Vanilla Factions Expanded - Insectoids</li>
+         <li>Vanilla Factions Expanded - Vikings</li>
       </mods>
       <match Class="PatchOperationSequence">
          <operations>
             <li Class="PatchOperationAdd">
                <xpath>/Defs</xpath>
                <value>
+			   
                   <ThingDef ParentName="VFEP_BaseWarcasketGun">
                      <defName>VFEP_WarcasketGun_CryptoCannon</defName>
                      <label>warcasket crypto cannon</label>
@@ -83,7 +84,7 @@
                   <VFECore.ExpandableProjectileDef ParentName="BaseBullet">
                      <defName>VFE_Bullet_CryptoCannon</defName>
                      <label>crypto cannon charge</label>
-                     <thingClass>VFECore.FlamethrowProjectile</thingClass>
+                     <thingClass>VFEPirates.CryptoProjectile</thingClass>
                      <graphicData>
                         <texPath>Projectile/Proj_WarcasketCryptocannon</texPath>
                         <texPathFadeOut>Projectile/Proj_WarcasketCryptocannonFadeOut</texPathFadeOut>

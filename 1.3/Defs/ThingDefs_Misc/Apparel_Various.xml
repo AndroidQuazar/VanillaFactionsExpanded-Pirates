@@ -1432,6 +1432,23 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 				<li>WarcasketAll</li>
 			</tags>
 		</apparel>
+		<comps>
+			<li Class="VFECore.CompProperties_ShieldBubble">
+				<compClass>VFECore.CompShieldBubble</compClass>
+				<blockRangedAttack>true</blockRangedAttack>
+				<blockMeleeAttack>false</blockMeleeAttack>
+				<showWhenDrafted>true</showWhenDrafted>
+				<showOnHostiles>true</showOnHostiles>
+				<showOnNeutralInCombat>true</showOnNeutralInCombat>
+				<shieldTexPath>Other/ShieldBubble</shieldTexPath>
+				<EnergyShieldRechargeRate>10</EnergyShieldRechargeRate>
+				<EnergyShieldEnergyMax>250</EnergyShieldEnergyMax>
+				<chargeFullyWhenMade>true</chargeFullyWhenMade>
+				<minShieldSize>2.1</minShieldSize>
+				<maxShieldSize>2.7</maxShieldSize>
+				<disableRotation>true</disableRotation>
+			</li>
+		</comps>
 		<modExtensions>
 			<li Class="VFECore.ApparelExtension">
 				<traitsOnEquip>
@@ -1547,6 +1564,23 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 				<li>WarcasketAll</li>
 			</tags>
 		</apparel>
+		<comps>
+			<li Class="VFECore.CompProperties_ShieldBubble">
+				<compClass>VFECore.CompShieldBubble</compClass>
+				<blockRangedAttack>true</blockRangedAttack>
+				<blockMeleeAttack>false</blockMeleeAttack>
+				<showWhenDrafted>true</showWhenDrafted>
+				<showOnHostiles>true</showOnHostiles>
+				<showOnNeutralInCombat>true</showOnNeutralInCombat>
+				<shieldTexPath>Other/ShieldBubble</shieldTexPath>
+				<EnergyShieldRechargeRate>10</EnergyShieldRechargeRate>
+				<EnergyShieldEnergyMax>150</EnergyShieldEnergyMax>
+				<chargeFullyWhenMade>true</chargeFullyWhenMade>
+				<minShieldSize>2.1</minShieldSize>
+				<maxShieldSize>2.7</maxShieldSize>
+				<disableRotation>true</disableRotation>
+			</li>
+		</comps>
 		<modExtensions>
 			<li Class="VFECore.ApparelExtension">
 				<traitsOnEquip>
@@ -1664,6 +1698,23 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 				<li>WarcasketAll</li>
 			</tags>
 		</apparel>
+		<comps>
+			<li Class="VFECore.CompProperties_ShieldBubble">
+				<compClass>VFECore.CompShieldBubble</compClass>
+				<blockRangedAttack>true</blockRangedAttack>
+				<blockMeleeAttack>false</blockMeleeAttack>
+				<showWhenDrafted>true</showWhenDrafted>
+				<showOnHostiles>true</showOnHostiles>
+				<showOnNeutralInCombat>true</showOnNeutralInCombat>
+				<shieldTexPath>Other/ShieldBubble</shieldTexPath>
+				<EnergyShieldRechargeRate>10</EnergyShieldRechargeRate>
+				<EnergyShieldEnergyMax>150</EnergyShieldEnergyMax>
+				<chargeFullyWhenMade>true</chargeFullyWhenMade>
+				<minShieldSize>2.1</minShieldSize>
+				<maxShieldSize>2.7</maxShieldSize>
+				<disableRotation>true</disableRotation>
+			</li>
+		</comps>
 		<modExtensions>
 			<li Class="VFECore.ApparelExtension">
 				<traitsOnEquip>
@@ -1781,6 +1832,23 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 				<li>WarcasketAll</li>
 			</tags>
 		</apparel>
+		<comps>
+			<li Class="VFECore.CompProperties_ShieldBubble">
+				<compClass>VFECore.CompShieldBubble</compClass>
+				<blockRangedAttack>true</blockRangedAttack>
+				<blockMeleeAttack>false</blockMeleeAttack>
+				<showWhenDrafted>true</showWhenDrafted>
+				<showOnHostiles>true</showOnHostiles>
+				<showOnNeutralInCombat>true</showOnNeutralInCombat>
+				<shieldTexPath>Other/ShieldBubble</shieldTexPath>
+				<EnergyShieldRechargeRate>10</EnergyShieldRechargeRate>
+				<EnergyShieldEnergyMax>150</EnergyShieldEnergyMax>
+				<chargeFullyWhenMade>true</chargeFullyWhenMade>
+				<minShieldSize>2.1</minShieldSize>
+				<maxShieldSize>2.7</maxShieldSize>
+				<disableRotation>true</disableRotation>
+			</li>
+		</comps>
 		<modExtensions>
 			<li Class="VFECore.ApparelExtension">
 				<traitsOnEquip>
@@ -1897,6 +1965,24 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 				<li>WarcasketAll</li>
 			</tags>
 		</apparel>
+		<comps>
+			<li Class="VFECore.CompProperties_ShieldBubble">
+				<compClass>VFECore.CompShieldBubble</compClass>
+				<blockRangedAttack>true</blockRangedAttack>
+				<blockMeleeAttack>false</blockMeleeAttack>
+				<showWhenDrafted>true</showWhenDrafted>
+				<showOnHostiles>true</showOnHostiles>
+				<showOnNeutralInCombat>true</showOnNeutralInCombat>
+				<shieldTexPath>Other/ShieldBubble</shieldTexPath>
+				<EnergyShieldRechargeRate>5</EnergyShieldRechargeRate>
+				<EnergyShieldEnergyMax>500</EnergyShieldEnergyMax>
+				<chargeFullyWhenMade>true</chargeFullyWhenMade>
+				<minShieldSize>2.1</minShieldSize>
+				<maxShieldSize>2.7</maxShieldSize>
+				<disableRotation>true</disableRotation>
+				<dontAllowRangedAttack>true</dontAllowRangedAttack>
+			</li>
+		</comps>
 		<modExtensions>
 			<li Class="VFECore.ApparelExtension">
 				<traitsOnEquip>
@@ -1938,6 +2024,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 		</statBases>
 		<equippedStatOffsets>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
+			<VEF_EnergyShieldEnergyMaxFactor>0.5</VEF_EnergyShieldEnergyMaxFactor>
 		</equippedStatOffsets>
 		<costList>
 			<Plasteel>60</Plasteel>

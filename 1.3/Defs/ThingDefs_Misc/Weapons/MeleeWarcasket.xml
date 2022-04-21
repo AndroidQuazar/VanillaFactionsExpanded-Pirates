@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
 
@@ -168,7 +168,7 @@
       <li>
         <label>head</label>
         <capacities>
-          <li>Blunt</li>
+          <li>VFEP_GravityHammerAttack</li>
         </capacities>
         <power>31</power>
         <cooldownTime>3</cooldownTime>

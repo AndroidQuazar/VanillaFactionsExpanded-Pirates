@@ -1939,13 +1939,28 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 				<pawnCapacityMinLevels>
 					<li>
 						<capacity>Moving</capacity>
-						<minLevel>0.7</minLevel>
+						<minLevel>1</minLevel>
 					</li>
 					<li>
 						<capacity>Manipulation</capacity>
-						<minLevel>0.7</minLevel>
+						<minLevel>1</minLevel>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<minLevel>1</minLevel>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<minLevel>1</minLevel>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<minLevel>1</minLevel>
 					</li>
 				</pawnCapacityMinLevels>
+				<preventDowning>true</preventDowning>
+				<preventKilling>true</preventKilling>
+				<preventBleeding>true</preventBleeding>
 			</li>
 		</modExtensions>
 	</VFEPirates.WarcasketDef>
@@ -1994,6 +2009,24 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 				<li>WarcasketAll</li>
 			</tags>
 		</apparel>
+		<modExtensions>
+			<li Class="VFECore.ApparelExtension">
+				<pawnCapacityMinLevels>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<minLevel>1</minLevel>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<minLevel>1</minLevel>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<minLevel>1</minLevel>
+					</li>
+				</pawnCapacityMinLevels>
+			</li>
+		</modExtensions>
 	</VFEPirates.WarcasketDef>
 	
 	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">

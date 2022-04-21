@@ -566,6 +566,32 @@
     <researchPrerequisites>
       <li>VFEP_SpacerWarcaskets</li>
     </researchPrerequisites>
+		<modExtensions>
+			<li Class="VFECore.ApparelExtension">
+				<pawnCapacityMinLevels>
+					<li>
+						<capacity>Consciousness</capacity>
+						<minLevel>1</minLevel>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<minLevel>1</minLevel>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<minLevel>1</minLevel>
+					</li>
+					<li>
+						<capacity>Talking</capacity>
+						<minLevel>1</minLevel>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<minLevel>1</minLevel>
+					</li>
+				</pawnCapacityMinLevels>
+			</li>
+		</modExtensions>
     <apparel>
       <bodyPartGroups>
         <li>FullHead</li>

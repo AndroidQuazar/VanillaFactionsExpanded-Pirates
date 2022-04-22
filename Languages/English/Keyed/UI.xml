@@ -25,4 +25,6 @@ assembly over other tasks.</VFEP.WarcasketText>
 	<VFEPirates.CannotEntomb>Cannot entomp in warcasket: {0}</VFEPirates.CannotEntomb>
 	<VFEPirates.EntombInWarcasket>Entomb in warcasket</VFEPirates.EntombInWarcasket>
 	<VFEP.EntombInIncapableOfViolenceWarning> (Warning: {PAWN_nameDef} is not capable of violence, it will make {PAWN_objective} useless.)</VFEP.EntombInIncapableOfViolenceWarning>
+	<VFEP.ActivateShield>Activate shield field</VFEP.ActivateShield>
+	<VFEP.ActivateShieldDesc>Click to activate the shield field. It has 10 seconds of active mode and then 90 seconds cooldown.</VFEP.ActivateShieldDesc>
 </LanguageData>

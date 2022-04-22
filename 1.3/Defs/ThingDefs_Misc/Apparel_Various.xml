@@ -1534,6 +1534,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 			<Insulation_Cold>80</Insulation_Cold>
 			<Insulation_Heat>80</Insulation_Heat>
 			<EquipDelay>1</EquipDelay>
+			<VEF_EnergyShieldRadiusApparel>5</VEF_EnergyShieldRadiusApparel>
 		</statBases>
 		<equippedStatOffsets>
 			<PsychicSensitivity>-0.5</PsychicSensitivity>
@@ -1567,6 +1568,16 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 		</apparel>
 		<tickerType>Normal</tickerType>
 		<comps>
+			<li Class="VFECore.CompProperties_ShieldField">
+				<shieldColour>(1, 1, 1, 0.7)</shieldColour>
+				<shieldRadiusStat>VEF_EnergyShieldRadiusApparel</shieldRadiusStat>
+				<manualActivation>true</manualActivation>
+				<workingTimeTicks>600</workingTimeTicks>
+				<cooldownTicks>5400</cooldownTicks>
+				<activationLabelKey>VFEP.ActivateShield</activationLabelKey>
+				<activationDescKey>VFEP.ActivateShieldDesc</activationDescKey>
+				<activationIconTexPath>UI/Abilities/WarcasketDeployLowshield</activationIconTexPath>
+			</li>
 			<li Class="VFECore.CompProperties_ShieldBubble">
 				<compClass>VFECore.CompShieldBubble</compClass>
 				<blockRangedAttack>true</blockRangedAttack>
@@ -1610,6 +1621,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 		<label>guardian warcasket shoulders</label>
 		<shortDescription>Specialized spacer-tech warcasket pauldrons with improved impact dispersion, equipped with heavy magnetic modules that occasionally offer full impact mitigation.</shortDescription>
 		<description>Specialized spacer-tech warcasket pauldrons with improved impact dispersion, equipped with heavy magnetic modules that occasionally offer full impact mitigation.</description>
+		<thingClass>VFEPirates.Apparel_GuardianShoulders</thingClass>
 		<graphicData>
 			<texPath>Things/Pawn/Warcasketlike/WarcasketGuardian/WarcasketGuardianShoulders</texPath>
 		</graphicData>

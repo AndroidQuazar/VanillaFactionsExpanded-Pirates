@@ -54,6 +54,7 @@
     <Compile Include="Abilities\Ability_PowerJump.cs" />
     <Compile Include="Abilities\Ability_GrapplingHook.cs" />
     <Compile Include="Abilities\Ability_SiegeMode.cs" />
+    <Compile Include="Apparels\Apparel_GuardianShoulders.cs" />
     <Compile Include="Apparels\Apparel_Warcasket.cs" />
     <Compile Include="Comps\CompWeaponBox.cs" />
     <Compile Include="Buildings\Chunks\FilthSpawner.cs" />

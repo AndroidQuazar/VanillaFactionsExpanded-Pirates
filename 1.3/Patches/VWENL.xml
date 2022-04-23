@@ -98,7 +98,7 @@
                         <WorkToBuild>45000</WorkToBuild>
                      </statBases>
                      <researchPrerequisites>
-                        <li>VWENL_Projectile_TearGasGrenade</li>
+                        <li>VWE_NonLethal</li>
                      </researchPrerequisites>
                      <comps>
                         <li Class="VFEPirates.CompProperties_WeaponBox">

@@ -56,7 +56,7 @@
                            <cooldownTime>2.6</cooldownTime>
                         </li>
                      </tools>
-                     <equippedAngleOffset>53</equippedAngleOffset>
+                     <equippedAngleOffset>35</equippedAngleOffset>
                      <comps>
                         <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
                            <eastOffset>(0,0,-0.18)</eastOffset>
@@ -181,7 +181,7 @@
                            <cooldownTime>2.6</cooldownTime>
                         </li>
                      </tools>
-                     <equippedAngleOffset>53</equippedAngleOffset>
+                     <equippedAngleOffset>35</equippedAngleOffset>
                      <comps>
                         <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
                            <eastOffset>(0,0,-0.18)</eastOffset>

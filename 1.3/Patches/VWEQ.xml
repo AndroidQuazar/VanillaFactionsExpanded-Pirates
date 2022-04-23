@@ -96,7 +96,7 @@
                      </researchPrerequisites>
                      <comps>
                         <li Class="VFEPirates.CompProperties_WeaponBox">
-                           <weaponToEquip>VFEP_WarcasketGun_TearGasGrenadeLauncher</weaponToEquip>
+                           <weaponToEquip>VFEP_WarcasketGun_FoldingGun</weaponToEquip>
                         </li>
                      </comps>
                   </ThingDef>

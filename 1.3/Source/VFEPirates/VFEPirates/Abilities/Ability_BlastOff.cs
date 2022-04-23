@@ -331,7 +331,7 @@ namespace VFEPirates
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_References.Look(ref pawn, "pawn");
+            Scribe_Deep.Look(ref pawn, "pawn");
         }
     }
     public class TravelingPawn : TravelingTransportPods
@@ -502,6 +502,7 @@ namespace VFEPirates
         {
             base.ExposeData();
             Scribe_References.Look(ref pawn, "pawn");
+            Scribe_References.Look(ref mapParent, "mapParent");
         }
     }
 }

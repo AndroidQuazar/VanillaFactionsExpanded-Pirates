@@ -1702,6 +1702,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 			<targetable>false</targetable>
 			<nonInterruptingSelfCast>true</nonInterruptingSelfCast>
 			<onlyManualCast>True</onlyManualCast>
+			<soundCast>VFEP_DeployWardrones</soundCast>
 		</li>
 		</verbs>
 		<researchPrerequisites>
@@ -1812,9 +1813,21 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 		<researchPrerequisites>
 			<li>VFEP_SpacerWarcaskets</li>
 		</researchPrerequisites>
+		<comps>
+			<li Class="CompProperties_Reloadable">
+				<maxCharges>1</maxCharges>
+				<ammoDef>ComponentSpacer</ammoDef>
+				<ammoCountToRefill>1</ammoCountToRefill>
+				<baseReloadTicks>60</baseReloadTicks>
+				<soundReload>Standard_Reload</soundReload>
+				<hotKey>Misc4</hotKey>
+				<chargeNoun>spider mine deployment</chargeNoun>
+				<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+			</li>
+		</comps>
 		<verbs>
 			<li>
-				<label>Deploy a Spider mine</label>
+				<label>Deploy spidermine</label>
 				<verbClass>VFEPirates.Verb_Spidermine</verbClass>
 				<commandIcon>UI/Abilities/WarcasketDeploySpidermine</commandIcon>
 				<hasStandardCommand>true</hasStandardCommand>
@@ -1829,18 +1842,6 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 				<defaultProjectile>VFEP_SpidermineProjectile</defaultProjectile>
 			</li>
 		</verbs>
-		<comps>
-			<li Class="MVCF.Comps.CompProperties_VerbGiver">
-				<verbProps>
-					<li>
-						<label>Deploy a Spider mine</label>
-						<visualLabel>Deploy a Spider mine</visualLabel>
-						<description>Deploy a Spider mine.</description>
-						<draw>false</draw>
-					</li>
-				</verbProps>
-			</li>
-		</comps>
 		<apparel>
 			<bodyPartGroups>
 				<li>Shoulders</li>

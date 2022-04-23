@@ -30,7 +30,7 @@ namespace VFEPirates
 							this.customImpact = false;
 							if (list[num] is Pawn pawn)
                             {
-								HealthUtility.AdjustSeverity(pawn, HediffDefOf.Hypothermia, 0.3f);
+								HealthUtility.AdjustSeverity(pawn, HediffDefOf.Hypothermia, Rand.Range(0.05f, 0.25f));
 								HealthUtility.AdjustSeverity(pawn, VFEP_DefOf.VFEP_HypothermicSlowdown, 0.3f);
 							}
 						}

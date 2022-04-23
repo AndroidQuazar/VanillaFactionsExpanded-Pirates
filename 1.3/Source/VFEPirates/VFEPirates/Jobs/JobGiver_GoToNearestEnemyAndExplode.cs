@@ -5,14 +5,6 @@ using Verse.AI.Group;
 
 namespace VFEPirates
 {
-    public class Hediff_KillItself : HediffWithComps
-    {
-        public override void Tick()
-        {
-            base.Tick();
-            this.pawn.Kill(null);
-        }
-    }
     public class JobGiver_GoToNearestEnemyAndExplode : JobGiver_AIFightEnemy
 	{
 		private float targetKeepRadius = 30;
@@ -39,12 +31,16 @@ namespace VFEPirates
 		{
 			UpdateEnemyTarget(pawn);
 			Thing enemyTarget = pawn.mindState.enemyTarget;
-            if (enemyTarget == null || enemyTarget.Position == pawn.Position)
+            if (enemyTarget == null)
 			{
-                pawn.health.AddHediff(HediffMaker.MakeHediff(VFEP_DefOf.VFEP_KillItself, pawn));
+				if (pawn.health.hediffSet.GetFirstHediffOfDef(VFEP_DefOf.VFEP_KillItself) == null)
+                {
+					var hediff = HediffMaker.MakeHediff(VFEP_DefOf.VFEP_KillItself, pawn) as Hediff_KillItself;
+					pawn.health.AddHediff(hediff);
+				}
                 return null;
 			}
-			Job job = JobMaker.MakeJob(JobDefOf.Goto, enemyTarget.Position);
+			Job job = JobMaker.MakeJob(VFEP_DefOf.VFEP_GotoAndExplode, enemyTarget);
 			job.expiryInterval = ExpiryInterval_ShooterSucceeded.RandomInRange;
 			job.checkOverrideOnExpire = true;
 			return job;

@@ -15,18 +15,27 @@ namespace VFEPirates.HarmonyPatches
                 __result.defaultIconColor = Color.white;
                 __result.overrideColor = Color.white;
             }
+            if (verb is Verb_Spidermine)
+            {
+                __result.defaultDesc = "VFEP.DeploySpidermineDesc".Translate();
+            }
+            if (verb is Verb_DroneDeployment)
+            {
+                __result.defaultDesc = "VFEP.DeployWarDrone".Translate();
+            }
         }
     }
 
-    [HarmonyPatch(typeof(Command_VerbTarget), "IconDrawColor", MethodType.Getter)]
-    public static class Command_VerbTarget_IconDrawColor_Patch
+    [HarmonyPatch(typeof(Pawn_HealthTracker), "NotifyPlayerOfKilled")]
+    public static class Pawn_HealthTracker_NotifyPlayerOfKilled_Patch
     {
-        public static void Postfix(ref Color __result, Command_VerbTarget __instance)
+        public static bool Prefix(Pawn ___pawn)
         {
-            if (__instance.verb is Verb_DroneDeployment || __instance.verb is Verb_Spidermine)
+            if (___pawn.kindDef == VFEP_DefOf.VFEP_Mech_Wardrone || ___pawn.kindDef == VFEP_DefOf.VFEP_Mech_Spidermine)
             {
-                __result = Color.white;
+                return false;
             }
+            return true;
         }
     }
 }

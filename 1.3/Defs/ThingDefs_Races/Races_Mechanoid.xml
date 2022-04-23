@@ -25,7 +25,7 @@
       <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
     </statBases>
     <race>
-      <deathActionWorkerClass>DeathActionWorker_SmallExplosion</deathActionWorkerClass>
+      <deathActionWorkerClass>VFEPirates.DeathActionWorker_SmallExplosionDestroyCorpse</deathActionWorkerClass>
       <body>VFEP_Wardrone</body>
       <baseHealthScale>0.22</baseHealthScale>
       <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
@@ -48,6 +48,7 @@
 	<comps>
       <li Class="CompProperties_DestroyAfterDelay">
         <delayTicks>3600</delayTicks>
+        <countdownLabel>Explodes in</countdownLabel>
         <destroyMode>KillFinalize</destroyMode>
 		<compClass>VFEPirates.CompKillAfterDelay</compClass>
       </li>
@@ -102,7 +103,7 @@
       <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
     </statBases>
     <race>
-      <deathActionWorkerClass>DeathActionWorker_SmallExplosion</deathActionWorkerClass>
+      <deathActionWorkerClass>VFEPirates.DeathActionWorker_SmallExplosionDestroyCorpse</deathActionWorkerClass>
       <body>VFEP_Spidermine</body>
       <baseHealthScale>0.22</baseHealthScale>
       <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>

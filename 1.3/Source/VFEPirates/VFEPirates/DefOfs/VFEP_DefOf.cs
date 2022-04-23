@@ -119,5 +119,8 @@ namespace VFEPirates
         public static PawnKindDef VFEP_Mech_Spidermine;
         public static ThingDef VFEP_WarcasketHelmet_Controller;
         public static HediffDef VFEP_KillItself;
+        public static JobDef VFEP_GotoAndExplode;
     }
+
+    
 }

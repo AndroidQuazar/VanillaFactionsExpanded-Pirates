@@ -15,7 +15,7 @@
                      <description>A rather complicated piece of laser technology that was primarily developed as a siege weapon to generate explosions within hardened bunkers. In order to miniaturize an emplacement weapon without needing a massive power unit, the shoulder-mounted laser fires in irregular pulses with a frequency between kHz and MHz. The results are hard to dispute as it can cause a devastating blast, however it has a limited effective range and a long warm-up period to charge the capacitor banks.</description>
                      <techLevel>Ultra</techLevel>
                      <graphicData>
-                        <texPath>Things/Item/Equipment/WeaponRanged/WarcasketSalvagedLaserEradicator</texPath>
+                        <texPath>Things/Item/Weapons/WarcasketSalvagedLaserEradicator</texPath>
                         <graphicClass>Graphic_Single</graphicClass>
                      </graphicData>
                      <soundInteract>VWE_Interact_UnstableLaserGun</soundInteract>
@@ -140,7 +140,7 @@
                      <description>An enlarged laser weapon, combining both modern and antique methods into a compact package. Taking advantage of a greater weight tolerance, this system includes a revolver cylinder using advanced battery cells instead of cartridges. This allows the weapon to fire more powerful shots at a slower warmup reduction, meaning safer sustained fire for the operator.</description>
                      <techLevel>Ultra</techLevel>
                      <graphicData>
-                        <texPath>Things/Item/Equipment/WeaponRanged/WarcasketLaserBolter</texPath>
+                        <texPath>Things/Item/Weapons/WarcasketLaserBolter</texPath>
                         <graphicClass>Graphic_Single</graphicClass>
                      </graphicData>
                      <soundInteract>VWE_Interact_LaserGun</soundInteract>

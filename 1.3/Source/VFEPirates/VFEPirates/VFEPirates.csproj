@@ -62,6 +62,8 @@
     <Compile Include="Buildings\Chunks\VolatileEngine.cs" />
     <Compile Include="Buildings\Dialog_WarcasketCustomization.cs" />
     <Compile Include="Comps\CompRumSuit.cs" />
+    <Compile Include="HarmonyPatches\MechKindSuitableForCluster_Patch.cs" />
+    <Compile Include="HarmonyPatches\PawnRenderer_DrawEquipment_Patch.cs" />
     <Compile Include="Misc\Hediff_KillItself.cs" />
     <Compile Include="Jobs\JobDriver_GotoAndExplode.cs" />
     <Compile Include="Jobs\JobGiver_GoToNearestEnemyAndExplode.cs" />
@@ -140,6 +142,7 @@
     <Compile Include="Utilities\StaticStartup.cs" />
     <Compile Include="Thoughts\Thought_Precept_Camaraderie_Exalted.cs" />
     <Compile Include="Comps\CompKillAfterDelay.cs" />
+    <Compile Include="Verbs\Verb_ShieldDetonation.cs" />
     <Compile Include="Verbs\Verb_DroneDeployment.cs" />
     <Compile Include="Verbs\Verb_LaunchProjectileStaticMultiple.cs" />
     <Compile Include="Verbs\Verb_ShootCone.cs" />

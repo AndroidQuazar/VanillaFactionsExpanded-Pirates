@@ -67,7 +67,6 @@
     <Compile Include="Misc\Hediff_KillItself.cs" />
     <Compile Include="Jobs\JobDriver_GotoAndExplode.cs" />
     <Compile Include="Jobs\JobGiver_GoToNearestEnemyAndExplode.cs" />
-    <Compile Include="Misc\DeathActionWorker_SmallExplosionDestroyCorpse.cs" />
     <Compile Include="Projectiles\Projectile_Spidermine.cs" />
     <Compile Include="Comps\Properties\CompProperties_RumSuit.cs" />
     <Compile Include="Curses\CurseDef.cs" />

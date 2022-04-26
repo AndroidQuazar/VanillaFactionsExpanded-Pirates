@@ -22,7 +22,6 @@ namespace VFEPirates.Buildings
         private readonly Pawn pawn;
         private readonly WarcasketProject project;
         private readonly List<WarcasketDef> shoulders;
-        private List<Color> allColors;
         private Vector2 scrollPos;
         public Dialog_WarcasketCustomization(WarcasketProject project, Pawn pawn, Action onAccept, Action onCancel)
         {
@@ -36,30 +35,8 @@ namespace VFEPirates.Buildings
             forcePause = true;
             Notify_SettingsChanged();
         }
-
         protected override float Margin => 5f;
-
         public override Vector2 InitialSize => new(955f, UI.screenHeight - 150f);
-
-        private List<Color> AllColors
-        {
-            get
-            {
-                if (allColors != null) return allColors;
-
-                allColors = DefDatabase<ColorDef>.AllDefsListForReading.Where(x => !x.hairOnly).Select(x => x.color).ToList();
-
-                if (pawn.Ideo != null && !allColors.Any(c => pawn.Ideo.ApparelColor.IndistinguishableFrom(c))) allColors.Add(pawn.Ideo.ApparelColor);
-
-                if (pawn.story is {favoriteColor: { } favoriteColor} && !allColors.Any(c => favoriteColor.IndistinguishableFrom(c)))
-                    allColors.Add(favoriteColor);
-
-                allColors.SortByColor(x => x);
-
-                return allColors;
-            }
-        }
-
         public override void OnAcceptKeyPressed()
         {
             base.OnAcceptKeyPressed();
@@ -195,7 +172,7 @@ namespace VFEPirates.Buildings
             inRect.y += 5f;
             Widgets.Label(inRect.TakeTopPart(40f), "VFEP.ResourceCost".Translate() + " " + current.costList.Join(cost => cost.LabelCap));
             inRect.y += 5f;
-            if (Widgets.ColorSelector(inRect.TakeTopPart(150f), ref currentColor, AllColors)) Notify_SettingsChanged();
+            if (Widgets.ColorSelector(inRect.TakeTopPart(150f), ref currentColor, StaticStartup.colors)) Notify_SettingsChanged();
         }
 
         public void DoSelection(Rect selectionRect, List<WarcasketDef> options, WarcasketDef current, Action<WarcasketDef> setCurrent)

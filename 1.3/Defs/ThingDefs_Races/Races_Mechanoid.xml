@@ -25,7 +25,7 @@
       <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
     </statBases>
     <race>
-      <deathActionWorkerClass>VFEPirates.DeathActionWorker_SmallExplosionDestroyCorpse</deathActionWorkerClass>
+      <deathActionWorkerClass>DeathActionWorker_SmallExplosion</deathActionWorkerClass>
       <body>VFEP_Wardrone</body>
       <baseHealthScale>0.22</baseHealthScale>
       <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
@@ -53,6 +53,11 @@
 		<compClass>VFEPirates.CompKillAfterDelay</compClass>
       </li>
 	</comps>
+	<modExtensions>
+		<li Class="VFECore.ThingDefExtension">
+			<destroyCorpse>true</destroyCorpse>
+		</li>
+	</modExtensions>
   </ThingDef>
   
   <PawnKindDef>
@@ -103,7 +108,7 @@
       <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
     </statBases>
     <race>
-      <deathActionWorkerClass>VFEPirates.DeathActionWorker_SmallExplosionDestroyCorpse</deathActionWorkerClass>
+      <deathActionWorkerClass>DeathActionWorker_SmallExplosion</deathActionWorkerClass>
       <body>VFEP_Spidermine</body>
       <baseHealthScale>0.22</baseHealthScale>
       <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
@@ -123,6 +128,11 @@
       </lifeStageAges>
       <soundCallIntervalRange>1000~2000</soundCallIntervalRange>
     </race>
+	<modExtensions>
+		<li Class="VFECore.ThingDefExtension">
+			<destroyCorpse>true</destroyCorpse>
+		</li>
+	</modExtensions>
   </ThingDef>
   
   <PawnKindDef>

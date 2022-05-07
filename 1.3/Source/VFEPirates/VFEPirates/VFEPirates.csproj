@@ -32,6 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BadHygiene">
+      <HintPath>..\..\..\..\..\..\..\..\workshop\content\294100\836308268\1.3\Assemblies\BadHygiene.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="HeavyWeapons">
       <HintPath>..\..\..\..\..\VanillaExpandedFramework\1.3\Assemblies\HeavyWeapons.dll</HintPath>
       <Private>False</Private>
@@ -68,6 +72,7 @@
     <Compile Include="Misc\Hediff_KillItself.cs" />
     <Compile Include="Jobs\JobDriver_GotoAndExplode.cs" />
     <Compile Include="Jobs\JobGiver_GoToNearestEnemyAndExplode.cs" />
+    <Compile Include="Utilities\ModCompatibility.cs" />
     <Compile Include="Projectiles\Projectile_Spidermine.cs" />
     <Compile Include="Comps\Properties\CompProperties_RumSuit.cs" />
     <Compile Include="Curses\CurseDef.cs" />

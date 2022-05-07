@@ -46,6 +46,15 @@ namespace VFEPirates
             Comps_PostDraw();
         }
 
+        public override void Tick()
+        {
+            base.Tick();
+            if (this.Wearer != null && ModCompatibility.DubsBadHygieneActive)
+            {
+                ModCompatibility.FillBladderNeed(this.Wearer, 0.001f);
+                ModCompatibility.FillHygieneNeed(this.Wearer, 0.001f);
+            }
+        }
         public override bool AllowVerbCast(Verb verb)
         {
             var comp = ShieldComp;

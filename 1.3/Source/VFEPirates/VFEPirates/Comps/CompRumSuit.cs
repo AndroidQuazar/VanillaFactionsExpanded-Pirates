@@ -68,7 +68,10 @@ namespace VFEPirates
             {
                 return;
             }
-            
+            if (ModCompatibility.DubsBadHygieneActive && Wearer != null)
+            {
+                ModCompatibility.FillBladderNeed(this.Wearer, 0.001f);
+            }
             ticksUntilSpawn -= interval;
             CheckShouldSpawn();
         }

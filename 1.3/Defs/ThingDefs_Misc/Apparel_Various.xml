@@ -66,6 +66,7 @@
 	</VFEPirates.WarcasketDef>
 	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketPartBase" Name="VFEP_WarcasketArmorBase" Abstract="True">
 		<isArmor>true</isArmor>
+		<tickerType>Normal</tickerType>
 		<shortDescription>short desc</shortDescription>
 		<modExtensions>
 			<li Class="VFECore.ApparelDrawPosExtension">
@@ -1972,11 +1973,14 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 					</li>
 				</pawnCapacityMinLevels>
 				<preventDowning>true</preventDowning>
+				
+				<preventKilling>true</preventKilling>
+				<preventKillingUntilHealthHPPercentage>0.6</preventKillingUntilHealthHPPercentage>
+				<preventKillingUntilBrainMissing>true</preventKillingUntilBrainMissing>
 				<preventBleeding>true</preventBleeding>
 			</li>
 		</modExtensions>
 	</VFEPirates.WarcasketDef>
-	
 	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
 		<defName>VFEP_WarcasketShoulders_Sarcophagus</defName>
 		<label>sarcophagus warcasket shoulders</label>

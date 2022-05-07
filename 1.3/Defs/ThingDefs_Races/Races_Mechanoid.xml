@@ -108,7 +108,7 @@
       <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
     </statBases>
     <race>
-      <deathActionWorkerClass>DeathActionWorker_SmallExplosion</deathActionWorkerClass>
+      <deathActionWorkerClass>VFEPirates.DeathActionWorker_SpidermineExplosion</deathActionWorkerClass>
       <body>VFEP_Spidermine</body>
       <baseHealthScale>0.22</baseHealthScale>
       <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>

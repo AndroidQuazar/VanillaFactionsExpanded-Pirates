@@ -12,7 +12,7 @@
                   <ThingDef ParentName="VFEP_BaseWarcasketGun">
                      <defName>VFEP_WarcasketGun_FoldingGun</defName>
                      <label>warcasket folding gun</label>
-                     <description>tbd.</description>
+                     <description>A weapon designed to give Warcaskets rapid ranged response in an urban environment, able to be collapsed for ease of storage and transportation. The mediocre damage and accuracy is an acceptable trade-off for this convenience, with an increase in rate of fire and minimal aiming to improve its ‘spray and pray’ functionality.</description>
                      <graphicData>
                         <texPath>Things/Item/Weapons/WarcasketFoldingGun</texPath>
                      </graphicData>
@@ -78,7 +78,7 @@
                   <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
                      <defName>VFEP_Box_FoldingGun</defName>
                      <label>warcasket folding gun</label>
-                     <description>tbd.</description>
+                     <description>A weapon designed to give Warcaskets rapid ranged response in an urban environment, able to be collapsed for ease of storage and transportation. The mediocre damage and accuracy is an acceptable trade-off for this convenience, with an increase in rate of fire and minimal aiming to improve its ‘spray and pray’ functionality.</description>
                      <graphicData>
                         <texPath>Things/Item/WeaponsBoxed/WarcasketFoldingGun_OnFloor</texPath>
                      </graphicData>

@@ -12,7 +12,7 @@
                   <ThingDef ParentName="VFEP_BaseWarcasketGun">
                      <defName>VFEP_WarcasketGun_Railgun</defName>
                      <label>warcasket railgun</label>
-                     <description>tbd.</description>
+                     <description>A terrifying modification of the Gauss Lance with a revolving magazine and three barrels. Quite a long warmup period due to the barrels needing charging before firing in a series, however the slugs are considerably larger, translating as more damaging and better range. The potential for collateral damage is immense and many commanders typically forbid its use outside of guerilla tactics and solo raids.</description>
                      <techLevel>Spacer</techLevel>
                      <graphicData>
                         <texPath>Things/Item/Weapons/WarcasketRailgun</texPath>
@@ -84,7 +84,7 @@
                   <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
                      <defName>VFEP_Box_Railgun</defName>
                      <label>warcasket railgun</label>
-                     <description>tbd.</description>
+                     <description>A terrifying modification of the Gauss Lance with a revolving magazine and three barrels. Quite a long warmup period due to the barrels needing charging before firing in a series, however the slugs are considerably larger, translating as more damaging and better range. The potential for collateral damage is immense and many commanders typically forbid its use outside of guerilla tactics and solo raids.</description>
                      <graphicData>
                         <texPath>Things/Item/WeaponsBoxed/WarcasketRailgun_OnFloor</texPath>
                      </graphicData>

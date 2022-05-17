@@ -12,7 +12,7 @@
                   <ThingDef ParentName="VFEP_BaseWarcasketGun">
                      <defName>VFEP_WarcasketGun_TearGasGrenadeLauncher</defName>
                      <label>warcasket tear gas grenade launcher</label>
-                     <description>tbd.</description>
+                     <description>An upscaled version of the Tear Gas Grenade Launcher designed for use by a Warcasket. A straight upgrade, it fires 2 rounds and benefits from more powerful propellant for better range. In order to improve gas dispersal and not have two gas clouds overlap, the weapon was made even less accurate in order to try and spread out the supporting fire.</description>
                      <graphicData>
                         <texPath>Things/Item/Weapons/WarcasketTearGasGrenadeLauncher</texPath>
                      </graphicData>
@@ -83,7 +83,7 @@
                   <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
                      <defName>VFEP_Box_TearGasGrenadeLauncher</defName>
                      <label>warcasket tear gas grenade launcher</label>
-                     <description>tbd.</description>
+                     <description>An upscaled version of the Tear Gas Grenade Launcher designed for use by a Warcasket. A straight upgrade, it fires 2 rounds and benefits from more powerful propellant for better range. In order to improve gas dispersal and not have two gas clouds overlap, the weapon was made even less accurate in order to try and spread out the supporting fire.</description>
                      <graphicData>
                         <texPath>Things/Item/WeaponsBoxed/WarcasketTearGasGrenadeLauncher_OnFloor</texPath>
                      </graphicData>

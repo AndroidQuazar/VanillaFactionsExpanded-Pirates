@@ -117,6 +117,7 @@
                      <defName>VWEP_Bullet_WarcasketSalvagedLaserEradicator</defName>
                      <label>unstable laser shot</label>
                      <description>An unstable laser beam.</description>
+					 <thingClass>VFEPirates.Projectile_LaserEradicator</thingClass>
                      <textures>
                         <li>Things/Projectile/Shot_SalvagedLaserSniperRifle</li>
                      </textures>

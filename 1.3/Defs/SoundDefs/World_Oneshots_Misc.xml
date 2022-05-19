@@ -132,4 +132,25 @@
 			</li>
 		</subSounds>
 	</SoundDef>
+	
+  <SoundDef>
+    <defName>VFEP_DeployWardrones</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Things/Interact_LaserGun</clipFolderPath>
+          </li>
+        </grains>  
+        <volumeRange>
+          <min>16</min>        
+          <max>17</max>
+        </volumeRange>  
+      </li>
+    </subSounds>
+  </SoundDef>
+  
 </Defs>

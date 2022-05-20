@@ -38,17 +38,4 @@
     <growthRate>1.2</growthRate>
   </FleckDef>
 
-  <FleckDef ParentName="FleckBase_Thrown">
-    <defName>VFEP_JumpWarmupSmoke</defName>
-    <graphicData>
-      <texPath>Things/Mote/Smoke</texPath>
-      <drawSize>(2,2)</drawSize>
-    </graphicData>
-    <altitudeLayer>Projectile</altitudeLayer>
-    <fadeInTime>0.02</fadeInTime>
-    <solidTime>0.8</solidTime>
-    <fadeOutTime>0.2</fadeOutTime>
-    <growthRate>3</growthRate>
-  </FleckDef>
-
 </Defs>

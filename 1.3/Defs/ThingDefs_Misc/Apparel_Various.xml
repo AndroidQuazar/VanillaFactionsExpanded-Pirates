@@ -2094,29 +2094,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 			</tags>
 		</apparel>
 		<tickerType>Normal</tickerType>
-		<verbs>
-			<li>
-				<verbClass>VFEPirates.Verb_ShieldDetonation</verbClass>
-				<label>shield detonation</label>
-				<violent>false</violent>
-				<hasStandardCommand>true</hasStandardCommand>
-				<commandIcon>UI/Abilities/WarcasketShieldDetonation</commandIcon>
-				<targetable>false</targetable>
-				<nonInterruptingSelfCast>true</nonInterruptingSelfCast>
-				<onlyManualCast>True</onlyManualCast>
-			</li>
-		</verbs>
 		<comps>
-			<li Class="MVCF.Comps.CompProperties_VerbGiver">
-				<verbProps>
-					<li>
-						<label>shield detonation</label>
-						<visualLabel>shield detonation</visualLabel>
-						<description>Overload the personal shield to create a blast of kinetic energy around the warcasket, damaging everything in radius that gets bigger the more energy it detonates.</description>
-						<draw>false</draw>
-					</li>
-				</verbProps>
-			</li>
 			<li Class="VFECore.CompProperties_ShieldBubble">
 				<compClass>VFECore.CompShieldBubble</compClass>
 				<blockRangedAttack>true</blockRangedAttack>

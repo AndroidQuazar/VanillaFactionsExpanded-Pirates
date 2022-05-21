@@ -9,7 +9,7 @@
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipPath>Misc/JumpPack/JumpPack_Launch</clipPath>
+            <clipPath>Abilities/VFEP_JumpPack_Launch</clipPath>
           </li>
         </grains>
         <volumeRange>30</volumeRange>

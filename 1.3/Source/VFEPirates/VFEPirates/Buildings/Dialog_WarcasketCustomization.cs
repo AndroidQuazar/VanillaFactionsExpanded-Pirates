@@ -131,7 +131,7 @@ namespace VFEPirates.Buildings
             var y = (buttonsRect.height - 60f) / 2;
             buttonsRect.yMin += y;
             buttonsRect.yMax -= y;
-            if (Widgets.ButtonText(buttonsRect.LeftHalf().ContractedBy(5f), "Cancel".Translate())) OnCancelKeyPressed();
+            if (Widgets.ButtonText(buttonsRect.LeftHalf().ContractedBy(5f), "VFEP.Cancel".Translate())) OnCancelKeyPressed();
             if (Widgets.ButtonText(buttonsRect.RightHalf().ContractedBy(5f), "Accept".Translate())) OnAcceptKeyPressed();
             Text.Font = GameFont.Tiny;
             Text.Anchor = TextAnchor.UpperLeft;

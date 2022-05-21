@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
 
@@ -135,6 +135,60 @@
 			<graphicData>
 				<graphicClass>Graphic_Single</graphicClass>
 				<texPath>Things/Item/WeaponsBoxed/WarcasketBroadsword_OnFloor</texPath>
+				<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+				<drawSize>1</drawSize>
+			</graphicData>
+		</li>
+	</modExtensions>
+  </ThingDef>
+  
+<!--======================================================= UPDATE =======================================================-->
+  
+  <ThingDef ParentName="VFEP_BaseMeleeWeapon_Warcasket">
+    <defName>VFEP_WarcasketMeleeWeapon_GravityHammer</defName>
+    <label>warcasket gravity hammer</label>
+    <description>A monumental piece of anti-personnel technology that can only be properly utilized by the oversized warcaskets. Practically an engine block fitted to the end of a mech’s limb actuator, equipped with multiple pneumatic plates covering miniature repulsor generators designed for riot control. In layman’s terms, a strike from the head will launch the target backwards by several meters.</description>
+    <thingClass>VFECore.ThingWithFloorGraphic</thingClass>
+	<graphicData>
+      <texPath>Things/Item/Weapons/WarcasketGravityHammer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.7</drawSize>
+    </graphicData>
+    <statBases>
+	  <MarketValue>3000</MarketValue>
+      <WorkToMake>80000</WorkToMake>
+      <Mass>50</Mass>
+    </statBases>
+	<equippedAngleOffset>-35</equippedAngleOffset>
+    <weaponTags>
+        <li>WarcasketMelee</li>
+        <li>WarcasketVeteran</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>VFEP_GravityHammerAttack</li>
+        </capacities>
+        <power>31</power>
+        <cooldownTime>3</cooldownTime>
+		<armorPenetration>0.5</armorPenetration>
+      </li>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>2</cooldownTime>
+		<armorPenetration>0.4</armorPenetration>
+      </li>
+    </tools>
+	<modExtensions>
+		<li Class="VFECore.FloorGraphicExtension">
+			<graphicData>
+				<graphicClass>Graphic_Single</graphicClass>
+				<texPath>Things/Item/WeaponsBoxed/WarcasketGravityHammer_OnFloor</texPath>
 				<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
 				<drawSize>1</drawSize>
 			</graphicData>

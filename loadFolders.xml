@@ -1,11 +1,14 @@
 <loadFolders>
-
 	<v1.3>
 		<li>/</li>
 		<li>1.3</li>
-		<li IfModActive="Ludeon.RimWorld.Ideology">1.3/Mods/Ideology</li>	
-	
-		
+		<li IfModActive="Ludeon.RimWorld.Ideology">1.3/Mods/Ideology</li>
+        <li IfModActive="OskarPotocki.VFE.Insectoid">1.3/Mods/VFEI</li>	
+        <li IfModActive="OskarPotocki.VFE.Vikings">1.3/Mods/VFEV</li>	
+        <li IfModActive="VanillaExpanded.VWEC">1.3/Mods/VFEC</li>	
+        <li IfModActive="VanillaExpanded.VWEL">1.3/Mods/VFEL</li>	
+        <li IfModActive="VanillaExpanded.VWENL">1.3/Mods/VFENL</li>	
+        <li IfModActive="VanillaExpanded.VWEQ">1.3/Mods/VFEQ</li>			
 	</v1.3>
 </loadFolders>
 

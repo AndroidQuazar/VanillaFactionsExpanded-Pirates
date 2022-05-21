@@ -115,7 +115,7 @@
 			<li>
 				<subEffecterClass>SubEffecter_SoundTriggered</subEffecterClass>
 				<spawnLocType>OnSource</spawnLocType>
-				<soundDef>JumpPackLaunch</soundDef>
+				<soundDef>VFEP_JumpLaunch</soundDef>
 			</li>
 			<li>
 				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
@@ -128,7 +128,7 @@
 				<scale>0.5~0.6</scale>
 				<spawnLocType>OnSource</spawnLocType>
 				<positionOffset>(0,0,-0.5)</positionOffset>
-				<fleckDef>JumpFlame</fleckDef>
+				<fleckDef>VFEP_JumpFlame</fleckDef>
 				<ticksBetweenMotes>1</ticksBetweenMotes>
 				<maxMoteCount>14</maxMoteCount>
 				<speed>4~5</speed>
@@ -140,7 +140,7 @@
 				<scale>0.9~0.7</scale>
 				<spawnLocType>OnSource</spawnLocType>
 				<positionOffset>(0,0,-0.5)</positionOffset>
-				<fleckDef>JumpFlameGlow</fleckDef>
+				<fleckDef>VFEP_JumpFlameGlow</fleckDef>
 				<ticksBetweenMotes>1</ticksBetweenMotes>
 				<maxMoteCount>14</maxMoteCount>
 				<speed>4~5</speed>
@@ -152,7 +152,7 @@
 				<scale>0.8~1.2</scale>
 				<spawnLocType>OnSource</spawnLocType>
 				<positionOffset>(0,0,-0.5)</positionOffset>
-				<fleckDef>JumpSmoke</fleckDef>
+				<fleckDef>VFEP_JumpSmoke</fleckDef>
 				<ticksBetweenMotes>2</ticksBetweenMotes>
 				<maxMoteCount>8</maxMoteCount>
 				<speed>5~6</speed>
@@ -268,7 +268,7 @@
 			<li>
 				<subEffecterClass>SubEffecter_SoundTriggered</subEffecterClass>
 				<spawnLocType>OnSource</spawnLocType>
-				<soundDef>JumpPackLaunch</soundDef>
+				<soundDef>VFEP_JumpLaunch</soundDef>
 			</li>
 			<li>
 				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
@@ -281,7 +281,7 @@
 				<scale>0.5~0.6</scale>
 				<spawnLocType>OnSource</spawnLocType>
 				<positionOffset>(0,0,-0.5)</positionOffset>
-				<fleckDef>JumpFlame</fleckDef>
+				<fleckDef>VFEP_JumpFlame</fleckDef>
 				<ticksBetweenMotes>1</ticksBetweenMotes>
 				<maxMoteCount>1000</maxMoteCount>
 				<speed>4~5</speed>
@@ -293,7 +293,7 @@
 				<scale>0.9~0.7</scale>
 				<spawnLocType>OnSource</spawnLocType>
 				<positionOffset>(0,0,-0.5)</positionOffset>
-				<fleckDef>JumpFlameGlow</fleckDef>
+				<fleckDef>VFEP_JumpFlameGlow</fleckDef>
 				<ticksBetweenMotes>1</ticksBetweenMotes>
 				<maxMoteCount>1000</maxMoteCount>
 				<speed>4~5</speed>
@@ -305,7 +305,7 @@
 				<scale>0.8~1.2</scale>
 				<spawnLocType>OnSource</spawnLocType>
 				<positionOffset>(0,0,-0.5)</positionOffset>
-				<fleckDef>JumpSmoke</fleckDef>
+				<fleckDef>VFEP_JumpSmoke</fleckDef>
 				<ticksBetweenMotes>2</ticksBetweenMotes>
 				<maxMoteCount>1000</maxMoteCount>
 				<speed>5~6</speed>

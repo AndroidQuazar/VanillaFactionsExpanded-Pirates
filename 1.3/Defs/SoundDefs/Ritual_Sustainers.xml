@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-
+  <SoundDef Abstract="True" Name="VFEP_RitualSustainerBase">
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <sustainFadeoutTime>2.5</sustainFadeoutTime>
+  </SoundDef>
   
-  <SoundDef ParentName="RitualSustainerBase">
+  <SoundDef ParentName="VFEP_RitualSustainerBase">
     <defName>VFEP_RitualSustainer_Pirate</defName>
     <subSounds>
       <li>

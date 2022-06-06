@@ -25,7 +25,7 @@
 						<li>EVA</li>
 					</value>
 				</li>
-				<li Class="PatchOperationAdd">
+				<li Class="PatchOperationReplace">
 					<xpath>/Defs/VFEPirates.WarcasketDef[defName = "VFEP_WarcasketHelmet_Warcasket" or defName = "VFEP_WarcasketHelmet_Marine" or defName = "VFEP_WarcasketHelmet_Recon" or defName = "VFEP_WarcasketHelmet_Cataphract" or defName = "VFEP_WarcasketHelmet_Aerial" or defName = "VFEP_WarcasketHelmet_Barrage" or defName = "VFEP_WarcasketHelmet_Hazard" or defName = "VFEP_WarcasketHelmet_Shock" or defName = "VFEP_WarcasketHelmet_Siegebreaker" or defName = "VFEP_WarcasketHelmet_Guardian" or defName = "VFEP_WarcasketHelmet_Controller" or defName = "VFEP_WarcasketHelmet_Sarcophagus" or defName = "VFEP_WarcasketHelmet_Brute"]/statBases/Insulation_Cold</xpath>
 					<value>
 						<Insulation_Cold>100</Insulation_Cold>

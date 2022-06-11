@@ -25,5 +25,7 @@ namespace VFEPirates
                 return BaseContent.BadTex;
             }
         }
+
+        public override bool IsMeleeAttack => true;
     }
 }

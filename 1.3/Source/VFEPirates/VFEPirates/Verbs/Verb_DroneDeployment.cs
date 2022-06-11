@@ -10,7 +10,7 @@ namespace VFEPirates
             ReleaseDrones(base.ReloadableCompSource);
             return true;
         }
-        
+        public override bool IsMeleeAttack => true;
         public static void ReleaseDrones(CompReloadable comp)
         {
             if (comp != null && comp.CanBeUsed)

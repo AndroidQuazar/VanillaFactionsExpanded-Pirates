@@ -419,8 +419,8 @@
 			<EquipDelay>1</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
-			<PsychicSensitivity>0.5</PsychicSensitivity>
-			<ToxicSensitivity>0.5</ToxicSensitivity>
+			<PsychicSensitivity>-0.5</PsychicSensitivity>
+			<ToxicSensitivity>-0.5</ToxicSensitivity>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.1</SlaveSuppressionOffset>
 		</equippedStatOffsets>
 		<costList>
@@ -464,8 +464,8 @@
 			<EquipDelay>1</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
-			<PsychicSensitivity>0.5</PsychicSensitivity>
-			<ToxicSensitivity>0.5</ToxicSensitivity>
+			<PsychicSensitivity>-0.5</PsychicSensitivity>
+			<ToxicSensitivity>-0.5</ToxicSensitivity>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.1</SlaveSuppressionOffset>
 		</equippedStatOffsets>
 		<costList>
@@ -509,8 +509,8 @@
 			<EquipDelay>1</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
-			<PsychicSensitivity>0.5</PsychicSensitivity>
-			<ToxicSensitivity>0.5</ToxicSensitivity>
+			<PsychicSensitivity>-0.5</PsychicSensitivity>
+			<ToxicSensitivity>-0.5</ToxicSensitivity>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.1</SlaveSuppressionOffset>
 		</equippedStatOffsets>
 		<costList>
@@ -554,8 +554,8 @@
 			<EquipDelay>1</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
-			<PsychicSensitivity>0.5</PsychicSensitivity>
-			<ToxicSensitivity>0.5</ToxicSensitivity>
+			<PsychicSensitivity>-0.5</PsychicSensitivity>
+			<ToxicSensitivity>-0.5</ToxicSensitivity>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.1</SlaveSuppressionOffset>
 		</equippedStatOffsets>
 		<costList>
@@ -626,8 +626,8 @@
 			<EquipDelay>1</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
-			<PsychicSensitivity>0.5</PsychicSensitivity>
-			<ToxicSensitivity>0.5</ToxicSensitivity>
+			<PsychicSensitivity>-0.5</PsychicSensitivity>
+			<ToxicSensitivity>-0.5</ToxicSensitivity>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.1</SlaveSuppressionOffset>
 		</equippedStatOffsets>
 		<costList>

@@ -30,7 +30,6 @@ namespace VFEPirates
         }
         protected override bool TryCastShot()
         {
-            Log.Message("this: " + this.IsMeleeAttack);
             var comps = GetShieldComps.ToList();
             var energyTotal = comps.Sum(x => x.Energy);
             GenExplosion.DoExplosion(Caster.Position, Caster.Map, energyTotal / 50f, DamageDefOf.Bomb, Caster, 

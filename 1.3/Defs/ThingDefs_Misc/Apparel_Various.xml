@@ -1443,7 +1443,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 				<showOnHostiles>true</showOnHostiles>
 				<showOnNeutralInCombat>true</showOnNeutralInCombat>
 				<shieldTexPath>Other/ShieldBubble</shieldTexPath>
-				<EnergyShieldRechargeRate>10</EnergyShieldRechargeRate>
+				<EnergyShieldRechargeRate>0.33</EnergyShieldRechargeRate>
 				<EnergyShieldEnergyMax>250</EnergyShieldEnergyMax>
 				<chargeFullyWhenMade>true</chargeFullyWhenMade>
 				<minShieldSize>2.1</minShieldSize>
@@ -1587,7 +1587,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 				<showOnHostiles>true</showOnHostiles>
 				<showOnNeutralInCombat>true</showOnNeutralInCombat>
 				<shieldTexPath>Other/ShieldBubble</shieldTexPath>
-				<EnergyShieldRechargeRate>10</EnergyShieldRechargeRate>
+				<EnergyShieldRechargeRate>0.33</EnergyShieldRechargeRate>
 				<EnergyShieldEnergyMax>150</EnergyShieldEnergyMax>
 				<chargeFullyWhenMade>true</chargeFullyWhenMade>
 				<minShieldSize>2.1</minShieldSize>
@@ -1746,7 +1746,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 				<showOnHostiles>true</showOnHostiles>
 				<showOnNeutralInCombat>true</showOnNeutralInCombat>
 				<shieldTexPath>Other/ShieldBubble</shieldTexPath>
-				<EnergyShieldRechargeRate>10</EnergyShieldRechargeRate>
+				<EnergyShieldRechargeRate>0.33</EnergyShieldRechargeRate>
 				<EnergyShieldEnergyMax>150</EnergyShieldEnergyMax>
 				<chargeFullyWhenMade>true</chargeFullyWhenMade>
 				<minShieldSize>2.1</minShieldSize>
@@ -1933,7 +1933,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 				<showOnHostiles>true</showOnHostiles>
 				<showOnNeutralInCombat>true</showOnNeutralInCombat>
 				<shieldTexPath>Other/ShieldBubble</shieldTexPath>
-				<EnergyShieldRechargeRate>10</EnergyShieldRechargeRate>
+				<EnergyShieldRechargeRate>0.33</EnergyShieldRechargeRate>
 				<EnergyShieldEnergyMax>150</EnergyShieldEnergyMax>
 				<chargeFullyWhenMade>true</chargeFullyWhenMade>
 				<minShieldSize>2.1</minShieldSize>
@@ -2103,7 +2103,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 				<showOnHostiles>true</showOnHostiles>
 				<showOnNeutralInCombat>true</showOnNeutralInCombat>
 				<shieldTexPath>Other/ShieldBubble</shieldTexPath>
-				<EnergyShieldRechargeRate>5</EnergyShieldRechargeRate>
+				<EnergyShieldRechargeRate>0.166</EnergyShieldRechargeRate>
 				<EnergyShieldEnergyMax>500</EnergyShieldEnergyMax>
 				<chargeFullyWhenMade>true</chargeFullyWhenMade>
 				<minShieldSize>2.1</minShieldSize>

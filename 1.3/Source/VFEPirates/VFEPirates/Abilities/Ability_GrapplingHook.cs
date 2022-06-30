@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using RimWorld.Planet;
 using UnityEngine;
 using Verse;
 using VFECore.Abilities;
@@ -16,12 +17,14 @@ namespace VFEPirates
         public override bool CanHitTarget(LocalTargetInfo target) =>
             base.CanHitTarget(target) && target.Thing is {def: {Fillage: FillCategory.Full}} or Plant {def: {plant: {IsTree: true}}};
 
-        public override void Cast(LocalTargetInfo target)
+        public override void Cast(params GlobalTargetInfo[] targets)
         {
+            base.Cast(targets);
             if (Loaded)
             {
                 var projectile = GenSpawn.Spawn(def.GetModExtension<AbilityExtension_Projectile>().projectile, pawn.Position, pawn.Map) as Projectile;
                 if (projectile is AbilityProjectile abilityProjectile) abilityProjectile.ability = this;
+                var target = targets[0].HasThing ? new LocalTargetInfo(targets[0].Thing) : new LocalTargetInfo(targets[0].Cell);
                 projectile?.Launch(pawn, pawn.DrawPos, target, target, ProjectileHitFlags.IntendedTarget);
                 if (projectile is Projectile_GrapplingHook hook) hook.UpdateDest();
                 Loaded = false;
@@ -32,10 +35,10 @@ namespace VFEPirates
 
         public override void DoAction()
         {
-            if (Loaded)
-                Find.Targeter.BeginTargeting(this);
+            if (Event.current.button == 1 || Loaded)
+                base.DoAction();
             else
-                CreateCastJob(pawn);
+                CreateCastJob((GlobalTargetInfo) pawn);
         }
 
         public override int GetCastTimeForPawn() => Loaded ? 0 : def.GetModExtension<AbilityExtension_GrapplingHook>().reloadTicks;

@@ -14,7 +14,6 @@ namespace VFEPirates
 		public Building_WarcasketFoundry Foundry => TargetA.Thing as Building_WarcasketFoundry;
 		public override bool TryMakePreToilReservations(bool errorOnFailed)
 		{
-			pawn.jobs.debugLog = true;
 			if (!pawn.Reserve(job.GetTarget(TargetIndex.A), job, 1, -1, null, errorOnFailed))
 			{
 				return false;

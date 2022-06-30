@@ -9,6 +9,7 @@
     <pawnsPlural>pirates</pawnsPlural>
     <basicMemberKind>VFEP_PirateColonist</basicMemberKind>
     <techLevel>Industrial</techLevel>
+    <allowedCultures><li>Kriminul</li></allowedCultures>
     <factionNameMaker>NamerFactionPirate</factionNameMaker>
     <settlementNameMaker>NamerSettlementPirate</settlementNameMaker>
     <backstoryFilters>

@@ -167,9 +167,10 @@
 		<label>Blast off</label>
 		<description>Fire a large propulsion engine strapped to the back of your armor and designate a location on the world map to drop pod into. This will create a large explosion at the destination, but will most likely leave you stranded without fuel for the trip back.</description>
 		<abilityClass>VFEPirates.Ability_BlastOff</abilityClass>
-		<targetMode>Location</targetMode>
+		<targetMode>Tile</targetMode>
 		<iconPath>UI/Abilities/BlastOff</iconPath>
 		<castTime>60</castTime>
+		<range>30</range>
 		<modExtensions>
 			<li Class="VFEPirates.BlastOffExtension">
 				<fuelConsumption>100</fuelConsumption>

@@ -10,7 +10,7 @@ namespace VFEPirates
         [HarmonyPostfix]
         public static void ChangeNext(Page_SelectStoryteller __instance)
         {
-            if (CursesUtility.CursedStorytellerInCharge)
+            if (CursesUtility.CursedStorytellerInCharge && __instance.next is not Page_ChooseCurses)
             {
                 var next = __instance.next;
                 next.prev = __instance.next = new Page_ChooseCurses {prev = __instance, next = next};

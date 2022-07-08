@@ -19,7 +19,6 @@ namespace VFEPirates
 
         public override void Cast(params GlobalTargetInfo[] targets)
         {
-            base.Cast(targets);
             if (Loaded)
             {
                 var projectile = GenSpawn.Spawn(def.GetModExtension<AbilityExtension_Projectile>().projectile, pawn.Position, pawn.Map) as Projectile;
@@ -97,7 +96,7 @@ namespace VFEPirates
         public override void Tick()
         {
             base.Tick();
-            if (ticksTillPull < 0) return;
+            if (ticksTillPull <= 0) return;
             ticksTillPull--;
             if (ticksTillPull <= 0) Pull();
         }

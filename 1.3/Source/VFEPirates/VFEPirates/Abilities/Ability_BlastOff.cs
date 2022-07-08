@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using HarmonyLib;
 using RimWorld;
@@ -7,7 +6,6 @@ using RimWorld.Planet;
 using UnityEngine;
 using Verse;
 using Ability = VFECore.Abilities.Ability;
-using Command_Ability = VFECore.Abilities.Command_Ability;
 
 namespace VFEPirates
 {
@@ -20,68 +18,75 @@ namespace VFEPirates
     public class Ability_BlastOff : Ability
     {
         private CompTransporter cachedCompTransporter;
+        private BlastOffExtension cachedExtension;
 
         private ThingWithComps transporter;
-        public float FuelConsumption => def.GetModExtension<BlastOffExtension>().fuelConsumption;
-        public int MaxLaunchDistance => def.GetModExtension<BlastOffExtension>().maxLaunchDistance;
+        public float FuelConsumption => Extension.fuelConsumption;
+        public int MaxLaunchDistance => Extension.maxLaunchDistance;
 
-        public CompTransporter Transporter
+        public CompTransporter Transporter => cachedCompTransporter ??= transporter.GetComp<CompTransporter>();
+        public BlastOffExtension Extension => cachedExtension ??= def.GetModExtension<BlastOffExtension>();
+
+        public override bool IsEnabledForPawn(out string reason)
         {
-            get
+            if (holder.TryGetComp<CompReloadable>().RemainingCharges < FuelConsumption)
             {
-                if (cachedCompTransporter == null) cachedCompTransporter = transporter.GetComp<CompTransporter>();
-                return cachedCompTransporter;
-            }
-        }
-
-        public override Gizmo GetGizmo()
-        {
-            var action = new Command_Ability(pawn, this);
-            if (holder.TryGetComp<CompReloadable>().RemainingCharges < FuelConsumption) action.Disable("VFEP.NotEnoughFuel".Translate());
-            return action;
-        }
-
-        public override bool ValidateTargetTile(GlobalTargetInfo target) => target.IsMapTarget;
-
-        public override void DoTargeting()
-        {
-            base.DoTargeting();
-            CameraJumper.TryJump(CameraJumper.GetWorldTarget(pawn));
-            var texture = TravelingPawn.MakeReadableTextureInstance(PortraitsCache.Get(pawn, new Vector2(50, 50), Rot4.South));
-            Find.WorldTargeter.BeginTargeting(target =>
-                    ChoseWorldTargetForBlastOff(target, pawn.Tile, Gen.YieldSingle(pawn), MaxLaunchDistance, TryLaunch, null), true, texture, false,
-                OnUpdateWorld,
-                target => TargetingLabelGetter(target, pawn.Tile, MaxLaunchDistance, Gen.YieldSingle(pawn), TryLaunch, null), ValidateTargetTile);
-        }
-
-        public bool ChoseWorldTargetForBlastOff(GlobalTargetInfo target, int tile, IEnumerable<IThingHolder> pods, int maxLaunchDistance,
-            Action<int, TransportPodsArrivalAction> launchAction, CompLaunchable launchable)
-        {
-            if (!target.IsValid)
-            {
-                Messages.Message("MessageTransportPodsDestinationIsInvalid".Translate(), MessageTypeDefOf.RejectInput, false);
+                reason = "VFEP.NotEnoughFuel".Translate();
                 return false;
             }
 
-            var num = Find.WorldGrid.TraversalDistanceBetween(tile, target.Tile);
-            if (maxLaunchDistance > 0 && num > maxLaunchDistance)
+            reason = null;
+            return true;
+        }
+
+        public override bool CanHitTargetTile(GlobalTargetInfo target) => target.WorldObject is MapParent {HasMap: true};
+
+        public override bool ValidateTargetTile(GlobalTargetInfo target, bool showMessages = false)
+        {
+            if (!base.ValidateTargetTile(target, showMessages)) return false;
+
+            if (!target.IsValid)
             {
-                Messages.Message("TransportPodDestinationBeyondMaximumRange".Translate(), MessageTypeDefOf.RejectInput, false);
+                if (showMessages) Messages.Message("MessageTransportPodsDestinationIsInvalid".Translate(), MessageTypeDefOf.RejectInput, false);
+                return false;
+            }
+
+            var num = Find.WorldGrid.TraversalDistanceBetween(pawn.Tile, target.Tile);
+            if (MaxLaunchDistance > 0 && num > MaxLaunchDistance)
+            {
+                if (showMessages) Messages.Message("TransportPodDestinationBeyondMaximumRange".Translate(), MessageTypeDefOf.RejectInput, false);
                 return false;
             }
 
             if (Find.World.Impassable(target.Tile))
             {
-                Messages.Message("MessageTransportPodsDestinationIsInvalid".Translate(), MessageTypeDefOf.RejectInput, false);
+                if (showMessages) Messages.Message("MessageTransportPodsDestinationIsInvalid".Translate(), MessageTypeDefOf.RejectInput, false);
                 return false;
             }
 
-            launchAction(target.Tile, null);
             return true;
         }
 
-        public void TryLaunch(int destinationTile, TransportPodsArrivalAction arrivalAction)
+        protected override Texture2D MouseAttachment(GlobalTargetInfo target) =>
+            TravelingPawn.MakeReadableTextureInstance(PortraitsCache.Get(pawn, new Vector2(50, 50), Rot4.South));
+
+        protected override string WorldTargetingLabel(GlobalTargetInfo target)
         {
+            if (!target.IsValid) return null;
+            var num = Find.WorldGrid.TraversalDistanceBetween(pawn.Tile, target.Tile);
+            if (MaxLaunchDistance > 0 && num > MaxLaunchDistance)
+            {
+                GUI.color = ColorLibrary.RedReadable;
+                return "TransportPodDestinationBeyondMaximumRange".Translate();
+            }
+
+            return string.Empty;
+        }
+
+        public override void Cast(params GlobalTargetInfo[] targets)
+        {
+            base.Cast(targets);
+            var destinationTile = targets[0].Tile;
             var comp = holder.TryGetComp<CompReloadable>();
             for (var i = 0; i < FuelConsumption; i++) comp.UsedOnce();
             var map = pawn.Map;
@@ -111,20 +116,6 @@ namespace VFEPirates
             CameraJumper.TryHideWorld();
             transporter = null;
             cachedCompTransporter = null;
-        }
-
-        public static string TargetingLabelGetter(GlobalTargetInfo target, int tile, int maxLaunchDistance, IEnumerable<IThingHolder> pods,
-            Action<int, TransportPodsArrivalAction> launchAction, CompLaunchable launchable)
-        {
-            if (!target.IsValid) return null;
-            var num = Find.WorldGrid.TraversalDistanceBetween(tile, target.Tile);
-            if (maxLaunchDistance > 0 && num > maxLaunchDistance)
-            {
-                GUI.color = ColorLibrary.RedReadable;
-                return "TransportPodDestinationBeyondMaximumRange".Translate();
-            }
-
-            return string.Empty;
         }
     }
 

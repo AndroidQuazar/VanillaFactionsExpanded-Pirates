@@ -55,7 +55,6 @@
     </costList>
     <weaponTags>
 	  <li>WarcasketMelee</li>
-	  <li>WarcasketVeteran</li>
     </weaponTags>
     <tools>
       <li>
@@ -162,7 +161,6 @@
 	<equippedAngleOffset>-35</equippedAngleOffset>
     <weaponTags>
         <li>WarcasketMelee</li>
-        <li>WarcasketVeteran</li>
     </weaponTags>
     <tools>
       <li>

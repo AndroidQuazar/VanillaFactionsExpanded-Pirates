@@ -65,7 +65,8 @@ Junkers utilise warcasket technology and seal themselves in metal tombs in which
         <options>
           <VFEP_Scrapper>10</VFEP_Scrapper>
           <VFEP_Footsoldier>8</VFEP_Footsoldier>
-          <VFEP_Veteran>2</VFEP_Veteran>
+          <VFEP_Veteran>1</VFEP_Veteran>
+		  <VFEP_Veteran_Melee>1</VFEP_Veteran_Melee>
         </options>
       </li>
       <li>
@@ -86,7 +87,8 @@ Junkers utilise warcasket technology and seal themselves in metal tombs in which
         <options>
           <VFEP_Scrapper>2</VFEP_Scrapper>
           <VFEP_Footsoldier>6</VFEP_Footsoldier>
-          <VFEP_Veteran>4</VFEP_Veteran>
+          <VFEP_Veteran>3</VFEP_Veteran>
+		  <VFEP_Veteran_Melee>1</VFEP_Veteran_Melee>
           <VFEP_HeavyWeaponsPlatform>2</VFEP_HeavyWeaponsPlatform>
           <VFEP_Hussar>3</VFEP_Hussar>
         </options>
@@ -96,7 +98,8 @@ Junkers utilise warcasket technology and seal themselves in metal tombs in which
         <kindDef>Combat</kindDef>
         <commonality>10</commonality>
         <options>
-          <VFEP_Veteran>10</VFEP_Veteran>
+          <VFEP_Veteran>7</VFEP_Veteran>
+		  <VFEP_Veteran_Melee>3</VFEP_Veteran_Melee>
           <VFEP_HeavyWeaponsPlatform>5</VFEP_HeavyWeaponsPlatform>
           <VFEP_Hussar>8</VFEP_Hussar>
           <VFEP_Pyro>4</VFEP_Pyro>
@@ -109,7 +112,8 @@ Junkers utilise warcasket technology and seal themselves in metal tombs in which
         <options>
           <VFEP_Scrapper>10</VFEP_Scrapper>
           <VFEP_Footsoldier>8</VFEP_Footsoldier>
-          <VFEP_Veteran>6</VFEP_Veteran>
+          <VFEP_Veteran>4</VFEP_Veteran>
+		  <VFEP_Veteran_Melee>2</VFEP_Veteran_Melee>
           <VFEP_HeavyWeaponsPlatform>5</VFEP_HeavyWeaponsPlatform>
           <VFEP_Hussar>5</VFEP_Hussar>
           <VFEP_Pyro>2</VFEP_Pyro>
@@ -235,6 +239,7 @@ Mercenaries utilise spacer-tech weapons and armors to eliminate the targets of t
           <VFEP_Captain>4</VFEP_Captain>
           <VFEP_Major>2</VFEP_Major>
           <VFEP_General>1</VFEP_General>
+		  <VFEP_General_Melee>1</VFEP_General_Melee>
         </options>
       </li>
       <li>
@@ -249,6 +254,7 @@ Mercenaries utilise spacer-tech weapons and armors to eliminate the targets of t
           <VFEP_Captain>4</VFEP_Captain>
           <VFEP_Major>2</VFEP_Major>
           <VFEP_General>1</VFEP_General>
+		  <VFEP_General_Melee>1</VFEP_General_Melee>
         </options>
       </li>
     </pawnGroupMakers>

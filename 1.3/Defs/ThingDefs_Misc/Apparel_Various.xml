@@ -1492,6 +1492,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 		</statBases>
 		<equippedStatOffsets>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
+			<EnergyShieldRechargeRate>1</EnergyShieldRechargeRate>
 		</equippedStatOffsets>
 		<costList>
 			<Plasteel>60</Plasteel>
@@ -2090,7 +2091,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 			</layers>
 			<tags>
 				<li>WarcasketVeteran</li>
-				<li>WarcasketAll</li>
+				<li>WarcasketMelee</li>
 			</tags>
 		</apparel>
 		<tickerType>Normal</tickerType>
@@ -2177,7 +2178,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 			</layers>
 			<tags>
 				<li>WarcasketVeteran</li>
-				<li>WarcasketAll</li>
+				<li>WarcasketMelee</li>
 			</tags>
 		</apparel>
 	</VFEPirates.WarcasketDef>

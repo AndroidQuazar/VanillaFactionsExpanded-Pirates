@@ -365,5 +365,43 @@
     <combatEnhancingDrugsChance>1.0</combatEnhancingDrugsChance>
     <combatEnhancingDrugsCount>1~2</combatEnhancingDrugsCount>
   </PawnKindDef>
+  
+  <PawnKindDef ParentName="VFEP_MercenariesBase">
+    <defName>VFEP_General_Melee</defName>
+    <label>general</label>
+    <combatPower>350</combatPower>
+    <maxGenerationAge>55</maxGenerationAge>
+	<factionLeader>true</factionLeader>
+    <apparelMoney>3200~5200</apparelMoney>
+    <apparelTags>
+      <li>WarcasketMelee</li>
+    </apparelTags>
+    <apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
+    <weaponMoney>2800~3800</weaponMoney>
+    <weaponTags>
+      <li>WarcasketMelee</li>
+    </weaponTags>
+    <techHediffsChance>0.5</techHediffsChance>
+    <techHediffsMoney>1800~3000</techHediffsMoney>
+	<techHediffsMaxAmount>3</techHediffsMaxAmount>
+    <techHediffsTags>
+      <li>ImplantEmpireCommon</li>
+	  <li>Advanced</li>
+    </techHediffsTags>
+    <inventoryOptions>
+      <skipChance>0.3</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>5</countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+    <biocodeWeaponChance>0.3</biocodeWeaponChance>
+    <initialWillRange>2~3</initialWillRange>
+    <initialResistanceRange>16~20</initialResistanceRange>
+    <combatEnhancingDrugsChance>1.0</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>1~2</combatEnhancingDrugsCount>
+  </PawnKindDef>
 
 </Defs>

@@ -39,6 +39,7 @@
     <li>Ludeon.RimWorld.Ideology</li>
     <li>brrainz.harmony</li>
     <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+    <li>VanillaExpanded.VWEL</li>
   </loadAfter>
 	<incompatibleWith>
 		<li>n7huntsman.combatshields</li> 
